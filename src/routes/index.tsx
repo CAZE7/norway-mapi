@@ -70,6 +70,9 @@ function Home() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="w-[92vw] max-w-[420px] p-0">
+              <VisuallyHidden>
+                <SheetTitle>Orte und Filter</SheetTitle>
+              </VisuallyHidden>
               <AppSidebar results={results} />
             </SheetContent>
           </Sheet>
