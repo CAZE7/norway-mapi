@@ -8,6 +8,7 @@ type State = {
   favorites: string[];
   route: string[];
   focusId: string | null;
+  focusNonce: number;
   setQuery: (q: string) => void;
   toggleCategory: (c: Category) => void;
   clearCategories: () => void;
@@ -26,6 +27,7 @@ export const useAppStore = create<State>()(
       favorites: [],
       route: [],
       focusId: null,
+      focusNonce: 0,
       setQuery: (query) => set({ query }),
       toggleCategory: (c) =>
         set((s) => ({
@@ -45,7 +47,7 @@ export const useAppStore = create<State>()(
       removeFromRoute: (id) =>
         set((s) => ({ route: s.route.filter((x) => x !== id) })),
       clearRoute: () => set({ route: [] }),
-      focus: (focusId) => set({ focusId }),
+      focus: (focusId) => set((s) => ({ focusId, focusNonce: s.focusNonce + 1 })),
     }),
     {
       name: "steder-i-norge",

@@ -181,7 +181,7 @@ function PlaceDetail() {
             <div className="flex flex-col gap-2">
               <Button asChild>
                 <Link to="/" onClick={() => focus(place.id)}>
-                  <MapPin className="mr-2 h-4 w-4" /> Auf Karte zeigen
+                  <MapPin className="mr-2 h-4 w-4" /> Auf Karte anzeigen
                 </Link>
               </Button>
               <Button variant={isFav ? "default" : "outline"} onClick={() => toggleFav(place.id)}>
