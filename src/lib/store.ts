@@ -8,6 +8,7 @@ type State = {
   favorites: string[];
   route: string[];
   focusId: string | null;
+  focusNonce: number;
   setQuery: (q: string) => void;
   toggleCategory: (c: Category) => void;
   clearCategories: () => void;
