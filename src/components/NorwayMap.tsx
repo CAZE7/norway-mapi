@@ -119,6 +119,7 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
     requestAnimationFrame(addNext);
 
     return () => {
+      cancelled = true;
       map.remove();
       mapRef.current = null;
       clusterRef.current = null;
@@ -150,7 +151,17 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
     if (m) setTimeout(() => m.openPopup(), 400);
   }, [focusId, focusNonce, placesById]);
 
-  const loading = !tilesLoaded || !markersReady;
+  const tilesDone = tileProgress.finished;
+  const markersDone = markerProgress.done >= markerProgress.total && markerProgress.total > 0;
+  const loading = !tilesDone || !markersDone;
+
+  const tilePct = tileProgress.total
+    ? Math.min(100, Math.round((tileProgress.done / tileProgress.total) * 100))
+    : 0;
+  const markerPct = markerProgress.total
+    ? Math.round((markerProgress.done / markerProgress.total) * 100)
+    : 0;
+  const overallPct = Math.round((tilePct + markerPct) / 2);
 
   return (
     <div className="relative h-full w-full">
@@ -160,18 +171,77 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
           className="pointer-events-none absolute inset-0 z-[500] flex items-center justify-center bg-background/70 backdrop-blur-sm transition-opacity duration-300"
           role="status"
           aria-live="polite"
+          aria-label={`Karte wird geladen, ${overallPct}%`}
         >
-          <div className="flex flex-col items-center gap-3 rounded-xl border border-border/60 bg-card/90 px-5 py-4 shadow-lg">
-            <div className="h-8 w-8 animate-spin rounded-full border-2 border-muted border-t-primary" />
-            <div className="text-sm font-medium text-foreground">
-              {!tilesLoaded ? "Karte wird geladen…" : "Marker werden platziert…"}
+          <div className="w-[min(20rem,calc(100%-2rem))] rounded-2xl border border-border/60 bg-card/95 p-5 shadow-xl">
+            <div className="mb-4 flex items-center gap-3">
+              <div className="h-6 w-6 shrink-0 animate-spin rounded-full border-2 border-muted border-t-primary" />
+              <div className="min-w-0 flex-1">
+                <div className="truncate text-sm font-semibold text-foreground">
+                  Karte wird vorbereitet
+                </div>
+                <div className="text-xs text-muted-foreground">
+                  {overallPct}% · {PLACES.length.toLocaleString("de-DE")} Orte
+                </div>
+              </div>
             </div>
-            <div className="text-xs text-muted-foreground">
-              {PLACES.length.toLocaleString("de-DE")} Orte in Norwegen
-            </div>
+
+            <ProgressRow
+              label="Kartenkacheln"
+              status={
+                tilesDone
+                  ? "Fertig"
+                  : tileProgress.total
+                  ? `${tileProgress.done} / ${tileProgress.total}`
+                  : "Verbinde…"
+              }
+              pct={tilePct}
+              done={tilesDone}
+            />
+            <div className="h-3" />
+            <ProgressRow
+              label="Marker platzieren"
+              status={
+                markersDone
+                  ? "Fertig"
+                  : `${markerProgress.done.toLocaleString("de-DE")} / ${markerProgress.total.toLocaleString("de-DE")}`
+              }
+              pct={markerPct}
+              done={markersDone}
+            />
           </div>
         </div>
       )}
     </div>
   );
 }
+
+function ProgressRow({
+  label,
+  status,
+  pct,
+  done,
+}: {
+  label: string;
+  status: string;
+  pct: number;
+  done: boolean;
+}) {
+  return (
+    <div>
+      <div className="mb-1 flex items-center justify-between text-xs">
+        <span className="font-medium text-foreground">{label}</span>
+        <span className={done ? "text-primary" : "text-muted-foreground"}>{status}</span>
+      </div>
+      <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted">
+        <div
+          className={`h-full rounded-full transition-[width] duration-200 ease-out ${
+            done ? "bg-primary" : "bg-primary/70"
+          }`}
+          style={{ width: `${pct}%` }}
+        />
+      </div>
+    </div>
+  );
+}
+
