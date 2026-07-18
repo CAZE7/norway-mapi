@@ -59,46 +59,59 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
             </button>
           )}
         </div>
-        <div className="mt-3 flex flex-wrap gap-1.5">
-          {CATEGORIES.map((c) => {
-            const active = categories.includes(c);
-            return (
-              <button
-                key={c}
-                onClick={() => toggleCategory(c)}
-                className={cn(
-                  "rounded-full border px-2.5 py-1 text-xs transition-colors",
-                  active
-                    ? "border-primary bg-primary text-primary-foreground"
-                    : "border-sidebar-border bg-sidebar hover:bg-sidebar-accent",
-                )}
-              >
-                {CATEGORY_LABEL[c]}
-              </button>
-            );
-          })}
-          {categories.length > 0 && (
+        <div className="mt-3">
+          <div className="flex flex-wrap gap-1.5">
+            {(showAllCats ? CATEGORIES : CATEGORIES.slice(0, COLLAPSED_CATEGORY_COUNT)).map((c) => {
+              const active = categories.includes(c);
+              return (
+                <button
+                  key={c}
+                  onClick={() => toggleCategory(c)}
+                  className={cn(
+                    "focus-visible:ring-ring rounded-full border px-2.5 py-1 text-xs transition-colors focus-visible:outline-none focus-visible:ring-2",
+                    active
+                      ? "border-primary bg-primary text-primary-foreground"
+                      : "border-sidebar-border bg-sidebar hover:bg-sidebar-accent",
+                  )}
+                >
+                  {CATEGORY_LABEL[c]}
+                </button>
+              );
+            })}
+          </div>
+          <div className="mt-2 flex items-center justify-between gap-2">
             <button
-              onClick={clearCategories}
-              className="text-muted-foreground hover:text-foreground px-2 text-xs underline"
+              onClick={() => setShowAllCats((v) => !v)}
+              className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1 text-xs"
             >
-              zurücksetzen
+              <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", showAllCats && "rotate-180")} />
+              {showAllCats ? "weniger" : `+${CATEGORIES.length - COLLAPSED_CATEGORY_COUNT} weitere`}
             </button>
-          )}
+            {categories.length > 0 && (
+              <button
+                onClick={clearCategories}
+                className="text-muted-foreground hover:text-foreground text-xs underline"
+              >
+                zurücksetzen ({categories.length})
+              </button>
+            )}
+          </div>
         </div>
       </div>
 
       <Tabs defaultValue="results" className="flex min-h-0 flex-1 flex-col">
         <TabsList className="mx-3 mt-3 grid grid-cols-3">
-          <TabsTrigger value="results">
-            Ergebnisse
-            <Badge variant="secondary" className="ml-2">{results.length}</Badge>
+          <TabsTrigger value="results" className="min-w-0 gap-1.5">
+            <List className="h-3.5 w-3.5 shrink-0" />
+            <span className="truncate">{results.length}</span>
           </TabsTrigger>
-          <TabsTrigger value="favorites">
-            <Heart className="mr-1 h-3.5 w-3.5" /> {favorites.length}
+          <TabsTrigger value="favorites" className="min-w-0 gap-1.5">
+            <Heart className="h-3.5 w-3.5 shrink-0" />
+            <span className="truncate">{favorites.length}</span>
           </TabsTrigger>
-          <TabsTrigger value="route">
-            <RouteIcon className="mr-1 h-3.5 w-3.5" /> {route.length}
+          <TabsTrigger value="route" className="min-w-0 gap-1.5">
+            <RouteIcon className="h-3.5 w-3.5 shrink-0" />
+            <span className="truncate">{route.length}</span>
           </TabsTrigger>
         </TabsList>
 
