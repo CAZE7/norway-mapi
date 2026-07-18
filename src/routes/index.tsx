@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ClientOnly } from "@tanstack/react-router";
 import { Suspense, lazy, useMemo, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { PLACES, searchPlaces } from "@/data/places";
 import { useAppStore } from "@/lib/store";
 import { AppSidebar } from "@/components/AppSidebar";
