@@ -309,6 +309,15 @@ function PlaceDetail() {
           </div>
         </section>
 
+        {/* Weather + aurora */}
+        <ClientOnly fallback={null}>
+          <Suspense fallback={null}>
+            <WeatherPanel lat={place.lat} lng={place.lng} />
+          </Suspense>
+        </ClientOnly>
+
+
+
         {/* Coordinates + actions */}
         <section className="grid gap-4 md:grid-cols-2">
           <div className="bg-card border-border rounded-xl border p-5">
