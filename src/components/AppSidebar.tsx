@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowDown, ArrowUp, Car, ChevronDown, Download, ExternalLink, FileCode, Footprints, Heart, Info, List, MapPin, Navigation, Route as RouteIcon, Search, Sparkles, Star, Trash2, X } from "lucide-react";
+import { ArrowDown, ArrowUp, Car, ChevronDown, Download, ExternalLink, FileCode, Footprints, Heart, Info, List, MapPin, Route as RouteIcon, Search, Sparkles, Star, Trash2, X } from "lucide-react";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
