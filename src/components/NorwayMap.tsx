@@ -219,7 +219,7 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       if (!p) return;
       pts.push([p.lat, p.lng]);
       const badge = L.divIcon({
-        html: `<div style="background:hsl(var(--primary));color:hsl(var(--primary-foreground));width:26px;height:26px;border-radius:9999px;display:grid;place-items:center;font:600 12px 'Space Grotesk',sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.35);border:2px solid white">${i + 1}</div>`,
+        html: `<div style="background:var(--primary);color:var(--primary-foreground);width:26px;height:26px;border-radius:9999px;display:grid;place-items:center;font:600 12px 'Space Grotesk',sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.35);border:2px solid white">${i + 1}</div>`,
         className: "",
         iconSize: [26, 26],
         iconAnchor: [13, 13],
@@ -228,7 +228,7 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
     });
     if (pts.length >= 2) {
       L.polyline(pts, {
-        color: "hsl(var(--primary))",
+        color: "var(--primary)",
         weight: 4,
         opacity: 0.85,
         dashArray: "8 6",
