@@ -132,6 +132,7 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
                   onSelect={() => focus(p.id)}
                   onFav={() => toggleFav(p.id)}
                   onAddRoute={() => addToRoute(p.id)}
+                  onNavigate={onNavigate}
                 />
               ))}
             </ul>
