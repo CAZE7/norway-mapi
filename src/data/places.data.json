@@ -1252,7 +1252,7 @@
       "aliases": [],
       "region": "Oslo",
       "category": "waterfall",
-      "description": "Rauschende Wasserstufe nahe Oslo, im südlichen Vestland.",
+      "description": "Rauschende Wasserstufe nahe Oslo, im westlichen Süd-Norwegen.",
       "lat": 60.12341,
       "lng": 10.60837,
       "quality": 3
@@ -1858,7 +1858,7 @@
       "aliases": [],
       "region": "Akershus",
       "category": "waterfall",
-      "description": "Rauschende Wasserstufe nahe Akershus, im südlichen Vestland.",
+      "description": "Rauschende Wasserstufe nahe Akershus, im westlichen Süd-Norwegen.",
       "lat": 60.29977,
       "lng": 10.7428,
       "quality": 2
@@ -1880,7 +1880,7 @@
       "aliases": [],
       "region": "Rogaland",
       "category": "waterfall",
-      "description": "Gischtender Fallabschnitt bei Rogaland – Foto-Stopp im südlichen Vestland.",
+      "description": "Gischtender Fallabschnitt bei Rogaland – Foto-Stopp in Süd-Norwegen.",
       "lat": 59.58716,
       "lng": 6.34063,
       "quality": 2
@@ -1935,7 +1935,7 @@
       "aliases": [],
       "region": "Agder",
       "category": "waterfall",
-      "description": "Rauschende Wasserstufe nahe Agder, in Süd-Norwegen.",
+      "description": "Rauschende Wasserstufe nahe Agder, an der Südküste.",
       "lat": 58.30318,
       "lng": 7.20823,
       "quality": 2
@@ -2001,7 +2001,7 @@
       "aliases": [],
       "region": "Rogaland",
       "category": "waterfall",
-      "description": "Gischtender Fallabschnitt bei Rogaland – Foto-Stopp im südlichen Vestland.",
+      "description": "Gischtender Fallabschnitt bei Rogaland – Foto-Stopp in Süd-Norwegen.",
       "lat": 59.54143,
       "lng": 5.5738,
       "quality": 2
@@ -2012,7 +2012,7 @@
       "aliases": [],
       "region": "Akershus",
       "category": "waterfall",
-      "description": "Rauschende Wasserstufe nahe Akershus, im südlichen Vestland.",
+      "description": "Rauschende Wasserstufe nahe Akershus, im westlichen Süd-Norwegen.",
       "lat": 60.10079,
       "lng": 10.946,
       "quality": 3
@@ -2749,7 +2749,7 @@
       "aliases": [],
       "region": "Agder",
       "category": "cafe",
-      "description": "Kleines Ausflugscafé bei Agder, in Süd-Norwegen.",
+      "description": "Kleines Ausflugscafé bei Agder, an der Südküste.",
       "lat": 58.29685,
       "lng": 6.66191,
       "quality": 2
@@ -2804,7 +2804,7 @@
       "aliases": [],
       "region": "Oslo",
       "category": "cafe",
-      "description": "Kleines Ausflugscafé bei Oslo, im südlichen Vestland.",
+      "description": "Kleines Ausflugscafé bei Oslo, in Süd-Norwegen.",
       "lat": 59.89173,
       "lng": 10.90747,
       "quality": 2
@@ -2815,7 +2815,7 @@
       "aliases": [],
       "region": "Oslo",
       "category": "cafe",
-      "description": "Kleines Ausflugscafé bei Oslo, im südlichen Vestland.",
+      "description": "Kleines Ausflugscafé bei Oslo, in Süd-Norwegen.",
       "lat": 59.85095,
       "lng": 10.88062,
       "quality": 2
@@ -2848,7 +2848,7 @@
       "aliases": [],
       "region": "Møre og Romsdal",
       "category": "cafe",
-      "description": "Kleines Ausflugscafé bei Møre og Romsdal, in Vestland/Innlandet.",
+      "description": "Kleines Ausflugscafé bei Møre og Romsdal, im westlichen Süd-Norwegen.",
       "lat": 62.73786,
       "lng": 7.16244,
       "quality": 2
@@ -2870,7 +2870,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "cafe",
-      "description": "Kleines Ausflugscafé bei Trøndelag, in Vestland/Innlandet.",
+      "description": "Kleines Ausflugscafé bei Trøndelag, im westlichen Süd-Norwegen.",
       "lat": 62.52685,
       "lng": 11.68414,
       "quality": 2
@@ -2892,7 +2892,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "cafe",
-      "description": "Kleines Ausflugscafé bei Trøndelag, in Trøndelag/Møre.",
+      "description": "Kleines Ausflugscafé bei Trøndelag, in Mittelnorwegen.",
       "lat": 63.46831,
       "lng": 10.92319,
       "quality": 2
@@ -2903,7 +2903,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "cafe",
-      "description": "Kleines Ausflugscafé bei Trøndelag, in Trøndelag/Møre.",
+      "description": "Kleines Ausflugscafé bei Trøndelag, in Mittelnorwegen.",
       "lat": 63.46988,
       "lng": 10.91809,
       "quality": 2
@@ -2991,7 +2991,7 @@
       "aliases": [],
       "region": "Vestland",
       "category": "cafe",
-      "description": "Kleines Ausflugscafé bei Vestland, in Vestland/Innlandet.",
+      "description": "Kleines Ausflugscafé bei Vestland, im westlichen Süd-Norwegen.",
       "lat": 61.09796,
       "lng": 7.47928,
       "quality": 2
@@ -3013,7 +3013,7 @@
       "aliases": [],
       "region": "Innlandet",
       "category": "cafe",
-      "description": "Kleines Ausflugscafé bei Innlandet, in Vestland/Innlandet.",
+      "description": "Kleines Ausflugscafé bei Innlandet, im westlichen Süd-Norwegen.",
       "lat": 61.34168,
       "lng": 12.03474,
       "quality": 2
@@ -3090,7 +3090,7 @@
       "aliases": [],
       "region": "Innlandet",
       "category": "cafe",
-      "description": "Kleines Ausflugscafé bei Innlandet, in Vestland/Innlandet.",
+      "description": "Kleines Ausflugscafé bei Innlandet, im westlichen Süd-Norwegen.",
       "lat": 61.5744,
       "lng": 9.85904,
       "quality": 2
@@ -3217,7 +3217,7 @@
       ],
       "region": "Agder",
       "category": "viewpoint",
-      "description": "Kurzer Umweg für den Blick über Agder, in Süd-Norwegen.",
+      "description": "Kurzer Umweg für den Blick über Agder, an der Südküste.",
       "lat": 58.15937,
       "lng": 8.04171,
       "quality": 3
@@ -3230,7 +3230,7 @@
       ],
       "region": "Agder",
       "category": "viewpoint",
-      "description": "Panorama-Halt Agder: offener Horizont in Süd-Norwegen.",
+      "description": "Panorama-Halt Agder: offener Horizont an der Südküste.",
       "lat": 58.17877,
       "lng": 8.00187,
       "quality": 3
@@ -3243,7 +3243,7 @@
       ],
       "region": "Agder",
       "category": "viewpoint",
-      "description": "Panorama-Halt Agder: offener Horizont in Süd-Norwegen.",
+      "description": "Panorama-Halt Agder: offener Horizont an der Südküste.",
       "lat": 58.0871,
       "lng": 8.00722,
       "quality": 3
@@ -3282,7 +3282,7 @@
       ],
       "region": "Agder",
       "category": "viewpoint",
-      "description": "Kurzer Umweg für den Blick über Agder, in Süd-Norwegen.",
+      "description": "Kurzer Umweg für den Blick über Agder, an der Südküste.",
       "lat": 58.12477,
       "lng": 8.13344,
       "quality": 2
@@ -3308,7 +3308,7 @@
       ],
       "region": "Vestfold",
       "category": "viewpoint",
-      "description": "Aussichtspunkt bei Vestfold – weiter Blick, im südlichen Vestland.",
+      "description": "Aussichtspunkt bei Vestfold – weiter Blick, in Süd-Norwegen.",
       "lat": 59.22532,
       "lng": 10.22548,
       "quality": 2
@@ -3321,7 +3321,7 @@
       ],
       "region": "Vestfold",
       "category": "viewpoint",
-      "description": "Kurzer Umweg für den Blick über Vestfold, im südlichen Vestland.",
+      "description": "Kurzer Umweg für den Blick über Vestfold, in Süd-Norwegen.",
       "lat": 59.14109,
       "lng": 10.21297,
       "quality": 3
@@ -3360,7 +3360,7 @@
       ],
       "region": "Vestfold",
       "category": "viewpoint",
-      "description": "Aussichtspunkt bei Vestfold, auf der Hochfläche – weiter Blick, im südlichen Vestland.",
+      "description": "Aussichtspunkt bei Vestfold, auf der Hochfläche – weiter Blick, in Süd-Norwegen.",
       "lat": 59.36081,
       "lng": 10.10019,
       "quality": 2
@@ -3386,7 +3386,7 @@
       ],
       "region": "Vestland",
       "category": "viewpoint",
-      "description": "Kurzer Umweg für den Blick über Vestland, im südlichen Vestland.",
+      "description": "Kurzer Umweg für den Blick über Vestland, im westlichen Süd-Norwegen.",
       "lat": 60.61288,
       "lng": 6.42323,
       "quality": 3
@@ -3399,7 +3399,7 @@
       ],
       "region": "Møre og Romsdal",
       "category": "viewpoint",
-      "description": "Panorama-Halt Møre og Romsdal: offener Horizont in Trøndelag/Møre.",
+      "description": "Panorama-Halt Møre og Romsdal: offener Horizont in Mittelnorwegen.",
       "lat": 63.04664,
       "lng": 7.80999,
       "quality": 2
@@ -3412,7 +3412,7 @@
       ],
       "region": "Møre og Romsdal",
       "category": "viewpoint",
-      "description": "Kurzer Umweg für den Blick über Møre og Romsdal, in Trøndelag/Møre.",
+      "description": "Kurzer Umweg für den Blick über Møre og Romsdal, in Mittelnorwegen.",
       "lat": 63.04542,
       "lng": 7.74043,
       "quality": 3
@@ -3425,7 +3425,7 @@
       ],
       "region": "Møre og Romsdal",
       "category": "viewpoint",
-      "description": "Kurzer Umweg für den Blick über Møre og Romsdal, in Trøndelag/Møre.",
+      "description": "Kurzer Umweg für den Blick über Møre og Romsdal, in Mittelnorwegen.",
       "lat": 63.11242,
       "lng": 7.7486,
       "quality": 3
@@ -3438,7 +3438,7 @@
       ],
       "region": "Rogaland",
       "category": "viewpoint",
-      "description": "Markanter Aussichtspunkt Rogaland – lohnender Halt im südlichen Vestland.",
+      "description": "Markanter Aussichtspunkt Rogaland – lohnender Halt in Süd-Norwegen.",
       "lat": 59.04683,
       "lng": 6.65212,
       "quality": 3
@@ -3451,7 +3451,7 @@
       ],
       "region": "Trøndelag",
       "category": "viewpoint",
-      "description": "Panorama-Halt Trøndelag: offener Horizont in Vestland/Innlandet.",
+      "description": "Panorama-Halt Trøndelag: offener Horizont im westlichen Süd-Norwegen.",
       "lat": 62.54883,
       "lng": 11.50843,
       "quality": 2
@@ -3464,7 +3464,7 @@
       ],
       "region": "Trøndelag",
       "category": "viewpoint",
-      "description": "Panorama-Halt Trøndelag: offener Horizont in Vestland/Innlandet.",
+      "description": "Panorama-Halt Trøndelag: offener Horizont im westlichen Süd-Norwegen.",
       "lat": 62.64166,
       "lng": 11.85397,
       "quality": 2
@@ -3490,7 +3490,7 @@
       ],
       "region": "Trøndelag",
       "category": "viewpoint",
-      "description": "Aussichtspunkt bei Trøndelag – weiter Blick, in Vestland/Innlandet.",
+      "description": "Aussichtspunkt bei Trøndelag – weiter Blick, im westlichen Süd-Norwegen.",
       "lat": 62.5759,
       "lng": 11.39533,
       "quality": 3
@@ -3516,7 +3516,7 @@
       ],
       "region": "Trøndelag",
       "category": "viewpoint",
-      "description": "Aussichtspunkt bei Trøndelag – weiter Blick, in Vestland/Innlandet.",
+      "description": "Aussichtspunkt bei Trøndelag – weiter Blick, im westlichen Süd-Norwegen.",
       "lat": 62.54603,
       "lng": 11.48168,
       "quality": 2
@@ -3555,7 +3555,7 @@
       ],
       "region": "Akershus",
       "category": "viewpoint",
-      "description": "Panorama-Halt Akershus: offener Horizont im südlichen Vestland.",
+      "description": "Panorama-Halt Akershus: offener Horizont in Süd-Norwegen.",
       "lat": 59.89873,
       "lng": 11.10474,
       "quality": 3
@@ -3594,7 +3594,7 @@
       ],
       "region": "Vestland",
       "category": "viewpoint",
-      "description": "Aussichtspunkt bei Vestland – weiter Blick, in Vestland/Innlandet.",
+      "description": "Aussichtspunkt bei Vestland – weiter Blick, im westlichen Süd-Norwegen.",
       "lat": 61.93617,
       "lng": 7.25946,
       "quality": 3
@@ -3633,7 +3633,7 @@
       ],
       "region": "Østfold",
       "category": "viewpoint",
-      "description": "Kurzer Umweg für den Blick über Østfold, im südlichen Vestland.",
+      "description": "Kurzer Umweg für den Blick über Østfold, in Süd-Norwegen.",
       "lat": 59.64226,
       "lng": 11.18466,
       "quality": 2
@@ -3646,7 +3646,7 @@
       ],
       "region": "Innlandet",
       "category": "viewpoint",
-      "description": "Panorama-Halt Innlandet: offener Horizont in Vestland/Innlandet.",
+      "description": "Panorama-Halt Innlandet: offener Horizont im westlichen Süd-Norwegen.",
       "lat": 61.38074,
       "lng": 10.02812,
       "quality": 2
@@ -3659,7 +3659,7 @@
       ],
       "region": "Akershus",
       "category": "viewpoint",
-      "description": "Markanter Aussichtspunkt Akershus – lohnender Halt im südlichen Vestland.",
+      "description": "Markanter Aussichtspunkt Akershus – lohnender Halt im westlichen Süd-Norwegen.",
       "lat": 60.19022,
       "lng": 11.07158,
       "quality": 3
@@ -3672,7 +3672,7 @@
       ],
       "region": "Akershus",
       "category": "viewpoint",
-      "description": "Panorama-Halt Akershus: offener Horizont im südlichen Vestland.",
+      "description": "Panorama-Halt Akershus: offener Horizont im westlichen Süd-Norwegen.",
       "lat": 60.17569,
       "lng": 11.10158,
       "quality": 3
@@ -3720,7 +3720,7 @@
       "aliases": [],
       "region": "Møre og Romsdal",
       "category": "beach",
-      "description": "Strand bei Møre og Romsdal – offener Blick in Vestland/Innlandet.",
+      "description": "Strand bei Møre og Romsdal – offener Blick im westlichen Süd-Norwegen.",
       "lat": 62.40211,
       "lng": 5.84963,
       "quality": 3
@@ -3746,7 +3746,7 @@
       ],
       "region": "Oslo",
       "category": "beach",
-      "description": "Feiner Sand und ruhige Bucht bei Oslo, im südlichen Vestland.",
+      "description": "Feiner Sand und ruhige Bucht bei Oslo, in Süd-Norwegen.",
       "lat": 59.91768,
       "lng": 10.8821,
       "quality": 3
@@ -3902,7 +3902,7 @@
       ],
       "region": "Agder",
       "category": "beach",
-      "description": "Feiner Sand und ruhige Bucht bei Agder, in Süd-Norwegen.",
+      "description": "Feiner Sand und ruhige Bucht bei Agder, an der Südküste.",
       "lat": 58.07837,
       "lng": 7.78799,
       "quality": 2
@@ -4058,7 +4058,7 @@
       ],
       "region": "Vestfold",
       "category": "beach",
-      "description": "Strand bei Vestfold, am Strand – offener Blick im südlichen Vestland.",
+      "description": "Strand bei Vestfold, am Strand – offener Blick in Süd-Norwegen.",
       "lat": 59.37714,
       "lng": 10.46742,
       "quality": 3
@@ -4071,7 +4071,7 @@
       ],
       "region": "Vestfold",
       "category": "beach",
-      "description": "Strand bei Vestfold – offener Blick im südlichen Vestland.",
+      "description": "Strand bei Vestfold – offener Blick in Süd-Norwegen.",
       "lat": 59.3863,
       "lng": 10.52087,
       "quality": 3
@@ -4104,7 +4104,7 @@
       "aliases": [],
       "region": "Møre og Romsdal",
       "category": "shop_market",
-      "description": "Fisch-, Trödel- oder Wochenmarkt in Møre og Romsdal, in Vestland/Innlandet.",
+      "description": "Fisch-, Trödel- oder Wochenmarkt in Møre og Romsdal, im westlichen Süd-Norwegen.",
       "lat": 62.47339,
       "lng": 6.15671,
       "quality": 2
@@ -4137,7 +4137,7 @@
       "aliases": [],
       "region": "Akershus",
       "category": "shop_market",
-      "description": "Fisch-, Trödel- oder Wochenmarkt in Akershus, im südlichen Vestland.",
+      "description": "Fisch-, Trödel- oder Wochenmarkt in Akershus, in Süd-Norwegen.",
       "lat": 59.94207,
       "lng": 10.50062,
       "quality": 2
@@ -4148,7 +4148,7 @@
       "aliases": [],
       "region": "Østfold",
       "category": "shop_market",
-      "description": "Fisch-, Trödel- oder Wochenmarkt in Østfold, im südlichen Vestland.",
+      "description": "Fisch-, Trödel- oder Wochenmarkt in Østfold, in Süd-Norwegen.",
       "lat": 59.21354,
       "lng": 10.94053,
       "quality": 2
@@ -4192,7 +4192,7 @@
       "aliases": [],
       "region": "Agder",
       "category": "shop_market",
-      "description": "Fisch-, Trödel- oder Wochenmarkt in Agder, in Süd-Norwegen.",
+      "description": "Fisch-, Trödel- oder Wochenmarkt in Agder, an der Südküste.",
       "lat": 58.14689,
       "lng": 7.99415,
       "quality": 2
@@ -4247,7 +4247,7 @@
       "aliases": [],
       "region": "Østfold",
       "category": "shop_market",
-      "description": "Fisch-, Trödel- oder Wochenmarkt in Østfold, im südlichen Vestland.",
+      "description": "Fisch-, Trödel- oder Wochenmarkt in Østfold, in Süd-Norwegen.",
       "lat": 59.21356,
       "lng": 10.9408,
       "quality": 2
@@ -4269,7 +4269,7 @@
       "aliases": [],
       "region": "Vestland",
       "category": "shop_market",
-      "description": "Fisch-, Trödel- oder Wochenmarkt in Vestland, im südlichen Vestland.",
+      "description": "Fisch-, Trödel- oder Wochenmarkt in Vestland, im westlichen Süd-Norwegen.",
       "lat": 60.86236,
       "lng": 7.11343,
       "quality": 2
@@ -4291,7 +4291,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "shop_market",
-      "description": "Fisch-, Trödel- oder Wochenmarkt in Trøndelag, in Trøndelag/Møre.",
+      "description": "Fisch-, Trödel- oder Wochenmarkt in Trøndelag, in Mittelnorwegen.",
       "lat": 63.41117,
       "lng": 10.79218,
       "quality": 2
@@ -4383,7 +4383,7 @@
       ],
       "region": "Agder",
       "category": "culture",
-      "description": "Regionales Kulturziel bei Agder, in Süd-Norwegen.",
+      "description": "Regionales Kulturziel bei Agder, an der Südküste.",
       "lat": 58.29171,
       "lng": 8.28469,
       "quality": 2
@@ -4409,7 +4409,7 @@
       ],
       "region": "Trøndelag",
       "category": "culture",
-      "description": "Regionales Kulturziel bei Trøndelag, in Trøndelag/Møre.",
+      "description": "Regionales Kulturziel bei Trøndelag, in Mittelnorwegen.",
       "lat": 63.5437,
       "lng": 10.81325,
       "quality": 3
@@ -4433,7 +4433,7 @@
       ],
       "region": "Vestfold",
       "category": "culture",
-      "description": "Regionales Kulturziel bei Vestfold, im südlichen Vestland.",
+      "description": "Regionales Kulturziel bei Vestfold, in Süd-Norwegen.",
       "lat": 59.3834,
       "lng": 10.47133,
       "quality": 3
@@ -4446,7 +4446,7 @@
       ],
       "region": "Buskerud",
       "category": "culture",
-      "description": "Regionales Kulturziel bei Buskerud, im südlichen Vestland.",
+      "description": "Regionales Kulturziel bei Buskerud, im westlichen Süd-Norwegen.",
       "lat": 60.63391,
       "lng": 9.00807,
       "quality": 3
@@ -4472,7 +4472,7 @@
       ],
       "region": "Trøndelag",
       "category": "culture",
-      "description": "Regionales Kulturziel bei Trøndelag, in Trøndelag/Møre.",
+      "description": "Regionales Kulturziel bei Trøndelag, in Mittelnorwegen.",
       "lat": 63.58418,
       "lng": 10.62202,
       "quality": 3
@@ -4496,7 +4496,7 @@
       ],
       "region": "Rogaland",
       "category": "culture",
-      "description": "Regionales Kulturziel bei Rogaland, in Süd-Norwegen.",
+      "description": "Regionales Kulturziel bei Rogaland, an der Südküste.",
       "lat": 58.43961,
       "lng": 6.01437,
       "quality": 3
@@ -4533,7 +4533,7 @@
       ],
       "region": "Innlandet",
       "category": "culture",
-      "description": "Regionales Kulturziel bei Innlandet, in Vestland/Innlandet.",
+      "description": "Regionales Kulturziel bei Innlandet, im westlichen Süd-Norwegen.",
       "lat": 61.81142,
       "lng": 9.60531,
       "quality": 2
@@ -4614,7 +4614,7 @@
       "aliases": [],
       "region": "Vestland",
       "category": "culture",
-      "description": "Regionales Kulturziel bei Vestland, im südlichen Vestland.",
+      "description": "Regionales Kulturziel bei Vestland, im westlichen Süd-Norwegen.",
       "lat": 60.25241,
       "lng": 5.27032,
       "quality": 2
@@ -4649,7 +4649,7 @@
       ],
       "region": "Akershus",
       "category": "picnic",
-      "description": "Grillstopp mit Blick nahe Akershus, im südlichen Vestland.",
+      "description": "Grillstopp mit Blick nahe Akershus, im westlichen Süd-Norwegen.",
       "lat": 60.31468,
       "lng": 11.26415,
       "quality": 3
@@ -4662,7 +4662,7 @@
       ],
       "region": "Agder",
       "category": "picnic",
-      "description": "Grillstopp mit Blick nahe Agder, in Süd-Norwegen.",
+      "description": "Grillstopp mit Blick nahe Agder, an der Südküste.",
       "lat": 58.07598,
       "lng": 7.84704,
       "quality": 2
@@ -4740,7 +4740,7 @@
       ],
       "region": "Vestland",
       "category": "picnic",
-      "description": "Grillstopp mit Blick nahe Vestland, in Vestland/Innlandet.",
+      "description": "Grillstopp mit Blick nahe Vestland, im westlichen Süd-Norwegen.",
       "lat": 61.29474,
       "lng": 7.25824,
       "quality": 3
@@ -4753,7 +4753,7 @@
       ],
       "region": "Trøndelag",
       "category": "picnic",
-      "description": "Grillstopp mit Blick nahe Trøndelag, in Trøndelag/Møre.",
+      "description": "Grillstopp mit Blick nahe Trøndelag, in Mittelnorwegen.",
       "lat": 63.19946,
       "lng": 10.50572,
       "quality": 2
@@ -4851,7 +4851,7 @@
       "aliases": [],
       "region": "Møre og Romsdal",
       "category": "picnic",
-      "description": "Grillstopp mit Blick nahe Møre og Romsdal, in Trøndelag/Møre.",
+      "description": "Grillstopp mit Blick nahe Møre og Romsdal, in Mittelnorwegen.",
       "lat": 63.05288,
       "lng": 7.63227,
       "quality": 3
@@ -4873,7 +4873,7 @@
       "aliases": [],
       "region": "Rogaland",
       "category": "picnic",
-      "description": "Grillstopp mit Blick nahe Rogaland, im südlichen Vestland.",
+      "description": "Grillstopp mit Blick nahe Rogaland, in Süd-Norwegen.",
       "lat": 59.70753,
       "lng": 6.53848,
       "quality": 2
@@ -4884,7 +4884,7 @@
       "aliases": [],
       "region": "Agder",
       "category": "picnic",
-      "description": "Grillstopp mit Blick nahe Agder, in Süd-Norwegen.",
+      "description": "Grillstopp mit Blick nahe Agder, an der Südküste.",
       "lat": 58.06424,
       "lng": 7.10573,
       "quality": 2
@@ -5467,7 +5467,7 @@
       "aliases": [],
       "region": "Møre og Romsdal",
       "category": "waterfall",
-      "description": "Gischtender Fallabschnitt bei Møre og Romsdal – Foto-Stopp in Trøndelag/Møre.",
+      "description": "Gischtender Fallabschnitt bei Møre og Romsdal – Foto-Stopp in Mittelnorwegen.",
       "lat": 63.31746,
       "lng": 8.78978,
       "quality": 2
@@ -5502,7 +5502,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "waterfall",
-      "description": "Rauschende Wasserstufe nahe Trøndelag, in Vestland/Innlandet.",
+      "description": "Rauschende Wasserstufe nahe Trøndelag, im westlichen Süd-Norwegen.",
       "lat": 62.894,
       "lng": 9.96422,
       "quality": 2
@@ -5673,7 +5673,7 @@
       "aliases": [],
       "region": "Buskerud",
       "category": "lake",
-      "description": "Ruhiger See bei Buskerud, im südlichen Vestland.",
+      "description": "Ruhiger See bei Buskerud, im westlichen Süd-Norwegen.",
       "lat": 60.59207,
       "lng": 9.23802,
       "quality": 2
@@ -5708,7 +5708,7 @@
       "aliases": [],
       "region": "Innlandet",
       "category": "lake",
-      "description": "Stiller Wasserspiegel Innlandet, im südlichen Vestland.",
+      "description": "Stiller Wasserspiegel Innlandet, im westlichen Süd-Norwegen.",
       "lat": 60.80996,
       "lng": 9.40076,
       "quality": 2
@@ -5719,7 +5719,7 @@
       "aliases": [],
       "region": "Innlandet",
       "category": "lake",
-      "description": "Stiller Wasserspiegel Innlandet, in Vestland/Innlandet.",
+      "description": "Stiller Wasserspiegel Innlandet, im westlichen Süd-Norwegen.",
       "lat": 61.62035,
       "lng": 10.04119,
       "quality": 2
@@ -5730,7 +5730,7 @@
       "aliases": [],
       "region": "Innlandet",
       "category": "lake",
-      "description": "Stiller Wasserspiegel Innlandet, in Vestland/Innlandet.",
+      "description": "Stiller Wasserspiegel Innlandet, im westlichen Süd-Norwegen.",
       "lat": 61.72645,
       "lng": 10.17421,
       "quality": 3
@@ -5776,7 +5776,7 @@
       "aliases": [],
       "region": "Vestland",
       "category": "lake",
-      "description": "Ruhiger See bei Vestland, am Bergsee, in Vestland/Innlandet.",
+      "description": "Ruhiger See bei Vestland, am Bergsee, im westlichen Süd-Norwegen.",
       "lat": 61.17937,
       "lng": 7.85515,
       "quality": 2
@@ -5798,7 +5798,7 @@
       "aliases": [],
       "region": "Innlandet",
       "category": "lake",
-      "description": "Ruhiger See bei Innlandet, im südlichen Vestland.",
+      "description": "Ruhiger See bei Innlandet, im westlichen Süd-Norwegen.",
       "lat": 60.74002,
       "lng": 9.38989,
       "quality": 2
@@ -5844,7 +5844,7 @@
       "aliases": [],
       "region": "Buskerud",
       "category": "lake",
-      "description": "Stiller Wasserspiegel Buskerud, im südlichen Vestland.",
+      "description": "Stiller Wasserspiegel Buskerud, im westlichen Süd-Norwegen.",
       "lat": 60.77885,
       "lng": 9.04634,
       "quality": 2
@@ -5967,7 +5967,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "lake",
-      "description": "Stiller Wasserspiegel Trøndelag, in Trøndelag/Møre.",
+      "description": "Stiller Wasserspiegel Trøndelag, in Mittelnorwegen.",
       "lat": 63.16501,
       "lng": 8.93475,
       "quality": 2
@@ -6011,7 +6011,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "lake",
-      "description": "Stiller Wasserspiegel Trøndelag, in Trøndelag/Møre.",
+      "description": "Stiller Wasserspiegel Trøndelag, in Mittelnorwegen.",
       "lat": 63.26112,
       "lng": 9.07446,
       "quality": 2
@@ -6046,7 +6046,7 @@
       ],
       "region": "Vestland",
       "category": "lake",
-      "description": "Ruhiger See bei Vestland, am Bergsee, in Vestland/Innlandet.",
+      "description": "Ruhiger See bei Vestland, am Bergsee, im westlichen Süd-Norwegen.",
       "lat": 61.15239,
       "lng": 7.05719,
       "quality": 2
@@ -6068,7 +6068,7 @@
       "aliases": [],
       "region": "Innlandet",
       "category": "lake",
-      "description": "Ruhiger See bei Innlandet, im südlichen Vestland.",
+      "description": "Ruhiger See bei Innlandet, im westlichen Süd-Norwegen.",
       "lat": 60.98718,
       "lng": 9.35242,
       "quality": 2
@@ -6079,7 +6079,7 @@
       "aliases": [],
       "region": "Buskerud",
       "category": "lake",
-      "description": "Ruhiger See bei Buskerud, im südlichen Vestland.",
+      "description": "Ruhiger See bei Buskerud, im westlichen Süd-Norwegen.",
       "lat": 60.51092,
       "lng": 8.97428,
       "quality": 2
@@ -6134,7 +6134,7 @@
       "aliases": [],
       "region": "Innlandet",
       "category": "lake",
-      "description": "Ruhiger See bei Innlandet, am Bergsee, in Vestland/Innlandet.",
+      "description": "Ruhiger See bei Innlandet, am Bergsee, im westlichen Süd-Norwegen.",
       "lat": 61.56271,
       "lng": 7.94665,
       "quality": 2
@@ -6167,7 +6167,7 @@
       "aliases": [],
       "region": "Innlandet",
       "category": "lake",
-      "description": "Ruhiger See bei Innlandet, am Bergsee, in Vestland/Innlandet.",
+      "description": "Ruhiger See bei Innlandet, am Bergsee, im westlichen Süd-Norwegen.",
       "lat": 61.79297,
       "lng": 7.65828,
       "quality": 2
@@ -6252,7 +6252,7 @@
       "aliases": [],
       "region": "Møre og Romsdal",
       "category": "viewpoint",
-      "description": "Aussichtspunkt bei Møre og Romsdal – weiter Blick, in Trøndelag/Møre.",
+      "description": "Aussichtspunkt bei Møre og Romsdal – weiter Blick, in Mittelnorwegen.",
       "lat": 63.00235,
       "lng": 7.28089,
       "quality": 2
@@ -6363,7 +6363,7 @@
       ],
       "region": "Vestland",
       "category": "viewpoint",
-      "description": "Aussichtspunkt bei Vestland – weiter Blick, im südlichen Vestland.",
+      "description": "Aussichtspunkt bei Vestland – weiter Blick, im westlichen Süd-Norwegen.",
       "lat": 60.5893,
       "lng": 5.83474,
       "quality": 2
@@ -6389,7 +6389,7 @@
       ],
       "region": "Innlandet",
       "category": "viewpoint",
-      "description": "Kurzer Umweg für den Blick über Innlandet, im südlichen Vestland.",
+      "description": "Kurzer Umweg für den Blick über Innlandet, im westlichen Süd-Norwegen.",
       "lat": 60.56389,
       "lng": 11.01773,
       "quality": 2
@@ -6413,7 +6413,7 @@
       "aliases": [],
       "region": "Møre og Romsdal",
       "category": "viewpoint",
-      "description": "Panorama-Halt Møre og Romsdal: offener Horizont in Trøndelag/Møre.",
+      "description": "Panorama-Halt Møre og Romsdal: offener Horizont in Mittelnorwegen.",
       "lat": 63.06384,
       "lng": 7.66555,
       "quality": 2
@@ -6498,7 +6498,7 @@
       ],
       "region": "Innlandet",
       "category": "viewpoint",
-      "description": "Aussichtspunkt bei Innlandet – weiter Blick, in Vestland/Innlandet.",
+      "description": "Aussichtspunkt bei Innlandet – weiter Blick, im westlichen Süd-Norwegen.",
       "lat": 61.03585,
       "lng": 11.22852,
       "quality": 2
@@ -6509,7 +6509,7 @@
       "aliases": [],
       "region": "Innlandet",
       "category": "viewpoint",
-      "description": "Aussichtspunkt bei Innlandet – weiter Blick, in Vestland/Innlandet.",
+      "description": "Aussichtspunkt bei Innlandet – weiter Blick, im westlichen Süd-Norwegen.",
       "lat": 61.67508,
       "lng": 11.31797,
       "quality": 2
@@ -6520,7 +6520,7 @@
       "aliases": [],
       "region": "Innlandet",
       "category": "viewpoint",
-      "description": "Panorama-Halt Innlandet: offener Horizont in Vestland/Innlandet.",
+      "description": "Panorama-Halt Innlandet: offener Horizont im westlichen Süd-Norwegen.",
       "lat": 61.77844,
       "lng": 12.0353,
       "quality": 2
@@ -6592,7 +6592,7 @@
       "aliases": [],
       "region": "Innlandet",
       "category": "beach",
-      "description": "Strand bei Innlandet, am Sandstrand – offener Blick in Vestland/Innlandet.",
+      "description": "Strand bei Innlandet, am Sandstrand – offener Blick im westlichen Süd-Norwegen.",
       "lat": 61.10789,
       "lng": 8.68734,
       "quality": 2
@@ -6614,7 +6614,7 @@
       "aliases": [],
       "region": "Innlandet",
       "category": "beach",
-      "description": "Feiner Sand und ruhige Bucht bei Innlandet, im südlichen Vestland.",
+      "description": "Feiner Sand und ruhige Bucht bei Innlandet, im westlichen Süd-Norwegen.",
       "lat": 60.93782,
       "lng": 10.68084,
       "quality": 2
@@ -6625,7 +6625,7 @@
       "aliases": [],
       "region": "Innlandet",
       "category": "beach",
-      "description": "Strand bei Innlandet – offener Blick in Vestland/Innlandet.",
+      "description": "Strand bei Innlandet – offener Blick im westlichen Süd-Norwegen.",
       "lat": 61.22225,
       "lng": 10.62826,
       "quality": 2
@@ -6658,7 +6658,7 @@
       "aliases": [],
       "region": "Innlandet",
       "category": "beach",
-      "description": "Strand bei Innlandet, am Strand – offener Blick in Vestland/Innlandet.",
+      "description": "Strand bei Innlandet, am Strand – offener Blick im westlichen Süd-Norwegen.",
       "lat": 61.57126,
       "lng": 9.86031,
       "quality": 2
@@ -6767,7 +6767,7 @@
       "aliases": [],
       "region": "Møre og Romsdal",
       "category": "beach",
-      "description": "Feiner Sand und ruhige Bucht bei Møre og Romsdal, in Trøndelag/Møre.",
+      "description": "Feiner Sand und ruhige Bucht bei Møre og Romsdal, in Mittelnorwegen.",
       "lat": 63.28862,
       "lng": 8.14013,
       "quality": 2
@@ -6778,7 +6778,7 @@
       "aliases": [],
       "region": "Møre og Romsdal",
       "category": "beach",
-      "description": "Strand bei Møre og Romsdal, am Sandstrand – offener Blick in Vestland/Innlandet.",
+      "description": "Strand bei Møre og Romsdal, am Sandstrand – offener Blick im westlichen Süd-Norwegen.",
       "lat": 62.34394,
       "lng": 5.82617,
       "quality": 2
@@ -7086,7 +7086,7 @@
       "aliases": [],
       "region": "Innlandet",
       "category": "geology",
-      "description": "Sichtbare Erdgeschichte am Rand von Innlandet, in Vestland/Innlandet.",
+      "description": "Sichtbare Erdgeschichte am Rand von Innlandet, im westlichen Süd-Norwegen.",
       "lat": 61.87794,
       "lng": 10.85054,
       "quality": 2
@@ -7130,7 +7130,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "geology",
-      "description": "Geologische Formation bei Trøndelag, in Vestland/Innlandet.",
+      "description": "Geologische Formation bei Trøndelag, im westlichen Süd-Norwegen.",
       "lat": 62.68988,
       "lng": 9.13709,
       "quality": 2
@@ -7163,7 +7163,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "geology",
-      "description": "Geologische Formation bei Trøndelag, in Vestland/Innlandet.",
+      "description": "Geologische Formation bei Trøndelag, im westlichen Süd-Norwegen.",
       "lat": 62.7253,
       "lng": 9.50928,
       "quality": 2
@@ -7187,7 +7187,7 @@
       "aliases": [],
       "region": "Møre og Romsdal",
       "category": "geology",
-      "description": "Sichtbare Erdgeschichte am Rand von Møre og Romsdal, in Trøndelag/Møre.",
+      "description": "Sichtbare Erdgeschichte am Rand von Møre og Romsdal, in Mittelnorwegen.",
       "lat": 63.07941,
       "lng": 7.64604,
       "quality": 2
@@ -7198,7 +7198,7 @@
       "aliases": [],
       "region": "Møre og Romsdal",
       "category": "geology",
-      "description": "Geologische Formation bei Møre og Romsdal, in Trøndelag/Møre.",
+      "description": "Geologische Formation bei Møre og Romsdal, in Mittelnorwegen.",
       "lat": 63.37395,
       "lng": 8.53573,
       "quality": 2
@@ -7220,7 +7220,7 @@
       "aliases": [],
       "region": "Vestland",
       "category": "geology",
-      "description": "Sichtbare Erdgeschichte am Rand von Vestland, in Vestland/Innlandet.",
+      "description": "Sichtbare Erdgeschichte am Rand von Vestland, im westlichen Süd-Norwegen.",
       "lat": 61.30413,
       "lng": 7.25478,
       "quality": 2
@@ -7231,7 +7231,7 @@
       "aliases": [],
       "region": "Møre og Romsdal",
       "category": "geology",
-      "description": "Sichtbare Erdgeschichte am Rand von Møre og Romsdal, in Trøndelag/Møre.",
+      "description": "Sichtbare Erdgeschichte am Rand von Møre og Romsdal, in Mittelnorwegen.",
       "lat": 63.35944,
       "lng": 8.55027,
       "quality": 2
@@ -7270,7 +7270,7 @@
       ],
       "region": "Møre og Romsdal",
       "category": "mountain_hike",
-      "description": "Wanderziel bei Møre og Romsdal, in Vestland/Innlandet.",
+      "description": "Wanderziel bei Møre og Romsdal, im westlichen Süd-Norwegen.",
       "lat": 62.35937,
       "lng": 9.01888,
       "quality": 3
@@ -7478,7 +7478,7 @@
       ],
       "region": "Innlandet",
       "category": "mountain_hike",
-      "description": "Beliebter Aufstieg bei Innlandet, im südlichen Vestland.",
+      "description": "Beliebter Aufstieg bei Innlandet, im westlichen Süd-Norwegen.",
       "lat": 60.96051,
       "lng": 12.0201,
       "quality": 3
@@ -7556,7 +7556,7 @@
       ],
       "region": "Vestland",
       "category": "mountain_hike",
-      "description": "Wanderziel bei Vestland, auf der Hochfläche, in Vestland/Innlandet.",
+      "description": "Wanderziel bei Vestland, auf der Hochfläche, im westlichen Süd-Norwegen.",
       "lat": 61.4916,
       "lng": 7.50671,
       "quality": 3
@@ -7569,7 +7569,7 @@
       ],
       "region": "Vestland",
       "category": "mountain_hike",
-      "description": "Wanderziel bei Vestland, in Vestland/Innlandet.",
+      "description": "Wanderziel bei Vestland, im westlichen Süd-Norwegen.",
       "lat": 61.70274,
       "lng": 7.52436,
       "quality": 3
@@ -7672,7 +7672,7 @@
       "aliases": [],
       "region": "Østfold",
       "category": "mountain_hike",
-      "description": "Wanderziel bei Østfold, im südlichen Vestland.",
+      "description": "Wanderziel bei Østfold, in Süd-Norwegen.",
       "lat": 59.58824,
       "lng": 11.10955,
       "quality": 3
@@ -7694,7 +7694,7 @@
       "aliases": [],
       "region": "Telemark",
       "category": "mountain_hike",
-      "description": "Beliebter Aufstieg bei Telemark, im südlichen Vestland.",
+      "description": "Beliebter Aufstieg bei Telemark, im westlichen Süd-Norwegen.",
       "lat": 60.01462,
       "lng": 7.48755,
       "quality": 3
@@ -7727,7 +7727,7 @@
       "aliases": [],
       "region": "Østfold",
       "category": "mountain_hike",
-      "description": "Wanderziel bei Østfold, im südlichen Vestland.",
+      "description": "Wanderziel bei Østfold, in Süd-Norwegen.",
       "lat": 59.44232,
       "lng": 11.47719,
       "quality": 3
@@ -7760,7 +7760,7 @@
       "aliases": [],
       "region": "Telemark",
       "category": "mountain_hike",
-      "description": "Beliebter Aufstieg bei Telemark, im südlichen Vestland.",
+      "description": "Beliebter Aufstieg bei Telemark, in Süd-Norwegen.",
       "lat": 59.12086,
       "lng": 8.83143,
       "quality": 3
@@ -7771,7 +7771,7 @@
       "aliases": [],
       "region": "Telemark",
       "category": "mountain_hike",
-      "description": "Wanderziel bei Telemark, im südlichen Vestland.",
+      "description": "Wanderziel bei Telemark, in Süd-Norwegen.",
       "lat": 59.12852,
       "lng": 8.82148,
       "quality": 3
@@ -7826,7 +7826,7 @@
       "aliases": [],
       "region": "Østfold",
       "category": "mountain_hike",
-      "description": "Beliebter Aufstieg bei Østfold, im südlichen Vestland.",
+      "description": "Beliebter Aufstieg bei Østfold, in Süd-Norwegen.",
       "lat": 59.57789,
       "lng": 11.0059,
       "quality": 3
@@ -7870,7 +7870,7 @@
       "aliases": [],
       "region": "Akershus",
       "category": "mountain_hike",
-      "description": "Wanderziel bei Akershus, auf der Hochfläche, im südlichen Vestland.",
+      "description": "Wanderziel bei Akershus, auf der Hochfläche, in Süd-Norwegen.",
       "lat": 59.71093,
       "lng": 10.51637,
       "quality": 3
@@ -7953,7 +7953,7 @@
       ],
       "region": "Agder",
       "category": "mountain_hike",
-      "description": "Wanderziel bei Agder, auf der Hochfläche, in Süd-Norwegen.",
+      "description": "Wanderziel bei Agder, auf der Hochfläche, an der Südküste.",
       "lat": 58.34125,
       "lng": 8.67703,
       "quality": 3
@@ -7979,7 +7979,7 @@
       ],
       "region": "Agder",
       "category": "lighthouse",
-      "description": "Weite Meersicht am Leuchtturm von Agder, in Süd-Norwegen.",
+      "description": "Weite Meersicht am Leuchtturm von Agder, an der Südküste.",
       "lat": 58.10929,
       "lng": 6.56691,
       "quality": 3
@@ -7992,7 +7992,7 @@
       ],
       "region": "Vestfold",
       "category": "lighthouse",
-      "description": "Leuchtturm an der Küste bei Vestfold, am Leuchtturm, im südlichen Vestland.",
+      "description": "Leuchtturm an der Küste bei Vestfold, am Leuchtturm, in Süd-Norwegen.",
       "lat": 59.02681,
       "lng": 10.52464,
       "quality": 3
@@ -8057,7 +8057,7 @@
       ],
       "region": "Rogaland",
       "category": "lighthouse",
-      "description": "Leuchtturm an der Küste bei Rogaland, am Leuchtturm, in Süd-Norwegen.",
+      "description": "Leuchtturm an der Küste bei Rogaland, am Leuchtturm, an der Südküste.",
       "lat": 58.43081,
       "lng": 5.86762,
       "quality": 3
@@ -8070,7 +8070,7 @@
       ],
       "region": "Vestland",
       "category": "lighthouse",
-      "description": "Weite Meersicht am Leuchtturm von Vestland, im südlichen Vestland.",
+      "description": "Weite Meersicht am Leuchtturm von Vestland, im westlichen Süd-Norwegen.",
       "lat": 60.75209,
       "lng": 4.71069,
       "quality": 3
@@ -8161,7 +8161,7 @@
       ],
       "region": "Rogaland",
       "category": "lighthouse",
-      "description": "Weite Meersicht am Leuchtturm von Rogaland, im südlichen Vestland.",
+      "description": "Weite Meersicht am Leuchtturm von Rogaland, in Süd-Norwegen.",
       "lat": 59.30686,
       "lng": 4.87123,
       "quality": 3
@@ -8174,7 +8174,7 @@
       ],
       "region": "Møre og Romsdal",
       "category": "lighthouse",
-      "description": "Weite Meersicht am Leuchtturm von Møre og Romsdal, in Vestland/Innlandet.",
+      "description": "Weite Meersicht am Leuchtturm von Møre og Romsdal, im westlichen Süd-Norwegen.",
       "lat": 62.6851,
       "lng": 6.16513,
       "quality": 3
@@ -8200,7 +8200,7 @@
       ],
       "region": "Møre og Romsdal",
       "category": "lighthouse",
-      "description": "Leuchtturm an der Küste bei Møre og Romsdal, in Vestland/Innlandet.",
+      "description": "Leuchtturm an der Küste bei Møre og Romsdal, im westlichen Süd-Norwegen.",
       "lat": 62.63625,
       "lng": 6.1761,
       "quality": 3
@@ -8213,7 +8213,7 @@
       ],
       "region": "Møre og Romsdal",
       "category": "lighthouse",
-      "description": "Leuchtturm an der Küste bei Møre og Romsdal, am Leuchtturm, in Trøndelag/Møre.",
+      "description": "Leuchtturm an der Küste bei Møre og Romsdal, am Leuchtturm, in Mittelnorwegen.",
       "lat": 63.47215,
       "lng": 7.75718,
       "quality": 3
@@ -8239,7 +8239,7 @@
       ],
       "region": "Vestfold",
       "category": "lighthouse",
-      "description": "Weite Meersicht am Leuchtturm von Vestfold, im südlichen Vestland.",
+      "description": "Weite Meersicht am Leuchtturm von Vestfold, in Süd-Norwegen.",
       "lat": 59.17534,
       "lng": 10.5992,
       "quality": 3
@@ -8311,7 +8311,7 @@
       "aliases": [],
       "region": "Møre og Romsdal",
       "category": "lighthouse",
-      "description": "Leuchtturm an der Küste bei Møre og Romsdal, am Leuchtturm, in Vestland/Innlandet.",
+      "description": "Leuchtturm an der Küste bei Møre og Romsdal, am Leuchtturm, im westlichen Süd-Norwegen.",
       "lat": 62.47454,
       "lng": 6.15012,
       "quality": 3
@@ -8322,7 +8322,7 @@
       "aliases": [],
       "region": "Østfold",
       "category": "lighthouse",
-      "description": "Leuchtturm an der Küste bei Østfold, am Leuchtturm, im südlichen Vestland.",
+      "description": "Leuchtturm an der Küste bei Østfold, am Leuchtturm, in Süd-Norwegen.",
       "lat": 59.01606,
       "lng": 11.02409,
       "quality": 3
@@ -8344,7 +8344,7 @@
       "aliases": [],
       "region": "Østfold",
       "category": "lighthouse",
-      "description": "Weite Meersicht am Leuchtturm von Østfold, im südlichen Vestland.",
+      "description": "Weite Meersicht am Leuchtturm von Østfold, in Süd-Norwegen.",
       "lat": 59.15119,
       "lng": 10.82944,
       "quality": 3
@@ -8377,7 +8377,7 @@
       "aliases": [],
       "region": "Süd-/Mittelnorwegen",
       "category": "lighthouse",
-      "description": "Leuchtturm an der Küste bei Süd-/Mittelnorwegen, am Leuchtturm, im südlichen Vestland.",
+      "description": "Leuchtturm an der Küste bei Süd-/Mittelnorwegen, am Leuchtturm, in Süd-Norwegen.",
       "lat": 59.89981,
       "lng": 10.72202,
       "quality": 3
@@ -8388,7 +8388,7 @@
       "aliases": [],
       "region": "Østfold",
       "category": "lighthouse",
-      "description": "Leuchtturm an der Küste bei Østfold, im südlichen Vestland.",
+      "description": "Leuchtturm an der Küste bei Østfold, in Süd-Norwegen.",
       "lat": 59.18167,
       "lng": 10.79757,
       "quality": 3
@@ -8399,7 +8399,7 @@
       "aliases": [],
       "region": "Østfold",
       "category": "lighthouse",
-      "description": "Weite Meersicht am Leuchtturm von Østfold, im südlichen Vestland.",
+      "description": "Weite Meersicht am Leuchtturm von Østfold, in Süd-Norwegen.",
       "lat": 59.04012,
       "lng": 11.41934,
       "quality": 3
@@ -8432,7 +8432,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "lighthouse",
-      "description": "Leuchtturm an der Küste bei Trøndelag, am Leuchtturm, in Trøndelag/Møre.",
+      "description": "Leuchtturm an der Küste bei Trøndelag, am Leuchtturm, in Mittelnorwegen.",
       "lat": 63.49379,
       "lng": 9.0394,
       "quality": 3
@@ -8476,7 +8476,7 @@
       "aliases": [],
       "region": "Rogaland",
       "category": "lighthouse",
-      "description": "Leuchtturm an der Küste bei Rogaland, am Leuchtturm, in Süd-Norwegen.",
+      "description": "Leuchtturm an der Küste bei Rogaland, am Leuchtturm, an der Südküste.",
       "lat": 58.32289,
       "lng": 6.25748,
       "quality": 3
@@ -8807,7 +8807,7 @@
       "aliases": [],
       "region": "Süd-/Mittelnorwegen",
       "category": "waterfall",
-      "description": "Rauschende Wasserstufe nahe Süd-/Mittelnorwegen, im südlichen Vestland.",
+      "description": "Rauschende Wasserstufe nahe Süd-/Mittelnorwegen, im westlichen Süd-Norwegen.",
       "lat": 60.54682,
       "lng": 7.67334,
       "quality": 3
@@ -8974,7 +8974,7 @@
       "aliases": [],
       "region": "Telemark",
       "category": "waterfall",
-      "description": "Gischtender Fallabschnitt bei Telemark – Foto-Stopp im südlichen Vestland.",
+      "description": "Gischtender Fallabschnitt bei Telemark – Foto-Stopp in Süd-Norwegen.",
       "lat": 59.3188,
       "lng": 8.43328,
       "quality": 3
@@ -9051,7 +9051,7 @@
       "aliases": [],
       "region": "Østfold",
       "category": "waterfall",
-      "description": "Rauschende Wasserstufe nahe Østfold, im südlichen Vestland.",
+      "description": "Rauschende Wasserstufe nahe Østfold, in Süd-Norwegen.",
       "lat": 59.33831,
       "lng": 11.38504,
       "quality": 3
@@ -9084,7 +9084,7 @@
       "aliases": [],
       "region": "Telemark",
       "category": "waterfall",
-      "description": "Gischtender Fallabschnitt bei Telemark – Foto-Stopp im südlichen Vestland.",
+      "description": "Gischtender Fallabschnitt bei Telemark – Foto-Stopp in Süd-Norwegen.",
       "lat": 59.08701,
       "lng": 8.81126,
       "quality": 3
@@ -9121,7 +9121,7 @@
       ],
       "region": "Telemark",
       "category": "geology",
-      "description": "Geologische Formation bei Telemark, im südlichen Vestland.",
+      "description": "Geologische Formation bei Telemark, in Süd-Norwegen.",
       "lat": 59.21973,
       "lng": 9.47586,
       "quality": 3
@@ -9173,7 +9173,7 @@
       ],
       "region": "Akershus",
       "category": "geology",
-      "description": "Sichtbare Erdgeschichte am Rand von Akershus, im südlichen Vestland.",
+      "description": "Sichtbare Erdgeschichte am Rand von Akershus, in Süd-Norwegen.",
       "lat": 59.98166,
       "lng": 10.90164,
       "quality": 3
@@ -9186,7 +9186,7 @@
       ],
       "region": "Süd-/Mittelnorwegen",
       "category": "geology",
-      "description": "Sichtbare Erdgeschichte am Rand von Süd-/Mittelnorwegen, im südlichen Vestland.",
+      "description": "Sichtbare Erdgeschichte am Rand von Süd-/Mittelnorwegen, in Süd-Norwegen.",
       "lat": 59.85348,
       "lng": 10.8869,
       "quality": 3
@@ -9212,7 +9212,7 @@
       ],
       "region": "Süd-/Mittelnorwegen",
       "category": "geology",
-      "description": "Geologische Formation bei Süd-/Mittelnorwegen, im südlichen Vestland.",
+      "description": "Geologische Formation bei Süd-/Mittelnorwegen, in Süd-Norwegen.",
       "lat": 59.9806,
       "lng": 10.80639,
       "quality": 3
@@ -9225,7 +9225,7 @@
       ],
       "region": "Süd-/Mittelnorwegen",
       "category": "geology",
-      "description": "Geologische Formation bei Süd-/Mittelnorwegen, im südlichen Vestland.",
+      "description": "Geologische Formation bei Süd-/Mittelnorwegen, in Süd-Norwegen.",
       "lat": 59.97756,
       "lng": 10.79606,
       "quality": 3
@@ -9251,7 +9251,7 @@
       ],
       "region": "Vestland",
       "category": "geology",
-      "description": "Sichtbare Erdgeschichte am Rand von Vestland, im südlichen Vestland.",
+      "description": "Sichtbare Erdgeschichte am Rand von Vestland, im westlichen Süd-Norwegen.",
       "lat": 60.49316,
       "lng": 5.26033,
       "quality": 3
@@ -9264,7 +9264,7 @@
       ],
       "region": "Rogaland",
       "category": "geology",
-      "description": "Geologische Formation bei Rogaland, im südlichen Vestland.",
+      "description": "Geologische Formation bei Rogaland, in Süd-Norwegen.",
       "lat": 59.08149,
       "lng": 5.61484,
       "quality": 3
@@ -9290,7 +9290,7 @@
       ],
       "region": "Agder",
       "category": "geology",
-      "description": "Sichtbare Erdgeschichte am Rand von Agder, in Süd-Norwegen.",
+      "description": "Sichtbare Erdgeschichte am Rand von Agder, an der Südküste.",
       "lat": 58.06761,
       "lng": 8.00356,
       "quality": 3
@@ -9303,7 +9303,7 @@
       ],
       "region": "Agder",
       "category": "geology",
-      "description": "Sichtbare Erdgeschichte am Rand von Agder, in Süd-Norwegen.",
+      "description": "Sichtbare Erdgeschichte am Rand von Agder, an der Südküste.",
       "lat": 58.23981,
       "lng": 8.1176,
       "quality": 3
@@ -9342,7 +9342,7 @@
       ],
       "region": "Akershus",
       "category": "geology",
-      "description": "Sichtbare Erdgeschichte am Rand von Akershus, im südlichen Vestland.",
+      "description": "Sichtbare Erdgeschichte am Rand von Akershus, in Süd-Norwegen.",
       "lat": 59.93893,
       "lng": 10.46433,
       "quality": 3
@@ -9381,7 +9381,7 @@
       ],
       "region": "Østfold",
       "category": "geology",
-      "description": "Sichtbare Erdgeschichte am Rand von Østfold, im südlichen Vestland.",
+      "description": "Sichtbare Erdgeschichte am Rand von Østfold, in Süd-Norwegen.",
       "lat": 59.20845,
       "lng": 10.87048,
       "quality": 3
@@ -9407,7 +9407,7 @@
       ],
       "region": "Vestland",
       "category": "geology",
-      "description": "Sichtbare Erdgeschichte am Rand von Vestland, im südlichen Vestland.",
+      "description": "Sichtbare Erdgeschichte am Rand von Vestland, im westlichen Süd-Norwegen.",
       "lat": 60.64752,
       "lng": 6.81724,
       "quality": 3
@@ -9418,7 +9418,7 @@
       "aliases": [],
       "region": "Østfold",
       "category": "geology",
-      "description": "Sichtbare Erdgeschichte am Rand von Østfold, im südlichen Vestland.",
+      "description": "Sichtbare Erdgeschichte am Rand von Østfold, in Süd-Norwegen.",
       "lat": 59.12114,
       "lng": 11.22777,
       "quality": 3
@@ -9429,7 +9429,7 @@
       "aliases": [],
       "region": "Rogaland",
       "category": "geology",
-      "description": "Sichtbare Erdgeschichte am Rand von Rogaland, im südlichen Vestland.",
+      "description": "Sichtbare Erdgeschichte am Rand von Rogaland, in Süd-Norwegen.",
       "lat": 59.0157,
       "lng": 6.28925,
       "quality": 3
@@ -9440,7 +9440,7 @@
       "aliases": [],
       "region": "Vestfold",
       "category": "geology",
-      "description": "Geologische Formation bei Vestfold, im südlichen Vestland.",
+      "description": "Geologische Formation bei Vestfold, in Süd-Norwegen.",
       "lat": 59.45056,
       "lng": 10.44786,
       "quality": 3
@@ -9462,7 +9462,7 @@
       "aliases": [],
       "region": "Buskerud",
       "category": "geology",
-      "description": "Geologische Formation bei Buskerud, im südlichen Vestland.",
+      "description": "Geologische Formation bei Buskerud, im westlichen Süd-Norwegen.",
       "lat": 60.13423,
       "lng": 10.49864,
       "quality": 3
@@ -9484,7 +9484,7 @@
       "aliases": [],
       "region": "Akershus",
       "category": "geology",
-      "description": "Geologische Formation bei Akershus, im südlichen Vestland.",
+      "description": "Geologische Formation bei Akershus, in Süd-Norwegen.",
       "lat": 59.92146,
       "lng": 11.02483,
       "quality": 3
@@ -9596,7 +9596,7 @@
       ],
       "region": "Østfold",
       "category": "dam",
-      "description": "Historische Stauanlage in Østfold, im südlichen Vestland.",
+      "description": "Historische Stauanlage in Østfold, in Süd-Norwegen.",
       "lat": 59.63766,
       "lng": 11.15442,
       "quality": 3
@@ -9622,7 +9622,7 @@
       ],
       "region": "Vestland",
       "category": "dam",
-      "description": "Historische Stauanlage in Vestland, im südlichen Vestland.",
+      "description": "Historische Stauanlage in Vestland, im westlichen Süd-Norwegen.",
       "lat": 60.12837,
       "lng": 6.63757,
       "quality": 3
@@ -9648,7 +9648,7 @@
       ],
       "region": "Süd-/Mittelnorwegen",
       "category": "dam",
-      "description": "Historische Stauanlage in Süd-/Mittelnorwegen, im südlichen Vestland.",
+      "description": "Historische Stauanlage in Süd-/Mittelnorwegen, in Süd-Norwegen.",
       "lat": 59.97927,
       "lng": 10.86607,
       "quality": 3
@@ -9674,7 +9674,7 @@
       ],
       "region": "Süd-/Mittelnorwegen",
       "category": "dam",
-      "description": "Historische Stauanlage in Süd-/Mittelnorwegen, im südlichen Vestland.",
+      "description": "Historische Stauanlage in Süd-/Mittelnorwegen, im westlichen Süd-Norwegen.",
       "lat": 60.10795,
       "lng": 10.66238,
       "quality": 3
@@ -9739,7 +9739,7 @@
       ],
       "region": "Trøndelag",
       "category": "dam",
-      "description": "Historische Stauanlage in Trøndelag, in Trøndelag/Møre.",
+      "description": "Historische Stauanlage in Trøndelag, in Mittelnorwegen.",
       "lat": 63.41848,
       "lng": 10.32452,
       "quality": 3
@@ -9763,7 +9763,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "dam",
-      "description": "Historische Stauanlage in Trøndelag, in Trøndelag/Møre.",
+      "description": "Historische Stauanlage in Trøndelag, in Mittelnorwegen.",
       "lat": 63.44102,
       "lng": 10.28925,
       "quality": 3
@@ -9818,7 +9818,7 @@
       "aliases": [],
       "region": "Møre og Romsdal",
       "category": "dam",
-      "description": "Historische Stauanlage in Møre og Romsdal, in Vestland/Innlandet.",
+      "description": "Historische Stauanlage in Møre og Romsdal, im westlichen Süd-Norwegen.",
       "lat": 62.80829,
       "lng": 7.48724,
       "quality": 3
@@ -9829,7 +9829,7 @@
       "aliases": [],
       "region": "Møre og Romsdal",
       "category": "dam",
-      "description": "Historische Stauanlage in Møre og Romsdal, in Vestland/Innlandet.",
+      "description": "Historische Stauanlage in Møre og Romsdal, im westlichen Süd-Norwegen.",
       "lat": 62.84196,
       "lng": 8.11569,
       "quality": 3
@@ -9851,7 +9851,7 @@
       "aliases": [],
       "region": "Rogaland",
       "category": "dam",
-      "description": "Historische Stauanlage in Rogaland, im südlichen Vestland.",
+      "description": "Historische Stauanlage in Rogaland, in Süd-Norwegen.",
       "lat": 59.14787,
       "lng": 6.60354,
       "quality": 3
@@ -9873,7 +9873,7 @@
       "aliases": [],
       "region": "Innlandet",
       "category": "dam",
-      "description": "Historische Stauanlage in Innlandet, im südlichen Vestland.",
+      "description": "Historische Stauanlage in Innlandet, im westlichen Süd-Norwegen.",
       "lat": 60.99778,
       "lng": 12.08347,
       "quality": 3
@@ -9917,7 +9917,7 @@
       "aliases": [],
       "region": "Vestland",
       "category": "dam",
-      "description": "Historische Stauanlage in Vestland, in Vestland/Innlandet.",
+      "description": "Historische Stauanlage in Vestland, im westlichen Süd-Norwegen.",
       "lat": 61.46689,
       "lng": 7.18072,
       "quality": 3
@@ -9939,7 +9939,7 @@
       "aliases": [],
       "region": "Innlandet",
       "category": "dam",
-      "description": "Historische Stauanlage in Innlandet, in Vestland/Innlandet.",
+      "description": "Historische Stauanlage in Innlandet, im westlichen Süd-Norwegen.",
       "lat": 61.73506,
       "lng": 8.92447,
       "quality": 3
@@ -9983,7 +9983,7 @@
       "aliases": [],
       "region": "Østfold",
       "category": "geology",
-      "description": "Geologische Formation bei Østfold, im südlichen Vestland.",
+      "description": "Geologische Formation bei Østfold, in Süd-Norwegen.",
       "lat": 59.21764,
       "lng": 11.07646,
       "quality": 3
@@ -10005,7 +10005,7 @@
       "aliases": [],
       "region": "Vestfold",
       "category": "geology",
-      "description": "Sichtbare Erdgeschichte am Rand von Vestfold, im südlichen Vestland.",
+      "description": "Sichtbare Erdgeschichte am Rand von Vestfold, in Süd-Norwegen.",
       "lat": 59.42576,
       "lng": 10.48789,
       "quality": 3
@@ -10060,7 +10060,7 @@
       "aliases": [],
       "region": "Vestland",
       "category": "geology",
-      "description": "Geologische Formation bei Vestland, in Vestland/Innlandet.",
+      "description": "Geologische Formation bei Vestland, im westlichen Süd-Norwegen.",
       "lat": 61.96135,
       "lng": 7.38872,
       "quality": 3
@@ -10104,7 +10104,7 @@
       "aliases": [],
       "region": "Rogaland",
       "category": "geology",
-      "description": "Geologische Formation bei Rogaland, im südlichen Vestland.",
+      "description": "Geologische Formation bei Rogaland, in Süd-Norwegen.",
       "lat": 59.23501,
       "lng": 6.43031,
       "quality": 3
@@ -10126,7 +10126,7 @@
       "aliases": [],
       "region": "Rogaland",
       "category": "geology",
-      "description": "Geologische Formation bei Rogaland, in Süd-Norwegen.",
+      "description": "Geologische Formation bei Rogaland, an der Südküste.",
       "lat": 58.49466,
       "lng": 6.08793,
       "quality": 3
@@ -10159,7 +10159,7 @@
       "aliases": [],
       "region": "Telemark",
       "category": "geology",
-      "description": "Geologische Formation bei Telemark, im südlichen Vestland.",
+      "description": "Geologische Formation bei Telemark, in Süd-Norwegen.",
       "lat": 59.25416,
       "lng": 8.59163,
       "quality": 3
@@ -10192,7 +10192,7 @@
       "aliases": [],
       "region": "Telemark",
       "category": "geology",
-      "description": "Sichtbare Erdgeschichte am Rand von Telemark, im südlichen Vestland.",
+      "description": "Sichtbare Erdgeschichte am Rand von Telemark, in Süd-Norwegen.",
       "lat": 59.2679,
       "lng": 9.53508,
       "quality": 3
@@ -10205,7 +10205,7 @@
       ],
       "region": "Süd-/Mittelnorwegen",
       "category": "beach",
-      "description": "Strand bei Süd-/Mittelnorwegen – offener Blick im südlichen Vestland.",
+      "description": "Strand bei Süd-/Mittelnorwegen – offener Blick in Süd-Norwegen.",
       "lat": 59.89491,
       "lng": 10.6755,
       "quality": 3
@@ -10231,7 +10231,7 @@
       ],
       "region": "Agder",
       "category": "beach",
-      "description": "Strand bei Agder – offener Blick in Süd-Norwegen.",
+      "description": "Strand bei Agder – offener Blick an der Südküste.",
       "lat": 58.06871,
       "lng": 7.81789,
       "quality": 3
@@ -10257,7 +10257,7 @@
       ],
       "region": "Agder",
       "category": "beach",
-      "description": "Strand bei Agder – offener Blick in Süd-Norwegen.",
+      "description": "Strand bei Agder – offener Blick an der Südküste.",
       "lat": 58.14139,
       "lng": 7.85937,
       "quality": 3
@@ -10270,7 +10270,7 @@
       ],
       "region": "Akershus",
       "category": "beach",
-      "description": "Strand bei Akershus – offener Blick im südlichen Vestland.",
+      "description": "Strand bei Akershus – offener Blick in Süd-Norwegen.",
       "lat": 59.88147,
       "lng": 10.59911,
       "quality": 3
@@ -10296,7 +10296,7 @@
       ],
       "region": "Østfold",
       "category": "beach",
-      "description": "Strand bei Østfold – offener Blick im südlichen Vestland.",
+      "description": "Strand bei Østfold – offener Blick in Süd-Norwegen.",
       "lat": 59.28203,
       "lng": 11.01043,
       "quality": 3
@@ -10387,7 +10387,7 @@
       ],
       "region": "Trøndelag",
       "category": "beach",
-      "description": "Strand bei Trøndelag – offener Blick in Vestland/Innlandet.",
+      "description": "Strand bei Trøndelag – offener Blick im westlichen Süd-Norwegen.",
       "lat": 62.69765,
       "lng": 9.39723,
       "quality": 3
@@ -10529,7 +10529,7 @@
       ],
       "region": "Agder",
       "category": "viewpoint",
-      "description": "Markanter Aussichtspunkt Agder – lohnender Halt in Süd-Norwegen.",
+      "description": "Markanter Aussichtspunkt Agder – lohnender Halt an der Südküste.",
       "lat": 58.22957,
       "lng": 8.16076,
       "quality": 3
@@ -10607,7 +10607,7 @@
       ],
       "region": "Møre og Romsdal",
       "category": "viewpoint",
-      "description": "Markanter Aussichtspunkt Møre og Romsdal – lohnender Halt in Vestland/Innlandet.",
+      "description": "Markanter Aussichtspunkt Møre og Romsdal – lohnender Halt im westlichen Süd-Norwegen.",
       "lat": 62.6322,
       "lng": 7.58004,
       "quality": 3
@@ -10646,7 +10646,7 @@
       ],
       "region": "Rogaland",
       "category": "viewpoint",
-      "description": "Panorama-Halt Rogaland: offener Horizont im südlichen Vestland.",
+      "description": "Panorama-Halt Rogaland: offener Horizont in Süd-Norwegen.",
       "lat": 59.52757,
       "lng": 5.90466,
       "quality": 3
@@ -10718,7 +10718,7 @@
       "aliases": [],
       "region": "Agder",
       "category": "viewpoint",
-      "description": "Kurzer Umweg für den Blick über Agder, im südlichen Vestland.",
+      "description": "Kurzer Umweg für den Blick über Agder, in Süd-Norwegen.",
       "lat": 59.28329,
       "lng": 7.49023,
       "quality": 3
@@ -11052,7 +11052,7 @@
       ],
       "region": "Finnmark",
       "category": "waterfall",
-      "description": "Gischtender Fallabschnitt bei Finnmark – Foto-Stopp am Nordkap.",
+      "description": "Gischtender Fallabschnitt bei Finnmark – Foto-Stopp hoch im Norden.",
       "lat": 70.1645,
       "lng": 29.28945,
       "quality": 3
@@ -11777,7 +11777,7 @@
       ],
       "region": "Finnmark",
       "category": "viewpoint",
-      "description": "Panorama-Halt Finnmark: offener Horizont am Nordkap.",
+      "description": "Panorama-Halt Finnmark: offener Horizont hoch im Norden.",
       "lat": 70.09665,
       "lng": 29.81966,
       "quality": 3
@@ -11790,7 +11790,7 @@
       ],
       "region": "Finnmark",
       "category": "viewpoint",
-      "description": "Aussichtspunkt bei Finnmark – weiter Blick, am Nordkap.",
+      "description": "Aussichtspunkt bei Finnmark – weiter Blick, hoch im Norden.",
       "lat": 70.39546,
       "lng": 30.96259,
       "quality": 3
@@ -11816,7 +11816,7 @@
       ],
       "region": "Finnmark",
       "category": "viewpoint",
-      "description": "Panorama-Halt Finnmark: offener Horizont am Nordkap.",
+      "description": "Panorama-Halt Finnmark: offener Horizont hoch im Norden.",
       "lat": 70.3705,
       "lng": 31.11635,
       "quality": 3
@@ -11982,7 +11982,7 @@
       ],
       "region": "Nordland",
       "category": "viewpoint",
-      "description": "Panorama-Halt Nordland: offener Horizont auf Helgeland.",
+      "description": "Panorama-Halt Nordland: offener Horizont in Nordnorwegen.",
       "lat": 67.87644,
       "lng": 12.97489,
       "quality": 3
@@ -12060,7 +12060,7 @@
       ],
       "region": "Nordland",
       "category": "viewpoint",
-      "description": "Aussichtspunkt bei Nordland – weiter Blick, auf Helgeland.",
+      "description": "Aussichtspunkt bei Nordland – weiter Blick, in Nordnorwegen.",
       "lat": 67.94025,
       "lng": 13.08305,
       "quality": 3
@@ -12125,7 +12125,7 @@
       ],
       "region": "Nordland",
       "category": "viewpoint",
-      "description": "Panorama-Halt Nordland: offener Horizont in Trøndelag/Møre.",
+      "description": "Panorama-Halt Nordland: offener Horizont in Nordnorwegen.",
       "lat": 65.70637,
       "lng": 11.99239,
       "quality": 3
@@ -12138,7 +12138,7 @@
       ],
       "region": "Nordland",
       "category": "viewpoint",
-      "description": "Markanter Aussichtspunkt Nordland – lohnender Halt in Trøndelag/Møre.",
+      "description": "Markanter Aussichtspunkt Nordland – lohnender Halt in Nordnorwegen.",
       "lat": 65.62465,
       "lng": 13.29181,
       "quality": 3
@@ -12151,7 +12151,7 @@
       ],
       "region": "Nordland",
       "category": "viewpoint",
-      "description": "Kurzer Umweg für den Blick über Nordland, auf Helgeland.",
+      "description": "Kurzer Umweg für den Blick über Nordland, in Nordnorwegen.",
       "lat": 66.07111,
       "lng": 12.72399,
       "quality": 3
@@ -12201,7 +12201,7 @@
       ],
       "region": "Nordland",
       "category": "viewpoint",
-      "description": "Kurzer Umweg für den Blick über Nordland, auf Helgeland.",
+      "description": "Kurzer Umweg für den Blick über Nordland, in Nordnorwegen.",
       "lat": 66.49054,
       "lng": 12.08086,
       "quality": 3
@@ -12603,7 +12603,7 @@
       ],
       "region": "Nordland",
       "category": "beach",
-      "description": "Feiner Sand und ruhige Bucht bei Nordland, in Trøndelag/Møre.",
+      "description": "Feiner Sand und ruhige Bucht bei Nordland, in Nordnorwegen.",
       "lat": 65.94667,
       "lng": 13.03681,
       "quality": 3
@@ -12642,7 +12642,7 @@
       ],
       "region": "Trøndelag",
       "category": "beach",
-      "description": "Strand bei Trøndelag, am Strand – offener Blick in Trøndelag/Møre.",
+      "description": "Strand bei Trøndelag, am Strand – offener Blick in Mittelnorwegen.",
       "lat": 63.68455,
       "lng": 9.66593,
       "quality": 3
@@ -12775,7 +12775,7 @@
       "aliases": [],
       "region": "Nordland",
       "category": "beach",
-      "description": "Strand bei Nordland – offener Blick auf Helgeland.",
+      "description": "Strand bei Nordland – offener Blick in Nordnorwegen.",
       "lat": 67.97762,
       "lng": 12.96298,
       "quality": 3
@@ -12808,7 +12808,7 @@
       "aliases": [],
       "region": "Nordland",
       "category": "beach",
-      "description": "Strand bei Nordland – offener Blick in Trøndelag/Møre.",
+      "description": "Strand bei Nordland – offener Blick in Nordnorwegen.",
       "lat": 65.74986,
       "lng": 12.39573,
       "quality": 3
@@ -12830,7 +12830,7 @@
       "aliases": [],
       "region": "Nordland",
       "category": "beach",
-      "description": "Feiner Sand und ruhige Bucht bei Nordland, auf Helgeland.",
+      "description": "Feiner Sand und ruhige Bucht bei Nordland, in Nordnorwegen.",
       "lat": 67.66017,
       "lng": 12.62881,
       "quality": 3
@@ -12863,7 +12863,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "beach",
-      "description": "Strand bei Trøndelag, am Sandstrand – offener Blick in Trøndelag/Møre.",
+      "description": "Strand bei Trøndelag, am Sandstrand – offener Blick in Mittelnorwegen.",
       "lat": 64.05307,
       "lng": 9.94964,
       "quality": 3
@@ -12885,7 +12885,7 @@
       "aliases": [],
       "region": "Finnmark",
       "category": "beach",
-      "description": "Strand bei Finnmark – offener Blick am Nordkap.",
+      "description": "Strand bei Finnmark – offener Blick hoch im Norden.",
       "lat": 70.49848,
       "lng": 28.07501,
       "quality": 3
@@ -13224,7 +13224,7 @@
       ],
       "region": "Nordland",
       "category": "lake",
-      "description": "Ruhiger See bei Nordland, am Bergsee, auf Helgeland.",
+      "description": "Ruhiger See bei Nordland, am Bergsee, in Nordnorwegen.",
       "lat": 67.17623,
       "lng": 14.58992,
       "quality": 3
@@ -13315,7 +13315,7 @@
       ],
       "region": "Nordland",
       "category": "lake",
-      "description": "Ruhiger See bei Nordland, am Bergsee, auf Helgeland.",
+      "description": "Ruhiger See bei Nordland, am Bergsee, in Nordnorwegen.",
       "lat": 67.02098,
       "lng": 15.028,
       "quality": 3
@@ -13402,7 +13402,7 @@
       ],
       "region": "Finnmark",
       "category": "lake",
-      "description": "Stiller Wasserspiegel Finnmark, am Nordkap.",
+      "description": "Stiller Wasserspiegel Finnmark, hoch im Norden.",
       "lat": 70.20198,
       "lng": 23.55604,
       "quality": 3
@@ -13467,7 +13467,7 @@
       ],
       "region": "Finnmark",
       "category": "lake",
-      "description": "Stiller Wasserspiegel Finnmark, am Nordkap.",
+      "description": "Stiller Wasserspiegel Finnmark, hoch im Norden.",
       "lat": 70.06876,
       "lng": 29.85551,
       "quality": 3
@@ -13493,7 +13493,7 @@
       ],
       "region": "Nordland",
       "category": "lake",
-      "description": "Ruhiger See bei Nordland, auf Helgeland.",
+      "description": "Ruhiger See bei Nordland, in Nordnorwegen.",
       "lat": 66.32517,
       "lng": 14.43381,
       "quality": 3
@@ -13519,7 +13519,7 @@
       ],
       "region": "Nordland",
       "category": "lake",
-      "description": "Ruhiger See bei Nordland, auf Helgeland.",
+      "description": "Ruhiger See bei Nordland, in Nordnorwegen.",
       "lat": 66.38782,
       "lng": 14.32732,
       "quality": 3
@@ -13776,7 +13776,7 @@
       "aliases": [],
       "region": "Nordland",
       "category": "lake",
-      "description": "Stiller Wasserspiegel Nordland, in Trøndelag/Møre.",
+      "description": "Stiller Wasserspiegel Nordland, in Nordnorwegen.",
       "lat": 65.82034,
       "lng": 13.0414,
       "quality": 3
@@ -14082,7 +14082,7 @@
       ],
       "region": "Trøndelag",
       "category": "mountain_hike",
-      "description": "Wanderziel bei Trøndelag, in Trøndelag/Møre.",
+      "description": "Wanderziel bei Trøndelag, in Mittelnorwegen.",
       "lat": 63.82433,
       "lng": 10.52326,
       "quality": 3
@@ -14160,7 +14160,7 @@
       ],
       "region": "Nordland",
       "category": "mountain_hike",
-      "description": "Wanderziel bei Nordland, auf Helgeland.",
+      "description": "Wanderziel bei Nordland, in Nordnorwegen.",
       "lat": 67.06279,
       "lng": 16.00407,
       "quality": 3
@@ -14562,7 +14562,7 @@
       "aliases": [],
       "region": "Nordland",
       "category": "mountain_hike",
-      "description": "Wanderziel bei Nordland, in Trøndelag/Møre.",
+      "description": "Wanderziel bei Nordland, in Nordnorwegen.",
       "lat": 65.7935,
       "lng": 13.18908,
       "quality": 3
@@ -14628,7 +14628,7 @@
       "aliases": [],
       "region": "Nordland",
       "category": "mountain_hike",
-      "description": "Wanderziel bei Nordland, auf der Hochfläche, in Trøndelag/Møre.",
+      "description": "Wanderziel bei Nordland, auf der Hochfläche, in Nordnorwegen.",
       "lat": 65.83938,
       "lng": 13.12476,
       "quality": 3
@@ -14650,7 +14650,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "mountain_hike",
-      "description": "Wanderziel bei Trøndelag, in Trøndelag/Møre.",
+      "description": "Wanderziel bei Trøndelag, in Mittelnorwegen.",
       "lat": 64.28972,
       "lng": 12.52239,
       "quality": 3
@@ -14672,7 +14672,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "mountain_hike",
-      "description": "Beliebter Aufstieg bei Trøndelag, in Trøndelag/Møre.",
+      "description": "Beliebter Aufstieg bei Trøndelag, in Mittelnorwegen.",
       "lat": 64.29561,
       "lng": 12.74564,
       "quality": 3
@@ -14683,7 +14683,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "mountain_hike",
-      "description": "Wanderziel bei Trøndelag, auf der Hochfläche, in Trøndelag/Møre.",
+      "description": "Wanderziel bei Trøndelag, auf der Hochfläche, in Mittelnorwegen.",
       "lat": 64.43385,
       "lng": 13.0695,
       "quality": 3
@@ -14749,7 +14749,7 @@
       "aliases": [],
       "region": "Nordland",
       "category": "mountain_hike",
-      "description": "Wanderziel bei Nordland, auf Helgeland.",
+      "description": "Wanderziel bei Nordland, in Nordnorwegen.",
       "lat": 67.9679,
       "lng": 16.43121,
       "quality": 3
@@ -14891,7 +14891,7 @@
       "aliases": [],
       "region": "Nordland",
       "category": "geology",
-      "description": "Sichtbare Erdgeschichte am Rand von Nordland, auf Helgeland.",
+      "description": "Sichtbare Erdgeschichte am Rand von Nordland, in Nordnorwegen.",
       "lat": 67.84124,
       "lng": 12.81872,
       "quality": 3
@@ -14902,7 +14902,7 @@
       "aliases": [],
       "region": "Nordland",
       "category": "geology",
-      "description": "Geologische Formation bei Nordland, in Trøndelag/Møre.",
+      "description": "Geologische Formation bei Nordland, in Nordnorwegen.",
       "lat": 65.91554,
       "lng": 12.46942,
       "quality": 3
@@ -14913,7 +14913,7 @@
       "aliases": [],
       "region": "Nordland",
       "category": "geology",
-      "description": "Geologische Formation bei Nordland, in Trøndelag/Møre.",
+      "description": "Geologische Formation bei Nordland, in Nordnorwegen.",
       "lat": 65.76448,
       "lng": 12.41397,
       "quality": 3
@@ -14935,7 +14935,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "geology",
-      "description": "Sichtbare Erdgeschichte am Rand von Trøndelag, in Trøndelag/Møre.",
+      "description": "Sichtbare Erdgeschichte am Rand von Trøndelag, in Mittelnorwegen.",
       "lat": 64.07273,
       "lng": 9.97982,
       "quality": 3
@@ -14946,7 +14946,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "geology",
-      "description": "Sichtbare Erdgeschichte am Rand von Trøndelag, in Trøndelag/Møre.",
+      "description": "Sichtbare Erdgeschichte am Rand von Trøndelag, in Mittelnorwegen.",
       "lat": 64.06301,
       "lng": 9.97885,
       "quality": 3
@@ -15003,7 +15003,7 @@
       ],
       "region": "Nordland",
       "category": "lighthouse",
-      "description": "Weite Meersicht am Leuchtturm von Nordland, auf Helgeland.",
+      "description": "Weite Meersicht am Leuchtturm von Nordland, in Nordnorwegen.",
       "lat": 67.41092,
       "lng": 11.87492,
       "quality": 3
@@ -15107,7 +15107,7 @@
       ],
       "region": "Nordland",
       "category": "lighthouse",
-      "description": "Weite Meersicht am Leuchtturm von Nordland, in Trøndelag/Møre.",
+      "description": "Weite Meersicht am Leuchtturm von Nordland, in Nordnorwegen.",
       "lat": 65.5967,
       "lng": 11.28682,
       "quality": 3
@@ -15120,7 +15120,7 @@
       ],
       "region": "Nordland",
       "category": "lighthouse",
-      "description": "Weite Meersicht am Leuchtturm von Nordland, auf Helgeland.",
+      "description": "Weite Meersicht am Leuchtturm von Nordland, in Nordnorwegen.",
       "lat": 67.302,
       "lng": 13.49777,
       "quality": 3
@@ -15205,7 +15205,7 @@
       ],
       "region": "Trøndelag",
       "category": "lighthouse",
-      "description": "Leuchtturm an der Küste bei Trøndelag, am Leuchtturm, in Trøndelag/Møre.",
+      "description": "Leuchtturm an der Küste bei Trøndelag, am Leuchtturm, in Mittelnorwegen.",
       "lat": 64.72702,
       "lng": 10.85441,
       "quality": 3
@@ -15286,7 +15286,7 @@
       "aliases": [],
       "region": "Finnmark",
       "category": "lighthouse",
-      "description": "Leuchtturm an der Küste bei Finnmark, am Leuchtturm, am Nordkap.",
+      "description": "Leuchtturm an der Küste bei Finnmark, am Leuchtturm, hoch im Norden.",
       "lat": 70.38874,
       "lng": 31.15676,
       "quality": 3
@@ -15385,7 +15385,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "nature_place",
-      "description": "Besonderer Naturort bei Trøndelag, in Trøndelag/Møre.",
+      "description": "Besonderer Naturort bei Trøndelag, in Mittelnorwegen.",
       "lat": 64.5437,
       "lng": 12.45988,
       "quality": 3
@@ -15568,7 +15568,7 @@
       ],
       "region": "Nordland",
       "category": "picnic",
-      "description": "Grillstopp mit Blick nahe Nordland, in Trøndelag/Møre.",
+      "description": "Grillstopp mit Blick nahe Nordland, in Nordnorwegen.",
       "lat": 65.65111,
       "lng": 14.10644,
       "quality": 3
@@ -15803,7 +15803,7 @@
       "aliases": [],
       "region": "Akershus",
       "category": "viewpoint",
-      "description": "Aussichtspunkt bei Akershus – weiter Blick, im südlichen Vestland.",
+      "description": "Aussichtspunkt bei Akershus – weiter Blick, im westlichen Süd-Norwegen.",
       "lat": 60.21284,
       "lng": 11.08448,
       "quality": 1
@@ -15836,7 +15836,7 @@
       "aliases": [],
       "region": "Østfold",
       "category": "beach",
-      "description": "Strand bei Østfold – offener Blick im südlichen Vestland.",
+      "description": "Strand bei Østfold – offener Blick in Süd-Norwegen.",
       "lat": 59.12344,
       "lng": 11.07029,
       "quality": 1
@@ -15847,7 +15847,7 @@
       "aliases": [],
       "region": "Østfold",
       "category": "beach",
-      "description": "Strand bei Østfold, am Sandstrand – offener Blick im südlichen Vestland.",
+      "description": "Strand bei Østfold, am Sandstrand – offener Blick in Süd-Norwegen.",
       "lat": 59.13594,
       "lng": 11.07078,
       "quality": 1
@@ -15913,7 +15913,7 @@
       "aliases": [],
       "region": "Østfold",
       "category": "beach",
-      "description": "Strand bei Østfold, am Strand – offener Blick im südlichen Vestland.",
+      "description": "Strand bei Østfold, am Strand – offener Blick in Süd-Norwegen.",
       "lat": 59.03856,
       "lng": 11.42746,
       "quality": 1
@@ -15983,7 +15983,7 @@
       "aliases": [],
       "region": "Vestland",
       "category": "beach",
-      "description": "Strand bei Vestland – offener Blick in Vestland/Innlandet.",
+      "description": "Strand bei Vestland – offener Blick im westlichen Süd-Norwegen.",
       "lat": 61.16045,
       "lng": 6.99399,
       "quality": 1
@@ -15994,7 +15994,7 @@
       "aliases": [],
       "region": "Vestland",
       "category": "beach",
-      "description": "Strand bei Vestland – offener Blick in Vestland/Innlandet.",
+      "description": "Strand bei Vestland – offener Blick im westlichen Süd-Norwegen.",
       "lat": 61.18611,
       "lng": 6.83436,
       "quality": 1
@@ -16148,7 +16148,7 @@
       "aliases": [],
       "region": "Møre og Romsdal",
       "category": "lake",
-      "description": "Ruhiger See bei Møre og Romsdal, in Vestland/Innlandet.",
+      "description": "Ruhiger See bei Møre og Romsdal, im westlichen Süd-Norwegen.",
       "lat": 62.77712,
       "lng": 7.83113,
       "quality": 1
@@ -16225,7 +16225,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "lake",
-      "description": "Stiller Wasserspiegel Trøndelag, in Vestland/Innlandet.",
+      "description": "Stiller Wasserspiegel Trøndelag, im westlichen Süd-Norwegen.",
       "lat": 62.62001,
       "lng": 9.19715,
       "quality": 1
@@ -16236,7 +16236,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "lake",
-      "description": "Stiller Wasserspiegel Trøndelag, in Vestland/Innlandet.",
+      "description": "Stiller Wasserspiegel Trøndelag, im westlichen Süd-Norwegen.",
       "lat": 62.62639,
       "lng": 9.19864,
       "quality": 1
@@ -16269,7 +16269,7 @@
       "aliases": [],
       "region": "Vestland",
       "category": "lake",
-      "description": "Ruhiger See bei Vestland, in Vestland/Innlandet.",
+      "description": "Ruhiger See bei Vestland, im westlichen Süd-Norwegen.",
       "lat": 61.26295,
       "lng": 6.41566,
       "quality": 1
@@ -16357,7 +16357,7 @@
       "aliases": [],
       "region": "Vestland",
       "category": "lake",
-      "description": "Ruhiger See bei Vestland, in Vestland/Innlandet.",
+      "description": "Ruhiger See bei Vestland, im westlichen Süd-Norwegen.",
       "lat": 61.22641,
       "lng": 7.24713,
       "quality": 1
@@ -16401,7 +16401,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "lake",
-      "description": "Ruhiger See bei Trøndelag, in Trøndelag/Møre.",
+      "description": "Ruhiger See bei Trøndelag, in Mittelnorwegen.",
       "lat": 63.55824,
       "lng": 8.81246,
       "quality": 1
@@ -16412,7 +16412,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "lake",
-      "description": "Ruhiger See bei Trøndelag, in Trøndelag/Møre.",
+      "description": "Ruhiger See bei Trøndelag, in Mittelnorwegen.",
       "lat": 63.58624,
       "lng": 8.92308,
       "quality": 1
@@ -16478,7 +16478,7 @@
       "aliases": [],
       "region": "Agder",
       "category": "mountain_hike",
-      "description": "Wanderziel bei Agder, in Süd-Norwegen.",
+      "description": "Wanderziel bei Agder, an der Südküste.",
       "lat": 58.33565,
       "lng": 8.6214,
       "quality": 1
@@ -16511,7 +16511,7 @@
       "aliases": [],
       "region": "Trøndelag",
       "category": "mountain_hike",
-      "description": "Wanderziel bei Trøndelag, in Vestland/Innlandet.",
+      "description": "Wanderziel bei Trøndelag, im westlichen Süd-Norwegen.",
       "lat": 62.70347,
       "lng": 9.01225,
       "quality": 1
@@ -16599,7 +16599,7 @@
       "aliases": [],
       "region": "Frosta",
       "category": "camper_motorhome",
-      "description": "Wohnmobilstellplatz in Frosta, Tautervegen – kostenfrei – kostenfrei.",
+      "description": "Wohnmobilstellplatz in Frosta, Tautervegen – kostenfrei.",
       "lat": 63.55713,
       "lng": 10.65255,
       "quality": 2
@@ -17644,7 +17644,7 @@
       "aliases": [],
       "region": "Nord-Fron",
       "category": "camper_motorhome",
-      "description": "Wohnmobilstellplatz in Nord-Fron, Linvegen – kostenfrei – kostenfrei, Strom vorhanden.",
+      "description": "Wohnmobilstellplatz in Nord-Fron, Linvegen – kostenfrei, Strom vorhanden.",
       "lat": 61.66523,
       "lng": 9.70053,
       "quality": 1
@@ -18748,7 +18748,7 @@
       "aliases": [],
       "region": "Eigersund",
       "category": "camper_motorhome",
-      "description": "Wohnmobilstellplatz in Eigersund, Sokndalsveien – kostenfrei – kostenfrei.",
+      "description": "Wohnmobilstellplatz in Eigersund, Sokndalsveien – kostenfrei.",
       "lat": 58.38301,
       "lng": 6.0569,
       "quality": 1
@@ -18825,7 +18825,7 @@
       "aliases": [],
       "region": "Averøy",
       "category": "camper_motorhome",
-      "description": "Wohnmobilstellplatz in Averøy, Ekkilsøyveien – kostenfrei – kostenfrei.",
+      "description": "Wohnmobilstellplatz in Averøy, Ekkilsøyveien – kostenfrei.",
       "lat": 63.08332,
       "lng": 7.56176,
       "quality": 1
@@ -18970,7 +18970,7 @@
       "aliases": [],
       "region": "Indre Fosen",
       "category": "camper_motorhome",
-      "description": "Wohnmobilstellplatz in Indre Fosen, Hogsdalsveien – kostenfrei – kostenfrei.",
+      "description": "Wohnmobilstellplatz in Indre Fosen, Hogsdalsveien – kostenfrei.",
       "lat": 63.80241,
       "lng": 10.23004,
       "quality": 1
@@ -19014,7 +19014,7 @@
       "aliases": [],
       "region": "Tana",
       "category": "camper_motorhome",
-      "description": "Wohnmobilstellplatz in Tana, Langnesveien – kostenfrei – kostenfrei.",
+      "description": "Wohnmobilstellplatz in Tana, Langnesveien – kostenfrei.",
       "lat": 70.49839,
       "lng": 28.3612,
       "quality": 1
@@ -22204,7 +22204,7 @@
       "aliases": [],
       "region": "Nesodden",
       "category": "camper_camping",
-      "description": "Campingplatz in Nesodden, Presteskjærveien – kostenfrei – kostenfrei.",
+      "description": "Campingplatz in Nesodden, Presteskjærveien – kostenfrei.",
       "lat": 59.81209,
       "lng": 10.69981,
       "quality": 2
@@ -23183,7 +23183,7 @@
       "aliases": [],
       "region": "Hamnøya",
       "category": "camper_camping",
-      "description": "Campingplatz in Hamnøya, Moskenesveien – kostenfrei – kostenfrei.",
+      "description": "Campingplatz in Hamnøya, Moskenesveien – kostenfrei.",
       "lat": 67.96183,
       "lng": 13.15146,
       "quality": 2
@@ -24019,7 +24019,7 @@
       "aliases": [],
       "region": "Saltdal",
       "category": "camper_camping",
-      "description": "Campingplatz in Saltdal, Saltfjellveien – kostenfrei – kostenfrei.",
+      "description": "Campingplatz in Saltdal, Saltfjellveien – kostenfrei.",
       "lat": 66.81443,
       "lng": 15.38799,
       "quality": 1
@@ -24283,7 +24283,7 @@
       "aliases": [],
       "region": "Flekkefjord",
       "category": "camper_water",
-      "description": "Trinkwasser-Station in Flekkefjord, Midtbø – kostenfrei – kostenfrei.",
+      "description": "Trinkwasser-Station in Flekkefjord, Midtbø – kostenfrei.",
       "lat": 58.28541,
       "lng": 6.42335,
       "quality": 2
@@ -24327,7 +24327,7 @@
       "aliases": [],
       "region": "Lindesnes",
       "category": "camper_water",
-      "description": "Trinkwasser-Station in Lindesnes, Grønviksveien – kostenfrei – kostenfrei.",
+      "description": "Trinkwasser-Station in Lindesnes, Grønviksveien – kostenfrei.",
       "lat": 58.02015,
       "lng": 7.46319,
       "quality": 1
@@ -24564,7 +24564,7 @@
       "aliases": [],
       "region": "Hamar",
       "category": "camper_water",
-      "description": "Trinkwasser-Station in Hamar, Stafsbergvegen – kostenfrei – kostenfrei.",
+      "description": "Trinkwasser-Station in Hamar, Stafsbergvegen – kostenfrei.",
       "lat": 60.80291,
       "lng": 11.07313,
       "quality": 1
@@ -24597,7 +24597,7 @@
       "aliases": [],
       "region": "Molde",
       "category": "camper_water",
-      "description": "Trinkwasser-Station in Molde, Per Amdams veg – kostenfrei – kostenfrei.",
+      "description": "Trinkwasser-Station in Molde, Per Amdams veg – kostenfrei.",
       "lat": 62.73953,
       "lng": 7.14877,
       "quality": 1
@@ -24858,7 +24858,7 @@
       "aliases": [],
       "region": "Sunndal",
       "category": "camper_water",
-      "description": "Trinkwasser-Station in Sunndal, Viromdalsvegen – kostenfrei – kostenfrei.",
+      "description": "Trinkwasser-Station in Sunndal, Viromdalsvegen – kostenfrei.",
       "lat": 62.73829,
       "lng": 8.7109,
       "quality": 1
@@ -24968,7 +24968,7 @@
       "aliases": [],
       "region": "Lærdal",
       "category": "camper_water",
-      "description": "Trinkwasser-Station in Lærdal, Øyragata – kostenfrei – kostenfrei.",
+      "description": "Trinkwasser-Station in Lærdal, Øyragata – kostenfrei.",
       "lat": 61.09807,
       "lng": 7.47453,
       "quality": 1
@@ -24979,7 +24979,7 @@
       "aliases": [],
       "region": "Stranda",
       "category": "camper_water",
-      "description": "Trinkwasser-Station in Stranda, Maråkvegen – kostenfrei – kostenfrei.",
+      "description": "Trinkwasser-Station in Stranda, Maråkvegen – kostenfrei.",
       "lat": 62.09995,
       "lng": 7.20386,
       "quality": 1
@@ -25001,7 +25001,7 @@
       "aliases": [],
       "region": "Rauma",
       "category": "camper_water",
-      "description": "Trinkwasser-Station in Rauma, Romsdalsvegen – kostenfrei – kostenfrei.",
+      "description": "Trinkwasser-Station in Rauma, Romsdalsvegen – kostenfrei.",
       "lat": 62.54761,
       "lng": 7.75328,
       "quality": 1
@@ -25023,7 +25023,7 @@
       "aliases": [],
       "region": "Ålesund",
       "category": "camper_water",
-      "description": "Trinkwasser-Station in Ålesund, Sorenskriver Bulls gate – kostenfrei – kostenfrei.",
+      "description": "Trinkwasser-Station in Ålesund, Sorenskriver Bulls gate – kostenfrei.",
       "lat": 62.47643,
       "lng": 6.15913,
       "quality": 1
@@ -25045,7 +25045,7 @@
       "aliases": [],
       "region": "Målselv",
       "category": "camper_water",
-      "description": "Trinkwasser-Station in Målselv, Mellombygdveien – kostenfrei – kostenfrei.",
+      "description": "Trinkwasser-Station in Målselv, Mellombygdveien – kostenfrei.",
       "lat": 69.14059,
       "lng": 18.60021,
       "quality": 1
@@ -25056,7 +25056,7 @@
       "aliases": [],
       "region": "Storfjord",
       "category": "camper_water",
-      "description": "Trinkwasser-Station in Storfjord, Nordlysveien – kostenfrei – kostenfrei.",
+      "description": "Trinkwasser-Station in Storfjord, Nordlysveien – kostenfrei.",
       "lat": 69.27237,
       "lng": 19.93679,
       "quality": 1
@@ -27095,7 +27095,7 @@
       "aliases": [],
       "region": "Lillesand",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Lillesand, Tangvigveien – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Lillesand, Tangvigveien – kostenfrei.",
       "lat": 58.21391,
       "lng": 8.38511,
       "quality": 2
@@ -27128,7 +27128,7 @@
       "aliases": [],
       "region": "Kåfjord",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Kåfjord, Kåfjorddalsveien – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Kåfjord, Kåfjorddalsveien – kostenfrei.",
       "lat": 69.49459,
       "lng": 20.8298,
       "quality": 2
@@ -27187,7 +27187,7 @@
       ],
       "region": "Karasjok",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Karasjok, Ávjovárgeaidnu – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Karasjok, Ávjovárgeaidnu – kostenfrei.",
       "lat": 69.44436,
       "lng": 25.22733,
       "quality": 1
@@ -27226,7 +27226,7 @@
       ],
       "region": "Eidskog",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Eidskog, Syversbakken – kostenfrei – kostenfrei, geöffnet Ma-Sa 07:00-23:00.",
+      "description": "Öffentliche Toilette in Eidskog, Syversbakken – kostenfrei, geöffnet Ma-Sa 07:00-23:00.",
       "lat": 59.98543,
       "lng": 12.1229,
       "quality": 1
@@ -27239,7 +27239,7 @@
       ],
       "region": "Kristiansund",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Kristiansund, Seivikveien – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Kristiansund, Seivikveien – kostenfrei.",
       "lat": 63.11197,
       "lng": 7.87002,
       "quality": 1
@@ -27265,7 +27265,7 @@
       ],
       "region": "Namsskogan",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Namsskogan, Namsskoganveien – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Namsskogan, Namsskoganveien – kostenfrei.",
       "lat": 64.84733,
       "lng": 13.01335,
       "quality": 1
@@ -27324,7 +27324,7 @@
       ],
       "region": "Gjerstad",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Gjerstad, Europaveien – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Gjerstad, Europaveien – kostenfrei.",
       "lat": 58.85994,
       "lng": 9.14066,
       "quality": 1
@@ -27337,7 +27337,7 @@
       ],
       "region": "Sogndal",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Sogndal, Kong Beles veg – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Sogndal, Kong Beles veg – kostenfrei.",
       "lat": 61.20464,
       "lng": 6.53353,
       "quality": 1
@@ -27441,7 +27441,7 @@
       ],
       "region": "Tromsø",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Tromsø, Brensholmvegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Tromsø, Brensholmvegen – kostenfrei.",
       "lat": 69.62133,
       "lng": 18.05916,
       "quality": 1
@@ -27467,7 +27467,7 @@
       ],
       "region": "Rauma",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Rauma, Romsdalsvegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Rauma, Romsdalsvegen – kostenfrei.",
       "lat": 62.48748,
       "lng": 7.76035,
       "quality": 1
@@ -27493,7 +27493,7 @@
       ],
       "region": "Grane",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Grane, Svenningdalsvegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Grane, Svenningdalsvegen – kostenfrei.",
       "lat": 65.37727,
       "lng": 13.36363,
       "quality": 1
@@ -27532,7 +27532,7 @@
       ],
       "region": "Rendalen",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Rendalen, Østvollveien – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Rendalen, Østvollveien – kostenfrei.",
       "lat": 61.67259,
       "lng": 11.3715,
       "quality": 1
@@ -27628,7 +27628,7 @@
       ],
       "region": "Suldal",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Suldal, Suldalsvegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Suldal, Suldalsvegen – kostenfrei.",
       "lat": 59.69214,
       "lng": 6.75169,
       "quality": 1
@@ -27641,7 +27641,7 @@
       ],
       "region": "Meråker",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Meråker, Mellomriksveien – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Meråker, Mellomriksveien – kostenfrei.",
       "lat": 63.35651,
       "lng": 11.99537,
       "quality": 1
@@ -27667,7 +27667,7 @@
       ],
       "region": "Bardu",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Bardu, Tromsøveien – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Bardu, Tromsøveien – kostenfrei.",
       "lat": 68.92303,
       "lng": 18.44947,
       "quality": 1
@@ -27680,7 +27680,7 @@
       ],
       "region": "Kautokeino",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Kautokeino, Suomaluodda – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Kautokeino, Suomaluodda – kostenfrei.",
       "lat": 68.73999,
       "lng": 23.30192,
       "quality": 1
@@ -27693,7 +27693,7 @@
       ],
       "region": "Kautokeino",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Kautokeino, 92 – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Kautokeino, 92 – kostenfrei.",
       "lat": 69.24344,
       "lng": 23.79295,
       "quality": 1
@@ -27706,7 +27706,7 @@
       ],
       "region": "Flekkefjord",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Flekkefjord, Sirneset – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Flekkefjord, Sirneset – kostenfrei.",
       "lat": 58.40605,
       "lng": 6.62333,
       "quality": 1
@@ -27849,7 +27849,7 @@
       ],
       "region": "Sirdal",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Sirdal, Sirdalsveien – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Sirdal, Sirdalsveien – kostenfrei.",
       "lat": 58.90752,
       "lng": 6.85449,
       "quality": 1
@@ -27862,7 +27862,7 @@
       ],
       "region": "Sirdal",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Sirdal, Sirdalsveien – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Sirdal, Sirdalsveien – kostenfrei.",
       "lat": 58.67047,
       "lng": 6.7186,
       "quality": 1
@@ -27888,7 +27888,7 @@
       ],
       "region": "Lund",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Lund, Lundveien – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Lund, Lundveien – kostenfrei.",
       "lat": 58.44192,
       "lng": 6.61178,
       "quality": 1
@@ -27901,7 +27901,7 @@
       ],
       "region": "Farsund",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Farsund, Haviksanden – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Farsund, Haviksanden – kostenfrei.",
       "lat": 58.06842,
       "lng": 6.72851,
       "quality": 1
@@ -27927,7 +27927,7 @@
       ],
       "region": "Lillesand",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Lillesand, Tangvigveien – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Lillesand, Tangvigveien – kostenfrei.",
       "lat": 58.21494,
       "lng": 8.38437,
       "quality": 1
@@ -27953,7 +27953,7 @@
       ],
       "region": "Etne",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Etne, Haukelivegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Etne, Haukelivegen – kostenfrei.",
       "lat": 59.84649,
       "lng": 6.34063,
       "quality": 1
@@ -27966,7 +27966,7 @@
       ],
       "region": "Suldal",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Suldal, Postvegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Suldal, Postvegen – kostenfrei.",
       "lat": 59.48178,
       "lng": 6.2569,
       "quality": 1
@@ -27979,7 +27979,7 @@
       ],
       "region": "Bykle",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Bykle, Otravegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Bykle, Otravegen – kostenfrei.",
       "lat": 59.55991,
       "lng": 7.35574,
       "quality": 1
@@ -28018,7 +28018,7 @@
       ],
       "region": "Stange",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Stange, Espavegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Stange, Espavegen – kostenfrei.",
       "lat": 60.53837,
       "lng": 11.2441,
       "quality": 1
@@ -28109,7 +28109,7 @@
       ],
       "region": "Kongsvinger",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Kongsvinger, Kongsvinger festning – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Kongsvinger, Kongsvinger festning – kostenfrei.",
       "lat": 60.19923,
       "lng": 12.01261,
       "quality": 1
@@ -28135,7 +28135,7 @@
       ],
       "region": "Ullensaker",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Ullensaker, Lufthavnvegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Ullensaker, Lufthavnvegen – kostenfrei.",
       "lat": 60.19446,
       "lng": 11.09552,
       "quality": 1
@@ -28174,7 +28174,7 @@
       ],
       "region": "Sogndal",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Sogndal, Gamle Kaupangsvegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Sogndal, Gamle Kaupangsvegen – kostenfrei.",
       "lat": 61.21033,
       "lng": 7.13886,
       "quality": 1
@@ -28200,7 +28200,7 @@
       ],
       "region": "Lærdal",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Lærdal, Øyragata – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Lærdal, Øyragata – kostenfrei.",
       "lat": 61.09784,
       "lng": 7.47875,
       "quality": 1
@@ -28213,7 +28213,7 @@
       ],
       "region": "Aurland",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Aurland, Bjørgavegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Aurland, Bjørgavegen – kostenfrei.",
       "lat": 60.90827,
       "lng": 7.21267,
       "quality": 1
@@ -28239,7 +28239,7 @@
       ],
       "region": "Vik",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Vik, Hopperstadvegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Vik, Hopperstadvegen – kostenfrei.",
       "lat": 61.07814,
       "lng": 6.56995,
       "quality": 1
@@ -28291,7 +28291,7 @@
       ],
       "region": "Rauma",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Rauma, Liabygdvegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Rauma, Liabygdvegen – kostenfrei.",
       "lat": 62.53608,
       "lng": 7.82541,
       "quality": 1
@@ -28369,7 +28369,7 @@
       ],
       "region": "Osen",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Osen, Forøyveien – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Osen, Forøyveien – kostenfrei.",
       "lat": 64.30051,
       "lng": 10.49947,
       "quality": 1
@@ -28382,7 +28382,7 @@
       ],
       "region": "Vefsn",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Vefsn, Vollanvegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Vefsn, Vollanvegen – kostenfrei.",
       "lat": 65.84491,
       "lng": 13.20014,
       "quality": 1
@@ -28408,7 +28408,7 @@
       ],
       "region": "Vefsn",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Vefsn, Vefsnvegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Vefsn, Vefsnvegen – kostenfrei.",
       "lat": 65.74351,
       "lng": 13.27574,
       "quality": 1
@@ -28447,7 +28447,7 @@
       ],
       "region": "Grane",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Grane, Granevegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Grane, Granevegen – kostenfrei.",
       "lat": 65.61704,
       "lng": 13.3064,
       "quality": 1
@@ -28486,7 +28486,7 @@
       ],
       "region": "Lurøy",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Lurøy, Aldersundveien – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Lurøy, Aldersundveien – kostenfrei.",
       "lat": 66.33272,
       "lng": 13.14388,
       "quality": 1
@@ -28538,7 +28538,7 @@
       ],
       "region": "Meløy",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Meløy, Furøyveien – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Meløy, Furøyveien – kostenfrei.",
       "lat": 66.73883,
       "lng": 13.51382,
       "quality": 1
@@ -28577,7 +28577,7 @@
       ],
       "region": "Tromsø",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Tromsø, Sandneshamnvegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Tromsø, Sandneshamnvegen – kostenfrei.",
       "lat": 69.61458,
       "lng": 18.09885,
       "quality": 1
@@ -28603,7 +28603,7 @@
       ],
       "region": "Tromsø",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Tromsø, Heilovegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Tromsø, Heilovegen – kostenfrei.",
       "lat": 69.67498,
       "lng": 18.92743,
       "quality": 1
@@ -28629,7 +28629,7 @@
       ],
       "region": "Balsfjord",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Balsfjord, Torgveien – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Balsfjord, Torgveien – kostenfrei.",
       "lat": 69.21826,
       "lng": 19.55966,
       "quality": 1
@@ -28707,7 +28707,7 @@
       ],
       "region": "Vinje",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Vinje, Bykleheivegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Vinje, Bykleheivegen – kostenfrei.",
       "lat": 59.73411,
       "lng": 7.55228,
       "quality": 1
@@ -28955,7 +28955,7 @@
       ],
       "region": "Lærdal",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Lærdal, 5 – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Lærdal, 5 – kostenfrei.",
       "lat": 61.14905,
       "lng": 7.38508,
       "quality": 1
@@ -28981,7 +28981,7 @@
       ],
       "region": "Folldal",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Folldal, Atndalsvegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Folldal, Atndalsvegen – kostenfrei.",
       "lat": 61.92154,
       "lng": 10.05349,
       "quality": 1
@@ -29033,7 +29033,7 @@
       ],
       "region": "Holtålen",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Holtålen, Båttjønndalsvegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Holtålen, Båttjønndalsvegen – kostenfrei.",
       "lat": 62.78361,
       "lng": 11.08024,
       "quality": 1
@@ -29059,7 +29059,7 @@
       ],
       "region": "Lierne",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Lierne, Tossåsveien – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Lierne, Tossåsveien – kostenfrei.",
       "lat": 64.48818,
       "lng": 13.41134,
       "quality": 1
@@ -29072,7 +29072,7 @@
       ],
       "region": "Grane",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Grane, Sørfiplingdalsvegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Grane, Sørfiplingdalsvegen – kostenfrei.",
       "lat": 65.21346,
       "lng": 13.37747,
       "quality": 1
@@ -29098,7 +29098,7 @@
       ],
       "region": "Tromsø",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Tromsø, Fagernesvegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Tromsø, Fagernesvegen – kostenfrei.",
       "lat": 69.4711,
       "lng": 19.24636,
       "quality": 1
@@ -29137,7 +29137,7 @@
       ],
       "region": "Sør-Varanger",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Sør-Varanger, Piilolan polku – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Sør-Varanger, Piilolan polku – kostenfrei.",
       "lat": 69.15888,
       "lng": 28.98032,
       "quality": 1
@@ -29150,7 +29150,7 @@
       ],
       "region": "Kåfjord",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Kåfjord, Båen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Kåfjord, Båen – kostenfrei.",
       "lat": 69.51206,
       "lng": 20.70065,
       "quality": 1
@@ -29202,7 +29202,7 @@
       ],
       "region": "Sør-Varanger",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Sør-Varanger, Grense Jakobselv veien – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Sør-Varanger, Grense Jakobselv veien – kostenfrei.",
       "lat": 69.79057,
       "lng": 30.79425,
       "quality": 1
@@ -29215,7 +29215,7 @@
       ],
       "region": "Porsanger",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Porsanger, Hatterveien – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Porsanger, Hatterveien – kostenfrei.",
       "lat": 70.47634,
       "lng": 24.85619,
       "quality": 1
@@ -29345,7 +29345,7 @@
       ],
       "region": "Tvedestrand",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Tvedestrand, Hotellkleiva – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Tvedestrand, Hotellkleiva – kostenfrei.",
       "lat": 58.6225,
       "lng": 8.93091,
       "quality": 1
@@ -29410,7 +29410,7 @@
       ],
       "region": "Suldal",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Suldal, Suldalsvegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Suldal, Suldalsvegen – kostenfrei.",
       "lat": 59.50737,
       "lng": 6.57639,
       "quality": 1
@@ -29501,7 +29501,7 @@
       ],
       "region": "Aurland",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Aurland, Odden – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Aurland, Odden – kostenfrei.",
       "lat": 60.90609,
       "lng": 7.18497,
       "quality": 1
@@ -29540,7 +29540,7 @@
       ],
       "region": "Vik",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Vik, Fjordavegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Vik, Fjordavegen – kostenfrei.",
       "lat": 61.08836,
       "lng": 6.5794,
       "quality": 1
@@ -29852,7 +29852,7 @@
       ],
       "region": "Ørland",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Ørland, Nils Lykkes vei – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Ørland, Nils Lykkes vei – kostenfrei.",
       "lat": 63.65898,
       "lng": 9.43597,
       "quality": 1
@@ -29865,7 +29865,7 @@
       ],
       "region": "Åfjord",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Åfjord, Hofstaddalsveien – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Åfjord, Hofstaddalsveien – kostenfrei.",
       "lat": 64.17608,
       "lng": 10.44155,
       "quality": 1
@@ -29878,7 +29878,7 @@
       ],
       "region": "Leka",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Leka, Leknesveien – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Leka, Leknesveien – kostenfrei.",
       "lat": 65.09405,
       "lng": 11.70163,
       "quality": 1
@@ -30151,7 +30151,7 @@
       ],
       "region": "Hammerfest",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Hammerfest, Sjøgata – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Hammerfest, Sjøgata – kostenfrei.",
       "lat": 70.66296,
       "lng": 23.68262,
       "quality": 1
@@ -30164,7 +30164,7 @@
       ],
       "region": "Vadsø",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Vadsø, Markvegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Vadsø, Markvegen – kostenfrei.",
       "lat": 70.10564,
       "lng": 29.82927,
       "quality": 1
@@ -30331,7 +30331,7 @@
       ],
       "region": "Aurland",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Aurland, Bjørgavegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Aurland, Bjørgavegen – kostenfrei.",
       "lat": 61.00762,
       "lng": 7.33135,
       "quality": 1
@@ -30565,7 +30565,7 @@
       ],
       "region": "Steinkjer",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Steinkjer, Nordvegen – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Steinkjer, Nordvegen – kostenfrei.",
       "lat": 64.01293,
       "lng": 11.74871,
       "quality": 1
@@ -30851,7 +30851,7 @@
       ],
       "region": "Alta",
       "category": "camper_toilets",
-      "description": "Öffentliche Toilette in Alta, Joatka fjellstue – kostenfrei – kostenfrei.",
+      "description": "Öffentliche Toilette in Alta, Joatka fjellstue – kostenfrei.",
       "lat": 69.75502,
       "lng": 23.93298,
       "quality": 1
