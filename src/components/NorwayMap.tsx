@@ -14,24 +14,69 @@ const iconUrl = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png";
 const shadowUrl = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png";
 L.Icon.Default.mergeOptions({ iconRetinaUrl: iconRetina, iconUrl, shadowUrl });
 
+// Icons are shared across markers of the same category. 2 866 markers used
+// to allocate 2 866 divIcons; now it's ~25 (one per category).
+const iconCache = new Map<string, L.DivIcon>();
 function pinIcon(color: string) {
+  const cached = iconCache.get(color);
+  if (cached) return cached;
   const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='30' height='40' viewBox='0 0 30 40'>
     <path d='M15 0C6.7 0 0 6.7 0 15c0 11 15 25 15 25s15-14 15-25C30 6.7 23.3 0 15 0z' fill='${color}' stroke='white' stroke-width='2'/>
     <circle cx='15' cy='15' r='5' fill='white'/>
   </svg>`;
-  return L.divIcon({
+  const icon = L.divIcon({
     html: svg,
     className: "",
     iconSize: [30, 40],
     iconAnchor: [15, 40],
     popupAnchor: [0, -36],
   });
+  iconCache.set(color, icon);
+  return icon;
 }
 
 function escapeHtml(s: string): string {
   return s.replace(/[&<>"']/g, (c) =>
     c === "&" ? "&amp;" : c === "<" ? "&lt;" : c === ">" ? "&gt;" : c === '"' ? "&quot;" : "&#39;",
   );
+}
+
+function buildPopup(
+  p: Place,
+  color: string,
+  handlers: {
+    onFav: () => void;
+    onRoute: () => void;
+    onDetails: () => void;
+  },
+): HTMLElement {
+  const popup = document.createElement("div");
+  popup.className = "npopup";
+  const safeName = escapeHtml(p.name);
+  const safeMeta = escapeHtml(`${CATEGORY_LABEL[p.category]} · ${p.region}`);
+  const safeDesc = escapeHtml(p.description);
+  popup.innerHTML = `
+    <div style="width:260px;font-family:'DM Sans',system-ui,sans-serif;overflow:hidden;border-radius:10px">
+      <div data-img style="position:relative;height:130px;background:linear-gradient(135deg, ${color}, color-mix(in oklab, ${color} 45%, black));display:flex;align-items:flex-end">
+        <div data-img-inner style="position:absolute;inset:0"></div>
+        <div style="position:relative;padding:10px 12px;background:linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));width:100%;color:white">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px;line-height:1.2;text-shadow:0 1px 3px rgba(0,0,0,0.6)">${safeName}</div>
+          <div style="font-size:11px;opacity:0.95;margin-top:2px;text-shadow:0 1px 3px rgba(0,0,0,0.6)">${safeMeta}</div>
+        </div>
+      </div>
+      <div style="padding:10px 12px 12px;background:white">
+        <div style="font-size:12.5px;line-height:1.45;color:#374151;margin-bottom:10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">${safeDesc}</div>
+        <div style="display:flex;gap:6px">
+          <button data-act="details" style="flex:1;padding:6px 8px;border:0;border-radius:6px;background:${color};color:white;cursor:pointer;font-size:12px;font-weight:500">Details</button>
+          <button data-act="fav" title="Favorit" style="padding:6px 10px;border:1px solid #e5e7eb;border-radius:6px;background:white;cursor:pointer;font-size:12px">☆</button>
+          <button data-act="route" title="Zur Route" style="padding:6px 10px;border:1px solid #e5e7eb;border-radius:6px;background:white;cursor:pointer;font-size:12px">＋</button>
+        </div>
+      </div>
+    </div>`;
+  popup.querySelector('[data-act="fav"]')?.addEventListener("click", handlers.onFav);
+  popup.querySelector('[data-act="route"]')?.addEventListener("click", handlers.onRoute);
+  popup.querySelector('[data-act="details"]')?.addEventListener("click", handlers.onDetails);
+  return popup;
 }
 
 export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
@@ -41,6 +86,7 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
   const mapRef = useRef<L.Map | null>(null);
   const clusterRef = useRef<L.MarkerClusterGroup | null>(null);
   const markersRef = useRef<Map<string, L.Marker>>(new Map());
+  const currentVisibleRef = useRef<Set<string>>(new Set());
   const focusId = useAppStore((s) => s.focusId);
   const focusNonce = useAppStore((s) => s.focusNonce);
   const focus = useAppStore((s) => s.focus);
@@ -65,6 +111,7 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       zoom: 5,
       zoomControl: false,
       attributionControl: true,
+      preferCanvas: true,
     });
     L.control.zoom({ position: "bottomright" }).addTo(map);
     const tiles = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -87,108 +134,98 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
 
     const cluster = L.markerClusterGroup({
       showCoverageOnHover: false,
-      maxClusterRadius: 50,
+      maxClusterRadius: 60,
+      chunkedLoading: true,
+      chunkInterval: 40,
+      chunkDelay: 20,
+      removeOutsideVisibleBounds: true,
     });
     map.addLayer(cluster);
     mapRef.current = map;
     clusterRef.current = cluster;
 
-    // Build all markers first (fast, no DOM cost until added to cluster).
-    const built: Array<{ id: string; marker: L.Marker }> = [];
+    // Build marker shells only — no popup DOM until the marker is opened.
+    // This saves ~2 866 popup allocations at startup.
+    const built: L.Marker[] = [];
     for (const p of PLACES) {
-      const m = L.marker([p.lat, p.lng], { icon: pinIcon(colorFor(p.category)) });
       const color = colorFor(p.category);
-      const popup = document.createElement("div");
-      popup.className = "npopup";
-      const safeName = escapeHtml(p.name);
-      const safeMeta = escapeHtml(`${CATEGORY_LABEL[p.category]} · ${p.region}`);
-      const safeDesc = escapeHtml(p.description);
-      popup.innerHTML = `
-        <div style="width:260px;font-family:'DM Sans',system-ui,sans-serif;overflow:hidden;border-radius:10px">
-          <div data-img style="position:relative;height:130px;background:linear-gradient(135deg, ${color}, color-mix(in oklab, ${color} 45%, black));display:flex;align-items:flex-end">
-            <div data-img-inner style="position:absolute;inset:0"></div>
-            <div style="position:relative;padding:10px 12px;background:linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));width:100%;color:white">
-              <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px;line-height:1.2;text-shadow:0 1px 3px rgba(0,0,0,0.6)">${safeName}</div>
-              <div style="font-size:11px;opacity:0.95;margin-top:2px;text-shadow:0 1px 3px rgba(0,0,0,0.6)">${safeMeta}</div>
-            </div>
-          </div>
-          <div style="padding:10px 12px 12px;background:white">
-            <div style="font-size:12.5px;line-height:1.45;color:#374151;margin-bottom:10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">${safeDesc}</div>
-            <div style="display:flex;gap:6px">
-              <button data-act="details" style="flex:1;padding:6px 8px;border:0;border-radius:6px;background:${color};color:white;cursor:pointer;font-size:12px;font-weight:500">Details</button>
-              <button data-act="fav" title="Favorit" style="padding:6px 10px;border:1px solid #e5e7eb;border-radius:6px;background:white;cursor:pointer;font-size:12px">☆</button>
-              <button data-act="route" title="Zur Route" style="padding:6px 10px;border:1px solid #e5e7eb;border-radius:6px;background:white;cursor:pointer;font-size:12px">＋</button>
-            </div>
-          </div>
-        </div>`;
-      popup.querySelector('[data-act="fav"]')?.addEventListener("click", () => toggleFav(p.id));
-      popup.querySelector('[data-act="route"]')?.addEventListener("click", () => addToRoute(p.id));
-      popup.querySelector('[data-act="details"]')?.addEventListener("click", () => {
-        navigate({ to: "/place/$id", params: { id: p.id } });
+      const m = L.marker([p.lat, p.lng], { icon: pinIcon(color) });
+      let popupBuilt = false;
+      m.on("click", () => {
+        focus(p.id);
+        if (!popupBuilt) {
+          popupBuilt = true;
+          const popup = buildPopup(p, color, {
+            onFav: () => toggleFav(p.id),
+            onRoute: () => addToRoute(p.id),
+            onDetails: () => navigate({ to: "/place/$id", params: { id: p.id } }),
+          });
+          m.bindPopup(popup, { maxWidth: 280, minWidth: 260, closeButton: true }).openPopup();
+          let imgLoaded = false;
+          m.on("popupopen", () => {
+            if (imgLoaded) return;
+            imgLoaded = true;
+            lookupPlaceImage(p.name, p.aliases).then((hit) => {
+              if (!hit) return;
+              const holder = popup.querySelector("[data-img-inner]") as HTMLElement | null;
+              if (!holder) return;
+              const img = document.createElement("img");
+              img.src = hit.thumbnail;
+              img.alt = "";
+              img.loading = "lazy";
+              img.decoding = "async";
+              img.style.cssText =
+                "width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .3s";
+              img.onload = () => {
+                img.style.opacity = "1";
+              };
+              holder.appendChild(img);
+            });
+          });
+        }
       });
-      m.bindPopup(popup, { maxWidth: 280, minWidth: 260, closeButton: true });
-      let imgLoaded = false;
-      m.on("popupopen", () => {
-        if (imgLoaded) return;
-        imgLoaded = true;
-        lookupPlaceImage(p.name, p.aliases).then((hit) => {
-          if (!hit) return;
-          const holder = popup.querySelector("[data-img-inner]") as HTMLElement | null;
-          if (!holder) return;
-          const img = document.createElement("img");
-          img.src = hit.thumbnail;
-          img.alt = "";
-          img.loading = "lazy";
-          img.decoding = "async";
-          img.style.cssText =
-            "width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .3s";
-          img.onload = () => {
-            img.style.opacity = "1";
-          };
-          holder.appendChild(img);
-        });
-      });
-      m.on("click", () => focus(p.id));
       markersRef.current.set(p.id, m);
-      built.push({ id: p.id, marker: m });
+      built.push(m);
     }
 
-
-    // Add markers to the cluster in chunks so the UI can report progress.
-    const CHUNK = 300;
-    let cursor = 0;
-    let cancelled = false;
-    const addNext = () => {
-      if (cancelled || !clusterRef.current) return;
-      const slice = built.slice(cursor, cursor + CHUNK);
-      cursor += slice.length;
-      clusterRef.current.addLayers(slice.map((b) => b.marker));
-      setMarkerProgress({ done: cursor, total: built.length });
-      if (cursor < built.length) {
-        requestAnimationFrame(addNext);
-      }
-    };
-    requestAnimationFrame(addNext);
+    // Add all markers at once — the cluster's chunkedLoading option splits
+    // the work into frames internally and is faster than manual chunking.
+    cluster.addLayers(built);
+    currentVisibleRef.current = new Set(markersRef.current.keys());
+    setMarkerProgress({ done: built.length, total: built.length });
 
     return () => {
-      cancelled = true;
       map.remove();
       mapRef.current = null;
       clusterRef.current = null;
       markersRef.current.clear();
+      currentVisibleRef.current.clear();
     };
   }, [focus, toggleFav, addToRoute, navigate]);
 
-  // Sync visible markers with filter/search results
+  // Sync visible markers with filter/search results using a diff so we
+  // only touch markers that actually changed state.
   useEffect(() => {
     const cluster = clusterRef.current;
     if (!cluster) return;
-    cluster.clearLayers();
-    const layers: L.Marker[] = [];
-    markersRef.current.forEach((m, id) => {
-      if (visibleIds.has(id)) layers.push(m);
+    const current = currentVisibleRef.current;
+    const toAdd: L.Marker[] = [];
+    const toRemove: L.Marker[] = [];
+    visibleIds.forEach((id) => {
+      if (!current.has(id)) {
+        const m = markersRef.current.get(id);
+        if (m) toAdd.push(m);
+      }
     });
-    cluster.addLayers(layers);
+    current.forEach((id) => {
+      if (!visibleIds.has(id)) {
+        const m = markersRef.current.get(id);
+        if (m) toRemove.push(m);
+      }
+    });
+    if (toRemove.length) cluster.removeLayers(toRemove);
+    if (toAdd.length) cluster.addLayers(toAdd);
+    currentVisibleRef.current = new Set(visibleIds);
   }, [visibleIds]);
 
   // Fly to focused place
@@ -332,4 +369,3 @@ function ProgressRow({
     </div>
   );
 }
-
