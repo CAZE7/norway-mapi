@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CATEGORY_LABEL, PLACES, type Category, type Place } from "@/data/places";
+import { CATEGORY_LABEL, PLACES, TIER_LABEL, type Category, type Place, type Tier } from "@/data/places";
 import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 import { colorFor } from "@/lib/category-color";
