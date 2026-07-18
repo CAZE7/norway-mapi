@@ -1,10 +1,11 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import type { Category } from "@/data/places";
+import type { Category, Tier } from "@/data/places";
 
 type State = {
   query: string;
   categories: Category[];
+  tiers: Tier[];
   favorites: string[];
   route: string[];
   focusId: string | null;
@@ -12,6 +13,7 @@ type State = {
   setQuery: (q: string) => void;
   toggleCategory: (c: Category) => void;
   clearCategories: () => void;
+  toggleTier: (t: Tier) => void;
   toggleFavorite: (id: string) => void;
   addToRoute: (id: string) => void;
   removeFromRoute: (id: string) => void;
@@ -20,6 +22,8 @@ type State = {
   moveRoute: (from: number, to: number) => void;
   focus: (id: string | null) => void;
 };
+
+
 
 export const useAppStore = create<State>()(
   persist(
