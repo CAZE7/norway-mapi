@@ -174,42 +174,15 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
         </TabsContent>
 
         <TabsContent value="route" className="mt-0 flex min-h-0 flex-1 flex-col">
-          <ScrollArea className="flex-1">
-            <ol className="divide-sidebar-border divide-y">
-              {route.length === 0 && (
-                <li className="text-muted-foreground p-6 text-center text-sm">
-                  Füge Orte zur Route hinzu.
-                </li>
-              )}
-              {route.map((id, i) => {
-                const p = byId.get(id);
-                if (!p) return null;
-                return (
-                  <li key={id} className="flex items-start gap-3 p-3">
-                    <div className="bg-primary text-primary-foreground grid h-6 w-6 shrink-0 place-items-center rounded-full text-xs font-semibold">
-                      {i + 1}
-                    </div>
-                    <button className="min-w-0 flex-1 text-left" onClick={() => focus(id)}>
-                      <div className="truncate text-sm font-medium">{p.name}</div>
-                      <div className="text-muted-foreground truncate text-xs">
-                        {CATEGORY_LABEL[p.category]} · {p.region}
-                      </div>
-                    </button>
-                    <Button size="icon" variant="ghost" onClick={() => removeFromRoute(id)}>
-                      <X className="h-4 w-4" />
-                    </Button>
-                  </li>
-                );
-              })}
-            </ol>
-          </ScrollArea>
-          {route.length > 0 && (
-            <div className="border-sidebar-border border-t p-3">
-              <Button variant="outline" className="w-full" onClick={clearRoute}>
-                <Trash2 className="mr-2 h-4 w-4" /> Route leeren
-              </Button>
-            </div>
-          )}
+          <RoutePanel
+            route={route}
+            byId={byId}
+            focus={focus}
+            removeFromRoute={removeFromRoute}
+            clearRoute={clearRoute}
+            setRoute={setRoute}
+            moveRoute={moveRoute}
+          />
         </TabsContent>
       </Tabs>
     </aside>
