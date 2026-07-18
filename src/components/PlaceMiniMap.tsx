@@ -15,6 +15,41 @@ function pinIcon(color: string) {
   });
 }
 
+// Module-level cache: one detached Leaflet instance is reused across every
+// detail page. On mount the cached DOM node is re-attached to the current
+// container; on unmount it's detached (not destroyed) so tiles stay warm.
+type Cache = {
+  host: HTMLDivElement;
+  map: L.Map;
+  marker: L.Marker;
+  tilesLoaded: boolean;
+};
+let cache: Cache | null = null;
+
+function ensureCache(): Cache {
+  if (cache) return cache;
+  const host = document.createElement("div");
+  host.style.width = "100%";
+  host.style.height = "100%";
+  const map = L.map(host, {
+    center: [64.5, 13.5],
+    zoom: 11,
+    zoomControl: true,
+    scrollWheelZoom: false,
+    attributionControl: true,
+  });
+  const tiles = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "&copy; OpenStreetMap",
+    maxZoom: 18,
+  }).addTo(map);
+  const marker = L.marker([64.5, 13.5]).addTo(map);
+  cache = { host, map, marker, tilesLoaded: false };
+  tiles.on("load", () => {
+    if (cache) cache.tilesLoaded = true;
+  });
+  return cache;
+}
+
 export default function PlaceMiniMap({
   lat,
   lng,
@@ -27,28 +62,40 @@ export default function PlaceMiniMap({
   name: string;
 }) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const mapRef = useRef<L.Map | null>(null);
-  const [tilesLoaded, setTilesLoaded] = useState(false);
+  const [tilesLoaded, setTilesLoaded] = useState(() => cache?.tilesLoaded ?? false);
 
   useEffect(() => {
-    if (!ref.current || mapRef.current) return;
-    const map = L.map(ref.current, {
-      center: [lat, lng],
-      zoom: 11,
-      zoomControl: true,
-      scrollWheelZoom: false,
-      attributionControl: true,
-    });
-    const tiles = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: "&copy; OpenStreetMap",
-      maxZoom: 18,
-    }).addTo(map);
-    tiles.on("load", () => setTilesLoaded(true));
-    L.marker([lat, lng], { icon: pinIcon(colorFor(category)), title: name }).addTo(map);
-    mapRef.current = map;
+    const container = ref.current;
+    if (!container) return;
+    const c = ensureCache();
+
+    // Attach the cached map DOM into this container.
+    container.appendChild(c.host);
+    c.marker.setIcon(pinIcon(colorFor(category)));
+    c.marker.setLatLng([lat, lng]);
+    if (name) c.marker.bindTooltip(name);
+    c.map.setView([lat, lng], 11, { animate: false });
+
+    // The container may have a different size than the previous mount.
+    requestAnimationFrame(() => c.map.invalidateSize());
+
+    if (c.tilesLoaded) {
+      setTilesLoaded(true);
+    } else {
+      setTilesLoaded(false);
+      const onLoad = () => {
+        c.tilesLoaded = true;
+        setTilesLoaded(true);
+      };
+      // Attach once; Leaflet fires "load" on the tile layer.
+      c.map.eachLayer((layer) => {
+        if (layer instanceof L.TileLayer) layer.once("load", onLoad);
+      });
+    }
+
     return () => {
-      map.remove();
-      mapRef.current = null;
+      // Detach the cached host so the next mount can adopt it again.
+      if (c.host.parentElement === container) container.removeChild(c.host);
     };
   }, [lat, lng, category, name]);
 
