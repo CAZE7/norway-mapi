@@ -70,6 +70,36 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
           )}
         </div>
         <div className="mt-3">
+          <div className="text-muted-foreground mb-1.5 text-[11px] font-medium uppercase tracking-wide">
+            Was möchtest du sehen?
+          </div>
+          <div className="flex flex-wrap gap-1.5">
+            {(["geheimtipp", "touristisch", "service"] as Tier[]).map((t) => {
+              const active = tiers.includes(t);
+              const icon = t === "geheimtipp" ? "✨" : t === "touristisch" ? "★" : "⛽";
+              return (
+                <button
+                  key={t}
+                  onClick={() => toggleTier(t)}
+                  className={cn(
+                    "focus-visible:ring-ring inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-2",
+                    active
+                      ? t === "geheimtipp"
+                        ? "border-accent bg-accent text-accent-foreground"
+                        : "border-primary bg-primary text-primary-foreground"
+                      : "border-sidebar-border bg-sidebar text-muted-foreground hover:bg-sidebar-accent",
+                  )}
+                  aria-pressed={active}
+                >
+                  <span aria-hidden>{icon}</span>
+                  {TIER_LABEL[t]}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+        <div className="mt-3">
+
           <div className="flex flex-wrap gap-1.5">
             {(showAllCats ? CATEGORIES : CATEGORIES.slice(0, COLLAPSED_CATEGORY_COUNT)).map((c) => {
               const active = categories.includes(c);
