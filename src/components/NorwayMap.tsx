@@ -147,7 +147,7 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       duration: 0.8,
     });
     if (m) setTimeout(() => m.openPopup(), 400);
-  }, [focusId, placesById]);
+  }, [focusId, focusNonce, placesById]);
 
   return <div ref={containerRef} className="h-full w-full" />;
 }
