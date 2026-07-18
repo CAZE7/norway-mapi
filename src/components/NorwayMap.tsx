@@ -239,6 +239,7 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
   }, [route, placesById]);
 
 
+  const tilesDone = tileProgress.finished;
   const markersDone = markerProgress.done >= markerProgress.total && markerProgress.total > 0;
   const loading = !tilesDone || !markersDone;
 
