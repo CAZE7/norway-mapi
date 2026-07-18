@@ -241,7 +241,10 @@ function PlaceDetail() {
               "radial-gradient(circle at 20% 20%, rgba(255,255,255,0.35), transparent 40%), radial-gradient(circle at 80% 80%, rgba(0,0,0,0.35), transparent 45%)",
           }}
         />
-        <div className="relative mx-auto max-w-5xl px-4 py-10 md:px-8 md:py-14">
+        <div
+          className="relative mx-auto max-w-5xl px-4 py-10 md:px-8 md:py-14"
+          style={{ textShadow: "0 1px 12px rgba(0,0,0,0.35)" }}
+        >
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <Badge className="bg-white/15 text-white ring-1 ring-white/25 backdrop-blur-sm hover:bg-white/20">
               {CATEGORY_LABEL[place.category]}
