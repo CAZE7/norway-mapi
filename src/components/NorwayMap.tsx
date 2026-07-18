@@ -35,6 +35,8 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
   const focus = useAppStore((s) => s.focus);
   const toggleFav = useAppStore((s) => s.toggleFavorite);
   const addToRoute = useAppStore((s) => s.addToRoute);
+  const [tilesLoaded, setTilesLoaded] = useState(false);
+  const [markersReady, setMarkersReady] = useState(false);
 
   const placesById = useMemo(() => {
     const m = new Map<string, Place>();
