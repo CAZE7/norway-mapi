@@ -1,18 +1,19 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Heart, Info, MapPin, Route as RouteIcon, Search, Star, Trash2, X } from "lucide-react";
+import { ChevronDown, Heart, Info, List, MapPin, Route as RouteIcon, Search, Star, Trash2, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CATEGORY_LABEL, PLACES, searchPlaces, type Category, type Place } from "@/data/places";
+import { CATEGORY_LABEL, PLACES, type Category, type Place } from "@/data/places";
 import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
 const CATEGORIES = Object.keys(CATEGORY_LABEL) as Category[];
+const COLLAPSED_CATEGORY_COUNT = 8;
 
-export function AppSidebar({ results }: { results: Place[] }) {
+export function AppSidebar({ results, onNavigate }: { results: Place[]; onNavigate?: () => void }) {
+  const [showAllCats, setShowAllCats] = useState(false);
   const { query, setQuery, categories, toggleCategory, clearCategories } = useAppStore();
   const favorites = useAppStore((s) => s.favorites);
   const route = useAppStore((s) => s.route);
@@ -58,46 +59,59 @@ export function AppSidebar({ results }: { results: Place[] }) {
             </button>
           )}
         </div>
-        <div className="mt-3 flex flex-wrap gap-1.5">
-          {CATEGORIES.map((c) => {
-            const active = categories.includes(c);
-            return (
-              <button
-                key={c}
-                onClick={() => toggleCategory(c)}
-                className={cn(
-                  "rounded-full border px-2.5 py-1 text-xs transition-colors",
-                  active
-                    ? "border-primary bg-primary text-primary-foreground"
-                    : "border-sidebar-border bg-sidebar hover:bg-sidebar-accent",
-                )}
-              >
-                {CATEGORY_LABEL[c]}
-              </button>
-            );
-          })}
-          {categories.length > 0 && (
+        <div className="mt-3">
+          <div className="flex flex-wrap gap-1.5">
+            {(showAllCats ? CATEGORIES : CATEGORIES.slice(0, COLLAPSED_CATEGORY_COUNT)).map((c) => {
+              const active = categories.includes(c);
+              return (
+                <button
+                  key={c}
+                  onClick={() => toggleCategory(c)}
+                  className={cn(
+                    "focus-visible:ring-ring rounded-full border px-2.5 py-1 text-xs transition-colors focus-visible:outline-none focus-visible:ring-2",
+                    active
+                      ? "border-primary bg-primary text-primary-foreground"
+                      : "border-sidebar-border bg-sidebar hover:bg-sidebar-accent",
+                  )}
+                >
+                  {CATEGORY_LABEL[c]}
+                </button>
+              );
+            })}
+          </div>
+          <div className="mt-2 flex items-center justify-between gap-2">
             <button
-              onClick={clearCategories}
-              className="text-muted-foreground hover:text-foreground px-2 text-xs underline"
+              onClick={() => setShowAllCats((v) => !v)}
+              className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1 text-xs"
             >
-              zurücksetzen
+              <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", showAllCats && "rotate-180")} />
+              {showAllCats ? "weniger" : `+${CATEGORIES.length - COLLAPSED_CATEGORY_COUNT} weitere`}
             </button>
-          )}
+            {categories.length > 0 && (
+              <button
+                onClick={clearCategories}
+                className="text-muted-foreground hover:text-foreground text-xs underline"
+              >
+                zurücksetzen ({categories.length})
+              </button>
+            )}
+          </div>
         </div>
       </div>
 
       <Tabs defaultValue="results" className="flex min-h-0 flex-1 flex-col">
         <TabsList className="mx-3 mt-3 grid grid-cols-3">
-          <TabsTrigger value="results">
-            Ergebnisse
-            <Badge variant="secondary" className="ml-2">{results.length}</Badge>
+          <TabsTrigger value="results" className="min-w-0 gap-1.5">
+            <List className="h-3.5 w-3.5 shrink-0" />
+            <span className="truncate">{results.length}</span>
           </TabsTrigger>
-          <TabsTrigger value="favorites">
-            <Heart className="mr-1 h-3.5 w-3.5" /> {favorites.length}
+          <TabsTrigger value="favorites" className="min-w-0 gap-1.5">
+            <Heart className="h-3.5 w-3.5 shrink-0" />
+            <span className="truncate">{favorites.length}</span>
           </TabsTrigger>
-          <TabsTrigger value="route">
-            <RouteIcon className="mr-1 h-3.5 w-3.5" /> {route.length}
+          <TabsTrigger value="route" className="min-w-0 gap-1.5">
+            <RouteIcon className="h-3.5 w-3.5 shrink-0" />
+            <span className="truncate">{route.length}</span>
           </TabsTrigger>
         </TabsList>
 
@@ -118,6 +132,7 @@ export function AppSidebar({ results }: { results: Place[] }) {
                   onSelect={() => focus(p.id)}
                   onFav={() => toggleFav(p.id)}
                   onAddRoute={() => addToRoute(p.id)}
+                  onNavigate={onNavigate}
                 />
               ))}
             </ul>
@@ -144,6 +159,7 @@ export function AppSidebar({ results }: { results: Place[] }) {
                     onSelect={() => focus(id)}
                     onFav={() => toggleFav(id)}
                     onAddRoute={() => addToRoute(id)}
+                    onNavigate={onNavigate}
                   />
                 );
               })}
@@ -201,6 +217,7 @@ function PlaceRow({
   onSelect,
   onFav,
   onAddRoute,
+  onNavigate,
 }: {
   place: Place;
   isFav: boolean;
@@ -208,10 +225,11 @@ function PlaceRow({
   onSelect: () => void;
   onFav: () => void;
   onAddRoute: () => void;
+  onNavigate?: () => void;
 }) {
   return (
     <li className="hover:bg-sidebar-accent group grid grid-cols-[minmax(0,1fr)_auto] items-start gap-2 p-3 transition-colors">
-      <button className="min-w-0 text-left" onClick={onSelect}>
+      <button className="min-w-0 text-left focus-visible:outline-none" onClick={onSelect}>
         <div className="flex items-center gap-2">
           <div className="truncate text-sm font-medium">{place.name}</div>
           {place.quality === 3 && <Star className="text-accent h-3.5 w-3.5 shrink-0 fill-current" />}
@@ -226,24 +244,24 @@ function PlaceRow({
           size="icon"
           variant={isFav ? "default" : "ghost"}
           onClick={onFav}
-          aria-label="Favorit"
-          className="h-7 w-7"
+          aria-label={isFav ? "Favorit entfernen" : "Als Favorit speichern"}
+          className="h-8 w-8"
         >
-          <Heart className={cn("h-3.5 w-3.5", isFav && "fill-current")} />
+          <Heart className={cn("h-4 w-4", isFav && "fill-current")} />
         </Button>
         <Button
           size="icon"
           variant={inRoute ? "default" : "ghost"}
           onClick={onAddRoute}
-          aria-label="Zur Route"
-          className="h-7 w-7"
+          aria-label={inRoute ? "Bereits in Route" : "Zur Route hinzufügen"}
+          className="h-8 w-8"
           disabled={inRoute}
         >
-          <RouteIcon className="h-3.5 w-3.5" />
+          <RouteIcon className="h-4 w-4" />
         </Button>
-        <Button asChild size="icon" variant="ghost" aria-label="Details" className="h-7 w-7">
-          <Link to="/place/$id" params={{ id: place.id }}>
-            <Info className="h-3.5 w-3.5" />
+        <Button asChild size="icon" variant="ghost" aria-label="Details ansehen" className="h-8 w-8">
+          <Link to="/place/$id" params={{ id: place.id }} onClick={onNavigate}>
+            <Info className="h-4 w-4" />
           </Link>
         </Button>
       </div>
