@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import L from "leaflet";
 import { colorFor } from "@/lib/category-color";
 
@@ -28,6 +28,7 @@ export default function PlaceMiniMap({
 }) {
   const ref = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<L.Map | null>(null);
+  const [tilesLoaded, setTilesLoaded] = useState(false);
 
   useEffect(() => {
     if (!ref.current || mapRef.current) return;
@@ -38,10 +39,11 @@ export default function PlaceMiniMap({
       scrollWheelZoom: false,
       attributionControl: true,
     });
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    const tiles = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: "&copy; OpenStreetMap",
       maxZoom: 18,
     }).addTo(map);
+    tiles.on("load", () => setTilesLoaded(true));
     L.marker([lat, lng], { icon: pinIcon(colorFor(category)), title: name }).addTo(map);
     mapRef.current = map;
     return () => {
@@ -50,5 +52,21 @@ export default function PlaceMiniMap({
     };
   }, [lat, lng, category, name]);
 
-  return <div ref={ref} className="h-full w-full" aria-label={`Karte für ${name}`} />;
+  return (
+    <div className="relative h-full w-full">
+      <div ref={ref} className="h-full w-full" aria-label={`Karte für ${name}`} />
+      {!tilesLoaded && (
+        <div
+          className="pointer-events-none absolute inset-0 z-[500] flex items-center justify-center bg-background/70 backdrop-blur-sm transition-opacity duration-300"
+          role="status"
+          aria-live="polite"
+        >
+          <div className="flex items-center gap-2 rounded-lg border border-border/60 bg-card/90 px-3 py-2 shadow-md">
+            <div className="h-4 w-4 animate-spin rounded-full border-2 border-muted border-t-primary" />
+            <span className="text-xs font-medium text-foreground">Karte wird geladen…</span>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }
