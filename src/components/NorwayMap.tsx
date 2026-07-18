@@ -65,6 +65,7 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
   const clusterRef = useRef<L.MarkerClusterGroup | null>(null);
   const markersRef = useRef<Map<string, L.Marker>>(new Map());
   const focusId = useAppStore((s) => s.focusId);
+  const focusNonce = useAppStore((s) => s.focusNonce);
   const focus = useAppStore((s) => s.focus);
   const toggleFav = useAppStore((s) => s.toggleFavorite);
   const addToRoute = useAppStore((s) => s.addToRoute);
