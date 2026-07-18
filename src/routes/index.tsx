@@ -73,14 +73,14 @@ function Home() {
               <VisuallyHidden>
                 <SheetTitle>Orte und Filter</SheetTitle>
               </VisuallyHidden>
-              <AppSidebar results={results} />
+              <AppSidebar results={results} onNavigate={() => setMobileOpen(false)} />
             </SheetContent>
           </Sheet>
         </div>
 
         {/* Result count chip */}
         <div className="bg-card/90 text-foreground pointer-events-none absolute right-3 top-3 z-[1000] rounded-full border px-3 py-1 text-xs font-medium shadow-sm backdrop-blur">
-          {results.length} Orte
+          {results.length.toLocaleString("de-DE")} Orte
         </div>
       </div>
     </div>
