@@ -46,6 +46,8 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
   const focus = useAppStore((s) => s.focus);
   const toggleFav = useAppStore((s) => s.toggleFavorite);
   const addToRoute = useAppStore((s) => s.addToRoute);
+  const route = useAppStore((s) => s.route);
+  const routeLayerRef = useRef<L.LayerGroup | null>(null);
   const [tileProgress, setTileProgress] = useState({ done: 0, total: 0, finished: false });
   const [markerProgress, setMarkerProgress] = useState({ done: 0, total: PLACES.length });
 
@@ -201,7 +203,42 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
     if (m) setTimeout(() => m.openPopup(), 400);
   }, [focusId, focusNonce, placesById]);
 
-  const tilesDone = tileProgress.finished;
+  // Draw ordered route polyline with numbered stop markers.
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map) return;
+    if (routeLayerRef.current) {
+      routeLayerRef.current.remove();
+      routeLayerRef.current = null;
+    }
+    if (route.length < 1) return;
+    const pts: L.LatLngExpression[] = [];
+    const layer = L.layerGroup();
+    route.forEach((id, i) => {
+      const p = placesById.get(id);
+      if (!p) return;
+      pts.push([p.lat, p.lng]);
+      const badge = L.divIcon({
+        html: `<div style="background:hsl(var(--primary));color:hsl(var(--primary-foreground));width:26px;height:26px;border-radius:9999px;display:grid;place-items:center;font:600 12px 'Space Grotesk',sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.35);border:2px solid white">${i + 1}</div>`,
+        className: "",
+        iconSize: [26, 26],
+        iconAnchor: [13, 13],
+      });
+      L.marker([p.lat, p.lng], { icon: badge, interactive: false, keyboard: false, zIndexOffset: 1000 }).addTo(layer);
+    });
+    if (pts.length >= 2) {
+      L.polyline(pts, {
+        color: "hsl(var(--primary))",
+        weight: 4,
+        opacity: 0.85,
+        dashArray: "8 6",
+      }).addTo(layer);
+    }
+    layer.addTo(map);
+    routeLayerRef.current = layer;
+  }, [route, placesById]);
+
+
   const markersDone = markerProgress.done >= markerProgress.total && markerProgress.total > 0;
   const loading = !tilesDone || !markersDone;
 
