@@ -8,6 +8,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CATEGORY_LABEL, PLACES, type Category, type Place } from "@/data/places";
 import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
+import { colorFor } from "@/lib/category-color";
+import PlaceThumb from "@/components/PlaceThumb";
+
 
 const CATEGORIES = Object.keys(CATEGORY_LABEL) as Category[];
 const COLLAPSED_CATEGORY_COUNT = 8;
@@ -228,7 +231,14 @@ function PlaceRow({
   onNavigate?: () => void;
 }) {
   return (
-    <li className="hover:bg-sidebar-accent group grid grid-cols-[minmax(0,1fr)_auto] items-start gap-2 p-3 transition-colors">
+    <li className="hover:bg-sidebar-accent group grid grid-cols-[auto_minmax(0,1fr)_auto] items-start gap-3 p-3 transition-colors">
+      <button
+        className="focus-visible:ring-ring rounded-md focus-visible:outline-none focus-visible:ring-2"
+        onClick={onSelect}
+        aria-label={`${place.name} auf Karte anzeigen`}
+      >
+        <PlaceThumb name={place.name} aliases={place.aliases} color={colorFor(place.category)} size={56} />
+      </button>
       <button className="min-w-0 text-left focus-visible:outline-none" onClick={onSelect}>
         <div className="flex items-center gap-2">
           <div className="truncate text-sm font-medium">{place.name}</div>
@@ -266,5 +276,6 @@ function PlaceRow({
         </Button>
       </div>
     </li>
+
   );
 }

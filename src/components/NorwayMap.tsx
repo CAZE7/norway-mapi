@@ -1,9 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useNavigate } from "@tanstack/react-router";
 import L from "leaflet";
 import "leaflet.markercluster";
 import { PLACES, CATEGORY_LABEL, type Place } from "@/data/places";
 import { useAppStore } from "@/lib/store";
 import { colorFor } from "@/lib/category-color";
+import { lookupPlaceImage } from "@/lib/wikipedia";
+
 
 // Fix default marker icons served from a CDN so we don't fight bundler paths.
 const iconRetina = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png";
@@ -25,7 +28,15 @@ function pinIcon(color: string) {
   });
 }
 
+function escapeHtml(s: string): string {
+  return s.replace(/[&<>"']/g, (c) =>
+    c === "&" ? "&amp;" : c === "<" ? "&lt;" : c === ">" ? "&gt;" : c === '"' ? "&quot;" : "&#39;",
+  );
+}
+
 export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
+
+  const navigate = useNavigate();
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<L.Map | null>(null);
   const clusterRef = useRef<L.MarkerClusterGroup | null>(null);
@@ -37,6 +48,7 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
   const addToRoute = useAppStore((s) => s.addToRoute);
   const [tileProgress, setTileProgress] = useState({ done: 0, total: 0, finished: false });
   const [markerProgress, setMarkerProgress] = useState({ done: 0, total: PLACES.length });
+
 
   const placesById = useMemo(() => {
     const m = new Map<string, Place>();
@@ -83,24 +95,62 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
     const built: Array<{ id: string; marker: L.Marker }> = [];
     for (const p of PLACES) {
       const m = L.marker([p.lat, p.lng], { icon: pinIcon(colorFor(p.category)) });
+      const color = colorFor(p.category);
       const popup = document.createElement("div");
+      popup.className = "npopup";
+      const safeName = escapeHtml(p.name);
+      const safeMeta = escapeHtml(`${CATEGORY_LABEL[p.category]} · ${p.region}`);
+      const safeDesc = escapeHtml(p.description);
       popup.innerHTML = `
-        <div style="min-width:200px;font-family:inherit">
-          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px;margin-bottom:4px">${p.name}</div>
-          <div style="font-size:12px;color:#6b7280;margin-bottom:6px">${CATEGORY_LABEL[p.category]} · ${p.region}</div>
-          <div style="font-size:13px;line-height:1.4;margin-bottom:8px">${p.description}</div>
-          <div style="display:flex;gap:6px">
-            <button data-act="fav" style="flex:1;padding:4px 8px;border:1px solid #e5e7eb;border-radius:6px;background:white;cursor:pointer;font-size:12px">☆ Favorit</button>
-            <button data-act="route" style="flex:1;padding:4px 8px;border:1px solid #e5e7eb;border-radius:6px;background:white;cursor:pointer;font-size:12px">＋ Route</button>
+        <div style="width:260px;font-family:'DM Sans',system-ui,sans-serif;overflow:hidden;border-radius:10px">
+          <div data-img style="position:relative;height:130px;background:linear-gradient(135deg, ${color}, color-mix(in oklab, ${color} 45%, black));display:flex;align-items:flex-end">
+            <div data-img-inner style="position:absolute;inset:0"></div>
+            <div style="position:relative;padding:10px 12px;background:linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));width:100%;color:white">
+              <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px;line-height:1.2;text-shadow:0 1px 3px rgba(0,0,0,0.6)">${safeName}</div>
+              <div style="font-size:11px;opacity:0.95;margin-top:2px;text-shadow:0 1px 3px rgba(0,0,0,0.6)">${safeMeta}</div>
+            </div>
+          </div>
+          <div style="padding:10px 12px 12px;background:white">
+            <div style="font-size:12.5px;line-height:1.45;color:#374151;margin-bottom:10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">${safeDesc}</div>
+            <div style="display:flex;gap:6px">
+              <button data-act="details" style="flex:1;padding:6px 8px;border:0;border-radius:6px;background:${color};color:white;cursor:pointer;font-size:12px;font-weight:500">Details</button>
+              <button data-act="fav" title="Favorit" style="padding:6px 10px;border:1px solid #e5e7eb;border-radius:6px;background:white;cursor:pointer;font-size:12px">☆</button>
+              <button data-act="route" title="Zur Route" style="padding:6px 10px;border:1px solid #e5e7eb;border-radius:6px;background:white;cursor:pointer;font-size:12px">＋</button>
+            </div>
           </div>
         </div>`;
       popup.querySelector('[data-act="fav"]')?.addEventListener("click", () => toggleFav(p.id));
       popup.querySelector('[data-act="route"]')?.addEventListener("click", () => addToRoute(p.id));
-      m.bindPopup(popup);
+      popup.querySelector('[data-act="details"]')?.addEventListener("click", () => {
+        navigate({ to: "/place/$id", params: { id: p.id } });
+      });
+      m.bindPopup(popup, { maxWidth: 280, minWidth: 260, closeButton: true });
+      let imgLoaded = false;
+      m.on("popupopen", () => {
+        if (imgLoaded) return;
+        imgLoaded = true;
+        lookupPlaceImage(p.name, p.aliases).then((hit) => {
+          if (!hit) return;
+          const holder = popup.querySelector("[data-img-inner]") as HTMLElement | null;
+          if (!holder) return;
+          const img = document.createElement("img");
+          img.src = hit.thumbnail;
+          img.alt = "";
+          img.loading = "lazy";
+          img.decoding = "async";
+          img.style.cssText =
+            "width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .3s";
+          img.onload = () => {
+            img.style.opacity = "1";
+          };
+          holder.appendChild(img);
+        });
+      });
       m.on("click", () => focus(p.id));
       markersRef.current.set(p.id, m);
       built.push({ id: p.id, marker: m });
     }
+
 
     // Add markers to the cluster in chunks so the UI can report progress.
     const CHUNK = 300;
@@ -125,7 +175,7 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       clusterRef.current = null;
       markersRef.current.clear();
     };
-  }, [focus, toggleFav, addToRoute]);
+  }, [focus, toggleFav, addToRoute, navigate]);
 
   // Sync visible markers with filter/search results
   useEffect(() => {
