@@ -1,5 +1,6 @@
 import { useMemo } from "react";
-import { Heart, MapPin, Route as RouteIcon, Search, Star, Trash2, X } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { Heart, Info, MapPin, Route as RouteIcon, Search, Star, Trash2, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -239,6 +240,11 @@ function PlaceRow({
           disabled={inRoute}
         >
           <RouteIcon className="h-3.5 w-3.5" />
+        </Button>
+        <Button asChild size="icon" variant="ghost" aria-label="Details" className="h-7 w-7">
+          <Link to="/place/$id" params={{ id: place.id }}>
+            <Info className="h-3.5 w-3.5" />
+          </Link>
         </Button>
       </div>
     </li>
