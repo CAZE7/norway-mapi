@@ -113,10 +113,21 @@ function PlaceDetail() {
       : `/place/${place.id}`;
   const coordString = `${place.lat.toFixed(5)}, ${place.lng.toFixed(5)}`;
 
+  const shortDescription = (() => {
+    const raw = (place.description ?? "").replace(/\s+/g, " ").trim();
+    if (!raw) return "";
+    if (raw.length <= 160) return raw;
+    const cut = raw.slice(0, 160);
+    const lastSpace = cut.lastIndexOf(" ");
+    return `${(lastSpace > 80 ? cut.slice(0, lastSpace) : cut).trim()}…`;
+  })();
+
   async function handleShare() {
+    const headline = `${place.name} – ${CATEGORY_LABEL[place.category]} in ${place.region}`;
+    const shareText = shortDescription ? `${headline}\n\n${shortDescription}` : headline;
     const shareData = {
       title: place.name,
-      text: `${place.name} – ${CATEGORY_LABEL[place.category]} in ${place.region}`,
+      text: shareText,
       url: shareUrl,
     };
     try {
@@ -127,10 +138,11 @@ function PlaceDetail() {
     } catch (err) {
       if ((err as DOMException)?.name === "AbortError") return;
     }
+    const clipboardText = `${shareText}\n${shareUrl}`;
     try {
-      await navigator.clipboard.writeText(shareUrl);
+      await navigator.clipboard.writeText(clipboardText);
       setCopied(true);
-      toast.success("Link kopiert", { description: shareUrl });
+      toast.success("Link & Beschreibung kopiert", { description: shareUrl });
       setTimeout(() => setCopied(false), 2000);
     } catch {
       toast.error("Kopieren fehlgeschlagen", { description: shareUrl });
