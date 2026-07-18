@@ -10,10 +10,10 @@ export type WikiImage = {
   pageUrl: string;
   title: string;
   extract: string;
-  lang: "no" | "nb" | "de" | "en";
+  lang: "no" | "nb" | "de" | "en" | "commons";
 };
 
-const CACHE_KEY = "wiki-image-cache-v1";
+const CACHE_KEY = "wiki-image-cache-v2";
 const NEGATIVE_TTL_MS = 24 * 60 * 60 * 1000; // 1 day
 
 type CacheEntry = { at: number; value: WikiImage | null };
@@ -72,6 +72,68 @@ async function fetchLang(
   }
 }
 
+// Wikimedia Commons search: finds File: pages by keyword, returns the best
+// image (thumburl + descriptionurl) via a single generator=search call.
+async function fetchCommons(query: string): Promise<WikiImage | null> {
+  const params = new URLSearchParams({
+    action: "query",
+    format: "json",
+    origin: "*",
+    generator: "search",
+    gsrsearch: `${query} filemime:image/jpeg|image/png`,
+    gsrnamespace: "6",
+    gsrlimit: "1",
+    prop: "imageinfo",
+    iiprop: "url|extmetadata|mime",
+    iiurlwidth: "1200",
+  });
+  const url = `https://commons.wikimedia.org/w/api.php?${params.toString()}`;
+  try {
+    const res = await fetch(url, { headers: { accept: "application/json" } });
+    if (!res.ok) return null;
+    const data = (await res.json()) as {
+      query?: {
+        pages?: Record<
+          string,
+          {
+            title?: string;
+            imageinfo?: Array<{
+              url?: string;
+              thumburl?: string;
+              descriptionurl?: string;
+              mime?: string;
+              extmetadata?: {
+                ImageDescription?: { value?: string };
+                ObjectName?: { value?: string };
+              };
+            }>;
+          }
+        >;
+      };
+    };
+    const pages = data.query?.pages;
+    if (!pages) return null;
+    const first = Object.values(pages)[0];
+    const info = first?.imageinfo?.[0];
+    if (!info?.url) return null;
+    if (info.mime && !info.mime.startsWith("image/")) return null;
+    const rawDesc = info.extmetadata?.ImageDescription?.value || "";
+    // Strip HTML tags from the Commons description.
+    const extract = rawDesc.replace(/<[^>]+>/g, "").trim();
+    const title = (first.title || query).replace(/^File:/i, "");
+    return {
+      thumbnail: info.thumburl || info.url,
+      original: info.url,
+      pageUrl: info.descriptionurl || `https://commons.wikimedia.org/wiki/${encodeURIComponent(first.title || "")}`,
+      title,
+      extract,
+      lang: "commons",
+    };
+  } catch {
+    return null;
+  }
+}
+
 export async function lookupPlaceImage(
   name: string,
   aliases: string[] = [],
@@ -87,6 +149,7 @@ export async function lookupPlaceImage(
   const candidates = [name, ...aliases].filter(Boolean);
   const langs: Array<"no" | "nb" | "de" | "en"> = ["no", "nb", "de", "en"];
 
+  // Phase 1: Wikipedia summary — richer text, tends to hit named landmarks.
   for (const candidate of candidates) {
     for (const lang of langs) {
       const hit = await fetchLang(lang, candidate);
@@ -95,6 +158,17 @@ export async function lookupPlaceImage(
         writeCache(cache);
         return hit;
       }
+    }
+  }
+
+  // Phase 2: Wikimedia Commons — catches campsites, viewpoints, minor spots
+  // that don't have their own Wikipedia article but do have photos on Commons.
+  for (const candidate of candidates) {
+    const hit = await fetchCommons(candidate);
+    if (hit) {
+      cache[cacheKey] = { at: Date.now(), value: hit };
+      writeCache(cache);
+      return hit;
     }
   }
 

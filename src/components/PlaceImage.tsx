@@ -82,9 +82,9 @@ export default function PlaceImage({
         target="_blank"
         rel="noreferrer"
         className="absolute bottom-2 right-2 inline-flex items-center gap-1 rounded-md bg-black/55 px-2 py-1 text-[11px] font-medium text-white backdrop-blur-sm transition hover:bg-black/70"
-        title="Bildquelle: Wikipedia (CC-BY-SA / Public Domain)"
+        title={`Bildquelle: ${image.lang === "commons" ? "Wikimedia Commons" : "Wikipedia"} (CC-BY-SA / Public Domain)`}
       >
-        Wikipedia
+        {image.lang === "commons" ? "Wikimedia Commons" : "Wikipedia"}
         <ExternalLink className="h-3 w-3" />
       </a>
     </div>
