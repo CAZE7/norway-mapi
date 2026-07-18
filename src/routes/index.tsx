@@ -38,12 +38,14 @@ function MapFallback() {
 function Home() {
   const query = useAppStore((s) => s.query);
   const categories = useAppStore((s) => s.categories);
+  const tiers = useAppStore((s) => s.tiers);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const results = useMemo(() => {
-    const hits = searchPlaces(PLACES, query, new Set(categories));
+    const hits = searchPlaces(PLACES, query, new Set(categories), new Set(tiers));
     return hits.map((h) => h.place);
-  }, [query, categories]);
+  }, [query, categories, tiers]);
+
 
   const visibleIds = useMemo(() => new Set(results.map((p) => p.id)), [results]);
 
