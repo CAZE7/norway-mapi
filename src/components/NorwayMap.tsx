@@ -119,5 +119,28 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
     if (m) setTimeout(() => m.openPopup(), 400);
   }, [focusId, focusNonce, placesById]);
 
-  return <div ref={containerRef} className="h-full w-full" />;
+  const loading = !tilesLoaded || !markersReady;
+
+  return (
+    <div className="relative h-full w-full">
+      <div ref={containerRef} className="h-full w-full" />
+      {loading && (
+        <div
+          className="pointer-events-none absolute inset-0 z-[500] flex items-center justify-center bg-background/70 backdrop-blur-sm transition-opacity duration-300"
+          role="status"
+          aria-live="polite"
+        >
+          <div className="flex flex-col items-center gap-3 rounded-xl border border-border/60 bg-card/90 px-5 py-4 shadow-lg">
+            <div className="h-8 w-8 animate-spin rounded-full border-2 border-muted border-t-primary" />
+            <div className="text-sm font-medium text-foreground">
+              {!tilesLoaded ? "Karte wird geladen…" : "Marker werden platziert…"}
+            </div>
+            <div className="text-xs text-muted-foreground">
+              {PLACES.length.toLocaleString("de-DE")} Orte in Norwegen
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }
