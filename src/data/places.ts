@@ -36,6 +36,7 @@ type RawFile = {
     lat: number;
     lng: number;
     quality?: number;
+    tier?: string;
   }>;
 };
 
@@ -46,7 +47,9 @@ export const CATEGORY_LABEL: Record<string, string> = data.labels;
 export const PLACES: Place[] = data.places.map((p) => ({
   ...p,
   quality: (p.quality as 1 | 2 | 3 | undefined) ?? undefined,
+  tier: (p.tier as Tier | undefined) ?? "geheimtipp",
 }));
+
 
 // Grouped category IDs so the UI can render "Natur" vs. "Camper & Service".
 export const CAMPER_CATEGORIES: Category[] = Object.keys(CATEGORY_LABEL).filter((c) =>
