@@ -44,11 +44,29 @@ const data = raw as RawFile;
 
 export const CATEGORY_LABEL: Record<string, string> = data.labels;
 
-export const PLACES: Place[] = data.places.map((p) => ({
+const BASE_PLACES: Place[] = data.places.map((p) => ({
   ...p,
   quality: (p.quality as 1 | 2 | 3 | undefined) ?? undefined,
   tier: (p.tier as Tier | undefined) ?? "geheimtipp",
 }));
+
+export const CUSTOM_STORAGE_KEY = "steder-custom-places";
+
+function loadCustomPlaces(): Place[] {
+  if (typeof window === "undefined") return [];
+  try {
+    const raw = window.localStorage.getItem(CUSTOM_STORAGE_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw) as Place[];
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+export const CUSTOM_PLACES: Place[] = loadCustomPlaces();
+export const PLACES: Place[] = [...BASE_PLACES, ...CUSTOM_PLACES];
+
 
 
 // Grouped category IDs so the UI can render "Natur" vs. "Camper & Service".
