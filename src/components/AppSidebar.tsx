@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ChevronDown, Heart, Info, List, MapPin, Route as RouteIcon, Search, Star, Trash2, X } from "lucide-react";
+import { ArrowDown, ArrowUp, Car, ChevronDown, Footprints, Heart, Info, List, MapPin, Route as RouteIcon, Search, Sparkles, Star, Trash2, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -10,6 +10,7 @@ import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 import { colorFor } from "@/lib/category-color";
 import PlaceThumb from "@/components/PlaceThumb";
+import { estimateTimes, formatDuration, formatKm, optimizeOrder, totalDistance, type Stop } from "@/lib/route-optimize";
 
 
 const CATEGORIES = Object.keys(CATEGORY_LABEL) as Category[];
@@ -25,6 +26,8 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
   const removeFromRoute = useAppStore((s) => s.removeFromRoute);
   const clearRoute = useAppStore((s) => s.clearRoute);
   const addToRoute = useAppStore((s) => s.addToRoute);
+  const setRoute = useAppStore((s) => s.setRoute);
+  const moveRoute = useAppStore((s) => s.moveRoute);
 
   const byId = useMemo(() => {
     const m = new Map<string, Place>();
@@ -171,42 +174,15 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
         </TabsContent>
 
         <TabsContent value="route" className="mt-0 flex min-h-0 flex-1 flex-col">
-          <ScrollArea className="flex-1">
-            <ol className="divide-sidebar-border divide-y">
-              {route.length === 0 && (
-                <li className="text-muted-foreground p-6 text-center text-sm">
-                  Füge Orte zur Route hinzu.
-                </li>
-              )}
-              {route.map((id, i) => {
-                const p = byId.get(id);
-                if (!p) return null;
-                return (
-                  <li key={id} className="flex items-start gap-3 p-3">
-                    <div className="bg-primary text-primary-foreground grid h-6 w-6 shrink-0 place-items-center rounded-full text-xs font-semibold">
-                      {i + 1}
-                    </div>
-                    <button className="min-w-0 flex-1 text-left" onClick={() => focus(id)}>
-                      <div className="truncate text-sm font-medium">{p.name}</div>
-                      <div className="text-muted-foreground truncate text-xs">
-                        {CATEGORY_LABEL[p.category]} · {p.region}
-                      </div>
-                    </button>
-                    <Button size="icon" variant="ghost" onClick={() => removeFromRoute(id)}>
-                      <X className="h-4 w-4" />
-                    </Button>
-                  </li>
-                );
-              })}
-            </ol>
-          </ScrollArea>
-          {route.length > 0 && (
-            <div className="border-sidebar-border border-t p-3">
-              <Button variant="outline" className="w-full" onClick={clearRoute}>
-                <Trash2 className="mr-2 h-4 w-4" /> Route leeren
-              </Button>
-            </div>
-          )}
+          <RoutePanel
+            route={route}
+            byId={byId}
+            focus={focus}
+            removeFromRoute={removeFromRoute}
+            clearRoute={clearRoute}
+            setRoute={setRoute}
+            moveRoute={moveRoute}
+          />
         </TabsContent>
       </Tabs>
     </aside>
@@ -279,3 +255,168 @@ function PlaceRow({
 
   );
 }
+
+function RoutePanel({
+  route,
+  byId,
+  focus,
+  removeFromRoute,
+  clearRoute,
+  setRoute,
+  moveRoute,
+}: {
+  route: string[];
+  byId: Map<string, Place>;
+  focus: (id: string | null) => void;
+  removeFromRoute: (id: string) => void;
+  clearRoute: () => void;
+  setRoute: (ids: string[]) => void;
+  moveRoute: (from: number, to: number) => void;
+}) {
+  const stops: Stop[] = useMemo(
+    () =>
+      route
+        .map((id) => byId.get(id))
+        .filter((p): p is Place => !!p)
+        .map((p) => ({ id: p.id, lat: p.lat, lng: p.lng })),
+    [route, byId],
+  );
+  const distKm = useMemo(() => totalDistance(stops), [stops]);
+  const times = useMemo(() => estimateTimes(distKm), [distKm]);
+
+  const optimize = () => {
+    if (stops.length < 3) return;
+    const opt = optimizeOrder(stops);
+    setRoute(opt.map((s) => s.id));
+  };
+  const reverse = () => setRoute(route.slice().reverse());
+
+  if (route.length === 0) {
+    return (
+      <div className="text-muted-foreground p-6 text-center text-sm">
+        Füge Orte zur Route hinzu, um Reihenfolge und Fahrzeit zu berechnen.
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <div className="border-sidebar-border grid grid-cols-3 gap-2 border-b p-3">
+        <Stat label="Strecke" value={formatKm(times.roadKm)} />
+        <Stat
+          label="Auto"
+          value={formatDuration(times.driveMinutes)}
+          icon={<Car className="h-3 w-3" />}
+        />
+        <Stat
+          label="zu Fuß"
+          value={formatDuration(times.walkMinutes)}
+          icon={<Footprints className="h-3 w-3" />}
+        />
+      </div>
+      <div className="border-sidebar-border flex gap-2 border-b p-3">
+        <Button
+          size="sm"
+          className="flex-1"
+          onClick={optimize}
+          disabled={stops.length < 3}
+          title={stops.length < 3 ? "Mindestens 3 Stopps nötig" : "Reihenfolge optimieren"}
+        >
+          <Sparkles className="mr-1.5 h-3.5 w-3.5" /> Optimieren
+        </Button>
+        <Button
+          size="sm"
+          variant="outline"
+          onClick={reverse}
+          disabled={route.length < 2}
+          title="Reihenfolge umkehren"
+        >
+          <ArrowUp className="h-3.5 w-3.5" />
+          <ArrowDown className="-ml-1 h-3.5 w-3.5" />
+        </Button>
+      </div>
+      <ScrollArea className="flex-1">
+        <ol className="divide-sidebar-border divide-y">
+          {route.map((id, i) => {
+            const p = byId.get(id);
+            if (!p) return null;
+            const leg = i > 0 ? distKm && haversineIds(byId, route[i - 1], id) : 0;
+            return (
+              <li key={id} className="flex items-start gap-2 p-3">
+                <div className="flex flex-col items-center gap-1">
+                  <div className="bg-primary text-primary-foreground grid h-6 w-6 shrink-0 place-items-center rounded-full text-xs font-semibold">
+                    {i + 1}
+                  </div>
+                  <div className="flex flex-col gap-0.5">
+                    <button
+                      onClick={() => moveRoute(i, i - 1)}
+                      disabled={i === 0}
+                      className="text-muted-foreground hover:text-foreground disabled:opacity-30"
+                      aria-label="Nach oben"
+                    >
+                      <ArrowUp className="h-3 w-3" />
+                    </button>
+                    <button
+                      onClick={() => moveRoute(i, i + 1)}
+                      disabled={i === route.length - 1}
+                      className="text-muted-foreground hover:text-foreground disabled:opacity-30"
+                      aria-label="Nach unten"
+                    >
+                      <ArrowDown className="h-3 w-3" />
+                    </button>
+                  </div>
+                </div>
+                <button className="min-w-0 flex-1 text-left" onClick={() => focus(id)}>
+                  <div className="truncate text-sm font-medium">{p.name}</div>
+                  <div className="text-muted-foreground truncate text-xs">
+                    {CATEGORY_LABEL[p.category]} · {p.region}
+                  </div>
+                  {i > 0 && (
+                    <div className="text-muted-foreground/80 mt-1 text-[11px]">
+                      + {formatKm(leg * 1.3)} von Stopp {i}
+                    </div>
+                  )}
+                </button>
+                <Button size="icon" variant="ghost" className="h-8 w-8" onClick={() => removeFromRoute(id)}>
+                  <X className="h-4 w-4" />
+                </Button>
+              </li>
+            );
+          })}
+        </ol>
+      </ScrollArea>
+      <div className="border-sidebar-border border-t p-3">
+        <Button variant="outline" className="w-full" onClick={clearRoute}>
+          <Trash2 className="mr-2 h-4 w-4" /> Route leeren
+        </Button>
+      </div>
+    </>
+  );
+}
+
+function haversineIds(byId: Map<string, Place>, a: string, b: string): number {
+  const pa = byId.get(a);
+  const pb = byId.get(b);
+  if (!pa || !pb) return 0;
+  const R = 6371;
+  const toRad = (v: number) => (v * Math.PI) / 180;
+  const dLat = toRad(pb.lat - pa.lat);
+  const dLng = toRad(pb.lng - pa.lng);
+  const s =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(toRad(pa.lat)) * Math.cos(toRad(pb.lat)) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(s));
+}
+
+function Stat({ label, value, icon }: { label: string; value: string; icon?: React.ReactNode }) {
+  return (
+    <div className="rounded-md border border-sidebar-border bg-sidebar-accent/40 px-2 py-1.5">
+      <div className="text-muted-foreground flex items-center gap-1 text-[10px] uppercase tracking-wide">
+        {icon}
+        {label}
+      </div>
+      <div className="mt-0.5 truncate text-sm font-semibold">{value}</div>
+    </div>
+  );
+}
+

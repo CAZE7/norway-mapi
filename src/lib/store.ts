@@ -16,6 +16,8 @@ type State = {
   addToRoute: (id: string) => void;
   removeFromRoute: (id: string) => void;
   clearRoute: () => void;
+  setRoute: (ids: string[]) => void;
+  moveRoute: (from: number, to: number) => void;
   focus: (id: string | null) => void;
 };
 
@@ -47,6 +49,15 @@ export const useAppStore = create<State>()(
       removeFromRoute: (id) =>
         set((s) => ({ route: s.route.filter((x) => x !== id) })),
       clearRoute: () => set({ route: [] }),
+      setRoute: (ids) => set({ route: ids }),
+      moveRoute: (from, to) =>
+        set((s) => {
+          if (from === to || from < 0 || to < 0 || from >= s.route.length || to >= s.route.length) return s;
+          const next = s.route.slice();
+          const [item] = next.splice(from, 1);
+          next.splice(to, 0, item);
+          return { route: next };
+        }),
       focus: (focusId) => set((s) => ({ focusId, focusNonce: s.focusNonce + 1 })),
     }),
     {
