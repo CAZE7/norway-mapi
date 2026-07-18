@@ -241,6 +241,11 @@ function PlaceRow({
         >
           <RouteIcon className="h-3.5 w-3.5" />
         </Button>
+        <Button asChild size="icon" variant="ghost" aria-label="Details" className="h-7 w-7">
+          <Link to="/place/$id" params={{ id: place.id }}>
+            <Info className="h-3.5 w-3.5" />
+          </Link>
+        </Button>
       </div>
     </li>
   );
