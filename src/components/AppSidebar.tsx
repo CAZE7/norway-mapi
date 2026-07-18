@@ -12,7 +12,8 @@ import { cn } from "@/lib/utils";
 const CATEGORIES = Object.keys(CATEGORY_LABEL) as Category[];
 const COLLAPSED_CATEGORY_COUNT = 8;
 
-export function AppSidebar({ results }: { results: Place[] }) {
+export function AppSidebar({ results, onNavigate }: { results: Place[]; onNavigate?: () => void }) {
+  const [showAllCats, setShowAllCats] = useState(false);
   const { query, setQuery, categories, toggleCategory, clearCategories } = useAppStore();
   const favorites = useAppStore((s) => s.favorites);
   const route = useAppStore((s) => s.route);
