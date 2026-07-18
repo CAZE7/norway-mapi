@@ -1,5 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowLeft, Heart, MapPin, Navigation, Route as RouteIcon, Star } from "lucide-react";
+import { ArrowLeft, Check, Heart, MapPin, Navigation, Route as RouteIcon, Share2, Star } from "lucide-react";
+import { useState } from "react";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CATEGORY_LABEL, PLACES, type Place } from "@/data/places";
