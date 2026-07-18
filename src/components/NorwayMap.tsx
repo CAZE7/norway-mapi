@@ -97,7 +97,7 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
     clusterRef.current = cluster;
 
     for (const p of PLACES) {
-      const m = L.marker([p.lat, p.lng], { icon: pinIcon(CATEGORY_COLOR[p.category]) });
+      const m = L.marker([p.lat, p.lng], { icon: pinIcon(colorFor(p.category)) });
       const popup = document.createElement("div");
       popup.innerHTML = `
         <div style="min-width:200px;font-family:inherit">
