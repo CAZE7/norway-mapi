@@ -195,6 +195,14 @@ function PlaceDetail() {
                 <RouteIcon className="mr-2 h-4 w-4" />
                 {inRoute ? "Aus Route entfernen" : "Zur Route hinzufügen"}
               </Button>
+              <Button variant="outline" onClick={handleShare} aria-label="Link teilen">
+                {copied ? (
+                  <Check className="mr-2 h-4 w-4" />
+                ) : (
+                  <Share2 className="mr-2 h-4 w-4" />
+                )}
+                {copied ? "Link kopiert" : "Teilen"}
+              </Button>
             </div>
           </div>
         </section>
