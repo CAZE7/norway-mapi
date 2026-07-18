@@ -123,25 +123,15 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
 
         <TabsContent value="results" className="mt-0 min-h-0 flex-1">
           <ScrollArea className="h-full">
-            <ul className="divide-sidebar-border divide-y">
-              {results.length === 0 && (
-                <li className="text-muted-foreground p-6 text-center text-sm">
-                  Keine Treffer. Filter oder Suche anpassen.
-                </li>
-              )}
-              {results.map((p) => (
-                <PlaceRow
-                  key={p.id}
-                  place={p}
-                  isFav={favorites.includes(p.id)}
-                  inRoute={route.includes(p.id)}
-                  onSelect={() => focus(p.id)}
-                  onFav={() => toggleFav(p.id)}
-                  onAddRoute={() => addToRoute(p.id)}
-                  onNavigate={onNavigate}
-                />
-              ))}
-            </ul>
+            <PagedResults
+              results={results}
+              favorites={favorites}
+              route={route}
+              onFocus={focus}
+              onFav={toggleFav}
+              onAddRoute={addToRoute}
+              onNavigate={onNavigate}
+            />
           </ScrollArea>
         </TabsContent>
 
