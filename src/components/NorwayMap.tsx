@@ -85,6 +85,7 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       m.on("click", () => focus(p.id));
       markersRef.current.set(p.id, m);
     }
+    setMarkersReady(true);
 
     return () => {
       map.remove();
