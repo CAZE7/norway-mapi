@@ -220,6 +220,19 @@ function PlaceDetail() {
           background: `linear-gradient(135deg, ${color} 0%, color-mix(in oklab, ${color} 55%, black) 100%)`,
         }}
       >
+        {/* Free Wikipedia image behind the gradient — silently falls back to the tint. */}
+        <div aria-hidden className="pointer-events-none absolute inset-0 opacity-70">
+          <ClientOnly fallback={null}>
+            <Suspense fallback={null}>
+              <PlaceImage
+                name={place.name}
+                aliases={place.aliases}
+                category={CATEGORY_LABEL[place.category]}
+                color={color}
+              />
+            </Suspense>
+          </ClientOnly>
+        </div>
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 opacity-20"
