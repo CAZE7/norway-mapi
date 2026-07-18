@@ -1,5 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowLeft, Heart, MapPin, Navigation, Route as RouteIcon, Star } from "lucide-react";
+import { ArrowLeft, Check, Heart, MapPin, Navigation, Route as RouteIcon, Share2, Star } from "lucide-react";
+import { useState } from "react";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CATEGORY_LABEL, PLACES, type Place } from "@/data/places";
@@ -55,6 +57,37 @@ function PlaceDetail() {
 
   const isFav = favorites.includes(place.id);
   const inRoute = route.includes(place.id);
+  const [copied, setCopied] = useState(false);
+
+  const shareUrl =
+    typeof window !== "undefined"
+      ? `${window.location.origin}/place/${place.id}`
+      : `/place/${place.id}`;
+
+  async function handleShare() {
+    const shareData = {
+      title: place.name,
+      text: `${place.name} – ${CATEGORY_LABEL[place.category]} in ${place.region}`,
+      url: shareUrl,
+    };
+    try {
+      if (typeof navigator !== "undefined" && typeof navigator.share === "function") {
+        await navigator.share(shareData);
+        return;
+      }
+    } catch (err) {
+      // User cancelled or share failed – fall through to clipboard.
+      if ((err as DOMException)?.name === "AbortError") return;
+    }
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setCopied(true);
+      toast.success("Link kopiert", { description: shareUrl });
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      toast.error("Kopieren fehlgeschlagen", { description: shareUrl });
+    }
+  }
 
   const related = PLACES.filter(
     (p) => p.id !== place.id && (p.category === place.category || p.region === place.region),
@@ -161,6 +194,14 @@ function PlaceDetail() {
               >
                 <RouteIcon className="mr-2 h-4 w-4" />
                 {inRoute ? "Aus Route entfernen" : "Zur Route hinzufügen"}
+              </Button>
+              <Button variant="outline" onClick={handleShare} aria-label="Link teilen">
+                {copied ? (
+                  <Check className="mr-2 h-4 w-4" />
+                ) : (
+                  <Share2 className="mr-2 h-4 w-4" />
+                )}
+                {copied ? "Link kopiert" : "Teilen"}
               </Button>
             </div>
           </div>
