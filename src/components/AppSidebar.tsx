@@ -22,7 +22,7 @@ const COLLAPSED_CATEGORY_COUNT = 8;
 
 export function AppSidebar({ results, onNavigate }: { results: Place[]; onNavigate?: () => void }) {
   const [showAllCats, setShowAllCats] = useState(false);
-  const { query, setQuery, categories, toggleCategory, clearCategories } = useAppStore();
+  const { query, setQuery, categories, toggleCategory, clearCategories, tiers, toggleTier } = useAppStore();
   const favorites = useAppStore((s) => s.favorites);
   const route = useAppStore((s) => s.route);
   const focus = useAppStore((s) => s.focus);
