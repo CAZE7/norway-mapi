@@ -1,10 +1,11 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import type { Category } from "@/data/places";
+import type { Category, Tier } from "@/data/places";
 
 type State = {
   query: string;
   categories: Category[];
+  tiers: Tier[];
   favorites: string[];
   route: string[];
   focusId: string | null;
@@ -12,6 +13,7 @@ type State = {
   setQuery: (q: string) => void;
   toggleCategory: (c: Category) => void;
   clearCategories: () => void;
+  toggleTier: (t: Tier) => void;
   toggleFavorite: (id: string) => void;
   addToRoute: (id: string) => void;
   removeFromRoute: (id: string) => void;
@@ -21,11 +23,14 @@ type State = {
   focus: (id: string | null) => void;
 };
 
+
+
 export const useAppStore = create<State>()(
   persist(
     (set) => ({
       query: "",
       categories: [],
+      tiers: ["geheimtipp", "touristisch"],
       favorites: [],
       route: [],
       focusId: null,
@@ -38,6 +43,11 @@ export const useAppStore = create<State>()(
             : [...s.categories, c],
         })),
       clearCategories: () => set({ categories: [] }),
+      toggleTier: (t) =>
+        set((s) => ({
+          tiers: s.tiers.includes(t) ? s.tiers.filter((x) => x !== t) : [...s.tiers, t],
+        })),
+
       toggleFavorite: (id) =>
         set((s) => ({
           favorites: s.favorites.includes(id)
@@ -62,7 +72,8 @@ export const useAppStore = create<State>()(
     }),
     {
       name: "steder-i-norge",
-      partialize: (s) => ({ favorites: s.favorites, route: s.route }),
+      partialize: (s) => ({ favorites: s.favorites, route: s.route, tiers: s.tiers }),
     },
+
   ),
 );

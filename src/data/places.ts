@@ -2,6 +2,13 @@
 import raw from "./places.data.json";
 
 export type Category = string;
+export type Tier = "geheimtipp" | "touristisch" | "service";
+
+export const TIER_LABEL: Record<Tier, string> = {
+  geheimtipp: "Geheimtipp",
+  touristisch: "Touristisch",
+  service: "Service & Infrastruktur",
+};
 
 export type Place = {
   id: string;
@@ -13,7 +20,9 @@ export type Place = {
   lat: number;
   lng: number;
   quality?: 1 | 2 | 3;
+  tier: Tier;
 };
+
 
 type RawFile = {
   labels: Record<string, string>;
@@ -27,6 +36,7 @@ type RawFile = {
     lat: number;
     lng: number;
     quality?: number;
+    tier?: string;
   }>;
 };
 
@@ -37,7 +47,9 @@ export const CATEGORY_LABEL: Record<string, string> = data.labels;
 export const PLACES: Place[] = data.places.map((p) => ({
   ...p,
   quality: (p.quality as 1 | 2 | 3 | undefined) ?? undefined,
+  tier: (p.tier as Tier | undefined) ?? "geheimtipp",
 }));
+
 
 // Grouped category IDs so the UI can render "Natur" vs. "Camper & Service".
 export const CAMPER_CATEGORIES: Category[] = Object.keys(CATEGORY_LABEL).filter((c) =>
@@ -69,13 +81,18 @@ export function searchPlaces(
   places: Place[],
   query: string,
   categories: Set<Category>,
+  tiers?: Set<Tier>,
 ): SearchHit[] {
-  const filtered = categories.size
+  let filtered = categories.size
     ? places.filter((p) => categories.has(p.category))
     : places;
+  if (tiers && tiers.size) {
+    filtered = filtered.filter((p) => tiers.has(p.tier));
+  }
   if (!query.trim()) {
     return filtered.map((place) => ({ place, score: 0 }));
   }
+
   const q = normalize(query);
   const hits: SearchHit[] = [];
   for (const place of filtered) {

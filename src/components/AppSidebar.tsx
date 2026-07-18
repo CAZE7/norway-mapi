@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CATEGORY_LABEL, PLACES, type Category, type Place } from "@/data/places";
+import { CATEGORY_LABEL, PLACES, TIER_LABEL, type Category, type Place, type Tier } from "@/data/places";
 import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 import { colorFor } from "@/lib/category-color";
@@ -22,7 +22,7 @@ const COLLAPSED_CATEGORY_COUNT = 8;
 
 export function AppSidebar({ results, onNavigate }: { results: Place[]; onNavigate?: () => void }) {
   const [showAllCats, setShowAllCats] = useState(false);
-  const { query, setQuery, categories, toggleCategory, clearCategories } = useAppStore();
+  const { query, setQuery, categories, toggleCategory, clearCategories, tiers, toggleTier } = useAppStore();
   const favorites = useAppStore((s) => s.favorites);
   const route = useAppStore((s) => s.route);
   const focus = useAppStore((s) => s.focus);
@@ -70,6 +70,36 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
           )}
         </div>
         <div className="mt-3">
+          <div className="text-muted-foreground mb-1.5 text-[11px] font-medium uppercase tracking-wide">
+            Was möchtest du sehen?
+          </div>
+          <div className="flex flex-wrap gap-1.5">
+            {(["geheimtipp", "touristisch", "service"] as Tier[]).map((t) => {
+              const active = tiers.includes(t);
+              const icon = t === "geheimtipp" ? "✨" : t === "touristisch" ? "★" : "⛽";
+              return (
+                <button
+                  key={t}
+                  onClick={() => toggleTier(t)}
+                  className={cn(
+                    "focus-visible:ring-ring inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-2",
+                    active
+                      ? t === "geheimtipp"
+                        ? "border-accent bg-accent text-accent-foreground"
+                        : "border-primary bg-primary text-primary-foreground"
+                      : "border-sidebar-border bg-sidebar text-muted-foreground hover:bg-sidebar-accent",
+                  )}
+                  aria-pressed={active}
+                >
+                  <span aria-hidden>{icon}</span>
+                  {TIER_LABEL[t]}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+        <div className="mt-3">
+
           <div className="flex flex-wrap gap-1.5">
             {(showAllCats ? CATEGORIES : CATEGORIES.slice(0, COLLAPSED_CATEGORY_COUNT)).map((c) => {
               const active = categories.includes(c);
@@ -282,8 +312,19 @@ function PlaceRow({
       <button className="min-w-0 text-left focus-visible:outline-none" onClick={onSelect}>
         <div className="flex items-center gap-2">
           <div className="truncate text-sm font-medium">{place.name}</div>
+          {place.tier === "geheimtipp" && (
+            <span className="bg-accent/15 text-accent shrink-0 rounded-full px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide">
+              Geheimtipp
+            </span>
+          )}
+          {place.tier === "touristisch" && (
+            <span className="bg-primary/10 text-primary shrink-0 rounded-full px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide">
+              Highlight
+            </span>
+          )}
           {place.quality === 3 && <Star className="text-accent h-3.5 w-3.5 shrink-0 fill-current" />}
         </div>
+
         <div className="text-muted-foreground mt-0.5 truncate text-xs">
           {CATEGORY_LABEL[place.category]} · {place.region}
         </div>
