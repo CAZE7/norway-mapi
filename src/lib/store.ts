@@ -30,6 +30,7 @@ export const useAppStore = create<State>()(
     (set) => ({
       query: "",
       categories: [],
+      tiers: ["geheimtipp", "touristisch"],
       favorites: [],
       route: [],
       focusId: null,
@@ -42,6 +43,11 @@ export const useAppStore = create<State>()(
             : [...s.categories, c],
         })),
       clearCategories: () => set({ categories: [] }),
+      toggleTier: (t) =>
+        set((s) => ({
+          tiers: s.tiers.includes(t) ? s.tiers.filter((x) => x !== t) : [...s.tiers, t],
+        })),
+
       toggleFavorite: (id) =>
         set((s) => ({
           favorites: s.favorites.includes(id)
