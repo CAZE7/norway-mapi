@@ -57,8 +57,38 @@ function PlaceDetail() {
 
   const isFav = favorites.includes(place.id);
   const inRoute = route.includes(place.id);
+  const [copied, setCopied] = useState(false);
 
-  const related = PLACES.filter(
+  const shareUrl =
+    typeof window !== "undefined"
+      ? `${window.location.origin}/place/${place.id}`
+      : `/place/${place.id}`;
+
+  async function handleShare() {
+    const shareData = {
+      title: place.name,
+      text: `${place.name} – ${CATEGORY_LABEL[place.category]} in ${place.region}`,
+      url: shareUrl,
+    };
+    try {
+      if (typeof navigator !== "undefined" && typeof navigator.share === "function") {
+        await navigator.share(shareData);
+        return;
+      }
+    } catch (err) {
+      // User cancelled or share failed – fall through to clipboard.
+      if ((err as DOMException)?.name === "AbortError") return;
+    }
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setCopied(true);
+      toast.success("Link kopiert", { description: shareUrl });
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      toast.error("Kopieren fehlgeschlagen", { description: shareUrl });
+    }
+  }
+
     (p) => p.id !== place.id && (p.category === place.category || p.region === place.region),
   ).slice(0, 6);
 
