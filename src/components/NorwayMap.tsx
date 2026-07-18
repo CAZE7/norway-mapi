@@ -57,7 +57,19 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       attribution: "&copy; OpenStreetMap contributors",
       maxZoom: 18,
     }).addTo(map);
-    tiles.on("load", () => setTilesLoaded(true));
+    let tilesFinished = false;
+    tiles.on("tileloadstart", () => {
+      if (tilesFinished) return;
+      setTileProgress((p) => ({ ...p, total: p.total + 1 }));
+    });
+    tiles.on("tileload", () => {
+      if (tilesFinished) return;
+      setTileProgress((p) => ({ ...p, done: p.done + 1 }));
+    });
+    tiles.on("load", () => {
+      tilesFinished = true;
+      setTileProgress((p) => ({ ...p, finished: true, done: Math.max(p.done, p.total) }));
+    });
 
     const cluster = L.markerClusterGroup({
       showCoverageOnHover: false,
@@ -67,6 +79,8 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
     mapRef.current = map;
     clusterRef.current = cluster;
 
+    // Build all markers first (fast, no DOM cost until added to cluster).
+    const built: Array<{ id: string; marker: L.Marker }> = [];
     for (const p of PLACES) {
       const m = L.marker([p.lat, p.lng], { icon: pinIcon(colorFor(p.category)) });
       const popup = document.createElement("div");
@@ -85,8 +99,24 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       m.bindPopup(popup);
       m.on("click", () => focus(p.id));
       markersRef.current.set(p.id, m);
+      built.push({ id: p.id, marker: m });
     }
-    setMarkersReady(true);
+
+    // Add markers to the cluster in chunks so the UI can report progress.
+    const CHUNK = 300;
+    let cursor = 0;
+    let cancelled = false;
+    const addNext = () => {
+      if (cancelled || !clusterRef.current) return;
+      const slice = built.slice(cursor, cursor + CHUNK);
+      cursor += slice.length;
+      clusterRef.current.addLayers(slice.map((b) => b.marker));
+      setMarkerProgress({ done: cursor, total: built.length });
+      if (cursor < built.length) {
+        requestAnimationFrame(addNext);
+      }
+    };
+    requestAnimationFrame(addNext);
 
     return () => {
       map.remove();
