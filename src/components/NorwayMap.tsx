@@ -29,6 +29,7 @@ function pinIcon(color: string) {
 }
 
 export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
+  const navigate = useNavigate();
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<L.Map | null>(null);
   const clusterRef = useRef<L.MarkerClusterGroup | null>(null);
@@ -40,6 +41,7 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
   const addToRoute = useAppStore((s) => s.addToRoute);
   const [tileProgress, setTileProgress] = useState({ done: 0, total: 0, finished: false });
   const [markerProgress, setMarkerProgress] = useState({ done: 0, total: PLACES.length });
+
 
   const placesById = useMemo(() => {
     const m = new Map<string, Place>();
