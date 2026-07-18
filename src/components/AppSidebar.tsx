@@ -1,5 +1,6 @@
 import { useMemo } from "react";
-import { Heart, MapPin, Route as RouteIcon, Search, Star, Trash2, X } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { Heart, Info, MapPin, Route as RouteIcon, Search, Star, Trash2, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
