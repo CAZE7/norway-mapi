@@ -47,7 +47,7 @@ export const useAppStore = create<State>()(
       removeFromRoute: (id) =>
         set((s) => ({ route: s.route.filter((x) => x !== id) })),
       clearRoute: () => set({ route: [] }),
-      focus: (focusId) => set({ focusId }),
+      focus: (focusId) => set((s) => ({ focusId, focusNonce: s.focusNonce + 1 })),
     }),
     {
       name: "steder-i-norge",
