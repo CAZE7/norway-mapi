@@ -14,21 +14,22 @@ const NorwayMap = lazy(() => import("@/components/NorwayMap"));
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Steder i Norge – Karte, Suche & Reiseplanung" },
+      { title: "Steder i Norge – Geheimtipps & Highlights in Norwegen" },
       {
         name: "description",
         content:
-          "Interaktive Karte für Norwegen: Fjorde, Berge, Wasserfälle, Städte und Camper-Infrastruktur. Mit Suche, Filtern, Favoriten und Routenplanung.",
+          "Über 2.000 handverlesene Orte in Norwegen: echte Geheimtipps abseits der Touristenrouten, dazu die bekanntesten Highlights, Camper-Infrastruktur, Wetter & Nordlicht.",
       },
-      { property: "og:title", content: "Steder i Norge" },
+      { property: "og:title", content: "Steder i Norge – Geheimtipps" },
       {
         property: "og:description",
-        content: "Entdecke Norwegens schönste Orte auf einer interaktiven Karte.",
+        content: "Geheimtipps und Highlights in Norwegen auf einer interaktiven Karte.",
       },
     ],
   }),
   component: Home,
 });
+
 
 function MapFallback() {
   return <div className="bg-muted h-full w-full animate-pulse" />;
