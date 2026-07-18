@@ -1,16 +1,16 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Heart, Info, MapPin, Route as RouteIcon, Search, Star, Trash2, X } from "lucide-react";
+import { ChevronDown, Heart, Info, List, MapPin, Route as RouteIcon, Search, Star, Trash2, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CATEGORY_LABEL, PLACES, searchPlaces, type Category, type Place } from "@/data/places";
+import { CATEGORY_LABEL, PLACES, type Category, type Place } from "@/data/places";
 import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
 const CATEGORIES = Object.keys(CATEGORY_LABEL) as Category[];
+const COLLAPSED_CATEGORY_COUNT = 8;
 
 export function AppSidebar({ results }: { results: Place[] }) {
   const { query, setQuery, categories, toggleCategory, clearCategories } = useAppStore();
