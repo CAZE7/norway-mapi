@@ -179,6 +179,76 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
   );
 }
 
+const PAGE_SIZE = 60;
+
+function PagedResults({
+  results,
+  favorites,
+  route,
+  onFocus,
+  onFav,
+  onAddRoute,
+  onNavigate,
+}: {
+  results: Place[];
+  favorites: string[];
+  route: string[];
+  onFocus: (id: string) => void;
+  onFav: (id: string) => void;
+  onAddRoute: (id: string) => void;
+  onNavigate?: () => void;
+}) {
+  const [limit, setLimit] = useState(PAGE_SIZE);
+  // Reset the visible page whenever the underlying result set changes.
+  useEffect(() => {
+    setLimit(PAGE_SIZE);
+  }, [results]);
+
+  if (results.length === 0) {
+    return (
+      <ul className="divide-sidebar-border divide-y">
+        <li className="text-muted-foreground p-6 text-center text-sm">
+          Keine Treffer. Filter oder Suche anpassen.
+        </li>
+      </ul>
+    );
+  }
+
+  const shown = results.slice(0, limit);
+  const remaining = results.length - shown.length;
+
+  return (
+    <>
+      <ul className="divide-sidebar-border divide-y">
+        {shown.map((p) => (
+          <PlaceRow
+            key={p.id}
+            place={p}
+            isFav={favorites.includes(p.id)}
+            inRoute={route.includes(p.id)}
+            onSelect={() => onFocus(p.id)}
+            onFav={() => onFav(p.id)}
+            onAddRoute={() => onAddRoute(p.id)}
+            onNavigate={onNavigate}
+          />
+        ))}
+      </ul>
+      {remaining > 0 && (
+        <div className="p-3">
+          <Button
+            variant="outline"
+            className="w-full"
+            onClick={() => setLimit((l) => l + PAGE_SIZE * 2)}
+          >
+            Weitere {Math.min(remaining, PAGE_SIZE * 2).toLocaleString("de-DE")} von{" "}
+            {remaining.toLocaleString("de-DE")} laden
+          </Button>
+        </div>
+      )}
+    </>
+  );
+}
+
 function PlaceRow({
   place,
   isFav,
