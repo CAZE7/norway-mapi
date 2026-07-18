@@ -329,26 +329,16 @@ function PlaceDetail() {
                 )}
                 {coordsCopied ? "Kopiert" : "Koordinaten kopieren"}
               </Button>
-              <Button asChild variant="outline" size="sm">
-                <a
-                  href={`https://www.google.com/maps/search/?api=1&query=${place.lat},${place.lng}`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Navigation className="mr-1.5 h-3.5 w-3.5" /> Google Maps
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="sm">
-                <a
-                  href={`https://www.openstreetmap.org/?mlat=${place.lat}&mlon=${place.lng}#map=13/${place.lat}/${place.lng}`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  OpenStreetMap
-                </a>
-              </Button>
+              {navLinksFor(place.lat, place.lng, place.name).map((n) => (
+                <Button asChild key={n.label} variant="outline" size="sm">
+                  <a href={n.href} target="_blank" rel="noreferrer" title={n.hint}>
+                    <Navigation className="mr-1.5 h-3.5 w-3.5" /> {n.label}
+                  </a>
+                </Button>
+              ))}
             </div>
           </div>
+
 
           <div className="bg-card border-border rounded-xl border p-5">
             <h2 className="font-display mb-3 text-lg font-semibold">Aktionen</h2>
