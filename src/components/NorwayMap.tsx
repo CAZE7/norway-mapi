@@ -49,9 +49,10 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
     const map = L.map(containerRef.current, {
       center: [64.5, 13.5],
       zoom: 5,
-      zoomControl: true,
+      zoomControl: false,
       attributionControl: true,
     });
+    L.control.zoom({ position: "bottomright" }).addTo(map);
     const tiles = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: "&copy; OpenStreetMap contributors",
       maxZoom: 18,
