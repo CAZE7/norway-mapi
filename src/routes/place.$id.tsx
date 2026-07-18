@@ -45,7 +45,7 @@ export const Route = createFileRoute("/place/$id")({
 });
 
 function PlaceDetail() {
-  const { place } = Route.useLoaderData();
+  const { place } = Route.useLoaderData() as { place: Place };
   const favorites = useAppStore((s) => s.favorites);
   const route = useAppStore((s) => s.route);
   const toggleFav = useAppStore((s) => s.toggleFavorite);
