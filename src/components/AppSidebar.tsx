@@ -489,11 +489,23 @@ function RoutePanel({
           })}
         </ol>
       </ScrollArea>
-      <div className="border-sidebar-border border-t p-3">
+      <div className="border-sidebar-border space-y-2 border-t p-3">
+        <div className="grid grid-cols-3 gap-2">
+          <Button size="sm" variant="outline" onClick={exportGpx} title="GPX für Komoot, Garmin, Organic Maps …">
+            <Download className="mr-1.5 h-3.5 w-3.5" /> GPX
+          </Button>
+          <Button size="sm" variant="outline" onClick={exportKml} title="KML für Google Earth, Maps.me …">
+            <FileCode className="mr-1.5 h-3.5 w-3.5" /> KML
+          </Button>
+          <Button size="sm" variant="outline" onClick={openInGoogle} title="Route in Google Maps öffnen">
+            <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> Maps
+          </Button>
+        </div>
         <Button variant="outline" className="w-full" onClick={clearRoute}>
           <Trash2 className="mr-2 h-4 w-4" /> Route leeren
         </Button>
       </div>
+
     </>
   );
 }
