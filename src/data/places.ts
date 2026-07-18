@@ -81,13 +81,18 @@ export function searchPlaces(
   places: Place[],
   query: string,
   categories: Set<Category>,
+  tiers?: Set<Tier>,
 ): SearchHit[] {
-  const filtered = categories.size
+  let filtered = categories.size
     ? places.filter((p) => categories.has(p.category))
     : places;
+  if (tiers && tiers.size) {
+    filtered = filtered.filter((p) => tiers.has(p.tier));
+  }
   if (!query.trim()) {
     return filtered.map((place) => ({ place, score: 0 }));
   }
+
   const q = normalize(query);
   const hits: SearchHit[] = [];
   for (const place of filtered) {
