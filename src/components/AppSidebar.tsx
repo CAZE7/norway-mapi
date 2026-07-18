@@ -8,6 +8,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CATEGORY_LABEL, PLACES, type Category, type Place } from "@/data/places";
 import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
+import { colorFor } from "@/lib/category-color";
+import PlaceThumb from "@/components/PlaceThumb";
+
 
 const CATEGORIES = Object.keys(CATEGORY_LABEL) as Category[];
 const COLLAPSED_CATEGORY_COUNT = 8;
