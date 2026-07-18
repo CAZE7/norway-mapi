@@ -175,7 +175,7 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       clusterRef.current = null;
       markersRef.current.clear();
     };
-  }, [focus, toggleFav, addToRoute]);
+  }, [focus, toggleFav, addToRoute, navigate]);
 
   // Sync visible markers with filter/search results
   useEffect(() => {
