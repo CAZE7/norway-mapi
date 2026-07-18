@@ -35,8 +35,8 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
   const focus = useAppStore((s) => s.focus);
   const toggleFav = useAppStore((s) => s.toggleFavorite);
   const addToRoute = useAppStore((s) => s.addToRoute);
-  const [tilesLoaded, setTilesLoaded] = useState(false);
-  const [markersReady, setMarkersReady] = useState(false);
+  const [tileProgress, setTileProgress] = useState({ done: 0, total: 0, finished: false });
+  const [markerProgress, setMarkerProgress] = useState({ done: 0, total: PLACES.length });
 
   const placesById = useMemo(() => {
     const m = new Map<string, Place>();
@@ -57,7 +57,19 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       attribution: "&copy; OpenStreetMap contributors",
       maxZoom: 18,
     }).addTo(map);
-    tiles.on("load", () => setTilesLoaded(true));
+    let tilesFinished = false;
+    tiles.on("tileloadstart", () => {
+      if (tilesFinished) return;
+      setTileProgress((p) => ({ ...p, total: p.total + 1 }));
+    });
+    tiles.on("tileload", () => {
+      if (tilesFinished) return;
+      setTileProgress((p) => ({ ...p, done: p.done + 1 }));
+    });
+    tiles.on("load", () => {
+      tilesFinished = true;
+      setTileProgress((p) => ({ ...p, finished: true, done: Math.max(p.done, p.total) }));
+    });
 
     const cluster = L.markerClusterGroup({
       showCoverageOnHover: false,
@@ -67,6 +79,8 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
     mapRef.current = map;
     clusterRef.current = cluster;
 
+    // Build all markers first (fast, no DOM cost until added to cluster).
+    const built: Array<{ id: string; marker: L.Marker }> = [];
     for (const p of PLACES) {
       const m = L.marker([p.lat, p.lng], { icon: pinIcon(colorFor(p.category)) });
       const popup = document.createElement("div");
@@ -85,10 +99,27 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       m.bindPopup(popup);
       m.on("click", () => focus(p.id));
       markersRef.current.set(p.id, m);
+      built.push({ id: p.id, marker: m });
     }
-    setMarkersReady(true);
+
+    // Add markers to the cluster in chunks so the UI can report progress.
+    const CHUNK = 300;
+    let cursor = 0;
+    let cancelled = false;
+    const addNext = () => {
+      if (cancelled || !clusterRef.current) return;
+      const slice = built.slice(cursor, cursor + CHUNK);
+      cursor += slice.length;
+      clusterRef.current.addLayers(slice.map((b) => b.marker));
+      setMarkerProgress({ done: cursor, total: built.length });
+      if (cursor < built.length) {
+        requestAnimationFrame(addNext);
+      }
+    };
+    requestAnimationFrame(addNext);
 
     return () => {
+      cancelled = true;
       map.remove();
       mapRef.current = null;
       clusterRef.current = null;
@@ -120,7 +151,17 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
     if (m) setTimeout(() => m.openPopup(), 400);
   }, [focusId, focusNonce, placesById]);
 
-  const loading = !tilesLoaded || !markersReady;
+  const tilesDone = tileProgress.finished;
+  const markersDone = markerProgress.done >= markerProgress.total && markerProgress.total > 0;
+  const loading = !tilesDone || !markersDone;
+
+  const tilePct = tileProgress.total
+    ? Math.min(100, Math.round((tileProgress.done / tileProgress.total) * 100))
+    : 0;
+  const markerPct = markerProgress.total
+    ? Math.round((markerProgress.done / markerProgress.total) * 100)
+    : 0;
+  const overallPct = Math.round((tilePct + markerPct) / 2);
 
   return (
     <div className="relative h-full w-full">
@@ -130,18 +171,77 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
           className="pointer-events-none absolute inset-0 z-[500] flex items-center justify-center bg-background/70 backdrop-blur-sm transition-opacity duration-300"
           role="status"
           aria-live="polite"
+          aria-label={`Karte wird geladen, ${overallPct}%`}
         >
-          <div className="flex flex-col items-center gap-3 rounded-xl border border-border/60 bg-card/90 px-5 py-4 shadow-lg">
-            <div className="h-8 w-8 animate-spin rounded-full border-2 border-muted border-t-primary" />
-            <div className="text-sm font-medium text-foreground">
-              {!tilesLoaded ? "Karte wird geladen…" : "Marker werden platziert…"}
+          <div className="w-[min(20rem,calc(100%-2rem))] rounded-2xl border border-border/60 bg-card/95 p-5 shadow-xl">
+            <div className="mb-4 flex items-center gap-3">
+              <div className="h-6 w-6 shrink-0 animate-spin rounded-full border-2 border-muted border-t-primary" />
+              <div className="min-w-0 flex-1">
+                <div className="truncate text-sm font-semibold text-foreground">
+                  Karte wird vorbereitet
+                </div>
+                <div className="text-xs text-muted-foreground">
+                  {overallPct}% · {PLACES.length.toLocaleString("de-DE")} Orte
+                </div>
+              </div>
             </div>
-            <div className="text-xs text-muted-foreground">
-              {PLACES.length.toLocaleString("de-DE")} Orte in Norwegen
-            </div>
+
+            <ProgressRow
+              label="Kartenkacheln"
+              status={
+                tilesDone
+                  ? "Fertig"
+                  : tileProgress.total
+                  ? `${tileProgress.done} / ${tileProgress.total}`
+                  : "Verbinde…"
+              }
+              pct={tilePct}
+              done={tilesDone}
+            />
+            <div className="h-3" />
+            <ProgressRow
+              label="Marker platzieren"
+              status={
+                markersDone
+                  ? "Fertig"
+                  : `${markerProgress.done.toLocaleString("de-DE")} / ${markerProgress.total.toLocaleString("de-DE")}`
+              }
+              pct={markerPct}
+              done={markersDone}
+            />
           </div>
         </div>
       )}
     </div>
   );
 }
+
+function ProgressRow({
+  label,
+  status,
+  pct,
+  done,
+}: {
+  label: string;
+  status: string;
+  pct: number;
+  done: boolean;
+}) {
+  return (
+    <div>
+      <div className="mb-1 flex items-center justify-between text-xs">
+        <span className="font-medium text-foreground">{label}</span>
+        <span className={done ? "text-primary" : "text-muted-foreground"}>{status}</span>
+      </div>
+      <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted">
+        <div
+          className={`h-full rounded-full transition-[width] duration-200 ease-out ${
+            done ? "bg-primary" : "bg-primary/70"
+          }`}
+          style={{ width: `${pct}%` }}
+        />
+      </div>
+    </div>
+  );
+}
+
