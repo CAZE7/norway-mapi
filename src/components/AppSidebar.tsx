@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowDown, ArrowUp, Car, ChevronDown, Footprints, Heart, Info, List, MapPin, Route as RouteIcon, Search, Sparkles, Star, Trash2, X } from "lucide-react";
+import { ArrowDown, ArrowUp, Car, ChevronDown, Download, ExternalLink, FileCode, Footprints, Heart, Info, List, MapPin, Route as RouteIcon, Search, Sparkles, Star, Trash2, X } from "lucide-react";
+import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -11,6 +12,9 @@ import { cn } from "@/lib/utils";
 import { colorFor } from "@/lib/category-color";
 import PlaceThumb from "@/components/PlaceThumb";
 import { estimateTimes, formatDuration, formatKm, optimizeOrder, totalDistance, type Stop } from "@/lib/route-optimize";
+import { buildGpx, buildKml, downloadTextFile, slugify, type ExportStop } from "@/lib/export";
+import { googleMapsRoute } from "@/lib/nav-links";
+
 
 
 const CATEGORIES = Object.keys(CATEGORY_LABEL) as Category[];
@@ -351,6 +355,46 @@ function RoutePanel({
   };
   const reverse = () => setRoute(route.slice().reverse());
 
+  const exportStops: ExportStop[] = useMemo(
+    () =>
+      route
+        .map((id) => byId.get(id))
+        .filter((p): p is Place => !!p)
+        .map((p) => ({
+          id: p.id,
+          name: p.name,
+          lat: p.lat,
+          lng: p.lng,
+          description: p.description,
+          category: CATEGORY_LABEL[p.category],
+        })),
+    [route, byId],
+  );
+  const exportGpx = () => {
+    if (exportStops.length === 0) return;
+    downloadTextFile(
+      `steder-route-${slugify(exportStops[0].name)}.gpx`,
+      buildGpx(exportStops),
+      "application/gpx+xml",
+    );
+    toast.success("GPX exportiert", { description: `${exportStops.length} Stopps` });
+  };
+  const exportKml = () => {
+    if (exportStops.length === 0) return;
+    downloadTextFile(
+      `steder-route-${slugify(exportStops[0].name)}.kml`,
+      buildKml(exportStops),
+      "application/vnd.google-earth.kml+xml",
+    );
+    toast.success("KML exportiert", { description: `${exportStops.length} Stopps` });
+  };
+  const openInGoogle = () => {
+    const url = googleMapsRoute(exportStops);
+    if (!url) return;
+    window.open(url, "_blank", "noopener");
+  };
+
+
   if (route.length === 0) {
     return (
       <div className="text-muted-foreground p-6 text-center text-sm">
@@ -445,11 +489,23 @@ function RoutePanel({
           })}
         </ol>
       </ScrollArea>
-      <div className="border-sidebar-border border-t p-3">
+      <div className="border-sidebar-border space-y-2 border-t p-3">
+        <div className="grid grid-cols-3 gap-2">
+          <Button size="sm" variant="outline" onClick={exportGpx} title="GPX für Komoot, Garmin, Organic Maps …">
+            <Download className="mr-1.5 h-3.5 w-3.5" /> GPX
+          </Button>
+          <Button size="sm" variant="outline" onClick={exportKml} title="KML für Google Earth, Maps.me …">
+            <FileCode className="mr-1.5 h-3.5 w-3.5" /> KML
+          </Button>
+          <Button size="sm" variant="outline" onClick={openInGoogle} title="Route in Google Maps öffnen">
+            <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> Maps
+          </Button>
+        </div>
         <Button variant="outline" className="w-full" onClick={clearRoute}>
           <Trash2 className="mr-2 h-4 w-4" /> Route leeren
         </Button>
       </div>
+
     </>
   );
 }
