@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef } from "react";
 import L from "leaflet";
 import "leaflet.markercluster";
-import { PLACES, CATEGORY_LABEL, type Place, type Category } from "@/data/places";
+import { PLACES, CATEGORY_LABEL, type Place } from "@/data/places";
 import { useAppStore } from "@/lib/store";
 
 // Fix default marker icons served from a CDN so we don't fight bundler paths.
