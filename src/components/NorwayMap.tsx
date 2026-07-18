@@ -52,10 +52,11 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       zoomControl: true,
       attributionControl: true,
     });
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    const tiles = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: "&copy; OpenStreetMap contributors",
       maxZoom: 18,
     }).addTo(map);
+    tiles.on("load", () => setTilesLoaded(true));
 
     const cluster = L.markerClusterGroup({
       showCoverageOnHover: false,
