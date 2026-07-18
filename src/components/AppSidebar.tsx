@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowDown, ArrowUp, Car, ChevronDown, Footprints, Heart, Info, List, MapPin, Route as RouteIcon, Search, Sparkles, Star, Trash2, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
