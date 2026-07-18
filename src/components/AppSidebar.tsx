@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ChevronDown, Heart, Info, List, MapPin, Route as RouteIcon, Search, Star, Trash2, X } from "lucide-react";
+import { ArrowDown, ArrowUp, Car, ChevronDown, Footprints, Heart, Info, List, MapPin, Route as RouteIcon, Search, Sparkles, Star, Trash2, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -10,6 +10,7 @@ import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 import { colorFor } from "@/lib/category-color";
 import PlaceThumb from "@/components/PlaceThumb";
+import { estimateTimes, formatDuration, formatKm, optimizeOrder, totalDistance, type Stop } from "@/lib/route-optimize";
 
 
 const CATEGORIES = Object.keys(CATEGORY_LABEL) as Category[];
@@ -25,6 +26,8 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
   const removeFromRoute = useAppStore((s) => s.removeFromRoute);
   const clearRoute = useAppStore((s) => s.clearRoute);
   const addToRoute = useAppStore((s) => s.addToRoute);
+  const setRoute = useAppStore((s) => s.setRoute);
+  const moveRoute = useAppStore((s) => s.moveRoute);
 
   const byId = useMemo(() => {
     const m = new Map<string, Place>();
