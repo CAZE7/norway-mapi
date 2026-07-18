@@ -10,7 +10,7 @@ export type WikiImage = {
   pageUrl: string;
   title: string;
   extract: string;
-  lang: "no" | "nb" | "de" | "en";
+  lang: "no" | "nb" | "de" | "en" | "commons";
 };
 
 const CACHE_KEY = "wiki-image-cache-v1";
