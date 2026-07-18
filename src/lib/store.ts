@@ -72,7 +72,8 @@ export const useAppStore = create<State>()(
     }),
     {
       name: "steder-i-norge",
-      partialize: (s) => ({ favorites: s.favorites, route: s.route }),
+      partialize: (s) => ({ favorites: s.favorites, route: s.route, tiers: s.tiers }),
     },
+
   ),
 );
