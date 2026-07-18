@@ -27,6 +27,7 @@ export const useAppStore = create<State>()(
       favorites: [],
       route: [],
       focusId: null,
+      focusNonce: 0,
       setQuery: (query) => set({ query }),
       toggleCategory: (c) =>
         set((s) => ({
