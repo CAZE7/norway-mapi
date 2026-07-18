@@ -1,9 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useNavigate } from "@tanstack/react-router";
 import L from "leaflet";
 import "leaflet.markercluster";
 import { PLACES, CATEGORY_LABEL, type Place } from "@/data/places";
 import { useAppStore } from "@/lib/store";
 import { colorFor } from "@/lib/category-color";
+import { lookupPlaceImage } from "@/lib/wikipedia";
+
 
 // Fix default marker icons served from a CDN so we don't fight bundler paths.
 const iconRetina = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png";
