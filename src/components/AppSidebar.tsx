@@ -355,6 +355,46 @@ function RoutePanel({
   };
   const reverse = () => setRoute(route.slice().reverse());
 
+  const exportStops: ExportStop[] = useMemo(
+    () =>
+      route
+        .map((id) => byId.get(id))
+        .filter((p): p is Place => !!p)
+        .map((p) => ({
+          id: p.id,
+          name: p.name,
+          lat: p.lat,
+          lng: p.lng,
+          description: p.description,
+          category: CATEGORY_LABEL[p.category],
+        })),
+    [route, byId],
+  );
+  const exportGpx = () => {
+    if (exportStops.length === 0) return;
+    downloadTextFile(
+      `steder-route-${slugify(exportStops[0].name)}.gpx`,
+      buildGpx(exportStops),
+      "application/gpx+xml",
+    );
+    toast.success("GPX exportiert", { description: `${exportStops.length} Stopps` });
+  };
+  const exportKml = () => {
+    if (exportStops.length === 0) return;
+    downloadTextFile(
+      `steder-route-${slugify(exportStops[0].name)}.kml`,
+      buildKml(exportStops),
+      "application/vnd.google-earth.kml+xml",
+    );
+    toast.success("KML exportiert", { description: `${exportStops.length} Stopps` });
+  };
+  const openInGoogle = () => {
+    const url = googleMapsRoute(exportStops);
+    if (!url) return;
+    window.open(url, "_blank", "noopener");
+  };
+
+
   if (route.length === 0) {
     return (
       <div className="text-muted-foreground p-6 text-center text-sm">
