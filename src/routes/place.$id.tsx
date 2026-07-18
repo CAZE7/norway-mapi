@@ -29,19 +29,42 @@ export const Route = createFileRoute("/place/$id")({
     if (!place) throw notFound();
     return { place };
   },
-  head: ({ loaderData }) => {
+  head: ({ params, loaderData }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Ort nicht gefunden" }, { name: "robots", content: "noindex" }] };
+      return {
+        meta: [{ title: "Ort nicht gefunden" }, { name: "robots", content: "noindex" }],
+      };
     }
     const { place } = loaderData;
     const title = `${place.name} – ${CATEGORY_LABEL[place.category]} in ${place.region}`;
+    const description = place.description;
+    const url = `/place/${params.id}`;
+    // Absolute static map image (required by social crawlers). OSM staticmap
+    // renders the location + a red marker at 1200x630 — ideal OG dimensions.
+    const image = `https://staticmap.openstreetmap.de/staticmap.php?center=${place.lat},${place.lng}&zoom=9&size=1200x630&maptype=mapnik&markers=${place.lat},${place.lng},red-pushpin`;
     return {
       meta: [
         { title },
-        { name: "description", content: place.description },
+        { name: "description", content: description },
+        // Open Graph
         { property: "og:title", content: title },
-        { property: "og:description", content: place.description },
+        { property: "og:description", content: description },
+        { property: "og:type", content: "article" },
+        { property: "og:url", content: url },
+        { property: "og:site_name", content: "Steder i Norge" },
+        { property: "og:locale", content: "de_DE" },
+        { property: "og:image", content: image },
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
+        { property: "og:image:alt", content: `Karte von ${place.name} in ${place.region}` },
+        // Twitter
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: description },
+        { name: "twitter:image", content: image },
+        { name: "twitter:image:alt", content: `Karte von ${place.name} in ${place.region}` },
       ],
+      links: [{ rel: "canonical", href: url }],
     };
   },
   component: PlaceDetail,
