@@ -89,6 +89,7 @@ function PlaceDetail() {
     }
   }
 
+  const related = PLACES.filter(
     (p) => p.id !== place.id && (p.category === place.category || p.region === place.region),
   ).slice(0, 6);
 
