@@ -6,7 +6,8 @@ import { PLACES, searchPlaces } from "@/data/places";
 import { useAppStore } from "@/lib/store";
 import { AppSidebar } from "@/components/AppSidebar";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 const NorwayMap = lazy(() => import("@/components/NorwayMap"));
 
