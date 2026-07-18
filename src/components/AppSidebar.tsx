@@ -217,6 +217,7 @@ function PlaceRow({
   onSelect,
   onFav,
   onAddRoute,
+  onNavigate,
 }: {
   place: Place;
   isFav: boolean;
@@ -224,10 +225,11 @@ function PlaceRow({
   onSelect: () => void;
   onFav: () => void;
   onAddRoute: () => void;
+  onNavigate?: () => void;
 }) {
   return (
     <li className="hover:bg-sidebar-accent group grid grid-cols-[minmax(0,1fr)_auto] items-start gap-2 p-3 transition-colors">
-      <button className="min-w-0 text-left" onClick={onSelect}>
+      <button className="min-w-0 text-left focus-visible:outline-none" onClick={onSelect}>
         <div className="flex items-center gap-2">
           <div className="truncate text-sm font-medium">{place.name}</div>
           {place.quality === 3 && <Star className="text-accent h-3.5 w-3.5 shrink-0 fill-current" />}
@@ -242,24 +244,24 @@ function PlaceRow({
           size="icon"
           variant={isFav ? "default" : "ghost"}
           onClick={onFav}
-          aria-label="Favorit"
-          className="h-7 w-7"
+          aria-label={isFav ? "Favorit entfernen" : "Als Favorit speichern"}
+          className="h-8 w-8"
         >
-          <Heart className={cn("h-3.5 w-3.5", isFav && "fill-current")} />
+          <Heart className={cn("h-4 w-4", isFav && "fill-current")} />
         </Button>
         <Button
           size="icon"
           variant={inRoute ? "default" : "ghost"}
           onClick={onAddRoute}
-          aria-label="Zur Route"
-          className="h-7 w-7"
+          aria-label={inRoute ? "Bereits in Route" : "Zur Route hinzufügen"}
+          className="h-8 w-8"
           disabled={inRoute}
         >
-          <RouteIcon className="h-3.5 w-3.5" />
+          <RouteIcon className="h-4 w-4" />
         </Button>
-        <Button asChild size="icon" variant="ghost" aria-label="Details" className="h-7 w-7">
-          <Link to="/place/$id" params={{ id: place.id }}>
-            <Info className="h-3.5 w-3.5" />
+        <Button asChild size="icon" variant="ghost" aria-label="Details ansehen" className="h-8 w-8">
+          <Link to="/place/$id" params={{ id: place.id }} onClick={onNavigate}>
+            <Info className="h-4 w-4" />
           </Link>
         </Button>
       </div>
