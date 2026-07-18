@@ -13,7 +13,7 @@ export type WikiImage = {
   lang: "no" | "nb" | "de" | "en" | "commons";
 };
 
-const CACHE_KEY = "wiki-image-cache-v1";
+const CACHE_KEY = "wiki-image-cache-v2";
 const NEGATIVE_TTL_MS = 24 * 60 * 60 * 1000; // 1 day
 
 type CacheEntry = { at: number; value: WikiImage | null };
