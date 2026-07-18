@@ -312,8 +312,19 @@ function PlaceRow({
       <button className="min-w-0 text-left focus-visible:outline-none" onClick={onSelect}>
         <div className="flex items-center gap-2">
           <div className="truncate text-sm font-medium">{place.name}</div>
+          {place.tier === "geheimtipp" && (
+            <span className="bg-accent/15 text-accent shrink-0 rounded-full px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide">
+              Geheimtipp
+            </span>
+          )}
+          {place.tier === "touristisch" && (
+            <span className="bg-primary/10 text-primary shrink-0 rounded-full px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide">
+              Highlight
+            </span>
+          )}
           {place.quality === 3 && <Star className="text-accent h-3.5 w-3.5 shrink-0 fill-current" />}
         </div>
+
         <div className="text-muted-foreground mt-0.5 truncate text-xs">
           {CATEGORY_LABEL[place.category]} · {place.region}
         </div>
