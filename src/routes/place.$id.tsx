@@ -20,9 +20,12 @@ import { CATEGORY_LABEL, PLACES, type Place } from "@/data/places";
 import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 import { colorFor, distanceKm } from "@/lib/category-color";
+import { navLinksFor } from "@/lib/nav-links";
 
 const PlaceMiniMap = lazy(() => import("@/components/PlaceMiniMap"));
 const PlaceImage = lazy(() => import("@/components/PlaceImage"));
+const WeatherPanel = lazy(() => import("@/components/WeatherPanel"));
+
 
 export const Route = createFileRoute("/place/$id")({
   loader: ({ params }) => {
