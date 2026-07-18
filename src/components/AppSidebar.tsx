@@ -46,11 +46,19 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
           <div className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-primary text-primary-foreground">
             <MapPin className="h-5 w-5" />
           </div>
-          <div className="min-w-0">
+          <div className="min-w-0 flex-1">
             <div className="font-display truncate text-base font-semibold leading-tight">Steder i Norge</div>
             <div className="text-muted-foreground truncate text-xs">Orte, Natur & Camper</div>
           </div>
+          <Link
+            to="/admin"
+            className="text-muted-foreground hover:text-foreground shrink-0 rounded-md border border-sidebar-border px-2 py-1 text-xs"
+            title="Orte verwalten"
+          >
+            Admin
+          </Link>
         </div>
+
         <div className="relative">
           <Search className="text-muted-foreground pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2" />
           <Input
