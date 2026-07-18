@@ -2,6 +2,13 @@
 import raw from "./places.data.json";
 
 export type Category = string;
+export type Tier = "geheimtipp" | "touristisch" | "service";
+
+export const TIER_LABEL: Record<Tier, string> = {
+  geheimtipp: "Geheimtipp",
+  touristisch: "Touristisch",
+  service: "Service & Infrastruktur",
+};
 
 export type Place = {
   id: string;
@@ -13,7 +20,9 @@ export type Place = {
   lat: number;
   lng: number;
   quality?: 1 | 2 | 3;
+  tier: Tier;
 };
+
 
 type RawFile = {
   labels: Record<string, string>;
