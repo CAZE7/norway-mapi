@@ -3,47 +3,13 @@ import L from "leaflet";
 import "leaflet.markercluster";
 import { PLACES, CATEGORY_LABEL, type Place } from "@/data/places";
 import { useAppStore } from "@/lib/store";
+import { colorFor } from "@/lib/category-color";
 
 // Fix default marker icons served from a CDN so we don't fight bundler paths.
 const iconRetina = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png";
 const iconUrl = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png";
 const shadowUrl = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png";
 L.Icon.Default.mergeOptions({ iconRetinaUrl: iconRetina, iconUrl, shadowUrl });
-
-const CATEGORY_COLOR: Record<string, string> = {
-  // Natur
-  fjord: "#2d8a9e",
-  waterfall: "#3b82f6",
-  lake: "#0ea5e9",
-  beach: "#eab308",
-  mountain_hike: "#2d5a3d",
-  geology: "#78716c",
-  lighthouse: "#f97316",
-  viewpoint: "#f59e0b",
-  glacier: "#93c5fd",
-  wilderness: "#166534",
-  nature_place: "#4d7c0f",
-  scenic_road: "#a3742c",
-  spring: "#22d3ee",
-  dam: "#64748b",
-  picnic: "#84cc16",
-  // Kultur & Versorgung
-  bakery: "#c2410c",
-  cafe: "#b45309",
-  culture: "#a855f7",
-  shop_market: "#ef4444",
-  // Camper
-  camper_camping: "#a0522d",
-  camper_motorhome: "#8b4513",
-  camper_toilets: "#6b7280",
-  camper_water: "#0891b2",
-  camper_ferry: "#1e40af",
-  camper_dump: "#4b5563",
-};
-
-function colorFor(cat: string): string {
-  return CATEGORY_COLOR[cat] ?? (cat.startsWith("camper_") ? "#a0522d" : "#2d5a3d");
-}
 
 function pinIcon(color: string) {
   const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='30' height='40' viewBox='0 0 30 40'>
