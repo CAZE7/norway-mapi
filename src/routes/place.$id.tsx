@@ -22,6 +22,7 @@ import { cn } from "@/lib/utils";
 import { colorFor, distanceKm } from "@/lib/category-color";
 
 const PlaceMiniMap = lazy(() => import("@/components/PlaceMiniMap"));
+const PlaceImage = lazy(() => import("@/components/PlaceImage"));
 
 export const Route = createFileRoute("/place/$id")({
   loader: ({ params }) => {
