@@ -248,6 +248,10 @@ function PlaceDetail() {
         </div>
         <div
           aria-hidden
+          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/60 via-black/35 to-black/75"
+        />
+        <div
+          aria-hidden
           className="pointer-events-none absolute inset-0 opacity-20"
           style={{
             backgroundImage:
@@ -256,7 +260,7 @@ function PlaceDetail() {
         />
         <div
           className="relative mx-auto max-w-5xl px-4 py-10 md:px-8 md:py-14"
-          style={{ textShadow: "0 1px 12px rgba(0,0,0,0.35)" }}
+          style={{ textShadow: "0 2px 10px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.95)" }}
         >
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <Badge className="bg-white/15 text-white ring-1 ring-white/25 backdrop-blur-sm hover:bg-white/20">
@@ -304,7 +308,7 @@ function PlaceDetail() {
           </div>
 
           <div className="bg-card border-border overflow-hidden rounded-xl border md:col-span-2">
-            <div className="h-64 w-full md:h-full md:min-h-[280px]">
+            <div className="h-80 sm:h-96 md:h-full md:min-h-[300px] w-full">
               <ClientOnly fallback={<MiniMapFallback />}>
                 <Suspense fallback={<MiniMapFallback />}>
                   <PlaceMiniMap

@@ -92,14 +92,15 @@ export default function WeatherPanel({ lat, lng }: Props) {
             {weather.daily.map((d) => (
               <div
                 key={d.date}
-                className="bg-muted/40 rounded-md px-1.5 py-2 text-center text-xs"
+                className="bg-muted/40 flex flex-col items-center justify-between rounded-md px-1 py-2 text-center text-xs"
               >
-                <div className="text-muted-foreground text-[10px]">
+                <div className="text-muted-foreground text-[10px] font-medium">
                   {new Date(d.date).toLocaleDateString("de-DE", { weekday: "short" })}
                 </div>
-                <div className="my-1 text-lg leading-none">{symbolEmoji(d.symbol)}</div>
-                <div className="font-mono tabular-nums">
-                  {Math.round(d.max)}° / {Math.round(d.min)}°
+                <div className="my-1 text-base sm:text-lg leading-none">{symbolEmoji(d.symbol)}</div>
+                <div className="flex flex-col items-center text-[11px] font-mono tabular-nums leading-tight">
+                  <span className="font-semibold text-foreground">{Math.round(d.max)}°</span>
+                  <span className="text-muted-foreground text-[10px]">{Math.round(d.min)}°</span>
                 </div>
               </div>
             ))}

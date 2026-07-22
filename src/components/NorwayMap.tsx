@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "@tanstack/react-router";
+import { Maximize2, Minimize2 } from "lucide-react";
 import L from "leaflet";
 import "leaflet.markercluster";
 import { PLACES, CATEGORY_LABEL, type Place } from "@/data/places";
@@ -82,6 +83,7 @@ function buildPopup(
 export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
 
   const navigate = useNavigate();
+  const wrapperRef = useRef<HTMLDivElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<L.Map | null>(null);
   const clusterRef = useRef<L.MarkerClusterGroup | null>(null);
@@ -96,6 +98,27 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
   const routeLayerRef = useRef<L.LayerGroup | null>(null);
   const [tileProgress, setTileProgress] = useState({ done: 0, total: 0, finished: false });
   const [markerProgress, setMarkerProgress] = useState({ done: 0, total: PLACES.length });
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  useEffect(() => {
+    const handleFsChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+      if (mapRef.current) {
+        setTimeout(() => mapRef.current?.invalidateSize(), 100);
+      }
+    };
+    document.addEventListener("fullscreenchange", handleFsChange);
+    return () => document.removeEventListener("fullscreenchange", handleFsChange);
+  }, []);
+
+  const toggleFullscreen = () => {
+    if (!wrapperRef.current) return;
+    if (!document.fullscreenElement) {
+      wrapperRef.current.requestFullscreen().catch(() => {});
+    } else {
+      document.exitFullscreen().catch(() => {});
+    }
+  };
 
 
   const actionsRef = useRef({ focus, toggleFav, addToRoute, navigate });
@@ -142,6 +165,8 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
     const cluster = L.markerClusterGroup({
       showCoverageOnHover: false,
       maxClusterRadius: 60,
+      spiderfyOnMaxZoom: true,
+      zoomToBoundsOnClick: true,
       chunkedLoading: true,
       chunkInterval: 40,
       chunkDelay: 20,
@@ -301,8 +326,17 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
   const overallPct = Math.round((tilePct + markerPct) / 2);
 
   return (
-    <div className="relative h-full w-full">
+    <div ref={wrapperRef} className="relative h-full w-full bg-background">
       <div ref={containerRef} className="h-full w-full" />
+      <button
+        type="button"
+        onClick={toggleFullscreen}
+        aria-label={isFullscreen ? "Vollbild beenden" : "Karte im Vollbild anzeigen"}
+        title={isFullscreen ? "Vollbild beenden" : "Vollbild (Mobil & Desktop)"}
+        className="absolute right-3 top-14 z-[1000] flex h-10 w-10 items-center justify-center rounded-lg border border-border/80 bg-card/90 text-foreground shadow-md backdrop-blur transition hover:bg-accent active:scale-95 sm:top-3"
+      >
+        {isFullscreen ? <Minimize2 className="h-5 w-5" /> : <Maximize2 className="h-5 w-5" />}
+      </button>
       {loading && (
         <div
           className="pointer-events-none absolute inset-0 z-[500] flex items-center justify-center bg-background/70 backdrop-blur-sm transition-opacity duration-300"

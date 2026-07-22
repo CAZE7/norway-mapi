@@ -457,7 +457,7 @@ function RoutePanel({
 
   return (
     <>
-      <div className="border-sidebar-border grid grid-cols-3 gap-2 border-b p-3">
+      <div className="border-sidebar-border grid grid-cols-3 gap-1.5 border-b p-2.5">
         <Stat label="Strecke" value={formatKm(times.roadKm)} />
         <Stat
           label="Auto"
@@ -503,22 +503,22 @@ function RoutePanel({
                   <div className="bg-primary text-primary-foreground grid h-6 w-6 shrink-0 place-items-center rounded-full text-xs font-semibold">
                     {i + 1}
                   </div>
-                  <div className="flex flex-col gap-0.5">
+                  <div className="flex flex-col gap-1">
                     <button
                       onClick={() => moveRoute(i, i - 1)}
                       disabled={i === 0}
-                      className="text-muted-foreground hover:text-foreground disabled:opacity-30"
+                      className="text-muted-foreground hover:text-foreground hover:bg-sidebar-accent flex h-7 w-7 items-center justify-center rounded-md transition-colors active:scale-95 disabled:opacity-25"
                       aria-label="Nach oben"
                     >
-                      <ArrowUp className="h-3 w-3" />
+                      <ArrowUp className="h-3.5 w-3.5" />
                     </button>
                     <button
                       onClick={() => moveRoute(i, i + 1)}
                       disabled={i === route.length - 1}
-                      className="text-muted-foreground hover:text-foreground disabled:opacity-30"
+                      className="text-muted-foreground hover:text-foreground hover:bg-sidebar-accent flex h-7 w-7 items-center justify-center rounded-md transition-colors active:scale-95 disabled:opacity-25"
                       aria-label="Nach unten"
                     >
-                      <ArrowDown className="h-3 w-3" />
+                      <ArrowDown className="h-3.5 w-3.5" />
                     </button>
                   </div>
                 </div>
@@ -578,12 +578,12 @@ function haversineIds(byId: Map<string, Place>, a: string, b: string): number {
 
 function Stat({ label, value, icon }: { label: string; value: string; icon?: React.ReactNode }) {
   return (
-    <div className="rounded-md border border-sidebar-border bg-sidebar-accent/40 px-2 py-1.5">
-      <div className="text-muted-foreground flex items-center gap-1 text-[10px] uppercase tracking-wide">
-        {icon}
-        {label}
+    <div className="min-w-0 rounded-md border border-sidebar-border bg-sidebar-accent/40 px-1.5 py-1.5">
+      <div className="text-muted-foreground flex items-center gap-1 text-[10px] font-medium uppercase tracking-wider">
+        <span className="shrink-0">{icon}</span>
+        <span className="truncate">{label}</span>
       </div>
-      <div className="mt-0.5 truncate text-sm font-semibold">{value}</div>
+      <div className="mt-0.5 truncate text-xs font-semibold tabular-nums sm:text-sm">{value}</div>
     </div>
   );
 }
