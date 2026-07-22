@@ -178,7 +178,7 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
     const built: L.Marker[] = [];
     for (const p of PLACES) {
       const color = colorFor(p.category);
-      const m = L.marker([p.lat, p.lng], { icon: pinIcon(color) });
+      const m = L.marker([p.lat, p.lng], { icon: pinIcon(color), keyboard: false });
       let popupBuilt = false;
       m.on("click", () => {
         actionsRef.current.focus(p.id);

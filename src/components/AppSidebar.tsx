@@ -74,14 +74,13 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
   const [localQuery, setLocalQuery] = useState(query);
 
   useEffect(() => {
-    setLocalQuery(query);
+    setLocalQuery((prev) => (prev !== query ? query : prev));
   }, [query]);
 
   useEffect(() => {
+    if (localQuery === query) return;
     const timer = setTimeout(() => {
-      if (localQuery !== query) {
-        setQuery(localQuery);
-      }
+      setQuery(localQuery);
     }, 120);
     return () => clearTimeout(timer);
   }, [localQuery, query, setQuery]);

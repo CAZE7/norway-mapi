@@ -184,17 +184,25 @@ export function searchPlaces(
   // Levenshtein fuzzy search fallback if 0 exact/substring hits
   if (hits.length === 0 && q.length >= 3) {
     const maxDist = q.length <= 4 ? 1 : 2;
+    const qFirst = q.charCodeAt(0);
     for (const place of normPlaces) {
       let minD = Infinity;
 
       for (const word of [place.normName, ...place.normWords, ...place.normAliases]) {
         if (!word || Math.abs(q.length - word.length) > maxDist) continue;
+        // Fast prefix optimization: if length >= 4 and first char differs, skip
+        if (q.length >= 4 && word.charCodeAt(0) !== qFirst) continue;
+
         const d = levenshtein(q, word);
-        if (d < minD) minD = d;
+        if (d < minD) {
+          minD = d;
+          if (minD === 0) break;
+        }
       }
 
       if (minD <= maxDist) {
         hits.push({ place, score: 25 - minD * 5 });
+        if (hits.length >= 50) break;
       }
     }
   }
