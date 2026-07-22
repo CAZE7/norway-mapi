@@ -1,6 +1,12 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { CUSTOM_STORAGE_KEY, loadCustomPlaces, type Category, type Place, type Tier } from "@/data/places";
+import {
+  CUSTOM_STORAGE_KEY,
+  loadCustomPlaces,
+  type Category,
+  type Place,
+  type Tier,
+} from "@/data/places";
 
 type State = {
   query: string;
@@ -67,15 +73,14 @@ export const useAppStore = create<State>()(
             ? s.favorites.filter((x) => x !== id)
             : [...s.favorites, id],
         })),
-      addToRoute: (id) =>
-        set((s) => (s.route.includes(id) ? s : { route: [...s.route, id] })),
-      removeFromRoute: (id) =>
-        set((s) => ({ route: s.route.filter((x) => x !== id) })),
+      addToRoute: (id) => set((s) => (s.route.includes(id) ? s : { route: [...s.route, id] })),
+      removeFromRoute: (id) => set((s) => ({ route: s.route.filter((x) => x !== id) })),
       clearRoute: () => set({ route: [] }),
       setRoute: (ids) => set({ route: ids }),
       moveRoute: (from, to) =>
         set((s) => {
-          if (from === to || from < 0 || to < 0 || from >= s.route.length || to >= s.route.length) return s;
+          if (from === to || from < 0 || to < 0 || from >= s.route.length || to >= s.route.length)
+            return s;
           const next = s.route.slice();
           const [item] = next.splice(from, 1);
           next.splice(to, 0, item);

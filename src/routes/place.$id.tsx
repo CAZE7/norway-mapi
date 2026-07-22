@@ -26,7 +26,6 @@ const PlaceMiniMap = lazy(() => import("@/components/PlaceMiniMap"));
 const PlaceImage = lazy(() => import("@/components/PlaceImage"));
 const WeatherPanel = lazy(() => import("@/components/WeatherPanel"));
 
-
 export const Route = createFileRoute("/place/$id")({
   loader: ({ params }) => {
     const place = PLACES.find((p) => p.id === params.id);
@@ -80,14 +79,18 @@ export const Route = createFileRoute("/place/$id")({
     <div className="mx-auto max-w-xl p-8 text-center">
       <h1 className="font-display text-2xl font-semibold">Ort nicht gefunden</h1>
       <p className="text-muted-foreground mt-2 text-sm">Dieser Ort existiert nicht (mehr).</p>
-      <Button asChild className="mt-4"><Link to="/">Zur Karte</Link></Button>
+      <Button asChild className="mt-4">
+        <Link to="/">Zur Karte</Link>
+      </Button>
     </div>
   ),
   errorComponent: ({ error, reset }) => (
     <div className="mx-auto max-w-xl p-8 text-center">
       <h1 className="font-display text-2xl font-semibold">Fehler</h1>
       <p className="text-muted-foreground mt-2 text-sm">{error.message}</p>
-      <Button className="mt-4" onClick={reset}>Erneut versuchen</Button>
+      <Button className="mt-4" onClick={reset}>
+        Erneut versuchen
+      </Button>
     </div>
   ),
 });
@@ -184,7 +187,12 @@ function PlaceDetail() {
       {/* Sticky toolbar */}
       <header className="border-border bg-card/90 supports-[backdrop-filter]:bg-card/70 sticky top-0 z-20 border-b backdrop-blur">
         <div className="mx-auto flex max-w-5xl items-center gap-2 p-3">
-          <Button asChild variant="ghost" size="icon" className="active:scale-95 transition-transform">
+          <Button
+            asChild
+            variant="ghost"
+            size="icon"
+            className="active:scale-95 transition-transform"
+          >
             <Link to="/" aria-label="Zurück zur Karte">
               <ArrowLeft className="h-5 w-5" />
             </Link>
@@ -279,9 +287,7 @@ function PlaceDetail() {
             {place.name}
           </h1>
           {place.aliases && place.aliases.length > 0 && (
-            <p className="mt-2 text-sm text-white/80">
-              auch: {place.aliases.join(", ")}
-            </p>
+            <p className="mt-2 text-sm text-white/80">auch: {place.aliases.join(", ")}</p>
           )}
           <div className="mt-4 flex items-center gap-1.5 text-sm text-white/85">
             <Compass className="h-4 w-4" />
@@ -302,7 +308,9 @@ function PlaceDetail() {
               <Stat label="Region" value={place.region} />
               <Stat
                 label="Wertung"
-                value={place.quality === 3 ? "Top" : place.quality === 2 ? "Sehenswert" : "Standard"}
+                value={
+                  place.quality === 3 ? "Top" : place.quality === 2 ? "Sehenswert" : "Standard"
+                }
               />
             </div>
           </div>
@@ -329,8 +337,6 @@ function PlaceDetail() {
             <WeatherPanel lat={place.lat} lng={place.lng} />
           </Suspense>
         </ClientOnly>
-
-
 
         {/* Coordinates + actions */}
         <section className="grid gap-4 md:grid-cols-2">
@@ -362,7 +368,6 @@ function PlaceDetail() {
             </div>
           </div>
 
-
           <div className="bg-card border-border rounded-xl border p-5">
             <h2 className="font-display mb-3 text-lg font-semibold">Aktionen</h2>
             <div className="flex flex-col gap-2">
@@ -383,11 +388,7 @@ function PlaceDetail() {
                 {inRoute ? "Aus Route entfernen" : "Zur Route hinzufügen"}
               </Button>
               <Button variant="outline" onClick={handleShare} aria-label="Link teilen">
-                {copied ? (
-                  <Check className="mr-2 h-4 w-4" />
-                ) : (
-                  <Share2 className="mr-2 h-4 w-4" />
-                )}
+                {copied ? <Check className="mr-2 h-4 w-4" /> : <Share2 className="mr-2 h-4 w-4" />}
                 {copied ? "Link kopiert" : "Teilen"}
               </Button>
             </div>

@@ -144,7 +144,9 @@ async function fetchCommons(query: string): Promise<WikiImage | null> {
     return {
       thumbnail: info.thumburl || info.url,
       original: info.url,
-      pageUrl: info.descriptionurl || `https://commons.wikimedia.org/wiki/${encodeURIComponent(first.title || "")}`,
+      pageUrl:
+        info.descriptionurl ||
+        `https://commons.wikimedia.org/wiki/${encodeURIComponent(first.title || "")}`,
       title,
       extract,
       lang: "commons",

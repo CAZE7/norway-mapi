@@ -11,9 +11,7 @@ export function haversine(a: Stop, b: Stop): number {
   const dLng = toRad(b.lng - a.lng);
   const lat1 = toRad(a.lat);
   const lat2 = toRad(b.lat);
-  const s =
-    Math.sin(dLat / 2) ** 2 +
-    Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLng / 2) ** 2;
+  const s = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLng / 2) ** 2;
   return 2 * R * Math.asin(Math.sqrt(s));
 }
 
@@ -48,7 +46,7 @@ export function optimizeOrder(stops: Stop[]): Stop[] {
 function twoOpt(route: Stop[]): Stop[] {
   const n = route.length;
   if (n < 4) return route;
-  let best = route.slice();
+  const best = route.slice();
 
   const matrix: number[][] = Array.from({ length: n }, () => new Array<number>(n));
   const updateMatrix = () => {
@@ -69,8 +67,7 @@ function twoOpt(route: Stop[]): Stop[] {
     guard++;
     for (let i = 1; i < n - 2; i++) {
       for (let k = i + 1; k < n - 1; k++) {
-        const delta =
-          matrix[i - 1][k] + matrix[i][k + 1] - matrix[i - 1][i] - matrix[k][k + 1];
+        const delta = matrix[i - 1][k] + matrix[i][k + 1] - matrix[i - 1][i] - matrix[k][k + 1];
         if (delta < -1e-9) {
           const sub = best.slice(i, k + 1).reverse();
           best.splice(i, sub.length, ...sub);

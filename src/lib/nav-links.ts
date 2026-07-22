@@ -41,7 +41,9 @@ export function navLinksFor(lat: number, lng: number, name: string): NavLink[] {
 
 // Multi-stop Google Maps route URL. First stop = origin, last = destination,
 // rest = waypoints (Google allows up to 9 waypoints in the free URL API).
-export function googleMapsRoute(stops: Array<{ lat: number; lng: number; name?: string }>): string | null {
+export function googleMapsRoute(
+  stops: Array<{ lat: number; lng: number; name?: string }>,
+): string | null {
   if (stops.length < 2) return null;
   const origin = `${stops[0].lat},${stops[0].lng}`;
   const destination = `${stops[stops.length - 1].lat},${stops[stops.length - 1].lng}`;

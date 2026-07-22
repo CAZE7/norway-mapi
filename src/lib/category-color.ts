@@ -34,7 +34,10 @@ export function colorFor(cat: string): string {
 }
 
 // Haversine distance in km
-export function distanceKm(a: { lat: number; lng: number }, b: { lat: number; lng: number }): number {
+export function distanceKm(
+  a: { lat: number; lng: number },
+  b: { lat: number; lng: number },
+): number {
   const R = 6371;
   const dLat = ((b.lat - a.lat) * Math.PI) / 180;
   const dLng = ((b.lng - a.lng) * Math.PI) / 180;

@@ -1,12 +1,28 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { toast } from "sonner";
-import { ArrowLeft, Download, KeyRound, Lock, LogOut, Plus, ShieldAlert, Trash2, Upload } from "lucide-react";
+import {
+  ArrowLeft,
+  Download,
+  KeyRound,
+  Lock,
+  LogOut,
+  Plus,
+  ShieldAlert,
+  Trash2,
+  Upload,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import {
   CATEGORY_LABEL,
   CUSTOM_PLACES,
@@ -120,7 +136,8 @@ function AdminPage() {
     const latN = Number(lat.replace(",", "."));
     const lngN = Number(lng.replace(",", "."));
     if (!name.trim() || !region.trim()) return toast.error("Name und Region sind Pflicht");
-    if (!Number.isFinite(latN) || !Number.isFinite(lngN)) return toast.error("Ungültige Koordinaten");
+    if (!Number.isFinite(latN) || !Number.isFinite(lngN))
+      return toast.error("Ungültige Koordinaten");
     if (latN < 57 || latN > 72 || lngN < 3 || lngN > 32) {
       toast.warning("Koordinaten liegen außerhalb Norwegens – trotzdem gespeichert");
     }
@@ -184,7 +201,10 @@ function AdminPage() {
       <div className="flex min-h-screen flex-col bg-background text-foreground">
         <header className="sticky top-0 z-10 border-b border-border/50 bg-background/95 backdrop-blur">
           <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3">
-            <Link to="/" className="text-muted-foreground hover:text-foreground inline-flex items-center gap-2 text-sm">
+            <Link
+              to="/"
+              className="text-muted-foreground hover:text-foreground inline-flex items-center gap-2 text-sm"
+            >
               <ArrowLeft className="h-4 w-4" /> Zurück zur Karte
             </Link>
             <div className="font-display text-sm font-semibold">Admin – Geschützter Bereich</div>
@@ -199,8 +219,10 @@ function AdminPage() {
             <div>
               <h1 className="font-display text-2xl font-bold">Admin-Zugang geschützt</h1>
               <p className="mt-1 text-sm text-muted-foreground">
-                Gib den PIN ein, um Orte verwalten und exportieren zu können.<br />
-                (Standard-PIN: <code className="font-mono font-semibold text-foreground">1234</code>)
+                Gib den PIN ein, um Orte verwalten und exportieren zu können.
+                <br />
+                (Standard-PIN: <code className="font-mono font-semibold text-foreground">1234</code>
+                )
               </p>
             </div>
 
@@ -231,7 +253,10 @@ function AdminPage() {
     <div className="min-h-screen bg-background text-foreground">
       <div className="border-border/50 sticky top-0 z-10 border-b bg-background/95 backdrop-blur">
         <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3">
-          <Link to="/" className="text-muted-foreground hover:text-foreground inline-flex items-center gap-2 text-sm">
+          <Link
+            to="/"
+            className="text-muted-foreground hover:text-foreground inline-flex items-center gap-2 text-sm"
+          >
             <ArrowLeft className="h-4 w-4" /> Zurück zur Karte
           </Link>
           <div className="font-display text-sm font-semibold">Admin – Orte verwalten</div>
@@ -244,12 +269,7 @@ function AdminPage() {
             >
               <KeyRound className="mr-1.5 h-3.5 w-3.5" /> PIN ändern
             </Button>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={handleLock}
-              className="text-xs"
-            >
+            <Button variant="outline" size="sm" onClick={handleLock} className="text-xs">
               <LogOut className="mr-1.5 h-3.5 w-3.5" /> Sperren
             </Button>
           </div>
@@ -290,20 +310,34 @@ function AdminPage() {
           <form onSubmit={add} className="space-y-4 rounded-xl border border-border bg-card p-5">
             <div className="grid gap-2">
               <Label htmlFor="name">Name *</Label>
-              <Input id="name" value={name} onChange={(e) => setName(e.target.value)} placeholder="z. B. Skjeggedal" />
+              <Input
+                id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="z. B. Skjeggedal"
+              />
             </div>
             <div className="grid gap-2">
               <Label htmlFor="region">Region *</Label>
-              <Input id="region" value={region} onChange={(e) => setRegion(e.target.value)} placeholder="z. B. Vestland" />
+              <Input
+                id="region"
+                value={region}
+                onChange={(e) => setRegion(e.target.value)}
+                placeholder="z. B. Vestland"
+              />
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="grid gap-2">
                 <Label>Kategorie</Label>
                 <Select value={category} onValueChange={setCategory}>
-                  <SelectTrigger><SelectValue /></SelectTrigger>
+                  <SelectTrigger>
+                    <SelectValue />
+                  </SelectTrigger>
                   <SelectContent>
                     {categories.map((c) => (
-                      <SelectItem key={c} value={c}>{CATEGORY_LABEL[c] ?? c}</SelectItem>
+                      <SelectItem key={c} value={c}>
+                        {CATEGORY_LABEL[c] ?? c}
+                      </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
@@ -311,10 +345,14 @@ function AdminPage() {
               <div className="grid gap-2">
                 <Label>Tier</Label>
                 <Select value={tier} onValueChange={(v) => setTier(v as Tier)}>
-                  <SelectTrigger><SelectValue /></SelectTrigger>
+                  <SelectTrigger>
+                    <SelectValue />
+                  </SelectTrigger>
                   <SelectContent>
                     {TIERS.map((t) => (
-                      <SelectItem key={t} value={t}>{TIER_LABEL[t]}</SelectItem>
+                      <SelectItem key={t} value={t}>
+                        {TIER_LABEL[t]}
+                      </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
@@ -323,16 +361,34 @@ function AdminPage() {
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="grid gap-2">
                 <Label htmlFor="lat">Breite (lat) *</Label>
-                <Input id="lat" inputMode="decimal" value={lat} onChange={(e) => setLat(e.target.value)} placeholder="60.1234" />
+                <Input
+                  id="lat"
+                  inputMode="decimal"
+                  value={lat}
+                  onChange={(e) => setLat(e.target.value)}
+                  placeholder="60.1234"
+                />
               </div>
               <div className="grid gap-2">
                 <Label htmlFor="lng">Länge (lng) *</Label>
-                <Input id="lng" inputMode="decimal" value={lng} onChange={(e) => setLng(e.target.value)} placeholder="6.7890" />
+                <Input
+                  id="lng"
+                  inputMode="decimal"
+                  value={lng}
+                  onChange={(e) => setLng(e.target.value)}
+                  placeholder="6.7890"
+                />
               </div>
             </div>
             <div className="grid gap-2">
               <Label htmlFor="desc">Beschreibung</Label>
-              <Textarea id="desc" rows={4} value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Kurze, individuelle Beschreibung des Ortes…" />
+              <Textarea
+                id="desc"
+                rows={4}
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                placeholder="Kurze, individuelle Beschreibung des Ortes…"
+              />
             </div>
             <Button type="submit" className="w-full">
               <Plus className="mr-2 h-4 w-4" /> Ort speichern
@@ -358,7 +414,12 @@ function AdminPage() {
                 <Download className="mr-2 h-4 w-4" /> Nur eigene
               </Button>
               <label className="inline-flex">
-                <input type="file" accept="application/json" className="hidden" onChange={importJson} />
+                <input
+                  type="file"
+                  accept="application/json"
+                  className="hidden"
+                  onChange={importJson}
+                />
                 <span className="border-input bg-background hover:bg-accent hover:text-accent-foreground inline-flex h-9 cursor-pointer items-center justify-center rounded-md border px-4 text-sm font-medium">
                   <Upload className="mr-2 h-4 w-4" /> Importieren
                 </span>
@@ -368,7 +429,8 @@ function AdminPage() {
 
           <div className="rounded-xl border border-border bg-card p-5">
             <h2 className="font-display mb-3 text-lg font-semibold">
-              Meine Orte <span className="text-muted-foreground text-sm font-normal">({custom.length})</span>
+              Meine Orte{" "}
+              <span className="text-muted-foreground text-sm font-normal">({custom.length})</span>
             </h2>
             {custom.length === 0 ? (
               <p className="text-muted-foreground text-sm">Noch keine eigenen Orte.</p>
@@ -379,10 +441,16 @@ function AdminPage() {
                     <div className="min-w-0">
                       <div className="truncate text-sm font-medium">{p.name}</div>
                       <div className="text-muted-foreground truncate text-xs">
-                        {p.region} · {CATEGORY_LABEL[p.category] ?? p.category} · {p.lat.toFixed(3)}, {p.lng.toFixed(3)}
+                        {p.region} · {CATEGORY_LABEL[p.category] ?? p.category} · {p.lat.toFixed(3)}
+                        , {p.lng.toFixed(3)}
                       </div>
                     </div>
-                    <Button size="icon" variant="ghost" onClick={() => remove(p.id)} aria-label="Entfernen">
+                    <Button
+                      size="icon"
+                      variant="ghost"
+                      onClick={() => remove(p.id)}
+                      aria-label="Entfernen"
+                    >
                       <Trash2 className="h-4 w-4" />
                     </Button>
                   </li>
