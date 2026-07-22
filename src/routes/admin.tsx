@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { toast } from "sonner";
-import { ArrowLeft, Download, Plus, Trash2, Upload } from "lucide-react";
+import { ArrowLeft, Download, KeyRound, Lock, LogOut, Plus, ShieldAlert, Trash2, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -30,6 +30,13 @@ export const Route = createFileRoute("/admin")({
 });
 
 const TIERS: Tier[] = ["geheimtipp", "touristisch", "service"];
+const PIN_STORAGE_KEY = "steder-admin-pin";
+const SESSION_UNLOCKED_KEY = "steder-admin-unlocked";
+
+function getStoredPin(): string {
+  if (typeof window === "undefined") return "1234";
+  return window.localStorage.getItem(PIN_STORAGE_KEY) || "1234";
+}
 
 function download(name: string, data: unknown) {
   const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
@@ -48,6 +55,14 @@ function AdminPage() {
   const removeCustomPlace = useAppStore((s) => s.removeCustomPlace);
   const setCustomPlaces = useAppStore((s) => s.setCustomPlaces);
 
+  const [unlocked, setUnlocked] = useState<boolean>(() => {
+    if (typeof window === "undefined") return false;
+    return window.sessionStorage.getItem(SESSION_UNLOCKED_KEY) === "true";
+  });
+  const [pinInput, setPinInput] = useState("");
+  const [newPinInput, setNewPinInput] = useState("");
+  const [showChangePin, setShowChangePin] = useState(false);
+
   const [name, setName] = useState("");
   const [region, setRegion] = useState("");
   const [category, setCategory] = useState<string>(categories[0] ?? "viewpoint");
@@ -55,6 +70,42 @@ function AdminPage() {
   const [lat, setLat] = useState("");
   const [lng, setLng] = useState("");
   const [description, setDescription] = useState("");
+
+  function handleUnlock(e: React.FormEvent) {
+    e.preventDefault();
+    const correctPin = getStoredPin();
+    if (pinInput.trim() === correctPin) {
+      if (typeof window !== "undefined") {
+        window.sessionStorage.setItem(SESSION_UNLOCKED_KEY, "true");
+      }
+      setUnlocked(true);
+      toast.success("Admin-Zugang freigeschaltet");
+    } else {
+      toast.error("Falscher PIN / Passwort", { description: "Bitte versuche es erneut." });
+      setPinInput("");
+    }
+  }
+
+  function handleLock() {
+    if (typeof window !== "undefined") {
+      window.sessionStorage.removeItem(SESSION_UNLOCKED_KEY);
+    }
+    setUnlocked(false);
+    toast.info("Admin-Sitzung beendet");
+  }
+
+  function handleChangePin(e: React.FormEvent) {
+    e.preventDefault();
+    if (!newPinInput.trim() || newPinInput.trim().length < 4) {
+      return toast.error("PIN muss mindestens 4 Zeichen lang sein");
+    }
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem(PIN_STORAGE_KEY, newPinInput.trim());
+    }
+    toast.success("Neuer Admin-PIN gespeichert");
+    setNewPinInput("");
+    setShowChangePin(false);
+  }
 
   function reset() {
     setName("");
@@ -128,6 +179,54 @@ function AdminPage() {
     e.target.value = "";
   }
 
+  if (!unlocked) {
+    return (
+      <div className="flex min-h-screen flex-col bg-background text-foreground">
+        <header className="sticky top-0 z-10 border-b border-border/50 bg-background/95 backdrop-blur">
+          <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3">
+            <Link to="/" className="text-muted-foreground hover:text-foreground inline-flex items-center gap-2 text-sm">
+              <ArrowLeft className="h-4 w-4" /> Zurück zur Karte
+            </Link>
+            <div className="font-display text-sm font-semibold">Admin – Geschützter Bereich</div>
+          </div>
+        </header>
+
+        <main className="flex flex-1 items-center justify-center p-4">
+          <div className="w-full max-w-md space-y-6 rounded-2xl border border-border/80 bg-card p-6 shadow-xl text-center">
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+              <Lock className="h-7 w-7" />
+            </div>
+            <div>
+              <h1 className="font-display text-2xl font-bold">Admin-Zugang geschützt</h1>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Gib den PIN ein, um Orte verwalten und exportieren zu können.<br />
+                (Standard-PIN: <code className="font-mono font-semibold text-foreground">1234</code>)
+              </p>
+            </div>
+
+            <form onSubmit={handleUnlock} className="space-y-4 text-left">
+              <div className="space-y-2">
+                <Label htmlFor="pin">PIN / Passwort</Label>
+                <Input
+                  id="pin"
+                  type="password"
+                  value={pinInput}
+                  onChange={(e) => setPinInput(e.target.value)}
+                  placeholder="PIN eingeben…"
+                  autoFocus
+                  className="text-center text-lg tracking-widest"
+                />
+              </div>
+              <Button type="submit" className="w-full">
+                Freischalten
+              </Button>
+            </form>
+          </div>
+        </main>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="border-border/50 sticky top-0 z-10 border-b bg-background/95 backdrop-blur">
@@ -136,7 +235,50 @@ function AdminPage() {
             <ArrowLeft className="h-4 w-4" /> Zurück zur Karte
           </Link>
           <div className="font-display text-sm font-semibold">Admin – Orte verwalten</div>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setShowChangePin((v) => !v)}
+              className="text-xs"
+            >
+              <KeyRound className="mr-1.5 h-3.5 w-3.5" /> PIN ändern
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={handleLock}
+              className="text-xs"
+            >
+              <LogOut className="mr-1.5 h-3.5 w-3.5" /> Sperren
+            </Button>
+          </div>
         </div>
+        {showChangePin && (
+          <div className="border-t border-border/60 bg-muted/40 p-3">
+            <form onSubmit={handleChangePin} className="mx-auto flex max-w-5xl items-center gap-2">
+              <Input
+                type="password"
+                placeholder="Neuer PIN (min. 4 Zeichen)…"
+                value={newPinInput}
+                onChange={(e) => setNewPinInput(e.target.value)}
+                className="h-8 max-w-xs text-xs"
+              />
+              <Button type="submit" size="sm" className="h-8 text-xs">
+                Speichern
+              </Button>
+              <Button
+                type="button"
+                variant="ghost"
+                size="sm"
+                className="h-8 text-xs"
+                onClick={() => setShowChangePin(false)}
+              >
+                Abbrechen
+              </Button>
+            </form>
+          </div>
+        )}
       </div>
 
       <main className="mx-auto grid max-w-5xl gap-8 px-4 py-8 lg:grid-cols-2">

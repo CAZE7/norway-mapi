@@ -226,7 +226,12 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
     setMarkerProgress({ done: built.length, total: built.length });
 
     return () => {
-      map.remove();
+      try {
+        cluster.clearLayers();
+        map.remove();
+      } catch {
+        // Safe fallback
+      }
       mapRef.current = null;
       clusterRef.current = null;
       markersRef.current.clear();

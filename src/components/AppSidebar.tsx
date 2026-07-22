@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowDown, ArrowUp, Car, ChevronDown, Download, ExternalLink, FileCode, Footprints, Heart, Info, List, MapPin, Route as RouteIcon, Search, Sparkles, Star, Trash2, X } from "lucide-react";
+import { ArrowDown, ArrowUp, Car, ChevronDown, Download, ExternalLink, FileCode, Footprints, Heart, Info, List, Lock, MapPin, Route as RouteIcon, Search, Sparkles, Star, Trash2, X } from "lucide-react";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -52,10 +52,10 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
           </div>
           <Link
             to="/admin"
-            className="text-muted-foreground hover:text-foreground shrink-0 rounded-md border border-sidebar-border px-2 py-1 text-xs"
-            title="Orte verwalten"
+            className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1 shrink-0 rounded-md border border-sidebar-border px-2 py-1 text-xs transition-colors"
+            title="Geschützter Admin-Bereich"
           >
-            Admin
+            <Lock className="h-3 w-3" /> Admin
           </Link>
         </div>
 
