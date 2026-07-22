@@ -258,12 +258,14 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       }
     });
     if (toRemove.length || toAdd.length) {
+      currentVisibleRef.current = new Set(visibleIds);
       const timer = requestAnimationFrame(() => {
         if (toRemove.length) cluster.removeLayers(toRemove);
         if (toAdd.length) cluster.addLayers(toAdd);
-        currentVisibleRef.current = new Set(visibleIds);
       });
       return () => cancelAnimationFrame(timer);
+    } else {
+      currentVisibleRef.current = new Set(visibleIds);
     }
   }, [visibleIds]);
 
@@ -337,8 +339,8 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
   const overallPct = Math.round((tilePct + markerPct) / 2);
 
   return (
-    <div ref={wrapperRef} className="relative h-full w-full bg-background [contain:strict]">
-      <div ref={containerRef} className="h-full w-full [contain:strict]" />
+    <div ref={wrapperRef} className="relative h-full w-full bg-background">
+      <div ref={containerRef} className="h-full w-full" />
       <button
         type="button"
         onClick={toggleFullscreen}
