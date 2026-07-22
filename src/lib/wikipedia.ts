@@ -27,9 +27,17 @@ function readCache(): Record<string, CacheEntry> {
   }
 }
 
+const MAX_CACHE_ENTRIES = 200;
+
 function writeCache(cache: Record<string, CacheEntry>) {
   if (typeof window === "undefined") return;
   try {
+    const keys = Object.keys(cache);
+    if (keys.length > MAX_CACHE_ENTRIES) {
+      const sortedKeys = keys.sort((a, b) => cache[a].at - cache[b].at);
+      const toRemove = sortedKeys.slice(0, keys.length - MAX_CACHE_ENTRIES);
+      for (const k of toRemove) delete cache[k];
+    }
     localStorage.setItem(CACHE_KEY, JSON.stringify(cache));
   } catch {
     /* quota */

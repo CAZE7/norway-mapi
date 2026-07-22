@@ -79,19 +79,15 @@ export default function PlaceMiniMap({
     // The container may have a different size than the previous mount.
     requestAnimationFrame(() => c.map.invalidateSize());
 
-    if (c.tilesLoaded) {
+    c.tilesLoaded = false;
+    setTilesLoaded(false);
+    const onLoad = () => {
+      c.tilesLoaded = true;
       setTilesLoaded(true);
-    } else {
-      setTilesLoaded(false);
-      const onLoad = () => {
-        c.tilesLoaded = true;
-        setTilesLoaded(true);
-      };
-      // Attach once; Leaflet fires "load" on the tile layer.
-      c.map.eachLayer((layer) => {
-        if (layer instanceof L.TileLayer) layer.once("load", onLoad);
-      });
-    }
+    };
+    c.map.eachLayer((layer) => {
+      if (layer instanceof L.TileLayer) layer.once("load", onLoad);
+    });
 
     return () => {
       // Detach the cached host so the next mount can adopt it again.

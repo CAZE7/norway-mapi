@@ -130,6 +130,10 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       if (tilesFinished) return;
       setTileProgress((p) => ({ ...p, done: p.done + 1 }));
     });
+    tiles.on("tileerror", () => {
+      if (tilesFinished) return;
+      setTileProgress((p) => ({ ...p, done: p.done + 1 }));
+    });
     tiles.on("load", () => {
       tilesFinished = true;
       setTileProgress((p) => ({ ...p, finished: true, done: Math.max(p.done, p.total) }));
@@ -164,14 +168,11 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
             onDetails: () => actionsRef.current.navigate({ to: "/place/$id", params: { id: p.id } }),
           });
           m.bindPopup(popup, { maxWidth: 280, minWidth: 260, closeButton: true }).openPopup();
-          let imgLoaded = false;
           m.on("popupopen", () => {
-            if (imgLoaded) return;
-            imgLoaded = true;
+            const holder = popup.querySelector("[data-img-inner]") as HTMLElement | null;
+            if (!holder || holder.querySelector("img")) return;
             lookupPlaceImage(p.name, p.aliases).then((hit) => {
-              if (!hit) return;
-              const holder = popup.querySelector("[data-img-inner]") as HTMLElement | null;
-              if (!holder) return;
+              if (!hit || holder.querySelector("img")) return;
               const img = document.createElement("img");
               img.src = hit.thumbnail;
               img.alt = "";
@@ -269,13 +270,19 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       L.marker([p.lat, p.lng], { icon: badge, interactive: false, keyboard: false, zIndexOffset: 1000 }).addTo(layer);
     });
     if (pts.length >= 2) {
+      const primaryColor =
+        typeof window !== "undefined"
+          ? getComputedStyle(document.documentElement).getPropertyValue("--primary").trim() || "#0a0a0a"
+          : "#0a0a0a";
       L.polyline(pts, {
-        color: "var(--primary)",
+        color: primaryColor,
         weight: 4,
         opacity: 0.85,
         dashArray: "8 6",
       }).addTo(layer);
     }
+    layer.addTo(map);
+    routeLayerRef.current = layer;
     layer.addTo(map);
     routeLayerRef.current = layer;
   }, [route, placesById]);

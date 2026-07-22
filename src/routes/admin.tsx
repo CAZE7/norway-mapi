@@ -38,7 +38,7 @@ function download(name: string, data: unknown) {
   a.href = url;
   a.download = name;
   a.click();
-  URL.revokeObjectURL(url);
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
 function AdminPage() {
@@ -104,7 +104,16 @@ function AdminPage() {
         const merged = [...custom];
         let importedCount = 0;
         for (const p of parsed) {
-          if (!p.id || !p.name || typeof p.lat !== "number") continue;
+          if (
+            !p.id ||
+            !p.name ||
+            typeof p.lat !== "number" ||
+            typeof p.lng !== "number" ||
+            !p.region ||
+            !p.category ||
+            !p.tier
+          )
+            continue;
           if (!merged.find((x) => x.id === p.id)) {
             merged.push(p);
             importedCount++;

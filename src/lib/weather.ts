@@ -84,6 +84,7 @@ export async function fetchWeather(lat: number, lng: number): Promise<WeatherRes
   };
 
   const series = json.properties.timeseries;
+  if (!series?.length) throw new Error("Wetter-API: Keine Daten verfügbar");
   const toHour = (t: (typeof series)[number]): HourForecast => {
     const d = t.data.instant.details;
     return {

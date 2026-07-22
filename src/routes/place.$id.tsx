@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ClientOnly } from "@tanstack/react-router";
-import { Suspense, lazy, useState } from "react";
+import { Suspense, lazy, useMemo, useState } from "react";
 import {
   ArrowLeft,
   Check,
@@ -121,14 +121,14 @@ function PlaceDetail() {
       : `/place/${place.id}`;
   const coordString = `${place.lat.toFixed(5)}, ${place.lng.toFixed(5)}`;
 
-  const shortDescription = (() => {
+  const shortDescription = useMemo(() => {
     const raw = (place.description ?? "").replace(/\s+/g, " ").trim();
     if (!raw) return "";
     if (raw.length <= 160) return raw;
     const cut = raw.slice(0, 160);
     const lastSpace = cut.lastIndexOf(" ");
     return `${(lastSpace > 80 ? cut.slice(0, lastSpace) : cut).trim()}…`;
-  })();
+  }, [place.description]);
 
   async function handleShare() {
     const headline = `${place.name} – ${CATEGORY_LABEL[place.category]} in ${place.region}`;
@@ -168,12 +168,16 @@ function PlaceDetail() {
     }
   }
 
-  const related = PLACES.filter(
-    (p) => p.id !== place.id && (p.category === place.category || p.region === place.region),
-  )
-    .map((p) => ({ p, d: distanceKm(place, p) }))
-    .sort((a, b) => a.d - b.d)
-    .slice(0, 6);
+  const related = useMemo(
+    () =>
+      PLACES.filter(
+        (p) => p.id !== place.id && (p.category === place.category || p.region === place.region),
+      )
+        .map((p) => ({ p, d: distanceKm(place, p) }))
+        .sort((a, b) => a.d - b.d)
+        .slice(0, 6),
+    [place.id, place.category, place.region, place.lat, place.lng],
+  );
 
   return (
     <div className="min-h-screen bg-background">
