@@ -1,8 +1,8 @@
 // Free Wikipedia / Wikimedia Commons image lookup.
-// Uses the public REST summary API — no auth, CORS-enabled.
-// Returned thumbnails are hosted on Wikimedia and licensed under CC-BY-SA
-// or public domain; the API responds with `originalimage` + a page URL
-// which we surface as attribution.
+// Uses local verified image cache from audit_places.py first.
+// Uses the public REST summary API & Commons as fallback.
+
+import imageCacheData from "@/data/image-cache.json";
 
 export type WikiImage = {
   thumbnail: string;
@@ -11,7 +11,69 @@ export type WikiImage = {
   title: string;
   extract: string;
   lang: "no" | "nb" | "de" | "en" | "commons";
+  license?: string;
+  source?: string;
+  attribution_required?: boolean;
+  verified?: boolean;
 };
+
+type LocalImageCacheEntry = {
+  name?: string;
+  has_image?: boolean;
+  verified?: boolean;
+  verification_score?: number;
+  source?: string;
+  url?: string;
+  thumbnail?: string;
+  page?: string;
+  license?: string;
+  attribution_required?: boolean;
+};
+
+const localCacheIndex = new Map<string, LocalImageCacheEntry>();
+
+function getLocalCacheEntry(cand: string): LocalImageCacheEntry | undefined {
+  if (localCacheIndex.size === 0) {
+    const raw = imageCacheData as Record<string, LocalImageCacheEntry>;
+    for (const [key, val] of Object.entries(raw)) {
+      if (key) localCacheIndex.set(key.toLowerCase(), val);
+      if (val.name) localCacheIndex.set(val.name.toLowerCase(), val);
+    }
+  }
+  return localCacheIndex.get(cand.toLowerCase());
+}
+
+function checkLocalCache(
+  name: string,
+  aliases: string[] = [],
+): { hit: boolean; value: WikiImage | null } {
+  const candidates = [name, ...aliases].filter(Boolean);
+  for (const cand of candidates) {
+    const entry = getLocalCacheEntry(cand);
+    if (entry) {
+      if (!entry.has_image || !entry.verified) {
+        // verified: false -> do not show image
+        return { hit: true, value: null };
+      }
+      return {
+        hit: true,
+        value: {
+          thumbnail: entry.thumbnail || entry.url || "",
+          original: entry.url || entry.thumbnail || "",
+          pageUrl: entry.page || "",
+          title: entry.name || name,
+          extract: "",
+          lang: "commons",
+          license: entry.license || "",
+          source: entry.source || "commons",
+          attribution_required: entry.attribution_required ?? true,
+          verified: true,
+        },
+      };
+    }
+  }
+  return { hit: false, value: null };
+}
 
 const CACHE_KEY = "wiki-image-cache-v2";
 const NEGATIVE_TTL_MS = 24 * 60 * 60 * 1000; // 1 day
@@ -86,6 +148,8 @@ async function fetchLang(
       title: data.title || title,
       extract: data.extract || "",
       lang,
+      attribution_required: true,
+      verified: true,
     };
   } catch {
     return null;
@@ -150,6 +214,9 @@ async function fetchCommons(query: string): Promise<WikiImage | null> {
       title,
       extract,
       lang: "commons",
+      source: "commons_search",
+      attribution_required: true,
+      verified: true,
     };
   } catch {
     return null;
@@ -160,6 +227,12 @@ export async function lookupPlaceImage(
   name: string,
   aliases: string[] = [],
 ): Promise<WikiImage | null> {
+  // Phase 0: Check local verified cache from audit
+  const local = checkLocalCache(name, aliases);
+  if (local.hit) {
+    return local.value;
+  }
+
   const cache = readCache();
   const cacheKey = name.toLowerCase();
   const cached = cache[cacheKey];

@@ -79,16 +79,28 @@ export default function PlaceImage({
             "linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.75) 100%)",
         }}
       />
-      <a
-        href={image.pageUrl}
-        target="_blank"
-        rel="noreferrer"
-        className="absolute bottom-2 right-2 inline-flex items-center gap-1 rounded-md bg-black/55 px-2 py-1 text-[11px] font-medium text-white backdrop-blur-sm transition hover:bg-black/70"
-        title={`Bildquelle: ${image.lang === "commons" ? "Wikimedia Commons" : "Wikipedia"} (CC-BY-SA / Public Domain)`}
-      >
-        {image.lang === "commons" ? "Wikimedia Commons" : "Wikipedia"}
-        <ExternalLink className="h-3 w-3" />
-      </a>
+      {image.attribution_required && image.license ? (
+        <a
+          href={image.pageUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute bottom-2 right-2 inline-flex items-center gap-1 rounded-md bg-black/60 px-2 py-1 text-[11px] font-medium text-white backdrop-blur-sm transition hover:bg-black/80"
+        >
+          Bild: {image.license} via {image.source || (image.lang === "commons" ? "Wikimedia Commons" : "Wikipedia")}
+          <ExternalLink className="h-3 w-3" />
+        </a>
+      ) : (
+        <a
+          href={image.pageUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="absolute bottom-2 right-2 inline-flex items-center gap-1 rounded-md bg-black/55 px-2 py-1 text-[11px] font-medium text-white backdrop-blur-sm transition hover:bg-black/70"
+          title={`Bildquelle: ${image.lang === "commons" ? "Wikimedia Commons" : "Wikipedia"} (CC-BY-SA / Public Domain)`}
+        >
+          {image.lang === "commons" ? "Wikimedia Commons" : "Wikipedia"}
+          <ExternalLink className="h-3 w-3" />
+        </a>
+      )}
     </div>
   );
 }

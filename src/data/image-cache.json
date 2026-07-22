@@ -1,0 +1,19 @@
+{
+  "p5": {
+    "name": "Trolltunga",
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Trolltunga%2C_Odda%2C_Norway_%28Unsplash_Xj8TdoAbmos%29.jpg",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Trolltunga%2C_Odda%2C_Norway_%28Unsplash_Xj8TdoAbmos%29.jpg/500px-Trolltunga%2C_Odda%2C_Norway_%28Unsplash_Xj8TdoAbmos%29.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Trolltunga,_Odda,_Norway_(Unsplash_Xj8TdoAbmos).jpg",
+    "license": "cc0",
+    "attribution_required": false
+  },
+  "c350": {
+    "name": "Trolltunga Camping",
+    "has_image": false,
+    "verified": false
+  }
+}

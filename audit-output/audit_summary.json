@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-07-22T15:57:20.024739+00:00",
+  "total_places": 2,
+  "images": {
+    "with_image": 1,
+    "with_verified_image": 1,
+    "without_image": 1,
+    "verification_rate": "1/1",
+    "new_since_last": 1
+  },
+  "coordinates": {
+    "ok": 2,
+    "wrong": 0,
+    "offset": 0
+  },
+  "fixes_suggested": 0,
+  "vision_api_enabled": false
+}
