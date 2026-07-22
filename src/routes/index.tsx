@@ -69,13 +69,18 @@ function Home() {
 
         {/* Mobile floating button */}
         <div className="absolute left-3 top-3 z-[1000] md:hidden">
-          <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
+          <Sheet open={mobileOpen} onOpenChange={setMobileOpen} modal={false}>
             <SheetTrigger asChild>
               <Button size="sm" className="shadow-lg">
                 <Menu className="mr-2 h-4 w-4" /> Orte & Filter
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="w-[92vw] max-w-[420px] p-0">
+            <SheetContent
+              side="left"
+              className="w-[92vw] max-w-[420px] p-0"
+              onOpenAutoFocus={(e) => e.preventDefault()}
+              onInteractOutside={(e) => e.preventDefault()}
+            >
               <VisuallyHidden>
                 <SheetTitle>Orte und Filter</SheetTitle>
               </VisuallyHidden>
