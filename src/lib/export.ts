@@ -11,8 +11,9 @@ export type ExportStop = {
   category?: string;
 };
 
-function escapeXml(s: string): string {
-  return s
+function escapeXml(s: string | undefined | null): string {
+  if (s == null) return "";
+  return String(s)
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
