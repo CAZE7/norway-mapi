@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ClientOnly } from "@tanstack/react-router";
-import { Suspense, lazy, useMemo, useState } from "react";
+import { Suspense, lazy, useDeferredValue, useMemo, useState } from "react";
 import { Menu } from "lucide-react";
 import { getAllPlaces, searchPlaces } from "@/data/places";
 import { useAppStore } from "@/lib/store";
@@ -43,10 +43,12 @@ function Home() {
 
   const allPlaces = useMemo(() => getAllPlaces(customPlaces), [customPlaces]);
 
+  const deferredQuery = useDeferredValue(query);
+
   const results = useMemo(() => {
-    const hits = searchPlaces(allPlaces, query, new Set(categories), new Set(tiers));
+    const hits = searchPlaces(allPlaces, deferredQuery, new Set(categories), new Set(tiers));
     return hits.map((h) => h.place);
-  }, [allPlaces, query, categories, tiers]);
+  }, [allPlaces, deferredQuery, categories, tiers]);
 
   const visibleIds = useMemo(() => new Set(results.map((p) => p.id)), [results]);
 
