@@ -184,7 +184,7 @@ function PlaceDetail() {
       {/* Sticky toolbar */}
       <header className="border-border bg-card/90 supports-[backdrop-filter]:bg-card/70 sticky top-0 z-20 border-b backdrop-blur">
         <div className="mx-auto flex max-w-5xl items-center gap-2 p-3">
-          <Button asChild variant="ghost" size="icon">
+          <Button asChild variant="ghost" size="icon" className="active:scale-95 transition-transform">
             <Link to="/" aria-label="Zurück zur Karte">
               <ArrowLeft className="h-5 w-5" />
             </Link>
@@ -198,7 +198,7 @@ function PlaceDetail() {
           <Button
             asChild
             size="sm"
-            className="hidden sm:inline-flex"
+            className="hidden sm:inline-flex active:scale-95 transition-transform"
             style={{ backgroundColor: color, color: "white" }}
           >
             <Link to="/" onClick={() => focus(place.id)}>
@@ -210,6 +210,7 @@ function PlaceDetail() {
             size="icon"
             onClick={() => toggleFav(place.id)}
             aria-label={isFav ? "Favorit entfernen" : "Als Favorit merken"}
+            className="active:scale-95 transition-transform"
           >
             <Heart className={cn("h-4 w-4", isFav && "fill-current")} />
           </Button>
@@ -218,6 +219,7 @@ function PlaceDetail() {
             size="icon"
             onClick={handleShare}
             aria-label="Link teilen"
+            className="active:scale-95 transition-transform"
           >
             {copied ? <Check className="h-4 w-4" /> : <Share2 className="h-4 w-4" />}
           </Button>

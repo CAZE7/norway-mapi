@@ -67,9 +67,9 @@ function buildPopup(
       <div style="padding:10px 12px 12px;background:white">
         <div style="font-size:12.5px;line-height:1.45;color:#374151;margin-bottom:10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">${safeDesc}</div>
         <div style="display:flex;gap:6px">
-          <button data-act="details" style="flex:1;padding:6px 8px;border:0;border-radius:6px;background:${color};color:white;cursor:pointer;font-size:12px;font-weight:500">Details</button>
-          <button data-act="fav" title="Favorit" style="padding:6px 10px;border:1px solid #e5e7eb;border-radius:6px;background:white;cursor:pointer;font-size:12px">☆</button>
-          <button data-act="route" title="Zur Route" style="padding:6px 10px;border:1px solid #e5e7eb;border-radius:6px;background:white;cursor:pointer;font-size:12px">＋</button>
+          <button data-act="details" aria-label="Details zu ${safeName}" style="flex:1;padding:8px 12px;border:0;border-radius:6px;background:${color};color:white;cursor:pointer;font-size:12.5px;font-weight:600;min-height:36px">Details</button>
+          <button data-act="fav" title="Favorit" aria-label="Als Favorit merken" style="padding:8px 12px;border:1px solid #e5e7eb;border-radius:6px;background:white;cursor:pointer;font-size:14px;min-height:36px;min-width:36px">☆</button>
+          <button data-act="route" title="Zur Route" aria-label="Zur Route hinzufügen" style="padding:8px 12px;border:1px solid #e5e7eb;border-radius:6px;background:white;cursor:pointer;font-size:14px;min-height:36px;min-width:36px">＋</button>
         </div>
       </div>
     </div>`;

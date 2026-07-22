@@ -344,7 +344,7 @@ function PlaceRow({
           variant={isFav ? "default" : "ghost"}
           onClick={onFav}
           aria-label={isFav ? "Favorit entfernen" : "Als Favorit speichern"}
-          className="h-8 w-8"
+          className="h-9 w-9 sm:h-8 sm:w-8 active:scale-95 transition-transform"
         >
           <Heart className={cn("h-4 w-4", isFav && "fill-current")} />
         </Button>
@@ -353,12 +353,12 @@ function PlaceRow({
           variant={inRoute ? "default" : "ghost"}
           onClick={onAddRoute}
           aria-label={inRoute ? "Bereits in Route" : "Zur Route hinzufügen"}
-          className="h-8 w-8"
+          className="h-9 w-9 sm:h-8 sm:w-8 active:scale-95 transition-transform"
           disabled={inRoute}
         >
           <RouteIcon className="h-4 w-4" />
         </Button>
-        <Button asChild size="icon" variant="ghost" aria-label="Details ansehen" className="h-8 w-8">
+        <Button asChild size="icon" variant="ghost" aria-label="Details ansehen" className="h-9 w-9 sm:h-8 sm:w-8 active:scale-95 transition-transform">
           <Link to="/place/$id" params={{ id: place.id }} onClick={onNavigate}>
             <Info className="h-4 w-4" />
           </Link>
