@@ -49,7 +49,8 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
           Seite konnte nicht geladen werden
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Ein unerwarteter Fehler ist aufgetreten. Bitte versuche es erneut oder kehre zur Startseite zurück.
+          Ein unerwarteter Fehler ist aufgetreten. Bitte versuche es erneut oder kehre zur
+          Startseite zurück.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
@@ -96,11 +97,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "stylesheet", href: "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" },
-      { rel: "stylesheet", href: "https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" },
-      { rel: "stylesheet", href: "https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" },
+      {
+        rel: "stylesheet",
+        href: "https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css",
+      },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),

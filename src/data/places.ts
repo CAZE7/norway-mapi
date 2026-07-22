@@ -23,7 +23,6 @@ export type Place = {
   tier: Tier;
 };
 
-
 type RawFile = {
   labels: Record<string, string>;
   places: Array<{
@@ -109,7 +108,8 @@ function levenshtein(a: string, b: string): number {
     let prev = i;
     const charB = b.charCodeAt(i - 1);
     for (let j = 1; j <= lenA; j++) {
-      const val = charB === a.charCodeAt(j - 1) ? row[j - 1] : Math.min(row[j - 1], row[j], prev) + 1;
+      const val =
+        charB === a.charCodeAt(j - 1) ? row[j - 1] : Math.min(row[j - 1], row[j], prev) + 1;
       row[j - 1] = prev;
       prev = val;
     }
@@ -155,9 +155,7 @@ export function searchPlaces(
   categories: Set<Category>,
   tiers?: Set<Tier>,
 ): SearchHit[] {
-  let filtered = categories.size
-    ? places.filter((p) => categories.has(p.category))
-    : places;
+  let filtered = categories.size ? places.filter((p) => categories.has(p.category)) : places;
   if (tiers && tiers.size) {
     filtered = filtered.filter((p) => tiers.has(p.tier));
   }

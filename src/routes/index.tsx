@@ -30,7 +30,6 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-
 function MapFallback() {
   return <div className="bg-muted h-full w-full animate-pulse" />;
 }
@@ -48,7 +47,6 @@ function Home() {
     const hits = searchPlaces(allPlaces, query, new Set(categories), new Set(tiers));
     return hits.map((h) => h.place);
   }, [allPlaces, query, categories, tiers]);
-
 
   const visibleIds = useMemo(() => new Set(results.map((p) => p.id)), [results]);
 

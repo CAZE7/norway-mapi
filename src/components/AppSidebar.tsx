@@ -1,21 +1,53 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowDown, ArrowUp, Car, ChevronDown, Download, ExternalLink, FileCode, Footprints, Heart, Info, List, Lock, MapPin, Route as RouteIcon, Search, Sparkles, Star, Trash2, X } from "lucide-react";
+import {
+  ArrowDown,
+  ArrowUp,
+  Car,
+  ChevronDown,
+  Download,
+  ExternalLink,
+  FileCode,
+  Footprints,
+  Heart,
+  Info,
+  List,
+  Lock,
+  MapPin,
+  Route as RouteIcon,
+  Search,
+  Sparkles,
+  Star,
+  Trash2,
+  X,
+} from "lucide-react";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CATEGORY_LABEL, PLACES, TIER_LABEL, type Category, type Place, type Tier } from "@/data/places";
+import {
+  CATEGORY_LABEL,
+  PLACES,
+  TIER_LABEL,
+  type Category,
+  type Place,
+  type Tier,
+} from "@/data/places";
 import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 import { colorFor } from "@/lib/category-color";
 import PlaceThumb from "@/components/PlaceThumb";
-import { estimateTimes, formatDuration, formatKm, optimizeOrder, totalDistance, type Stop } from "@/lib/route-optimize";
+import {
+  estimateTimes,
+  formatDuration,
+  formatKm,
+  optimizeOrder,
+  totalDistance,
+  type Stop,
+} from "@/lib/route-optimize";
 import { buildGpx, buildKml, downloadTextFile, slugify, type ExportStop } from "@/lib/export";
 import { googleMapsRoute } from "@/lib/nav-links";
-
-
 
 const CATEGORIES = Object.keys(CATEGORY_LABEL) as Category[];
 const COLLAPSED_CATEGORY_COUNT = 8;
@@ -68,7 +100,9 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
             <MapPin className="h-5 w-5" />
           </div>
           <div className="min-w-0 flex-1">
-            <div className="font-display truncate text-base font-semibold leading-tight">Steder i Norge</div>
+            <div className="font-display truncate text-base font-semibold leading-tight">
+              Steder i Norge
+            </div>
             <div className="text-muted-foreground truncate text-xs">Orte, Natur & Camper</div>
           </div>
           <Link
@@ -131,7 +165,6 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
           </div>
         </div>
         <div className="mt-3">
-
           <div className="flex flex-wrap gap-1.5">
             {(showAllCats ? CATEGORIES : CATEGORIES.slice(0, COLLAPSED_CATEGORY_COUNT)).map((c) => {
               const active = categories.includes(c);
@@ -156,7 +189,9 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
               onClick={() => setShowAllCats((v) => !v)}
               className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1 text-xs"
             >
-              <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", showAllCats && "rotate-180")} />
+              <ChevronDown
+                className={cn("h-3.5 w-3.5 transition-transform", showAllCats && "rotate-180")}
+              />
               {showAllCats ? "weniger" : `+${CATEGORIES.length - COLLAPSED_CATEGORY_COUNT} weitere`}
             </button>
             {categories.length > 0 && (
@@ -339,7 +374,12 @@ function PlaceRow({
         onClick={onSelect}
         aria-label={`${place.name} auf Karte anzeigen`}
       >
-        <PlaceThumb name={place.name} aliases={place.aliases} color={colorFor(place.category)} size={56} />
+        <PlaceThumb
+          name={place.name}
+          aliases={place.aliases}
+          color={colorFor(place.category)}
+          size={56}
+        />
       </button>
       <button className="min-w-0 text-left focus-visible:outline-none" onClick={onSelect}>
         <div className="flex items-center gap-2">
@@ -354,13 +394,17 @@ function PlaceRow({
               Highlight
             </span>
           )}
-          {place.quality === 3 && <Star className="text-accent h-3.5 w-3.5 shrink-0 fill-current" />}
+          {place.quality === 3 && (
+            <Star className="text-accent h-3.5 w-3.5 shrink-0 fill-current" />
+          )}
         </div>
 
         <div className="text-muted-foreground mt-0.5 truncate text-xs">
           {CATEGORY_LABEL[place.category]} · {place.region}
         </div>
-        <div className="text-muted-foreground/80 mt-1 line-clamp-2 text-xs">{place.description}</div>
+        <div className="text-muted-foreground/80 mt-1 line-clamp-2 text-xs">
+          {place.description}
+        </div>
       </button>
       <div className="flex shrink-0 flex-col gap-1">
         <Button
@@ -382,14 +426,19 @@ function PlaceRow({
         >
           <RouteIcon className="h-4 w-4" />
         </Button>
-        <Button asChild size="icon" variant="ghost" aria-label="Details ansehen" className="h-9 w-9 sm:h-8 sm:w-8 active:scale-95 transition-transform">
+        <Button
+          asChild
+          size="icon"
+          variant="ghost"
+          aria-label="Details ansehen"
+          className="h-9 w-9 sm:h-8 sm:w-8 active:scale-95 transition-transform"
+        >
           <Link to="/place/$id" params={{ id: place.id }} onClick={onNavigate}>
             <Info className="h-4 w-4" />
           </Link>
         </Button>
       </div>
     </li>
-
   );
 }
 
@@ -463,13 +512,14 @@ function RoutePanel({
   };
   const openInGoogle = () => {
     if (exportStops.length > 11) {
-      toast.warning("Google Maps unterstützt maximal 11 Stopps (1 Start + 9 Zwischenstopps + 1 Ziel). Die ersten 11 Stopps werden geöffnet.");
+      toast.warning(
+        "Google Maps unterstützt maximal 11 Stopps (1 Start + 9 Zwischenstopps + 1 Ziel). Die ersten 11 Stopps werden geöffnet.",
+      );
     }
     const url = googleMapsRoute(exportStops);
     if (!url) return;
     window.open(url, "_blank", "noopener");
   };
-
 
   if (route.length === 0) {
     return (
@@ -510,6 +560,7 @@ function RoutePanel({
           onClick={reverse}
           disabled={route.length < 2}
           title="Reihenfolge umkehren"
+          aria-label="Reihenfolge umkehren"
         >
           <ArrowUp className="h-3.5 w-3.5" />
           <ArrowDown className="-ml-1 h-3.5 w-3.5" />
@@ -557,7 +608,13 @@ function RoutePanel({
                     </div>
                   )}
                 </button>
-                <Button size="icon" variant="ghost" className="h-8 w-8" onClick={() => removeFromRoute(id)}>
+                <Button
+                  size="icon"
+                  variant="ghost"
+                  className="h-8 w-8"
+                  onClick={() => removeFromRoute(id)}
+                  aria-label={`${p.name} aus Route entfernen`}
+                >
                   <X className="h-4 w-4" />
                 </Button>
               </li>
@@ -567,13 +624,28 @@ function RoutePanel({
       </ScrollArea>
       <div className="border-sidebar-border space-y-2 border-t p-3">
         <div className="grid grid-cols-3 gap-2">
-          <Button size="sm" variant="outline" onClick={exportGpx} title="GPX für Komoot, Garmin, Organic Maps …">
+          <Button
+            size="sm"
+            variant="outline"
+            onClick={exportGpx}
+            title="GPX für Komoot, Garmin, Organic Maps …"
+          >
             <Download className="mr-1.5 h-3.5 w-3.5" /> GPX
           </Button>
-          <Button size="sm" variant="outline" onClick={exportKml} title="KML für Google Earth, Maps.me …">
+          <Button
+            size="sm"
+            variant="outline"
+            onClick={exportKml}
+            title="KML für Google Earth, Maps.me …"
+          >
             <FileCode className="mr-1.5 h-3.5 w-3.5" /> KML
           </Button>
-          <Button size="sm" variant="outline" onClick={openInGoogle} title="Route in Google Maps öffnen">
+          <Button
+            size="sm"
+            variant="outline"
+            onClick={openInGoogle}
+            title="Route in Google Maps öffnen"
+          >
             <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> Maps
           </Button>
         </div>
@@ -581,7 +653,6 @@ function RoutePanel({
           <Trash2 className="mr-2 h-4 w-4" /> Route leeren
         </Button>
       </div>
-
     </>
   );
 }
@@ -611,4 +682,3 @@ function Stat({ label, value, icon }: { label: string; value: string; icon?: Rea
     </div>
   );
 }
-

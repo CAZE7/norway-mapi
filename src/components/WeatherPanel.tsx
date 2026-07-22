@@ -65,9 +65,7 @@ export default function WeatherPanel({ lat, lng }: Props) {
         <div className="bg-card border-border rounded-xl border p-5">
           <div className="mb-3 flex items-center justify-between">
             <h2 className="font-display text-lg font-semibold">Wetter</h2>
-            <div className="text-muted-foreground text-[11px]">
-              MET Norway · aktuell
-            </div>
+            <div className="text-muted-foreground text-[11px]">MET Norway · aktuell</div>
           </div>
           <div className="flex items-center gap-4">
             <div className="text-5xl leading-none">{symbolEmoji(weather.now.symbol)}</div>
@@ -97,7 +95,9 @@ export default function WeatherPanel({ lat, lng }: Props) {
                 <div className="text-muted-foreground text-[10px] font-medium">
                   {new Date(d.date).toLocaleDateString("de-DE", { weekday: "short" })}
                 </div>
-                <div className="my-1 text-base sm:text-lg leading-none">{symbolEmoji(d.symbol)}</div>
+                <div className="my-1 text-base sm:text-lg leading-none">
+                  {symbolEmoji(d.symbol)}
+                </div>
                 <div className="flex flex-col items-center text-[11px] font-mono tabular-nums leading-tight">
                   <span className="font-semibold text-foreground">{Math.round(d.max)}°</span>
                   <span className="text-muted-foreground text-[10px]">{Math.round(d.min)}°</span>
@@ -155,16 +155,14 @@ function AuroraCard({ aurora, lat }: { aurora: AuroraResult; lat: number }) {
             Max 24 h: Kp {aurora.maxNext24.toFixed(1)}
           </div>
         </div>
-        <div
-          className={`ml-auto rounded-full px-3 py-1 text-xs font-medium ${toneClass}`}
-        >
+        <div className={`ml-auto rounded-full px-3 py-1 text-xs font-medium ${toneClass}`}>
           {status.label}
         </div>
       </div>
       <div className="text-muted-foreground mt-3 text-xs leading-relaxed">
         Für diesen Ort (Breite {lat.toFixed(1)}°) ist ein Kp-Wert von mindestens{" "}
-        <span className="text-foreground font-semibold">{nowVis.needed.toFixed(1)}</span>{" "}
-        nötig, damit das Polarlicht auf Horizonthöhe erscheint. Aktuell:{" "}
+        <span className="text-foreground font-semibold">{nowVis.needed.toFixed(1)}</span> nötig,
+        damit das Polarlicht auf Horizonthöhe erscheint. Aktuell:{" "}
         {nowVis.visible ? "erreicht" : "noch nicht erreicht"}. Peak in 24 h:{" "}
         {peakVis.visible ? "erreicht" : "wahrscheinlich nicht"}.
       </div>
@@ -173,11 +171,7 @@ function AuroraCard({ aurora, lat }: { aurora: AuroraResult; lat: number }) {
           {aurora.timeline.map((t) => {
             const h = Math.max(6, (t.kp / 9) * 40);
             const color =
-              t.kp >= 5
-                ? "hsl(155 60% 40%)"
-                : t.kp >= 3
-                  ? "hsl(45 90% 55%)"
-                  : "hsl(220 15% 65%)";
+              t.kp >= 5 ? "hsl(155 60% 40%)" : t.kp >= 3 ? "hsl(45 90% 55%)" : "hsl(220 15% 65%)";
             return (
               <div
                 key={t.time}

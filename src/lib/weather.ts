@@ -76,8 +76,18 @@ export async function fetchWeather(lat: number, lng: number): Promise<WeatherRes
         time: string;
         data: {
           instant: { details: Record<string, number> };
-          next_1_hours?: { summary: { symbol_code: string }; details?: { precipitation_amount?: number } };
-          next_6_hours?: { summary: { symbol_code: string }; details?: { precipitation_amount?: number; air_temperature_min?: number; air_temperature_max?: number } };
+          next_1_hours?: {
+            summary: { symbol_code: string };
+            details?: { precipitation_amount?: number };
+          };
+          next_6_hours?: {
+            summary: { symbol_code: string };
+            details?: {
+              precipitation_amount?: number;
+              air_temperature_min?: number;
+              air_temperature_max?: number;
+            };
+          };
         };
       }>;
     };
@@ -93,7 +103,10 @@ export async function fetchWeather(lat: number, lng: number): Promise<WeatherRes
       wind: d.wind_speed ?? 0,
       cloud: d.cloud_area_fraction ?? 0,
       precip: t.data.next_1_hours?.details?.precipitation_amount ?? 0,
-      symbol: t.data.next_1_hours?.summary.symbol_code ?? t.data.next_6_hours?.summary.symbol_code ?? "cloudy",
+      symbol:
+        t.data.next_1_hours?.summary.symbol_code ??
+        t.data.next_6_hours?.summary.symbol_code ??
+        "cloudy",
     };
   };
 

@@ -8,7 +8,6 @@ import { useAppStore } from "@/lib/store";
 import { colorFor } from "@/lib/category-color";
 import { lookupPlaceImage } from "@/lib/wikipedia";
 
-
 // Fix default marker icons served from a CDN so we don't fight bundler paths.
 const iconRetina = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png";
 const iconUrl = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png";
@@ -81,7 +80,6 @@ function buildPopup(
 }
 
 export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
-
   const navigate = useNavigate();
   const wrapperRef = useRef<HTMLDivElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -119,7 +117,6 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       document.exitFullscreen().catch(() => {});
     }
   };
-
 
   const actionsRef = useRef({ focus, toggleFav, addToRoute, navigate });
   actionsRef.current = { focus, toggleFav, addToRoute, navigate };
@@ -190,7 +187,8 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
           const popup = buildPopup(p, color, {
             onFav: () => actionsRef.current.toggleFav(p.id),
             onRoute: () => actionsRef.current.addToRoute(p.id),
-            onDetails: () => actionsRef.current.navigate({ to: "/place/$id", params: { id: p.id } }),
+            onDetails: () =>
+              actionsRef.current.navigate({ to: "/place/$id", params: { id: p.id } }),
           });
           m.bindPopup(popup, { maxWidth: 280, minWidth: 260, closeButton: true }).openPopup();
           m.on("popupopen", () => {
@@ -302,12 +300,18 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
         iconSize: [26, 26],
         iconAnchor: [13, 13],
       });
-      L.marker([p.lat, p.lng], { icon: badge, interactive: false, keyboard: false, zIndexOffset: 1000 }).addTo(layer);
+      L.marker([p.lat, p.lng], {
+        icon: badge,
+        interactive: false,
+        keyboard: false,
+        zIndexOffset: 1000,
+      }).addTo(layer);
     });
     if (pts.length >= 2) {
       const primaryColor =
         typeof window !== "undefined"
-          ? getComputedStyle(document.documentElement).getPropertyValue("--primary").trim() || "#0a0a0a"
+          ? getComputedStyle(document.documentElement).getPropertyValue("--primary").trim() ||
+            "#0a0a0a"
           : "#0a0a0a";
       L.polyline(pts, {
         color: primaryColor,
@@ -319,7 +323,6 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
     layer.addTo(map);
     routeLayerRef.current = layer;
   }, [route, placesById]);
-
 
   const tilesDone = tileProgress.finished;
   const markersDone = markerProgress.done >= markerProgress.total && markerProgress.total > 0;
@@ -371,8 +374,8 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
                 tilesDone
                   ? "Fertig"
                   : tileProgress.total
-                  ? `${tileProgress.done} / ${tileProgress.total}`
-                  : "Verbinde…"
+                    ? `${tileProgress.done} / ${tileProgress.total}`
+                    : "Verbinde…"
               }
               pct={tilePct}
               done={tilesDone}
