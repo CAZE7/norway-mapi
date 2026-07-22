@@ -17,6 +17,8 @@ import {
   type Tier,
 } from "@/data/places";
 
+import { useAppStore } from "@/lib/store";
+
 export const Route = createFileRoute("/admin")({
   component: AdminPage,
   head: () => ({
@@ -39,13 +41,12 @@ function download(name: string, data: unknown) {
   URL.revokeObjectURL(url);
 }
 
-function saveCustom(list: Place[]) {
-  window.localStorage.setItem(CUSTOM_STORAGE_KEY, JSON.stringify(list));
-}
-
 function AdminPage() {
   const categories = useMemo(() => Object.keys(CATEGORY_LABEL).sort(), []);
-  const [custom, setCustom] = useState<Place[]>(() => [...CUSTOM_PLACES]);
+  const custom = useAppStore((s) => s.customPlaces);
+  const addCustomPlace = useAppStore((s) => s.addCustomPlace);
+  const removeCustomPlace = useAppStore((s) => s.removeCustomPlace);
+  const setCustomPlaces = useAppStore((s) => s.setCustomPlaces);
 
   const [name, setName] = useState("");
   const [region, setRegion] = useState("");
@@ -83,20 +84,14 @@ function AdminPage() {
       lng: lngN,
       description: description.trim() || `${name.trim()} – ${region.trim()}.`,
     };
-    const next = [...custom, p];
-    setCustom(next);
-    saveCustom(next);
-    toast.success("Ort hinzugefügt – Seite lädt neu…");
+    addCustomPlace(p);
+    toast.success("Ort gespeichert");
     reset();
-    setTimeout(() => window.location.reload(), 700);
   }
 
   function remove(id: string) {
-    const next = custom.filter((p) => p.id !== id);
-    setCustom(next);
-    saveCustom(next);
-    toast.success("Ort entfernt – Seite lädt neu…");
-    setTimeout(() => window.location.reload(), 500);
+    removeCustomPlace(id);
+    toast.success("Ort entfernt");
   }
 
   function importJson(e: React.ChangeEvent<HTMLInputElement>) {
@@ -107,14 +102,16 @@ function AdminPage() {
         const parsed = JSON.parse(text) as Place[];
         if (!Array.isArray(parsed)) throw new Error("Kein Array");
         const merged = [...custom];
+        let importedCount = 0;
         for (const p of parsed) {
           if (!p.id || !p.name || typeof p.lat !== "number") continue;
-          if (!merged.find((x) => x.id === p.id)) merged.push(p);
+          if (!merged.find((x) => x.id === p.id)) {
+            merged.push(p);
+            importedCount++;
+          }
         }
-        setCustom(merged);
-        saveCustom(merged);
-        toast.success(`${parsed.length} Orte importiert – lädt neu…`);
-        setTimeout(() => window.location.reload(), 700);
+        setCustomPlaces(merged);
+        toast.success(`${importedCount} Orte importiert`);
       } catch (err) {
         toast.error("Import fehlgeschlagen – ungültiges JSON");
       }

@@ -95,7 +95,7 @@ export default function PlaceMiniMap({
 
     return () => {
       // Detach the cached host so the next mount can adopt it again.
-      if (c.host.parentElement === container) container.removeChild(c.host);
+      c.host.parentElement?.removeChild(c.host);
     };
   }, [lat, lng, category, name]);
 

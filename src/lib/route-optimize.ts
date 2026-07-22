@@ -49,7 +49,19 @@ function twoOpt(route: Stop[]): Stop[] {
   const n = route.length;
   if (n < 4) return route;
   let best = route.slice();
-  let bestDist = totalDistance(best);
+
+  const matrix: number[][] = Array.from({ length: n }, () => new Array<number>(n));
+  const updateMatrix = () => {
+    for (let i = 0; i < n; i++) {
+      for (let j = i; j < n; j++) {
+        const d = haversine(best[i], best[j]);
+        matrix[i][j] = d;
+        matrix[j][i] = d;
+      }
+    }
+  };
+  updateMatrix();
+
   let improved = true;
   let guard = 0;
   while (improved && guard < 40) {
@@ -57,16 +69,17 @@ function twoOpt(route: Stop[]): Stop[] {
     guard++;
     for (let i = 1; i < n - 2; i++) {
       for (let k = i + 1; k < n - 1; k++) {
-        const next = best
-          .slice(0, i)
-          .concat(best.slice(i, k + 1).reverse(), best.slice(k + 1));
-        const d = totalDistance(next);
-        if (d + 1e-9 < bestDist) {
-          best = next;
-          bestDist = d;
+        const delta =
+          matrix[i - 1][k] + matrix[i][k + 1] - matrix[i - 1][i] - matrix[k][k + 1];
+        if (delta < -1e-9) {
+          const sub = best.slice(i, k + 1).reverse();
+          best.splice(i, sub.length, ...sub);
+          updateMatrix();
           improved = true;
+          break;
         }
       }
+      if (improved) break;
     }
   }
   return best;

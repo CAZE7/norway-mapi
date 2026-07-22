@@ -438,6 +438,9 @@ function RoutePanel({
     toast.success("KML exportiert", { description: `${exportStops.length} Stopps` });
   };
   const openInGoogle = () => {
+    if (exportStops.length > 11) {
+      toast.warning("Google Maps unterstützt maximal 11 Stopps (1 Start + 9 Zwischenstopps + 1 Ziel). Die ersten 11 Stopps werden geöffnet.");
+    }
     const url = googleMapsRoute(exportStops);
     if (!url) return;
     window.open(url, "_blank", "noopener");
@@ -493,7 +496,7 @@ function RoutePanel({
           {route.map((id, i) => {
             const p = byId.get(id);
             if (!p) return null;
-            const leg = i > 0 ? distKm && haversineIds(byId, route[i - 1], id) : 0;
+            const leg = i > 0 ? haversineIds(byId, route[i - 1], id) : 0;
             return (
               <li key={id} className="flex items-start gap-2 p-3">
                 <div className="flex flex-col items-center gap-1">

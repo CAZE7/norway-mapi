@@ -17,6 +17,8 @@ export default function PlaceThumb({
   const [state, setState] = useState<"idle" | "loading" | "ok" | "empty">("idle");
   const [src, setSrc] = useState<string | null>(null);
 
+  const aliasesKey = aliases ? aliases.join(",") : "";
+
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
@@ -47,7 +49,7 @@ export default function PlaceThumb({
       alive = false;
       io.disconnect();
     };
-  }, [name, aliases]);
+  }, [name, aliasesKey]);
 
   return (
     <div

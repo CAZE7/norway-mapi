@@ -157,7 +157,7 @@ export async function fetchAurora(): Promise<AuroraResult> {
 // Rough aurora visibility. The auroral oval sits around geomagnetic latitude
 // ~67° at Kp 0 and expands ~2° south per Kp point.
 export function auroraVisibleAt(lat: number, kp: number): { visible: boolean; needed: number } {
-  const needed = Math.max(0, (67 - lat) / 2);
+  const needed = lat >= 67 ? 0.5 : (67 - lat) / 2;
   return { visible: kp >= needed, needed };
 }
 

@@ -17,6 +17,8 @@ export default function PlaceImage({
     { status: "loading" } | { status: "ok"; image: WikiImage } | { status: "empty" }
   >({ status: "loading" });
 
+  const aliasesKey = aliases ? aliases.join(",") : "";
+
   useEffect(() => {
     let alive = true;
     setState({ status: "loading" });
@@ -27,7 +29,7 @@ export default function PlaceImage({
     return () => {
       alive = false;
     };
-  }, [name, aliases]);
+  }, [name, aliasesKey]);
 
   if (state.status === "loading") {
     return (

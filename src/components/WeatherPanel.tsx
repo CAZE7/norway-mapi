@@ -15,17 +15,22 @@ export default function WeatherPanel({ lat, lng }: Props) {
   const [weather, setWeather] = useState<WeatherResult | null>(null);
   const [aurora, setAurora] = useState<AuroraResult | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [auroraError, setAuroraError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
     setError(null);
+    setAuroraError(null);
     Promise.allSettled([fetchWeather(lat, lng), fetchAurora()]).then((res) => {
       if (cancelled) return;
       const [w, a] = res;
       if (w.status === "fulfilled") setWeather(w.value);
       if (a.status === "fulfilled") setAurora(a.value);
+      if (a.status === "rejected") {
+        setAuroraError("Aurora-Daten derzeit nicht erreichbar.");
+      }
       if (w.status === "rejected" && a.status === "rejected") {
         setError("Wetter- und Aurora-Daten sind gerade nicht erreichbar.");
       }
@@ -102,7 +107,15 @@ export default function WeatherPanel({ lat, lng }: Props) {
         </div>
       )}
 
-      {aurora && <AuroraCard aurora={aurora} lat={lat} />}
+      {aurora ? (
+        <AuroraCard aurora={aurora} lat={lat} />
+      ) : auroraError ? (
+        <div className="bg-card border-border rounded-xl border p-5">
+          <div className="text-muted-foreground flex items-center gap-2 text-sm">
+            <AlertCircle className="h-4 w-4 text-amber-500" /> {auroraError}
+          </div>
+        </div>
+      ) : null}
     </section>
   );
 }

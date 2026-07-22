@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import type { Category, Tier } from "@/data/places";
+import { CUSTOM_STORAGE_KEY, loadCustomPlaces, type Category, type Place, type Tier } from "@/data/places";
 
 type State = {
   query: string;
@@ -8,6 +8,7 @@ type State = {
   tiers: Tier[];
   favorites: string[];
   route: string[];
+  customPlaces: Place[];
   focusId: string | null;
   focusNonce: number;
   setQuery: (q: string) => void;
@@ -21,9 +22,20 @@ type State = {
   setRoute: (ids: string[]) => void;
   moveRoute: (from: number, to: number) => void;
   focus: (id: string | null) => void;
+  addCustomPlace: (p: Place) => void;
+  removeCustomPlace: (id: string) => void;
+  setCustomPlaces: (places: Place[]) => void;
 };
 
-
+function saveCustomToStorage(list: Place[]) {
+  if (typeof window !== "undefined") {
+    try {
+      window.localStorage.setItem(CUSTOM_STORAGE_KEY, JSON.stringify(list));
+    } catch {
+      /* quota */
+    }
+  }
+}
 
 export const useAppStore = create<State>()(
   persist(
@@ -33,6 +45,7 @@ export const useAppStore = create<State>()(
       tiers: ["geheimtipp", "touristisch"],
       favorites: [],
       route: [],
+      customPlaces: loadCustomPlaces(),
       focusId: null,
       focusNonce: 0,
       setQuery: (query) => set({ query }),
@@ -69,11 +82,26 @@ export const useAppStore = create<State>()(
           return { route: next };
         }),
       focus: (focusId) => set((s) => ({ focusId, focusNonce: s.focusNonce + 1 })),
+      addCustomPlace: (p) =>
+        set((s) => {
+          const next = [...s.customPlaces, p];
+          saveCustomToStorage(next);
+          return { customPlaces: next };
+        }),
+      removeCustomPlace: (id) =>
+        set((s) => {
+          const next = s.customPlaces.filter((x) => x.id !== id);
+          saveCustomToStorage(next);
+          return { customPlaces: next };
+        }),
+      setCustomPlaces: (customPlaces) => {
+        saveCustomToStorage(customPlaces);
+        set({ customPlaces });
+      },
     }),
     {
       name: "steder-i-norge",
       partialize: (s) => ({ favorites: s.favorites, route: s.route, tiers: s.tiers }),
     },
-
   ),
 );

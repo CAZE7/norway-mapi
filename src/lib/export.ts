@@ -84,9 +84,12 @@ export function downloadTextFile(filename: string, content: string, mime: string
   a.href = url;
   a.download = filename;
   document.body.appendChild(a);
-  a.click();
-  a.remove();
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
+  try {
+    a.click();
+  } finally {
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
 }
 
 export function slugify(s: string): string {

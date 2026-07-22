@@ -98,6 +98,9 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
   const [markerProgress, setMarkerProgress] = useState({ done: 0, total: PLACES.length });
 
 
+  const actionsRef = useRef({ focus, toggleFav, addToRoute, navigate });
+  actionsRef.current = { focus, toggleFav, addToRoute, navigate };
+
   const placesById = useMemo(() => {
     const m = new Map<string, Place>();
     PLACES.forEach((p) => m.set(p.id, p));
@@ -152,13 +155,13 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       const m = L.marker([p.lat, p.lng], { icon: pinIcon(color) });
       let popupBuilt = false;
       m.on("click", () => {
-        focus(p.id);
+        actionsRef.current.focus(p.id);
         if (!popupBuilt) {
           popupBuilt = true;
           const popup = buildPopup(p, color, {
-            onFav: () => toggleFav(p.id),
-            onRoute: () => addToRoute(p.id),
-            onDetails: () => navigate({ to: "/place/$id", params: { id: p.id } }),
+            onFav: () => actionsRef.current.toggleFav(p.id),
+            onRoute: () => actionsRef.current.addToRoute(p.id),
+            onDetails: () => actionsRef.current.navigate({ to: "/place/$id", params: { id: p.id } }),
           });
           m.bindPopup(popup, { maxWidth: 280, minWidth: 260, closeButton: true }).openPopup();
           let imgLoaded = false;
@@ -182,6 +185,8 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
               holder.appendChild(img);
             });
           });
+        } else {
+          m.openPopup();
         }
       });
       markersRef.current.set(p.id, m);
@@ -201,7 +206,7 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       markersRef.current.clear();
       currentVisibleRef.current.clear();
     };
-  }, [focus, toggleFav, addToRoute, navigate]);
+  }, []);
 
   // Sync visible markers with filter/search results using a diff so we
   // only touch markers that actually changed state.

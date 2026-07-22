@@ -151,13 +151,12 @@ export async function lookupPlaceImage(
 
   // Phase 1: Wikipedia summary — richer text, tends to hit named landmarks.
   for (const candidate of candidates) {
-    for (const lang of langs) {
-      const hit = await fetchLang(lang, candidate);
-      if (hit) {
-        cache[cacheKey] = { at: Date.now(), value: hit };
-        writeCache(cache);
-        return hit;
-      }
+    const hits = await Promise.all(langs.map((lang) => fetchLang(lang, candidate)));
+    const hit = hits.find((h) => h !== null) ?? null;
+    if (hit) {
+      cache[cacheKey] = { at: Date.now(), value: hit };
+      writeCache(cache);
+      return hit;
     }
   }
 

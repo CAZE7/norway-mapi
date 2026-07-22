@@ -42,7 +42,11 @@ export const Route = createFileRoute("/place/$id")({
     const { place } = loaderData;
     const title = `${place.name} – ${CATEGORY_LABEL[place.category]} in ${place.region}`;
     const description = place.description;
-    const url = `/place/${params.id}`;
+    const origin =
+      typeof window !== "undefined"
+        ? window.location.origin
+        : (import.meta.env.VITE_APP_URL as string | undefined) || "https://norway-mapi.lovable.app";
+    const url = `${origin}/place/${params.id}`;
     // Absolute static map image (required by social crawlers). OSM staticmap
     // renders the location + a red marker at 1200x630 — ideal OG dimensions.
     const image = `https://staticmap.openstreetmap.de/staticmap.php?center=${place.lat},${place.lng}&zoom=9&size=1200x630&maptype=mapnik&markers=${place.lat},${place.lng},red-pushpin`;

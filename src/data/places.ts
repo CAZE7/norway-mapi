@@ -44,15 +44,9 @@ const data = raw as RawFile;
 
 export const CATEGORY_LABEL: Record<string, string> = data.labels;
 
-const BASE_PLACES: Place[] = data.places.map((p) => ({
-  ...p,
-  quality: (p.quality as 1 | 2 | 3 | undefined) ?? undefined,
-  tier: (p.tier as Tier | undefined) ?? "geheimtipp",
-}));
-
 export const CUSTOM_STORAGE_KEY = "steder-custom-places";
 
-function loadCustomPlaces(): Place[] {
+export function loadCustomPlaces(): Place[] {
   if (typeof window === "undefined") return [];
   try {
     const raw = window.localStorage.getItem(CUSTOM_STORAGE_KEY);
@@ -64,10 +58,17 @@ function loadCustomPlaces(): Place[] {
   }
 }
 
+export const BASE_PLACES: Place[] = data.places.map((p) => ({
+  ...p,
+  quality: (p.quality as 1 | 2 | 3 | undefined) ?? undefined,
+  tier: (p.tier as Tier | undefined) ?? "geheimtipp",
+}));
 export const CUSTOM_PLACES: Place[] = loadCustomPlaces();
 export const PLACES: Place[] = [...BASE_PLACES, ...CUSTOM_PLACES];
 
-
+export function getAllPlaces(customPlaces: Place[] = CUSTOM_PLACES): Place[] {
+  return [...BASE_PLACES, ...customPlaces];
+}
 
 // Grouped category IDs so the UI can render "Natur" vs. "Camper & Service".
 export const CAMPER_CATEGORIES: Category[] = Object.keys(CATEGORY_LABEL).filter((c) =>
@@ -91,6 +92,23 @@ export function normalize(s: string): string {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .trim();
+}
+
+function levenshtein(a: string, b: string): number {
+  if (a === b) return 0;
+  if (!a.length) return b.length;
+  if (!b.length) return a.length;
+  const row = Array.from({ length: a.length + 1 }, (_, i) => i);
+  for (let i = 1; i <= b.length; i++) {
+    let prev = i;
+    for (let j = 1; j <= a.length; j++) {
+      const val = b[i - 1] === a[j - 1] ? row[j - 1] : Math.min(row[j - 1], row[j], prev) + 1;
+      row[j - 1] = prev;
+      prev = val;
+    }
+    row[a.length] = prev;
+  }
+  return row[a.length];
 }
 
 export type SearchHit = { place: Place; score: number };
@@ -128,6 +146,28 @@ export function searchPlaces(
     else if (desc.includes(q)) score = 15;
     if (score > 0) hits.push({ place, score });
   }
+
+  // Levenshtein fuzzy search fallback if 0 exact/substring hits
+  if (hits.length === 0 && q.length >= 3) {
+    const maxDist = q.length <= 4 ? 1 : 2;
+    for (const place of filtered) {
+      const name = normalize(place.name);
+      const nameWords = name.split(/\s+/);
+      const aliases = (place.aliases ?? []).map(normalize);
+      let minD = Infinity;
+
+      for (const word of [name, ...nameWords, ...aliases]) {
+        if (!word) continue;
+        const d = levenshtein(q, word);
+        if (d < minD) minD = d;
+      }
+
+      if (minD <= maxDist) {
+        hits.push({ place, score: 25 - minD * 5 });
+      }
+    }
+  }
+
   hits.sort((a, b) => b.score - a.score || a.place.name.localeCompare(b.place.name));
   return hits;
 }
