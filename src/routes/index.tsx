@@ -53,12 +53,12 @@ function Home() {
   return (
     <div className="bg-background flex h-[100dvh] w-full overflow-hidden">
       {/* Desktop / tablet sidebar */}
-      <div className="border-sidebar-border hidden h-full w-[340px] shrink-0 border-r md:block lg:w-[380px]">
+      <div className="border-sidebar-border hidden h-full w-[340px] shrink-0 border-r md:block lg:w-[380px] [contain:layout_style]">
         <AppSidebar results={results} />
       </div>
 
       {/* Map */}
-      <div className="relative min-w-0 flex-1">
+      <div className="relative min-w-0 flex-1 [contain:strict]">
         <ClientOnly fallback={<MapFallback />}>
           <Suspense fallback={<MapFallback />}>
             <NorwayMap visibleIds={visibleIds} />

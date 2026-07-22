@@ -92,7 +92,7 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
   }, []);
 
   return (
-    <aside className="flex h-full w-full flex-col bg-sidebar text-sidebar-foreground">
+    <aside className="flex h-full w-full flex-col bg-sidebar text-sidebar-foreground [contain:layout_style]">
       <div className="border-b border-sidebar-border p-4">
         <div className="mb-3 flex items-center gap-2">
           <div className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-primary text-primary-foreground">
@@ -120,6 +120,10 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
             onChange={(e) => setLocalQuery(e.target.value)}
             placeholder="Suche Orte, Region, Kategorie…"
             className="pl-9"
+            autoCorrect="off"
+            autoCapitalize="off"
+            spellCheck={false}
+            inputMode="search"
           />
           {localQuery && (
             <button

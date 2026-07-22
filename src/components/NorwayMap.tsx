@@ -165,8 +165,8 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       spiderfyOnMaxZoom: true,
       zoomToBoundsOnClick: true,
       chunkedLoading: true,
-      chunkInterval: 40,
-      chunkDelay: 20,
+      chunkInterval: 10,
+      chunkDelay: 5,
       removeOutsideVisibleBounds: true,
     });
     map.addLayer(cluster);
@@ -337,8 +337,8 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
   const overallPct = Math.round((tilePct + markerPct) / 2);
 
   return (
-    <div ref={wrapperRef} className="relative h-full w-full bg-background">
-      <div ref={containerRef} className="h-full w-full" />
+    <div ref={wrapperRef} className="relative h-full w-full bg-background [contain:strict]">
+      <div ref={containerRef} className="h-full w-full [contain:strict]" />
       <button
         type="button"
         onClick={toggleFullscreen}
