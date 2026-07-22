@@ -36,8 +36,9 @@ function pinIcon(color: string) {
   return icon;
 }
 
-function escapeHtml(s: string): string {
-  return s.replace(/[&<>"']/g, (c) =>
+function escapeHtml(s: string | undefined | null): string {
+  if (s == null) return "";
+  return String(s).replace(/[&<>"']/g, (c) =>
     c === "&" ? "&amp;" : c === "<" ? "&lt;" : c === ">" ? "&gt;" : c === '"' ? "&quot;" : "&#39;",
   );
 }
