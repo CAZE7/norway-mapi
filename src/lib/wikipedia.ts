@@ -18,30 +18,42 @@ const NEGATIVE_TTL_MS = 24 * 60 * 60 * 1000; // 1 day
 
 type CacheEntry = { at: number; value: WikiImage | null };
 
+let memoryCache: Record<string, CacheEntry> | null = null;
+
 function readCache(): Record<string, CacheEntry> {
+  if (memoryCache) return memoryCache;
   if (typeof window === "undefined") return {};
   try {
-    return JSON.parse(localStorage.getItem(CACHE_KEY) || "{}");
+    memoryCache = JSON.parse(localStorage.getItem(CACHE_KEY) || "{}");
+    return memoryCache!;
   } catch {
-    return {};
+    memoryCache = {};
+    return memoryCache;
   }
 }
 
 const MAX_CACHE_ENTRIES = 200;
+let saveTimer: ReturnType<typeof setTimeout> | null = null;
 
 function writeCache(cache: Record<string, CacheEntry>) {
+  memoryCache = cache;
   if (typeof window === "undefined") return;
-  try {
-    const keys = Object.keys(cache);
-    if (keys.length > MAX_CACHE_ENTRIES) {
-      const sortedKeys = keys.sort((a, b) => cache[a].at - cache[b].at);
-      const toRemove = sortedKeys.slice(0, keys.length - MAX_CACHE_ENTRIES);
-      for (const k of toRemove) delete cache[k];
+  if (saveTimer) return;
+  saveTimer = setTimeout(() => {
+    saveTimer = null;
+    try {
+      if (!memoryCache) return;
+      const keys = Object.keys(memoryCache);
+      if (keys.length > MAX_CACHE_ENTRIES) {
+        const sortedKeys = keys.sort((a, b) => memoryCache![a].at - memoryCache![b].at);
+        const toRemove = sortedKeys.slice(0, keys.length - MAX_CACHE_ENTRIES);
+        for (const k of toRemove) delete memoryCache[k];
+      }
+      localStorage.setItem(CACHE_KEY, JSON.stringify(memoryCache));
+    } catch {
+      /* quota */
     }
-    localStorage.setItem(CACHE_KEY, JSON.stringify(cache));
-  } catch {
-    /* quota */
-  }
+  }, 1000);
 }
 
 async function fetchLang(

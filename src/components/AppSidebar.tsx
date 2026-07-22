@@ -22,7 +22,13 @@ const COLLAPSED_CATEGORY_COUNT = 8;
 
 export function AppSidebar({ results, onNavigate }: { results: Place[]; onNavigate?: () => void }) {
   const [showAllCats, setShowAllCats] = useState(false);
-  const { query, setQuery, categories, toggleCategory, clearCategories, tiers, toggleTier } = useAppStore();
+  const query = useAppStore((s) => s.query);
+  const setQuery = useAppStore((s) => s.setQuery);
+  const categories = useAppStore((s) => s.categories);
+  const toggleCategory = useAppStore((s) => s.toggleCategory);
+  const clearCategories = useAppStore((s) => s.clearCategories);
+  const tiers = useAppStore((s) => s.tiers);
+  const toggleTier = useAppStore((s) => s.toggleTier);
   const favorites = useAppStore((s) => s.favorites);
   const route = useAppStore((s) => s.route);
   const focus = useAppStore((s) => s.focus);
@@ -32,6 +38,21 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
   const addToRoute = useAppStore((s) => s.addToRoute);
   const setRoute = useAppStore((s) => s.setRoute);
   const moveRoute = useAppStore((s) => s.moveRoute);
+
+  const [localQuery, setLocalQuery] = useState(query);
+
+  useEffect(() => {
+    setLocalQuery(query);
+  }, [query]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (localQuery !== query) {
+        setQuery(localQuery);
+      }
+    }, 120);
+    return () => clearTimeout(timer);
+  }, [localQuery, query, setQuery]);
 
   const byId = useMemo(() => {
     const m = new Map<string, Place>();
@@ -62,14 +83,17 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
         <div className="relative">
           <Search className="text-muted-foreground pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2" />
           <Input
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            value={localQuery}
+            onChange={(e) => setLocalQuery(e.target.value)}
             placeholder="Suche Orte, Region, Kategorie…"
             className="pl-9"
           />
-          {query && (
+          {localQuery && (
             <button
-              onClick={() => setQuery("")}
+              onClick={() => {
+                setLocalQuery("");
+                setQuery("");
+              }}
               className="text-muted-foreground hover:text-foreground absolute right-2 top-1/2 -translate-y-1/2 rounded p-1"
               aria-label="Suche leeren"
             >

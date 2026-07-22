@@ -259,9 +259,14 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
         if (m) toRemove.push(m);
       }
     });
-    if (toRemove.length) cluster.removeLayers(toRemove);
-    if (toAdd.length) cluster.addLayers(toAdd);
-    currentVisibleRef.current = new Set(visibleIds);
+    if (toRemove.length || toAdd.length) {
+      const timer = requestAnimationFrame(() => {
+        if (toRemove.length) cluster.removeLayers(toRemove);
+        if (toAdd.length) cluster.addLayers(toAdd);
+        currentVisibleRef.current = new Set(visibleIds);
+      });
+      return () => cancelAnimationFrame(timer);
+    }
   }, [visibleIds]);
 
   // Fly to focused place
@@ -311,8 +316,6 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
         dashArray: "8 6",
       }).addTo(layer);
     }
-    layer.addTo(map);
-    routeLayerRef.current = layer;
     layer.addTo(map);
     routeLayerRef.current = layer;
   }, [route, placesById]);

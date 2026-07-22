@@ -96,22 +96,58 @@ export function normalize(s: string): string {
 
 function levenshtein(a: string, b: string): number {
   if (a === b) return 0;
-  if (!a.length) return b.length;
-  if (!b.length) return a.length;
-  const row = Array.from({ length: a.length + 1 }, (_, i) => i);
-  for (let i = 1; i <= b.length; i++) {
+  const lenA = a.length;
+  const lenB = b.length;
+  if (!lenA) return lenB;
+  if (!lenB) return lenA;
+  if (Math.abs(lenA - lenB) > 2) return Math.max(lenA, lenB);
+
+  const row = new Int32Array(lenA + 1);
+  for (let j = 0; j <= lenA; j++) row[j] = j;
+
+  for (let i = 1; i <= lenB; i++) {
     let prev = i;
-    for (let j = 1; j <= a.length; j++) {
-      const val = b[i - 1] === a[j - 1] ? row[j - 1] : Math.min(row[j - 1], row[j], prev) + 1;
+    const charB = b.charCodeAt(i - 1);
+    for (let j = 1; j <= lenA; j++) {
+      const val = charB === a.charCodeAt(j - 1) ? row[j - 1] : Math.min(row[j - 1], row[j], prev) + 1;
       row[j - 1] = prev;
       prev = val;
     }
-    row[a.length] = prev;
+    row[lenA] = prev;
   }
-  return row[a.length];
+  return row[lenA];
 }
 
 export type SearchHit = { place: Place; score: number };
+
+type NormalizedPlace = Place & {
+  normName: string;
+  normRegion: string;
+  normCat: string;
+  normDesc: string;
+  normAliases: string[];
+  normWords: string[];
+};
+
+const normCache = new WeakMap<Place, NormalizedPlace>();
+
+function getNormalizedPlace(p: Place): NormalizedPlace {
+  let cached = normCache.get(p);
+  if (!cached) {
+    const normName = normalize(p.name);
+    cached = {
+      ...p,
+      normName,
+      normRegion: normalize(p.region),
+      normCat: normalize(CATEGORY_LABEL[p.category] ?? p.category),
+      normDesc: normalize(p.description),
+      normAliases: (p.aliases ?? []).map(normalize),
+      normWords: normName.split(/\s+/).filter(Boolean),
+    };
+    normCache.set(p, cached);
+  }
+  return cached;
+}
 
 export function searchPlaces(
   places: Place[],
@@ -125,39 +161,36 @@ export function searchPlaces(
   if (tiers && tiers.size) {
     filtered = filtered.filter((p) => tiers.has(p.tier));
   }
-  if (!query.trim()) {
+
+  const trimmed = query.trim();
+  if (!trimmed) {
     return filtered.map((place) => ({ place, score: 0 }));
   }
 
-  const q = normalize(query);
+  const q = normalize(trimmed);
   const hits: SearchHit[] = [];
-  for (const place of filtered) {
-    const name = normalize(place.name);
-    const aliases = (place.aliases ?? []).map(normalize);
-    const region = normalize(place.region);
-    const cat = normalize(CATEGORY_LABEL[place.category] ?? place.category);
-    const desc = normalize(place.description);
+
+  const normPlaces = filtered.map(getNormalizedPlace);
+
+  for (const place of normPlaces) {
     let score = 0;
-    if (name === q) score = 100;
-    else if (name.startsWith(q)) score = 80;
-    else if (name.includes(q)) score = 60;
-    else if (aliases.some((a) => a.includes(q))) score = 50;
-    else if (region.includes(q) || cat.includes(q)) score = 30;
-    else if (desc.includes(q)) score = 15;
+    if (place.normName === q) score = 100;
+    else if (place.normName.startsWith(q)) score = 80;
+    else if (place.normName.includes(q)) score = 60;
+    else if (place.normAliases.some((a) => a.includes(q))) score = 50;
+    else if (place.normRegion.includes(q) || place.normCat.includes(q)) score = 30;
+    else if (place.normDesc.includes(q)) score = 15;
     if (score > 0) hits.push({ place, score });
   }
 
   // Levenshtein fuzzy search fallback if 0 exact/substring hits
   if (hits.length === 0 && q.length >= 3) {
     const maxDist = q.length <= 4 ? 1 : 2;
-    for (const place of filtered) {
-      const name = normalize(place.name);
-      const nameWords = name.split(/\s+/);
-      const aliases = (place.aliases ?? []).map(normalize);
+    for (const place of normPlaces) {
       let minD = Infinity;
 
-      for (const word of [name, ...nameWords, ...aliases]) {
-        if (!word) continue;
+      for (const word of [place.normName, ...place.normWords, ...place.normAliases]) {
+        if (!word || Math.abs(q.length - word.length) > maxDist) continue;
         const d = levenshtein(q, word);
         if (d < minD) minD = d;
       }
