@@ -155,12 +155,18 @@ export function searchPlaces(
   categories: Set<Category>,
   tiers?: Set<Tier>,
 ): SearchHit[] {
+  const trimmed = query.trim();
+
+  // If no filters and no query are active, return an empty array to prevent massive rendering issues
+  if (!trimmed && categories.size === 0 && (!tiers || tiers.size === 0)) {
+    return [];
+  }
+
   let filtered = categories.size ? places.filter((p) => categories.has(p.category)) : places;
   if (tiers && tiers.size) {
     filtered = filtered.filter((p) => tiers.has(p.tier));
   }
 
-  const trimmed = query.trim();
   if (!trimmed) {
     return filtered.map((place) => ({ place, score: 0 }));
   }
