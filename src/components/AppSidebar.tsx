@@ -332,7 +332,6 @@ function PagedResults({
             key={p.id}
             place={p}
             isFav={favSet.has(p.id)}
-            isFav={favSet.has(p.id)}
             inRoute={routeSet.has(p.id)}
             onSelect={onFocus}
             onFav={onFav}
