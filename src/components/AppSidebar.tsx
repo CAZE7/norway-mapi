@@ -91,6 +91,9 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
     return m;
   }, []);
 
+  // ⚡ Bolt: Convert route array to Set to achieve O(1) lookups during rendering instead of O(N) array includes checks
+  const routeSet = useMemo(() => new Set(route), [route]);
+
   return (
     <aside className="flex h-full w-full flex-col bg-sidebar text-sidebar-foreground">
       <div className="border-b border-sidebar-border p-4">
@@ -255,7 +258,7 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
                     key={id}
                     place={p}
                     isFav
-                    inRoute={route.includes(id)}
+                    inRoute={routeSet.has(id)}
                     onSelect={focus}
                     onFav={toggleFav}
                     onAddRoute={addToRoute}
@@ -309,6 +312,7 @@ function PagedResults({
   }, [results]);
 
   const favSet = useMemo(() => new Set(favorites), [favorites]);
+  // ⚡ Bolt: Convert route array to Set to achieve O(1) lookups during rendering instead of O(N) array includes checks
   const routeSet = useMemo(() => new Set(route), [route]);
 
   if (results.length === 0) {
