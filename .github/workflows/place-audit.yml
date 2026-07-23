@@ -2,8 +2,8 @@ name: Place Audit
 
 on:
   schedule:
-    - cron: '0 3 * * *'  # Taeglich 3 Uhr UTC
-  workflow_dispatch:      # Manuell triggerbar
+    - cron: "0 3 * * *" # Taeglich 3 Uhr UTC
+  workflow_dispatch: # Manuell triggerbar
 
 jobs:
   audit:
@@ -16,7 +16,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
       - name: Run Coordinate Audit
         run: python3 audit_places.py --coords-only

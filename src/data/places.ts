@@ -93,6 +93,9 @@ export function normalize(s: string): string {
     .trim();
 }
 
+// Pre-allocated array for Levenshtein distance calculation to avoid GC overhead
+const sharedRow = new Int32Array(256);
+
 function levenshtein(a: string, b: string): number {
   if (a === b) return 0;
   const lenA = a.length;
@@ -101,7 +104,11 @@ function levenshtein(a: string, b: string): number {
   if (!lenB) return lenA;
   if (Math.abs(lenA - lenB) > 2) return Math.max(lenA, lenB);
 
-  const row = new Int32Array(lenA + 1);
+  let row = sharedRow;
+  if (lenA + 1 > row.length) {
+    row = new Int32Array(lenA + 1);
+  }
+
   for (let j = 0; j <= lenA; j++) row[j] = j;
 
   for (let i = 1; i <= lenB; i++) {
@@ -191,18 +198,54 @@ export function searchPlaces(
   if (hits.length === 0 && q.length >= 3) {
     const maxDist = q.length <= 4 ? 1 : 2;
     const qFirst = q.charCodeAt(0);
+    const qLen = q.length;
+
     for (const place of normPlaces) {
       let minD = Infinity;
 
-      for (const word of [place.normName, ...place.normWords, ...place.normAliases]) {
-        if (!word || Math.abs(q.length - word.length) > maxDist) continue;
-        // Fast prefix optimization: if length >= 4 and first char differs, skip
-        if (q.length >= 4 && word.charCodeAt(0) !== qFirst) continue;
+      // Unrolled loop to avoid [place.normName, ...place.normWords, ...place.normAliases] array allocation
+      let word = place.normName;
+      if (
+        word &&
+        Math.abs(qLen - word.length) <= maxDist &&
+        !(qLen >= 4 && word.charCodeAt(0) !== qFirst)
+      ) {
+        minD = levenshtein(q, word);
+      }
 
-        const d = levenshtein(q, word);
-        if (d < minD) {
-          minD = d;
-          if (minD === 0) break;
+      if (minD !== 0) {
+        const words = place.normWords;
+        for (let j = 0; j < words.length; j++) {
+          word = words[j];
+          if (
+            word &&
+            Math.abs(qLen - word.length) <= maxDist &&
+            !(qLen >= 4 && word.charCodeAt(0) !== qFirst)
+          ) {
+            const d = levenshtein(q, word);
+            if (d < minD) {
+              minD = d;
+              if (minD === 0) break;
+            }
+          }
+        }
+      }
+
+      if (minD !== 0) {
+        const aliases = place.normAliases;
+        for (let j = 0; j < aliases.length; j++) {
+          word = aliases[j];
+          if (
+            word &&
+            Math.abs(qLen - word.length) <= maxDist &&
+            !(qLen >= 4 && word.charCodeAt(0) !== qFirst)
+          ) {
+            const d = levenshtein(q, word);
+            if (d < minD) {
+              minD = d;
+              if (minD === 0) break;
+            }
+          }
         }
       }
 
