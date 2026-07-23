@@ -97,6 +97,27 @@ function readCache(): Record<string, CacheEntry> {
 
 const MAX_CACHE_ENTRIES = 200;
 let saveTimer: ReturnType<typeof setTimeout> | null = null;
+const inflightLookups = new Map<string, Promise<WikiImage | null>>();
+let activeNetworkLookups = 0;
+const queuedNetworkLookups: Array<() => void> = [];
+
+function cacheKeyFor(name: string, aliases: string[] = []) {
+  return [name, ...aliases].filter(Boolean).join("|").toLowerCase();
+}
+
+async function withNetworkSlot<T>(task: () => Promise<T>): Promise<T> {
+  if (activeNetworkLookups >= 3) {
+    await new Promise<void>((resolve) => queuedNetworkLookups.push(resolve));
+  }
+  activeNetworkLookups += 1;
+  try {
+    return await task();
+  } finally {
+    activeNetworkLookups = Math.max(0, activeNetworkLookups - 1);
+    const next = queuedNetworkLookups.shift();
+    if (next) next();
+  }
+}
 
 function writeCache(cache: Record<string, CacheEntry>) {
   memoryCache = cache;
@@ -228,6 +249,21 @@ export async function lookupPlaceImage(
   name: string,
   aliases: string[] = [],
 ): Promise<WikiImage | null> {
+  const lookupKey = cacheKeyFor(name, aliases);
+  const inflight = inflightLookups.get(lookupKey);
+  if (inflight) return inflight;
+
+  const lookup = lookupPlaceImageUncached(name, aliases).finally(() => {
+    inflightLookups.delete(lookupKey);
+  });
+  inflightLookups.set(lookupKey, lookup);
+  return lookup;
+}
+
+async function lookupPlaceImageUncached(
+  name: string,
+  aliases: string[] = [],
+): Promise<WikiImage | null> {
   // Phase 0: Check local verified cache from audit
   const local = checkLocalCache(name, aliases);
   if (local.hit) {
@@ -247,7 +283,7 @@ export async function lookupPlaceImage(
 
   // Phase 1: Wikipedia summary — richer text, tends to hit named landmarks.
   for (const candidate of candidates) {
-    const hits = await Promise.all(langs.map((lang) => fetchLang(lang, candidate)));
+      const hits = await withNetworkSlot(() => Promise.all(langs.map((lang) => fetchLang(lang, candidate))));
     const hit = hits.find((h) => h !== null) ?? null;
     if (hit) {
       cache[cacheKey] = { at: Date.now(), value: hit };
@@ -259,7 +295,7 @@ export async function lookupPlaceImage(
   // Phase 2: Wikimedia Commons — catches campsites, viewpoints, minor spots
   // that don't have their own Wikipedia article but do have photos on Commons.
   for (const candidate of candidates) {
-    const hit = await fetchCommons(candidate);
+    const hit = await withNetworkSlot(() => fetchCommons(candidate));
     if (hit) {
       cache[cacheKey] = { at: Date.now(), value: hit };
       writeCache(cache);

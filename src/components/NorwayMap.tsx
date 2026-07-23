@@ -2,7 +2,6 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "@tanstack/react-router";
 import { Maximize2, Minimize2 } from "lucide-react";
 import L from "leaflet";
-import "leaflet.markercluster";
 import { PLACES, CATEGORY_LABEL, type Place } from "@/data/places";
 import { useAppStore } from "@/lib/store";
 import { colorFor } from "@/lib/category-color";
@@ -14,25 +13,18 @@ const iconUrl = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png";
 const shadowUrl = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png";
 L.Icon.Default.mergeOptions({ iconRetinaUrl: iconRetina, iconUrl, shadowUrl });
 
-// Icons are shared across markers of the same category. 2 866 markers used
-// to allocate 2 866 divIcons; now it's ~25 (one per category).
-const iconCache = new Map<string, L.DivIcon>();
-function pinIcon(color: string) {
-  const cached = iconCache.get(color);
-  if (cached) return cached;
-  const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='30' height='40' viewBox='0 0 30 40'>
-    <path d='M15 0C6.7 0 0 6.7 0 15c0 11 15 25 15 25s15-14 15-25C30 6.7 23.3 0 15 0z' fill='${color}' stroke='white' stroke-width='2'/>
-    <circle cx='15' cy='15' r='5' fill='white'/>
-  </svg>`;
-  const icon = L.divIcon({
-    html: svg,
-    className: "",
-    iconSize: [30, 40],
-    iconAnchor: [15, 40],
-    popupAnchor: [0, -36],
-  });
-  iconCache.set(color, icon);
-  return icon;
+function layerIsMounted(layer: L.LayerGroup | null): layer is L.LayerGroup {
+  if (!layer) return false;
+  return Boolean((layer as L.LayerGroup & { _map?: L.Map | null })._map);
+}
+
+function scheduleWhenIdle(callback: () => void) {
+  if (typeof window !== "undefined" && "requestIdleCallback" in window) {
+    const id = window.requestIdleCallback(callback, { timeout: 180 });
+    return () => window.cancelIdleCallback(id);
+  }
+  const id = globalThis.setTimeout(callback, 32);
+  return () => globalThis.clearTimeout(id);
 }
 
 function escapeHtml(s: string | undefined | null): string {
@@ -85,9 +77,13 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
   const wrapperRef = useRef<HTMLDivElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<L.Map | null>(null);
-  const clusterRef = useRef<L.MarkerClusterGroup | null>(null);
-  const markersRef = useRef<Map<string, L.Marker>>(new Map());
+  const markerLayerRef = useRef<L.LayerGroup | null>(null);
+  const markerRendererRef = useRef<L.Canvas | null>(null);
+  const markersRef = useRef<Map<string, L.CircleMarker>>(new Map());
   const currentVisibleRef = useRef<Set<string>>(new Set());
+  const latestVisibleIdsRef = useRef(visibleIds);
+  const syncFrameRef = useRef<number | null>(null);
+  const idleCancelRef = useRef<(() => void) | null>(null);
   const focusId = useAppStore((s) => s.focusId);
   const focusNonce = useAppStore((s) => s.focusNonce);
   const focus = useAppStore((s) => s.focus);
@@ -96,8 +92,22 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
   const route = useAppStore((s) => s.route);
   const routeLayerRef = useRef<L.LayerGroup | null>(null);
   const [tileProgress, setTileProgress] = useState({ done: 0, total: 0, finished: false });
-  const [markerProgress, setMarkerProgress] = useState({ done: 0, total: PLACES.length });
+  const [markerProgress, setMarkerProgress] = useState({ done: 0, total: 0 });
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [viewportTick, setViewportTick] = useState(0);
+
+  latestVisibleIdsRef.current = visibleIds;
+
+  const cancelLayerSync = () => {
+    if (syncFrameRef.current !== null) {
+      cancelAnimationFrame(syncFrameRef.current);
+      syncFrameRef.current = null;
+    }
+    if (idleCancelRef.current) {
+      idleCancelRef.current();
+      idleCancelRef.current = null;
+    }
+  };
 
   useEffect(() => {
     const handleFsChange = () => {
@@ -127,6 +137,58 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
     PLACES.forEach((p) => m.set(p.id, p));
     return m;
   }, []);
+
+  const createMarker = (p: Place) => {
+    const cached = markersRef.current.get(p.id);
+    if (cached) return cached;
+    const color = colorFor(p.category);
+    const options: L.CircleMarkerOptions = {
+      radius: p.quality === 3 ? 7 : p.quality === 2 ? 6 : 5,
+      color: "var(--color-card)",
+      weight: 1.5,
+      fillColor: color,
+      fillOpacity: 0.92,
+      opacity: 0.95,
+      bubblingMouseEvents: false,
+    };
+    if (markerRendererRef.current) options.renderer = markerRendererRef.current;
+    const marker = L.circleMarker([p.lat, p.lng], options);
+    let popupBuilt = false;
+    marker.on("click", () => {
+      actionsRef.current.focus(p.id);
+      if (!popupBuilt) {
+        popupBuilt = true;
+        const popup = buildPopup(p, color, {
+          onFav: () => actionsRef.current.toggleFav(p.id),
+          onRoute: () => actionsRef.current.addToRoute(p.id),
+          onDetails: () => actionsRef.current.navigate({ to: "/place/$id", params: { id: p.id } }),
+        });
+        marker.bindPopup(popup, { maxWidth: 280, minWidth: 260, closeButton: true }).openPopup();
+        marker.on("popupopen", () => {
+          const holder = popup.querySelector("[data-img-inner]") as HTMLElement | null;
+          if (!holder || holder.querySelector("img")) return;
+          lookupPlaceImage(p.name, p.aliases).then((hit) => {
+            if (!hit || holder.querySelector("img")) return;
+            const img = document.createElement("img");
+            img.src = hit.thumbnail;
+            img.alt = "";
+            img.loading = "lazy";
+            img.decoding = "async";
+            img.style.cssText =
+              "width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .3s";
+            img.onload = () => {
+              img.style.opacity = "1";
+            };
+            holder.appendChild(img);
+          });
+        });
+      } else {
+        marker.openPopup();
+      }
+    });
+    markersRef.current.set(p.id, marker);
+    return marker;
+  };
 
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
@@ -160,79 +222,36 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       setTileProgress((p) => ({ ...p, finished: true, done: Math.max(p.done, p.total) }));
     });
 
-    const cluster = L.markerClusterGroup({
-      showCoverageOnHover: false,
-      maxClusterRadius: 60,
-      spiderfyOnMaxZoom: true,
-      zoomToBoundsOnClick: true,
-      chunkedLoading: true,
-      chunkInterval: 10,
-      chunkDelay: 5,
-      removeOutsideVisibleBounds: true,
-    });
-    map.addLayer(cluster);
+    const markerRenderer = L.canvas({ padding: 0.45 });
+    const markerLayer = L.layerGroup().addTo(map);
     mapRef.current = map;
-    clusterRef.current = cluster;
+    markerLayerRef.current = markerLayer;
+    markerRendererRef.current = markerRenderer;
 
-    // Build marker shells only — no popup DOM until the marker is opened.
-    // This saves ~2 866 popup allocations at startup.
-    const built: L.Marker[] = [];
-    for (const p of PLACES) {
-      const color = colorFor(p.category);
-      const m = L.marker([p.lat, p.lng], { icon: pinIcon(color), keyboard: false });
-      let popupBuilt = false;
-      m.on("click", () => {
-        actionsRef.current.focus(p.id);
-        if (!popupBuilt) {
-          popupBuilt = true;
-          const popup = buildPopup(p, color, {
-            onFav: () => actionsRef.current.toggleFav(p.id),
-            onRoute: () => actionsRef.current.addToRoute(p.id),
-            onDetails: () =>
-              actionsRef.current.navigate({ to: "/place/$id", params: { id: p.id } }),
-          });
-          m.bindPopup(popup, { maxWidth: 280, minWidth: 260, closeButton: true }).openPopup();
-          m.on("popupopen", () => {
-            const holder = popup.querySelector("[data-img-inner]") as HTMLElement | null;
-            if (!holder || holder.querySelector("img")) return;
-            lookupPlaceImage(p.name, p.aliases).then((hit) => {
-              if (!hit || holder.querySelector("img")) return;
-              const img = document.createElement("img");
-              img.src = hit.thumbnail;
-              img.alt = "";
-              img.loading = "lazy";
-              img.decoding = "async";
-              img.style.cssText =
-                "width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .3s";
-              img.onload = () => {
-                img.style.opacity = "1";
-              };
-              holder.appendChild(img);
-            });
-          });
-        } else {
-          m.openPopup();
-        }
-      });
-      markersRef.current.set(p.id, m);
-      built.push(m);
-    }
-
-    // Add all markers at once — the cluster's chunkedLoading option splits
-    // the work into frames internally and is faster than manual chunking.
-    cluster.addLayers(built);
-    currentVisibleRef.current = new Set(markersRef.current.keys());
-    setMarkerProgress({ done: built.length, total: built.length });
+    let cancelled = false;
+    setMarkerProgress({ done: 0, total: 0 });
+    const triggerViewportSync = () => {
+      if (!cancelled) setViewportTick((tick) => tick + 1);
+    };
+    map.on("moveend zoomend resize", triggerViewportSync);
+    idleCancelRef.current = scheduleWhenIdle(() => {
+      idleCancelRef.current = null;
+      triggerViewportSync();
+    });
 
     return () => {
+      cancelled = true;
+      map.off("moveend zoomend resize", triggerViewportSync);
+      cancelLayerSync();
       try {
-        cluster.clearLayers();
+        markerLayer.clearLayers();
         map.remove();
       } catch {
         // Safe fallback
       }
       mapRef.current = null;
-      clusterRef.current = null;
+      markerLayerRef.current = null;
+      markerRendererRef.current = null;
       markersRef.current.clear();
       currentVisibleRef.current.clear();
     };
@@ -241,41 +260,113 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
   // Sync visible markers with filter/search results using a diff so we
   // only touch markers that actually changed state.
   useEffect(() => {
-    const cluster = clusterRef.current;
-    if (!cluster) return;
+    void viewportTick;
+    void latestVisibleIdsRef.current;
+    const map = mapRef.current;
+    const markerLayer = markerLayerRef.current;
+    if (!map || !layerIsMounted(markerLayer)) return;
+    cancelLayerSync();
+
+    const includeAllMatches = visibleIds.size <= MAX_ACTIVE_MARKERS;
+    const bounds = map.getBounds().pad(0.25);
+    const center = map.getCenter();
+    const targetPlaces = PLACES.filter((place) => {
+      if (!visibleIds.has(place.id)) return false;
+      return includeAllMatches || bounds.contains([place.lat, place.lng]);
+    });
+    if (!includeAllMatches && targetPlaces.length > MAX_ACTIVE_MARKERS) {
+      targetPlaces.sort(
+        (a, b) =>
+          (b.quality ?? 1) - (a.quality ?? 1) ||
+          center.distanceTo([a.lat, a.lng]) - center.distanceTo([b.lat, b.lng]),
+      );
+      targetPlaces.length = MAX_ACTIVE_MARKERS;
+    }
+
+    const targetIds = new Set(targetPlaces.map((place) => place.id));
+    [...route, focusId].forEach((id) => {
+      if (id && placesById.has(id)) targetIds.add(id);
+    });
+
     const current = currentVisibleRef.current;
-    const toAdd: L.Marker[] = [];
-    const toRemove: L.Marker[] = [];
-    visibleIds.forEach((id) => {
+    const toAdd: Array<{ id: string; marker: L.CircleMarker }> = [];
+    const toRemove: Array<{ id: string; marker: L.CircleMarker }> = [];
+    targetIds.forEach((id) => {
       if (!current.has(id)) {
-        const m = markersRef.current.get(id);
-        if (m) toAdd.push(m);
+        const place = placesById.get(id);
+        if (place) toAdd.push({ id, marker: createMarker(place) });
       }
     });
     current.forEach((id) => {
-      if (!visibleIds.has(id)) {
+      if (!targetIds.has(id)) {
         const m = markersRef.current.get(id);
-        if (m) toRemove.push(m);
+        if (m) toRemove.push({ id, marker: m });
       }
     });
-    if (toRemove.length || toAdd.length) {
-      currentVisibleRef.current = new Set(visibleIds);
-      const timer = requestAnimationFrame(() => {
-        if (toRemove.length) cluster.removeLayers(toRemove);
-        if (toAdd.length) cluster.addLayers(toAdd);
-      });
-      return () => cancelAnimationFrame(timer);
-    } else {
-      currentVisibleRef.current = new Set(visibleIds);
+    if (!toRemove.length && !toAdd.length) {
+      setMarkerProgress({ done: targetIds.size, total: targetIds.size });
+      return;
     }
-  }, [visibleIds]);
+
+    setMarkerProgress({ done: current.size, total: targetIds.size });
+
+    let removeIndex = 0;
+    let addIndex = 0;
+    let cancelled = false;
+    const step = () => {
+      if (cancelled || !layerIsMounted(markerLayer)) return;
+      const started = performance.now();
+      while (performance.now() - started < 4 && removeIndex < toRemove.length) {
+        const slice = toRemove.slice(removeIndex, removeIndex + LAYER_SYNC_BATCH);
+        slice.forEach((x) => markerLayer.removeLayer(x.marker));
+        slice.forEach((x) => currentVisibleRef.current.delete(x.id));
+        removeIndex += LAYER_SYNC_BATCH;
+      }
+      while (
+        performance.now() - started < 4 &&
+        removeIndex >= toRemove.length &&
+        addIndex < toAdd.length
+      ) {
+        const slice = toAdd.slice(addIndex, addIndex + LAYER_SYNC_BATCH);
+        slice.forEach((x) => markerLayer.addLayer(x.marker));
+        slice.forEach((x) => currentVisibleRef.current.add(x.id));
+        addIndex += LAYER_SYNC_BATCH;
+      }
+      setMarkerProgress({
+        done: Math.min(currentVisibleRef.current.size, targetIds.size),
+        total: targetIds.size,
+      });
+      if (removeIndex < toRemove.length || addIndex < toAdd.length) {
+        idleCancelRef.current = scheduleWhenIdle(() => {
+          idleCancelRef.current = null;
+          syncFrameRef.current = requestAnimationFrame(step);
+        });
+      } else {
+        syncFrameRef.current = null;
+      }
+    };
+    idleCancelRef.current = scheduleWhenIdle(() => {
+      idleCancelRef.current = null;
+      syncFrameRef.current = requestAnimationFrame(step);
+    });
+    return () => {
+      cancelled = true;
+      cancelLayerSync();
+    };
+  }, [visibleIds, viewportTick, route, focusId, placesById]);
 
   // Fly to focused place
   useEffect(() => {
     if (!focusId || !mapRef.current) return;
     const p = placesById.get(focusId);
-    const m = markersRef.current.get(focusId);
     if (!p) return;
+    let m = markersRef.current.get(focusId);
+    const markerLayer = markerLayerRef.current;
+    if (!m && layerIsMounted(markerLayer)) {
+      m = createMarker(p);
+      markerLayer.addLayer(m);
+      currentVisibleRef.current.add(p.id);
+    }
     mapRef.current.flyTo([p.lat, p.lng], Math.max(mapRef.current.getZoom(), 9), {
       duration: 0.8,
     });
@@ -328,7 +419,7 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
   }, [route, placesById]);
 
   const tilesDone = tileProgress.finished;
-  const markersDone = markerProgress.done >= markerProgress.total && markerProgress.total > 0;
+  const markersDone = markerProgress.total === 0 || markerProgress.done >= markerProgress.total;
   const loading = !tilesDone || !markersDone;
 
   const tilePct = tileProgress.total

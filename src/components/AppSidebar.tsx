@@ -308,6 +308,9 @@ function PagedResults({
     setLimit(PAGE_SIZE);
   }, [results]);
 
+  const favSet = useMemo(() => new Set(favorites), [favorites]);
+  const routeSet = useMemo(() => new Set(route), [route]);
+
   if (results.length === 0) {
     return (
       <ul className="divide-sidebar-border divide-y">
@@ -328,8 +331,9 @@ function PagedResults({
           <MemoizedPlaceRow
             key={p.id}
             place={p}
-            isFav={favorites.includes(p.id)}
-            inRoute={route.includes(p.id)}
+            isFav={favoritesSet.has(p.id)}
+            isFav={favSet.has(p.id)}
+            inRoute={routeSet.has(p.id)}
             onSelect={onFocus}
             onFav={onFav}
             onAddRoute={onAddRoute}
@@ -384,7 +388,10 @@ const MemoizedPlaceRow = React.memo(function PlaceRow({
           size={56}
         />
       </button>
-      <button className="min-w-0 text-left focus-visible:outline-none" onClick={onSelect}>
+      <button
+        className="min-w-0 text-left focus-visible:outline-none"
+        onClick={() => onSelect(place.id)}
+      >
         <div className="flex items-center gap-2">
           <div className="truncate text-sm font-medium">{place.name}</div>
           {place.tier === "geheimtipp" && (

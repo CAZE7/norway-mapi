@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ClientOnly } from "@tanstack/react-router";
-import { Suspense, lazy, useDeferredValue, useMemo, useState } from "react";
+import { Suspense, lazy, useDeferredValue, useEffect, useMemo, useState } from "react";
 import { Menu } from "lucide-react";
 import { getAllPlaces, searchPlaces } from "@/data/places";
 import { useAppStore } from "@/lib/store";
@@ -40,6 +40,7 @@ function Home() {
   const tiers = useAppStore((s) => s.tiers);
   const customPlaces = useAppStore((s) => s.customPlaces);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mapReady, setMapReady] = useState(false);
 
   const allPlaces = useMemo(() => getAllPlaces(customPlaces), [customPlaces]);
 
@@ -52,6 +53,23 @@ function Home() {
 
   const visibleIds = useMemo(() => new Set(results.map((p) => p.id)), [results]);
 
+  useEffect(() => {
+    let timeout: number | undefined;
+    const startWhenUserIsIdle = () => {
+      const active = document.activeElement;
+      const typing = active instanceof HTMLInputElement || active instanceof HTMLTextAreaElement;
+      if (typing) {
+        timeout = window.setTimeout(startWhenUserIsIdle, 700);
+        return;
+      }
+      setMapReady(true);
+    };
+    timeout = window.setTimeout(startWhenUserIsIdle, 1200);
+    return () => {
+      if (timeout) window.clearTimeout(timeout);
+    };
+  }, []);
+
   return (
     <div className="bg-background flex h-[100dvh] w-full overflow-hidden">
       {/* Desktop / tablet sidebar */}
@@ -61,11 +79,15 @@ function Home() {
 
       {/* Map */}
       <div className="relative min-w-0 flex-1">
-        <ClientOnly fallback={<MapFallback />}>
-          <Suspense fallback={<MapFallback />}>
-            <NorwayMap visibleIds={visibleIds} />
-          </Suspense>
-        </ClientOnly>
+        {mapReady ? (
+          <ClientOnly fallback={<MapFallback />}>
+            <Suspense fallback={<MapFallback />}>
+              <NorwayMap visibleIds={visibleIds} />
+            </Suspense>
+          </ClientOnly>
+        ) : (
+          <MapFallback />
+        )}
 
         {/* Mobile floating button */}
         <div className="absolute left-3 top-3 z-[1000] md:hidden">
