@@ -7,8 +7,11 @@ import { useAppStore } from "@/lib/store";
 import { colorFor } from "@/lib/category-color";
 import { lookupPlaceImage } from "@/lib/wikipedia";
 
-const LAYER_SYNC_BATCH = 60;
-const MAX_ACTIVE_MARKERS = 450;
+// We serve default marker icons from a CDN so we don't fight bundler paths.
+const iconRetina = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png";
+const iconUrl = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png";
+const shadowUrl = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png";
+L.Icon.Default.mergeOptions({ iconRetinaUrl: iconRetina, iconUrl, shadowUrl });
 
 function layerIsMounted(layer: L.LayerGroup | null): layer is L.LayerGroup {
   if (!layer) return false;
