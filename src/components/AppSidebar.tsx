@@ -388,7 +388,10 @@ const MemoizedPlaceRow = React.memo(function PlaceRow({
           size={56}
         />
       </button>
-      <button className="min-w-0 text-left focus-visible:outline-none" onClick={onSelect}>
+      <button
+        className="min-w-0 text-left focus-visible:outline-none"
+        onClick={() => onSelect(place.id)}
+      >
         <div className="flex items-center gap-2">
           <div className="truncate text-sm font-medium">{place.name}</div>
           {place.tier === "geheimtipp" && (
