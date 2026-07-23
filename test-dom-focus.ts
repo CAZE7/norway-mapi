@@ -13,8 +13,11 @@ const mapCode = fs.readFileSync("./src/components/NorwayMap.tsx", "utf-8");
 const indexRouteCode = fs.readFileSync("./src/routes/index.tsx", "utf-8");
 
 console.log("--- TEST 1: Pruefung auf CSS Layout Containment ---");
-const hasSidebarContain = sidebarCode.includes("[contain:layout_style]") || indexRouteCode.includes("[contain:layout_style]");
-const hasMapContain = mapCode.includes("[contain:strict]") || indexRouteCode.includes("[contain:strict]");
+const hasSidebarContain =
+  sidebarCode.includes("[contain:layout_style]") ||
+  indexRouteCode.includes("[contain:layout_style]");
+const hasMapContain =
+  mapCode.includes("[contain:strict]") || indexRouteCode.includes("[contain:strict]");
 
 if (hasSidebarContain) {
   console.log("❌ GEFUNDEN: '[contain:layout_style]' ist in AppSidebar/index.tsx aktiv!");
@@ -31,12 +34,20 @@ if (hasMapContain) {
 }
 
 console.log("\n--- TEST 2: Pruefung auf NorwayMap Ref-Sync Position ---");
-const refSyncInFrame = mapCode.includes("requestAnimationFrame(() => {\n        if (toRemove.length) cluster.removeLayers(toRemove);\n        if (toAdd.length) cluster.addLayers(toAdd);\n        currentVisibleRef.current = new Set(visibleIds);");
-const refSyncDelayed = mapCode.indexOf("currentVisibleRef.current = new Set(visibleIds)") > mapCode.indexOf("requestAnimationFrame");
+const refSyncInFrame = mapCode.includes(
+  "requestAnimationFrame(() => {\n        if (toRemove.length) cluster.removeLayers(toRemove);\n        if (toAdd.length) cluster.addLayers(toAdd);\n        currentVisibleRef.current = new Set(visibleIds);",
+);
+const refSyncDelayed =
+  mapCode.indexOf("currentVisibleRef.current = new Set(visibleIds)") >
+  mapCode.indexOf("requestAnimationFrame");
 
 if (refSyncDelayed) {
-  console.log("❌ FEHLER: 'currentVisibleRef.current' wird erst NACH requestAnimationFrame aktualisiert!");
-  console.log("   -> Wenn Frames gecancelt werden, bleibt der alte Ref-State bestehen und erzeugt Marker-Spam!");
+  console.log(
+    "❌ FEHLER: 'currentVisibleRef.current' wird erst NACH requestAnimationFrame aktualisiert!",
+  );
+  console.log(
+    "   -> Wenn Frames gecancelt werden, bleibt der alte Ref-State bestehen und erzeugt Marker-Spam!",
+  );
 } else {
   console.log("✓ Ref-Sync ist synchron vor dem AnimationFrame positioniert.");
 }

@@ -86,7 +86,8 @@ export default function PlaceImage({
           rel="noopener noreferrer"
           className="absolute bottom-2 right-2 inline-flex items-center gap-1 rounded-md bg-black/60 px-2 py-1 text-[11px] font-medium text-white backdrop-blur-sm transition hover:bg-black/80"
         >
-          Bild: {image.license} via {image.source || (image.lang === "commons" ? "Wikimedia Commons" : "Wikipedia")}
+          Bild: {image.license} via{" "}
+          {image.source || (image.lang === "commons" ? "Wikimedia Commons" : "Wikipedia")}
           <ExternalLink className="h-3 w-3" />
         </a>
       ) : (
