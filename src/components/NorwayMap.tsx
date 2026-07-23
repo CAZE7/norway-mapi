@@ -2,33 +2,18 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "@tanstack/react-router";
 import { Maximize2, Minimize2 } from "lucide-react";
 import L from "leaflet";
+import "leaflet.markercluster";
 import { PLACES, CATEGORY_LABEL, type Place } from "@/data/places";
 import { useAppStore } from "@/lib/store";
 import { colorFor } from "@/lib/category-color";
 import { lookupPlaceImage } from "@/lib/wikipedia";
 
-// We serve default marker icons from a CDN so we don't fight bundler paths.
 const iconRetina = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png";
 const iconUrl = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png";
 const shadowUrl = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png";
 L.Icon.Default.mergeOptions({ iconRetinaUrl: iconRetina, iconUrl, shadowUrl });
 
-const MAX_ACTIVE_MARKERS = 450;
-const LAYER_SYNC_BATCH = 60;
-
-function layerIsMounted(layer: L.LayerGroup | null): layer is L.LayerGroup {
-  if (!layer) return false;
-  return Boolean((layer as L.LayerGroup & { _map?: L.Map | null })._map);
-}
-
-function scheduleWhenIdle(callback: () => void) {
-  if (typeof window !== "undefined" && "requestIdleCallback" in window) {
-    const id = window.requestIdleCallback(callback, { timeout: 180 });
-    return () => window.cancelIdleCallback(id);
-  }
-  const id = globalThis.setTimeout(callback, 32);
-  return () => globalThis.clearTimeout(id);
-}
+const ADD_BATCH = 200;
 
 function escapeHtml(s: string | undefined | null): string {
   if (s == null) return "";
@@ -37,14 +22,41 @@ function escapeHtml(s: string | undefined | null): string {
   );
 }
 
+// Cache pin icons per color/size so we don't re-generate SVG for every marker.
+const iconCache = new Map<string, L.DivIcon>();
+function pinIcon(color: string, quality: number): L.DivIcon {
+  const size = quality === 3 ? 36 : quality === 2 ? 32 : 28;
+  const key = `${color}|${size}`;
+  const cached = iconCache.get(key);
+  if (cached) return cached;
+  const w = size;
+  const h = Math.round(size * 1.3);
+  const svg = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 32 42">
+      <defs>
+        <filter id="s" x="-20%" y="-10%" width="140%" height="130%">
+          <feDropShadow dx="0" dy="1.2" stdDeviation="1.2" flood-opacity="0.35"/>
+        </filter>
+      </defs>
+      <path filter="url(#s)" fill="${color}" stroke="#ffffff" stroke-width="2"
+        d="M16 1C8.27 1 2 7.27 2 15c0 10.5 12.3 24.2 13.1 25.1a1.2 1.2 0 0 0 1.8 0C17.7 39.2 30 25.5 30 15 30 7.27 23.73 1 16 1z"/>
+      <circle cx="16" cy="15" r="5.2" fill="#ffffff" fill-opacity="0.95"/>
+    </svg>`;
+  const icon = L.divIcon({
+    html: svg,
+    className: "n-pin",
+    iconSize: [w, h],
+    iconAnchor: [w / 2, h - 2],
+    popupAnchor: [0, -h + 8],
+  });
+  iconCache.set(key, icon);
+  return icon;
+}
+
 function buildPopup(
   p: Place,
   color: string,
-  handlers: {
-    onFav: () => void;
-    onRoute: () => void;
-    onDetails: () => void;
-  },
+  handlers: { onFav: () => void; onRoute: () => void; onDetails: () => void },
 ): HTMLElement {
   const popup = document.createElement("div");
   popup.className = "npopup";
@@ -75,18 +87,18 @@ function buildPopup(
   return popup;
 }
 
+type ClusterGroup = L.MarkerClusterGroup;
+
 export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
   const navigate = useNavigate();
   const wrapperRef = useRef<HTMLDivElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<L.Map | null>(null);
-  const markerLayerRef = useRef<L.LayerGroup | null>(null);
-  const markerRendererRef = useRef<L.Canvas | null>(null);
-  const markersRef = useRef<Map<string, L.CircleMarker>>(new Map());
-  const currentVisibleRef = useRef<Set<string>>(new Set());
-  const latestVisibleIdsRef = useRef(visibleIds);
-  const syncFrameRef = useRef<number | null>(null);
-  const idleCancelRef = useRef<(() => void) | null>(null);
+  const clusterRef = useRef<ClusterGroup | null>(null);
+  const markersRef = useRef<Map<string, L.Marker>>(new Map());
+  const currentIdsRef = useRef<Set<string>>(new Set());
+  const syncTimerRef = useRef<number | null>(null);
+  const batchTimerRef = useRef<number | null>(null);
   const focusId = useAppStore((s) => s.focusId);
   const focusNonce = useAppStore((s) => s.focusNonce);
   const focus = useAppStore((s) => s.focus);
@@ -97,27 +109,11 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
   const [tileProgress, setTileProgress] = useState({ done: 0, total: 0, finished: false });
   const [markerProgress, setMarkerProgress] = useState({ done: 0, total: 0 });
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [viewportTick, setViewportTick] = useState(0);
-
-  latestVisibleIdsRef.current = visibleIds;
-
-  const cancelLayerSync = () => {
-    if (syncFrameRef.current !== null) {
-      cancelAnimationFrame(syncFrameRef.current);
-      syncFrameRef.current = null;
-    }
-    if (idleCancelRef.current) {
-      idleCancelRef.current();
-      idleCancelRef.current = null;
-    }
-  };
 
   useEffect(() => {
     const handleFsChange = () => {
       setIsFullscreen(!!document.fullscreenElement);
-      if (mapRef.current) {
-        setTimeout(() => mapRef.current?.invalidateSize(), 100);
-      }
+      if (mapRef.current) setTimeout(() => mapRef.current?.invalidateSize(), 100);
     };
     document.addEventListener("fullscreenchange", handleFsChange);
     return () => document.removeEventListener("fullscreenchange", handleFsChange);
@@ -125,11 +121,8 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
 
   const toggleFullscreen = () => {
     if (!wrapperRef.current) return;
-    if (!document.fullscreenElement) {
-      wrapperRef.current.requestFullscreen().catch(() => {});
-    } else {
-      document.exitFullscreen().catch(() => {});
-    }
+    if (!document.fullscreenElement) wrapperRef.current.requestFullscreen().catch(() => {});
+    else document.exitFullscreen().catch(() => {});
   };
 
   const actionsRef = useRef({ focus, toggleFav, addToRoute, navigate });
@@ -141,25 +134,16 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
     return m;
   }, []);
 
-  const createMarker = (p: Place) => {
+  const createMarker = (p: Place): L.Marker => {
     const cached = markersRef.current.get(p.id);
     if (cached) return cached;
     const color = colorFor(p.category);
-    const q = p.quality ?? 1;
-    const options: L.CircleMarkerOptions = {
-      radius: q === 3 ? 9 : q === 2 ? 7 : 5.5,
-      color: "#ffffff",
-      weight: q === 3 ? 2.5 : 2,
-      fillColor: color,
-      fillOpacity: 1,
-      opacity: 1,
+    const marker = L.marker([p.lat, p.lng], {
+      icon: pinIcon(color, p.quality ?? 1),
       bubblingMouseEvents: false,
-    };
-    if (markerRendererRef.current) options.renderer = markerRendererRef.current;
-    const marker = L.circleMarker([p.lat, p.lng], options);
+    });
     let popupBuilt = false;
-    marker.on("click", () => {
-      actionsRef.current.focus(p.id);
+    const buildAndOpen = () => {
       if (!popupBuilt) {
         popupBuilt = true;
         const popup = buildPopup(p, color, {
@@ -168,9 +152,8 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
           onDetails: () => actionsRef.current.navigate({ to: "/place/$id", params: { id: p.id } }),
         });
         marker.bindPopup(popup, { maxWidth: 280, minWidth: 260, closeButton: true });
-        const loadImage = () => {
-          const holder = popup.querySelector("[data-img-inner]") as HTMLElement | null;
-          if (!holder || holder.querySelector("img")) return;
+        const holder = popup.querySelector("[data-img-inner]") as HTMLElement | null;
+        if (holder) {
           lookupPlaceImage(p.name, p.aliases).then((hit) => {
             if (!hit || holder.querySelector("img")) return;
             const img = document.createElement("img");
@@ -185,13 +168,13 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
             };
             holder.appendChild(img);
           });
-        };
-        marker.on("popupopen", loadImage);
-        marker.openPopup();
-        loadImage();
-      } else {
-        marker.openPopup();
+        }
       }
+      marker.openPopup();
+    };
+    marker.on("click", () => {
+      actionsRef.current.focus(p.id);
+      buildAndOpen();
     });
     markersRef.current.set(p.id, marker);
     return marker;
@@ -229,167 +212,137 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       setTileProgress((p) => ({ ...p, finished: true, done: Math.max(p.done, p.total) }));
     });
 
-    const markerRenderer = L.canvas({ padding: 0.45 });
-    const markerLayer = L.layerGroup().addTo(map);
-    mapRef.current = map;
-    markerLayerRef.current = markerLayer;
-    markerRendererRef.current = markerRenderer;
-
-    let cancelled = false;
-    setMarkerProgress({ done: 0, total: 0 });
-    const triggerViewportSync = () => {
-      if (!cancelled) setViewportTick((tick) => tick + 1);
-    };
-    map.on("moveend zoomend resize", triggerViewportSync);
-    idleCancelRef.current = scheduleWhenIdle(() => {
-      idleCancelRef.current = null;
-      triggerViewportSync();
+    const cluster = (L as unknown as {
+      markerClusterGroup: (opts: L.MarkerClusterGroupOptions) => ClusterGroup;
+    }).markerClusterGroup({
+      chunkedLoading: true,
+      chunkInterval: 60,
+      chunkDelay: 20,
+      maxClusterRadius: 60,
+      spiderfyOnMaxZoom: true,
+      showCoverageOnHover: false,
+      disableClusteringAtZoom: 12,
     });
+    cluster.addTo(map);
+    mapRef.current = map;
+    clusterRef.current = cluster;
 
     return () => {
-      cancelled = true;
-      map.off("moveend zoomend resize", triggerViewportSync);
-      cancelLayerSync();
+      if (syncTimerRef.current) window.clearTimeout(syncTimerRef.current);
+      if (batchTimerRef.current) window.clearTimeout(batchTimerRef.current);
       try {
-        markerLayer.clearLayers();
+        cluster.clearLayers();
         map.remove();
       } catch {
-        // Safe fallback
+        // no-op
       }
       mapRef.current = null;
-      markerLayerRef.current = null;
-      markerRendererRef.current = null;
+      clusterRef.current = null;
       markersRef.current.clear();
-      currentVisibleRef.current.clear();
+      currentIdsRef.current.clear();
     };
   }, []);
 
-  // Sync visible markers with filter/search results using a diff so we
-  // only touch markers that actually changed state.
+  // Sync visible markers via a debounced diff; clustering handles zoom-based grouping.
   useEffect(() => {
-    void viewportTick;
-    void latestVisibleIdsRef.current;
-    const map = mapRef.current;
-    const markerLayer = markerLayerRef.current;
-    if (!map || !layerIsMounted(markerLayer)) return;
-    cancelLayerSync();
+    const cluster = clusterRef.current;
+    if (!cluster) return;
 
-    const includeAllMatches = visibleIds.size <= MAX_ACTIVE_MARKERS;
-    const bounds = map.getBounds().pad(0.25);
-    const center = map.getCenter();
-    const targetPlaces = PLACES.filter((place) => {
-      if (!visibleIds.has(place.id)) return false;
-      return includeAllMatches || bounds.contains([place.lat, place.lng]);
-    });
-    if (!includeAllMatches && targetPlaces.length > MAX_ACTIVE_MARKERS) {
-      targetPlaces.sort(
-        (a, b) =>
-          (b.quality ?? 1) - (a.quality ?? 1) ||
-          center.distanceTo([a.lat, a.lng]) - center.distanceTo([b.lat, b.lng]),
-      );
-      targetPlaces.length = MAX_ACTIVE_MARKERS;
-    }
-
-    const targetIds = new Set(targetPlaces.map((place) => place.id));
-    [...route, focusId].forEach((id) => {
-      if (id && placesById.has(id)) targetIds.add(id);
-    });
-
-    const current = currentVisibleRef.current;
-    const toAdd: Array<{ id: string; marker: L.CircleMarker }> = [];
-    const toRemove: Array<{ id: string; marker: L.CircleMarker }> = [];
-    targetIds.forEach((id) => {
-      if (!current.has(id)) {
-        const place = placesById.get(id);
-        if (place) toAdd.push({ id, marker: createMarker(place) });
-      }
-    });
-    current.forEach((id) => {
-      if (!targetIds.has(id)) {
-        const m = markersRef.current.get(id);
-        if (m) toRemove.push({ id, marker: m });
-      }
-    });
-    if (!toRemove.length && !toAdd.length) {
-      setMarkerProgress({ done: targetIds.size, total: targetIds.size });
-      return;
-    }
-
-    setMarkerProgress({ done: current.size, total: targetIds.size });
-
-    let removeIndex = 0;
-    let addIndex = 0;
-    let cancelled = false;
-    const step = () => {
-      if (cancelled || !layerIsMounted(markerLayer)) return;
-      const started = performance.now();
-      while (performance.now() - started < 4 && removeIndex < toRemove.length) {
-        const slice = toRemove.slice(removeIndex, removeIndex + LAYER_SYNC_BATCH);
-        slice.forEach((x) => markerLayer.removeLayer(x.marker));
-        slice.forEach((x) => currentVisibleRef.current.delete(x.id));
-        removeIndex += LAYER_SYNC_BATCH;
-      }
-      while (
-        performance.now() - started < 4 &&
-        removeIndex >= toRemove.length &&
-        addIndex < toAdd.length
-      ) {
-        const slice = toAdd.slice(addIndex, addIndex + LAYER_SYNC_BATCH);
-        slice.forEach((x) => markerLayer.addLayer(x.marker));
-        slice.forEach((x) => currentVisibleRef.current.add(x.id));
-        addIndex += LAYER_SYNC_BATCH;
-      }
-      setMarkerProgress({
-        done: Math.min(currentVisibleRef.current.size, targetIds.size),
-        total: targetIds.size,
+    if (syncTimerRef.current) window.clearTimeout(syncTimerRef.current);
+    syncTimerRef.current = window.setTimeout(() => {
+      const targetIds = new Set(visibleIds);
+      [...route, focusId].forEach((id) => {
+        if (id && placesById.has(id)) targetIds.add(id);
       });
-      if (removeIndex < toRemove.length || addIndex < toAdd.length) {
-        idleCancelRef.current = scheduleWhenIdle(() => {
-          idleCancelRef.current = null;
-          syncFrameRef.current = requestAnimationFrame(step);
-        });
-      } else {
-        syncFrameRef.current = null;
-      }
-    };
-    idleCancelRef.current = scheduleWhenIdle(() => {
-      idleCancelRef.current = null;
-      syncFrameRef.current = requestAnimationFrame(step);
-    });
-    return () => {
-      cancelled = true;
-      cancelLayerSync();
-    };
-  }, [visibleIds, viewportTick, route, focusId, placesById]);
 
-  // Fly to focused place
+      const current = currentIdsRef.current;
+      const toAdd: L.Marker[] = [];
+      const toRemove: L.Marker[] = [];
+      targetIds.forEach((id) => {
+        if (!current.has(id)) {
+          const place = placesById.get(id);
+          if (place) toAdd.push(createMarker(place));
+        }
+      });
+      current.forEach((id) => {
+        if (!targetIds.has(id)) {
+          const m = markersRef.current.get(id);
+          if (m) toRemove.push(m);
+        }
+      });
+
+      if (toRemove.length) {
+        cluster.removeLayers(toRemove);
+        toRemove.forEach((m) => {
+          const entry = [...markersRef.current.entries()].find(([, v]) => v === m);
+          if (entry) current.delete(entry[0]);
+        });
+      }
+
+      if (batchTimerRef.current) window.clearTimeout(batchTimerRef.current);
+      let i = 0;
+      const addChunk = () => {
+        const slice = toAdd.slice(i, i + ADD_BATCH);
+        if (slice.length) {
+          cluster.addLayers(slice);
+          slice.forEach((m) => {
+            const entry = [...markersRef.current.entries()].find(([, v]) => v === m);
+            if (entry) current.add(entry[0]);
+          });
+          i += ADD_BATCH;
+          setMarkerProgress({ done: current.size, total: targetIds.size });
+          if (i < toAdd.length) {
+            batchTimerRef.current = window.setTimeout(addChunk, 16);
+            return;
+          }
+        }
+        setMarkerProgress({ done: targetIds.size, total: targetIds.size });
+      };
+      setMarkerProgress({ done: current.size, total: targetIds.size });
+      addChunk();
+    }, 120);
+
+    return () => {
+      if (syncTimerRef.current) window.clearTimeout(syncTimerRef.current);
+    };
+  }, [visibleIds, route, focusId, placesById]);
+
+  // Fly to focused place with padding so it isn't hidden by UI.
   useEffect(() => {
     if (!focusId || !mapRef.current) return;
     const p = placesById.get(focusId);
     if (!p) return;
+    const cluster = clusterRef.current;
     let m = markersRef.current.get(focusId);
-    const markerLayer = markerLayerRef.current;
-    if (!m && layerIsMounted(markerLayer)) {
+    if (!m && cluster) {
       m = createMarker(p);
-      markerLayer.addLayer(m);
-      currentVisibleRef.current.add(p.id);
+      cluster.addLayer(m);
+      currentIdsRef.current.add(p.id);
     }
     const map = mapRef.current;
-    const targetZoom = Math.max(map.getZoom(), 11);
-    map.flyTo([p.lat, p.lng], targetZoom, { duration: 0.9 });
+    const isMobile = window.innerWidth < 768;
+    const paddingTopLeft: L.PointExpression = isMobile ? [20, 80] : [400, 40];
+    const paddingBottomRight: L.PointExpression = isMobile ? [20, 260] : [60, 60];
+    const targetZoom = Math.max(map.getZoom(), 13);
+    map.flyTo([p.lat, p.lng], targetZoom, { duration: 0.9, paddingTopLeft, paddingBottomRight } as L.ZoomPanOptions);
     const marker = m;
     const openWhenReady = () => {
-      if (marker) marker.openPopup();
+      if (!marker) return;
+      const c = clusterRef.current;
+      if (c && typeof (c as unknown as { zoomToShowLayer: (m: L.Marker, cb: () => void) => void }).zoomToShowLayer === "function") {
+        (c as unknown as { zoomToShowLayer: (m: L.Marker, cb: () => void) => void }).zoomToShowLayer(marker, () => marker.openPopup());
+      } else {
+        marker.openPopup();
+      }
     };
     map.once("moveend", openWhenReady);
-    // Fallback in case moveend doesn't fire (already at target)
     setTimeout(() => {
       map.off("moveend", openWhenReady);
       openWhenReady();
     }, 1200);
   }, [focusId, focusNonce, placesById]);
 
-  // Draw ordered route polyline with numbered stop markers.
+  // Route polyline + numbered badges.
   useEffect(() => {
     const map = mapRef.current;
     if (!map) return;
@@ -423,12 +376,7 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
           ? getComputedStyle(document.documentElement).getPropertyValue("--primary").trim() ||
             "#0a0a0a"
           : "#0a0a0a";
-      L.polyline(pts, {
-        color: primaryColor,
-        weight: 4,
-        opacity: 0.85,
-        dashArray: "8 6",
-      }).addTo(layer);
+      L.polyline(pts, { color: primaryColor, weight: 4, opacity: 0.85, dashArray: "8 6" }).addTo(layer);
     }
     layer.addTo(map);
     routeLayerRef.current = layer;
@@ -437,7 +385,6 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
   const tilesDone = tileProgress.finished;
   const markersDone = markerProgress.total === 0 || markerProgress.done >= markerProgress.total;
   const loading = !tilesDone || !markersDone;
-
   const tilePct = tileProgress.total
     ? Math.min(100, Math.round((tileProgress.done / tileProgress.total) * 100))
     : 0;
@@ -477,7 +424,6 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
                 </div>
               </div>
             </div>
-
             <ProgressRow
               label="Kartenkacheln"
               status={
