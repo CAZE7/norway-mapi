@@ -95,10 +95,9 @@ export function normalize(s: string): string {
 
 // Pre-allocated array for Levenshtein distance calculation to avoid GC overhead
 const sharedRow = new Int32Array(256);
+const sharedQCodes = new Int32Array(256);
 
-function levenshtein(a: string, b: string): number {
-  if (a === b) return 0;
-  const lenA = a.length;
+function levenshtein(lenA: number, b: string): number {
   const lenB = b.length;
   if (!lenA) return lenB;
   if (!lenB) return lenA;
@@ -116,7 +115,7 @@ function levenshtein(a: string, b: string): number {
     const charB = b.charCodeAt(i - 1);
     for (let j = 1; j <= lenA; j++) {
       const val =
-        charB === a.charCodeAt(j - 1) ? row[j - 1] : Math.min(row[j - 1], row[j], prev) + 1;
+        charB === sharedQCodes[j - 1] ? row[j - 1] : Math.min(row[j - 1], row[j], prev) + 1;
       row[j - 1] = prev;
       prev = val;
     }
@@ -199,6 +198,7 @@ export function searchPlaces(
     const maxDist = q.length <= 4 ? 1 : 2;
     const qFirst = q.charCodeAt(0);
     const qLen = q.length;
+    for (let i = 0; i < qLen; i++) sharedQCodes[i] = q.charCodeAt(i);
 
     for (const place of normPlaces) {
       let minD = Infinity;
@@ -210,7 +210,7 @@ export function searchPlaces(
         Math.abs(qLen - word.length) <= maxDist &&
         !(qLen >= 4 && word.charCodeAt(0) !== qFirst)
       ) {
-        minD = levenshtein(q, word);
+        minD = levenshtein(qLen, word);
       }
 
       if (minD !== 0) {
@@ -222,7 +222,7 @@ export function searchPlaces(
             Math.abs(qLen - word.length) <= maxDist &&
             !(qLen >= 4 && word.charCodeAt(0) !== qFirst)
           ) {
-            const d = levenshtein(q, word);
+            const d = levenshtein(qLen, word);
             if (d < minD) {
               minD = d;
               if (minD === 0) break;
@@ -240,7 +240,7 @@ export function searchPlaces(
             Math.abs(qLen - word.length) <= maxDist &&
             !(qLen >= 4 && word.charCodeAt(0) !== qFirst)
           ) {
-            const d = levenshtein(q, word);
+            const d = levenshtein(qLen, word);
             if (d < minD) {
               minD = d;
               if (minD === 0) break;
