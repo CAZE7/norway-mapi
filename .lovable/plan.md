@@ -1,13 +1,16 @@
 ## Ziel
+
 Die Karte/Sidebar soll beim Klick in die Suchleiste, beim Tippen und beim Scrollen nicht mehr einfrieren; auch das erste Laden soll wieder schneller und stabiler wirken.
 
 ## Bestätigte Hinweise aus dem Code
+
 - Beim Start werden alle Marker direkt in `NorwayMap` gebaut und per `cluster.addLayers(built)` hinzugefügt.
 - Bei jeder Such-/Filteränderung wird ein großer Marker-Diff berechnet und anschließend `removeLayers`/`addLayers` auf dem MarkerCluster ausgeführt.
 - Die Sidebar lädt für sichtbare Ergebniszeilen Bilder über `PlaceThumb`/`lookupPlaceImage`; beim Scrollen können dadurch viele Wikipedia/Commons-Anfragen und `localStorage`-Cache-Zugriffe parallel starten.
 - Es gibt bereits eine bekannte Projekt-Notiz zu Focus-/Map-Deadlocks; `Sheet modal={false}` ist gesetzt, aber der aktuelle Freeze tritt auch auf Desktop/Sidebar-Interaktion auf und passt eher zu zu viel synchroner Marker-/Thumbnail-Arbeit beim Fokus/Scrollen/Suchen.
 
 ## Umsetzung
+
 1. **Freeze reproduzieren und messen**
    - Mit Playwright die Startseite öffnen, Suche fokussieren, tippen und Sidebar scrollen.
    - Browser-Konsole, lange Tasks und sichtbaren Zustand prüfen, damit die Änderung gegen genau dieses Verhalten validiert wird.
