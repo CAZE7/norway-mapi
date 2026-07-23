@@ -8,7 +8,7 @@ import { useAppStore } from "@/lib/store";
 import { colorFor } from "@/lib/category-color";
 import { lookupPlaceImage } from "@/lib/wikipedia";
 
-// Fix default marker icons served from a CDN so we don't fight bundler paths.
+// We serve default marker icons from a CDN so we don't fight bundler paths.
 const iconRetina = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png";
 const iconUrl = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png";
 const shadowUrl = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png";
