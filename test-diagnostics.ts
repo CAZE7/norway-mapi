@@ -21,7 +21,9 @@ console.log(`✓ 100 Suchen nach 'oslo' über ${PLACES.length} Orte: ${duration.
 console.log(`  Durchschnitt pro Suche: ${(duration / runs).toFixed(3)} ms`);
 
 if (duration > 500) {
-  console.warn("⚠️ WARNUNG: Suche dauert zu lange (> 500ms für 100 Runs). Main Thread könnte blockieren!");
+  console.warn(
+    "⚠️ WARNUNG: Suche dauert zu lange (> 500ms für 100 Runs). Main Thread könnte blockieren!",
+  );
 } else {
   console.log("✓ PASSED: Such-Performance ist im grünen Bereich.\n");
 }
@@ -69,9 +71,13 @@ currentVisibleRef.forEach((id) => {
   if (!visibleIds2.has(id)) toRemove2.push(id);
 });
 
-console.log(`\nDiff bei Suche 'bergen': ${toRemove2.length} Marker zu entfernen, ${toAdd2.length} hinzuzufügen.`);
+console.log(
+  `\nDiff bei Suche 'bergen': ${toRemove2.length} Marker zu entfernen, ${toAdd2.length} hinzuzufügen.`,
+);
 if (toRemove2.length > 2000) {
-  console.log(`⚠️ HINWEIS: ${toRemove2.length} synchrone Marker-Entfernungen im DOM bei einem einzigen Tastendruck!`);
+  console.log(
+    `⚠️ HINWEIS: ${toRemove2.length} synchrone Marker-Entfernungen im DOM bei einem einzigen Tastendruck!`,
+  );
 }
 console.log("✓ PASSED: Marker-Diff Simulation abgeschlossen.\n");
 

@@ -188,7 +188,8 @@ const Sidebar = React.forwardRef<
 
     if (isMobile) {
       return (
-        <Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>
+        <Sheet open={openMobile} onOpenChange={setOpenMobile} modal={false} {...props}>
+          {/* SECURITY: Use modal={false} to disable focus traps which conflict with the Leaflet map and cause main thread lockups (DoS) */}
           <SheetContent
             data-sidebar="sidebar"
             data-mobile="true"
