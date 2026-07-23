@@ -9,3 +9,7 @@
 
 **Learning:** Found that `PlaceRow` inside the sidebar list (`PagedResults` rendering 50 items) was fully re-rendering every time any state in `AppSidebar` changed (e.g. typing a search query, opening a category filter) because it wasn't memoized.
 **Action:** Used `React.memo()` for list item components (`MemoizedPlaceRow`) to significantly reduce re-renders when they receive stable props.
+
+## 2023-10-27 - Security vs. Client-Side Constraints
+**Learning:** In a purely client-side static application without a backend, authenticating the user securely and persistently is inherently impossible. Hashing the PIN prevents it from being read plainly, but storing the hash in `sessionStorage` still allows a savvy attacker to copy the known hash from `localStorage` into `sessionStorage` to bypass the UI login screen.
+**Action:** Implement hashing with a fallback for non-secure contexts (`crypto.subtle` restriction) and explicitly document the accepted risk in the PR when a backend cannot be introduced.

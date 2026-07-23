@@ -47,7 +47,33 @@ export const Route = createFileRoute("/admin")({
 
 const TIERS: Tier[] = ["geheimtipp", "touristisch", "service"];
 const PIN_STORAGE_KEY = "steder-admin-pin";
-const SESSION_UNLOCKED_KEY = "steder-admin-unlocked";
+const SESSION_TOKEN_KEY = "steder-admin-token";
+
+// We use a fixed salt to deter basic rainbow table attacks while allowing client-side verification
+const PIN_SALT = "steder-norge-v1-salt-";
+
+async function hashPin(pin: string): Promise<string> {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(PIN_SALT + pin);
+  // crypto.subtle is only available in secure contexts (HTTPS/localhost).
+  // Fallback to a simpler, synchronous hash if unavailable to prevent crashing.
+  if (typeof crypto !== "undefined" && crypto.subtle) {
+    const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hashHex = hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
+    return hashHex;
+  } else {
+    // Basic fallback for non-secure contexts (HTTP)
+    let hash = 0;
+    const str = PIN_SALT + pin;
+    for (let i = 0; i < str.length; i++) {
+      const char = str.charCodeAt(i);
+      hash = (hash << 5) - hash + char;
+      hash = hash & hash; // Convert to 32bit integer
+    }
+    return Math.abs(hash).toString(16).padStart(16, "0");
+  }
+}
 
 function getStoredPin(): string {
   if (typeof window === "undefined") return "1234";
@@ -73,7 +99,21 @@ function AdminPage() {
 
   const [unlocked, setUnlocked] = useState<boolean>(() => {
     if (typeof window === "undefined") return false;
-    return window.sessionStorage.getItem(SESSION_UNLOCKED_KEY) === "true";
+
+    // In a completely static site without a backend, a spoof-proof client-side session persistence
+    // is impossible. An attacker can always extract the hashed PIN from localStorage and
+    // inject it into sessionStorage. We use the hashed PIN in sessionStorage to persist the unlocked state
+    // across refreshes for convenience, accepting the inherent limitations of client-side-only auth.
+    const sessionHash = window.sessionStorage.getItem(SESSION_TOKEN_KEY);
+    const storedPin = getStoredPin();
+    if (sessionHash && sessionHash === storedPin && sessionHash.length === 64) {
+      return true;
+    }
+
+    if (sessionHash && sessionHash === storedPin && sessionHash.length < 64) {
+      return true;
+    }
+    return false;
   });
   const [pinInput, setPinInput] = useState("");
   const [newPinInput, setNewPinInput] = useState("");
@@ -87,12 +127,34 @@ function AdminPage() {
   const [lng, setLng] = useState("");
   const [description, setDescription] = useState("");
 
-  function handleUnlock(e: React.FormEvent) {
+  async function handleUnlock(e: React.FormEvent) {
     e.preventDefault();
     const correctPin = getStoredPin();
-    if (pinInput.trim() === correctPin) {
+    const input = pinInput.trim();
+
+    let isMatch = false;
+
+    // Migration logic for old plaintext PINs (including the default '1234')
+    if (correctPin.length < 64) {
+      if (input === correctPin) {
+        isMatch = true;
+        if (typeof window !== "undefined") {
+          const newHash = await hashPin(input);
+          window.localStorage.setItem(PIN_STORAGE_KEY, newHash);
+        }
+      }
+    } else {
+      // Hashed PIN comparison
+      const hashedInput = await hashPin(input);
+      if (hashedInput === correctPin) {
+        isMatch = true;
+      }
+    }
+
+    if (isMatch) {
       if (typeof window !== "undefined") {
-        window.sessionStorage.setItem(SESSION_UNLOCKED_KEY, "true");
+        const hashToStore = correctPin.length < 64 ? await hashPin(input) : correctPin;
+        window.sessionStorage.setItem(SESSION_TOKEN_KEY, hashToStore);
       }
       setUnlocked(true);
       toast.success("Admin-Zugang freigeschaltet");
@@ -104,19 +166,21 @@ function AdminPage() {
 
   function handleLock() {
     if (typeof window !== "undefined") {
-      window.sessionStorage.removeItem(SESSION_UNLOCKED_KEY);
+      window.sessionStorage.removeItem(SESSION_TOKEN_KEY);
     }
     setUnlocked(false);
     toast.info("Admin-Sitzung beendet");
   }
 
-  function handleChangePin(e: React.FormEvent) {
+  async function handleChangePin(e: React.FormEvent) {
     e.preventDefault();
-    if (!newPinInput.trim() || newPinInput.trim().length < 4) {
+    const input = newPinInput.trim();
+    if (!input || input.length < 4) {
       return toast.error("PIN muss mindestens 4 Zeichen lang sein");
     }
     if (typeof window !== "undefined") {
-      window.localStorage.setItem(PIN_STORAGE_KEY, newPinInput.trim());
+      const hashedPin = await hashPin(input);
+      window.localStorage.setItem(PIN_STORAGE_KEY, hashedPin);
     }
     toast.success("Neuer Admin-PIN gespeichert");
     setNewPinInput("");
