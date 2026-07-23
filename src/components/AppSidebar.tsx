@@ -27,6 +27,17 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+import {
   CATEGORY_LABEL,
   PLACES,
   TIER_LABEL,
@@ -658,9 +669,31 @@ function RoutePanel({
             <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> Maps
           </Button>
         </div>
-        <Button variant="outline" className="w-full" onClick={clearRoute}>
-          <Trash2 className="mr-2 h-4 w-4" /> Route leeren
-        </Button>
+        <AlertDialog>
+          <AlertDialogTrigger asChild>
+            <Button variant="outline" className="w-full">
+              <Trash2 className="mr-2 h-4 w-4" /> Route leeren
+            </Button>
+          </AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>Route leeren?</AlertDialogTitle>
+              <AlertDialogDescription>
+                Möchtest du wirklich alle Stopps aus deiner Route löschen? Diese Aktion kann nicht
+                rückgängig gemacht werden.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>Abbrechen</AlertDialogCancel>
+              <AlertDialogAction
+                onClick={clearRoute}
+                className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+              >
+                Route leeren
+              </AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
       </div>
     </>
   );
