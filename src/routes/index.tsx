@@ -69,7 +69,8 @@ function Home() {
 
         {/* Mobile floating button */}
         <div className="absolute left-3 top-3 z-[1000] md:hidden">
-          <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
+          <Sheet open={mobileOpen} onOpenChange={setMobileOpen} modal={false}>
+            {/* SECURITY: Use modal={false} to disable focus traps which conflict with the Leaflet map and cause main thread lockups (DoS) */}
             <SheetTrigger asChild>
               <Button size="sm" className="shadow-lg">
                 <Menu className="mr-2 h-4 w-4" /> Orte & Filter
