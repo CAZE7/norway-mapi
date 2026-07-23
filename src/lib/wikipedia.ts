@@ -283,7 +283,9 @@ async function lookupPlaceImageUncached(
 
   // Phase 1: Wikipedia summary — richer text, tends to hit named landmarks.
   for (const candidate of candidates) {
-      const hits = await withNetworkSlot(() => Promise.all(langs.map((lang) => fetchLang(lang, candidate))));
+    const hits = await withNetworkSlot(() =>
+      Promise.all(langs.map((lang) => fetchLang(lang, candidate))),
+    );
     const hit = hits.find((h) => h !== null) ?? null;
     if (hit) {
       cache[cacheKey] = { at: Date.now(), value: hit };
