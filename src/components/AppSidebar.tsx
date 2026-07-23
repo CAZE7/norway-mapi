@@ -308,7 +308,7 @@ function PagedResults({
     setLimit(PAGE_SIZE);
   }, [results]);
 
-  const favoritesSet = useMemo(() => new Set(favorites), [favorites]);
+  const favSet = useMemo(() => new Set(favorites), [favorites]);
   const routeSet = useMemo(() => new Set(route), [route]);
 
   if (results.length === 0) {
@@ -332,6 +332,7 @@ function PagedResults({
             key={p.id}
             place={p}
             isFav={favoritesSet.has(p.id)}
+            isFav={favSet.has(p.id)}
             inRoute={routeSet.has(p.id)}
             onSelect={onFocus}
             onFav={onFav}
