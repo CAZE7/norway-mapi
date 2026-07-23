@@ -331,7 +331,6 @@ function PagedResults({
           <MemoizedPlaceRow
             key={p.id}
             place={p}
-            isFav={favoritesSet.has(p.id)}
             isFav={favSet.has(p.id)}
             inRoute={routeSet.has(p.id)}
             onSelect={onFocus}

@@ -13,6 +13,9 @@ const iconUrl = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png";
 const shadowUrl = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png";
 L.Icon.Default.mergeOptions({ iconRetinaUrl: iconRetina, iconUrl, shadowUrl });
 
+const MAX_ACTIVE_MARKERS = 450;
+const LAYER_SYNC_BATCH = 60;
+
 function layerIsMounted(layer: L.LayerGroup | null): layer is L.LayerGroup {
   if (!layer) return false;
   return Boolean((layer as L.LayerGroup & { _map?: L.Map | null })._map);
