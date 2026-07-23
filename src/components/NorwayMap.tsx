@@ -145,13 +145,14 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
     const cached = markersRef.current.get(p.id);
     if (cached) return cached;
     const color = colorFor(p.category);
+    const q = p.quality ?? 1;
     const options: L.CircleMarkerOptions = {
-      radius: p.quality === 3 ? 7 : p.quality === 2 ? 6 : 5,
-      color: "var(--color-card)",
-      weight: 1.5,
+      radius: q === 3 ? 9 : q === 2 ? 7 : 5.5,
+      color: "#ffffff",
+      weight: q === 3 ? 2.5 : 2,
       fillColor: color,
-      fillOpacity: 0.92,
-      opacity: 0.95,
+      fillOpacity: 1,
+      opacity: 1,
       bubblingMouseEvents: false,
     };
     if (markerRendererRef.current) options.renderer = markerRendererRef.current;
