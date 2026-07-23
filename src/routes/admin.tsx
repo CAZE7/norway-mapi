@@ -170,6 +170,7 @@ function AdminPage() {
         const parsed = JSON.parse(text) as Place[];
         if (!Array.isArray(parsed)) throw new Error("Kein Array");
         const merged = [...custom];
+        const existingIds = new Set(merged.map((x) => x.id));
         let importedCount = 0;
         for (const p of parsed) {
           if (
@@ -182,7 +183,8 @@ function AdminPage() {
             !p.tier
           )
             continue;
-          if (!merged.find((x) => x.id === p.id)) {
+          if (!existingIds.has(p.id)) {
+            existingIds.add(p.id);
             merged.push(p);
             importedCount++;
           }
