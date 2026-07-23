@@ -1,18 +1,9782 @@
 {
+  "p0": {
+    "name": "Preikestolen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1": {
+    "name": "Kjeragbolten",
+    "has_image": false,
+    "verified": false
+  },
+  "p2": {
+    "name": "Himakånå",
+    "has_image": false,
+    "verified": false
+  },
+  "p3": {
+    "name": "Månafossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p4": {
+    "name": "Jæren: Orrestranda",
+    "has_image": false,
+    "verified": false
+  },
   "p5": {
     "name": "Trolltunga",
+    "has_image": false,
+    "verified": false
+  },
+  "p6": {
+    "name": "Vøringsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p7": {
+    "name": "Låtefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p8": {
+    "name": "Steinsdalsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p9": {
+    "name": "Bondhusvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p10": {
+    "name": "Buarbreen",
+    "has_image": false,
+    "verified": false
+  },
+  "p11": {
+    "name": "Dronningstien",
+    "has_image": false,
+    "verified": false
+  },
+  "p12": {
+    "name": "Langfoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p13": {
+    "name": "Åkrasanden",
+    "has_image": false,
+    "verified": false
+  },
+  "p14": {
+    "name": "Nærøyfjord – Bakka",
+    "has_image": false,
+    "verified": false
+  },
+  "p15": {
+    "name": "Stegastein",
+    "has_image": false,
+    "verified": false
+  },
+  "p16": {
+    "name": "Brekkefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p17": {
+    "name": "Nigardsbreen",
+    "has_image": false,
+    "verified": false
+  },
+  "p18": {
+    "name": "Feigefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p19": {
+    "name": "Vettisfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p20": {
+    "name": "Molden",
+    "has_image": false,
+    "verified": false
+  },
+  "p21": {
+    "name": "Besseggen",
+    "has_image": false,
+    "verified": false
+  },
+  "p22": {
+    "name": "Galdhøpiggen",
+    "has_image": false,
+    "verified": false
+  },
+  "p23": {
+    "name": "Gjende – Gjendesheim",
+    "has_image": false,
+    "verified": false
+  },
+  "p24": {
+    "name": "Knutshøe",
+    "has_image": false,
+    "verified": false
+  },
+  "p25": {
+    "name": "Sognefjellet: Mefjellet",
+    "has_image": false,
+    "verified": false
+  },
+  "p26": {
+    "name": "Briksdalsbreen",
+    "has_image": false,
+    "verified": false
+  },
+  "p27": {
+    "name": "Kjenndalsbreen",
+    "has_image": false,
+    "verified": false
+  },
+  "p28": {
+    "name": "Lovatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p29": {
+    "name": "Rakssetra",
+    "has_image": false,
+    "verified": false
+  },
+  "p30": {
+    "name": "Skåla",
+    "has_image": false,
+    "verified": false
+  },
+  "p31": {
+    "name": "Vestkapp",
+    "has_image": false,
+    "verified": false
+  },
+  "p32": {
+    "name": "Refviksanden",
+    "has_image": false,
+    "verified": false
+  },
+  "p33": {
+    "name": "Kannesteinen",
+    "has_image": false,
+    "verified": false
+  },
+  "p34": {
+    "name": "Geirangerfjord: Flydalsjuvet",
+    "has_image": false,
+    "verified": false
+  },
+  "p35": {
+    "name": "Dalsnibba",
+    "has_image": false,
+    "verified": false
+  },
+  "p36": {
+    "name": "Sieben Schwestern",
+    "has_image": false,
+    "verified": false
+  },
+  "p37": {
+    "name": "Trollstigen Aussichtspunkt",
+    "has_image": false,
+    "verified": false
+  },
+  "p38": {
+    "name": "Gudbrandsjuvet",
+    "has_image": false,
+    "verified": false
+  },
+  "p39": {
+    "name": "Romsdalseggen",
+    "has_image": false,
+    "verified": false
+  },
+  "p40": {
+    "name": "Rampestreken",
+    "has_image": false,
+    "verified": false
+  },
+  "p41": {
+    "name": "Trollveggen",
+    "has_image": false,
+    "verified": false
+  },
+  "p42": {
+    "name": "Mardalsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p43": {
+    "name": "Atlanterhavsvegen: Eldhusøya",
+    "has_image": false,
+    "verified": false
+  },
+  "p44": {
+    "name": "Innerdalen",
+    "has_image": false,
+    "verified": false
+  },
+  "p45": {
+    "name": "Snøhetta-Aussichtspunkt",
+    "has_image": false,
+    "verified": false
+  },
+  "p46": {
+    "name": "Rondane: Sohlbergplassen",
+    "has_image": false,
+    "verified": false
+  },
+  "p47": {
+    "name": "Rondvassbu",
+    "has_image": false,
+    "verified": false
+  },
+  "p48": {
+    "name": "Femundsmarka: Elgå",
+    "has_image": false,
+    "verified": false
+  },
+  "p49": {
+    "name": "Gaustatoppen",
+    "has_image": false,
+    "verified": false
+  },
+  "p50": {
+    "name": "Rjukanfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p51": {
+    "name": "Husedalen",
+    "has_image": false,
+    "verified": false
+  },
+  "p52": {
+    "name": "Kviteseid: Hamaren Tretoppvei",
+    "has_image": false,
+    "verified": false
+  },
+  "p53": {
+    "name": "Verdens Ende",
+    "has_image": false,
+    "verified": false
+  },
+  "p54": {
+    "name": "Mølen",
+    "has_image": false,
+    "verified": false
+  },
+  "p55": {
+    "name": "Hvaler: Storesand",
+    "has_image": false,
+    "verified": false
+  },
+  "p56": {
+    "name": "Kjerkeberget Nordmarka",
+    "has_image": false,
+    "verified": false
+  },
+  "p57": {
+    "name": "Østmarka: Nøklevann",
+    "has_image": false,
+    "verified": false
+  },
+  "p58": {
+    "name": "Kolsåstoppen",
+    "has_image": false,
+    "verified": false
+  },
+  "p59": {
+    "name": "Torghatten",
+    "has_image": false,
+    "verified": false
+  },
+  "p60": {
+    "name": "De syv søstre – Botnkrona",
+    "has_image": false,
+    "verified": false
+  },
+  "p61": {
+    "name": "Vega: Eidemsliene",
+    "has_image": false,
+    "verified": false
+  },
+  "p62": {
+    "name": "Svartisen: Austerdalsisen",
+    "has_image": false,
+    "verified": false
+  },
+  "p63": {
+    "name": "Saltstraumen",
+    "has_image": false,
+    "verified": false
+  },
+  "p64": {
+    "name": "Mørsvikbotn: Rago Nationalpark",
+    "has_image": false,
+    "verified": false
+  },
+  "p65": {
+    "name": "Mannen Hamarøy",
+    "has_image": false,
+    "verified": false
+  },
+  "p66": {
+    "name": "Reinebringen",
+    "has_image": false,
+    "verified": false
+  },
+  "p67": {
+    "name": "Kvalvika Beach",
+    "has_image": false,
+    "verified": false
+  },
+  "p68": {
+    "name": "Ryten",
+    "has_image": false,
+    "verified": false
+  },
+  "p69": {
+    "name": "Hauklandstranda",
+    "has_image": false,
+    "verified": false
+  },
+  "p70": {
+    "name": "Uttakleiv",
+    "has_image": false,
+    "verified": false
+  },
+  "p71": {
+    "name": "Offersøykammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p72": {
+    "name": "Mannen bei Haukland",
+    "has_image": false,
+    "verified": false
+  },
+  "p73": {
+    "name": "Svolværgeita",
+    "has_image": false,
+    "verified": false
+  },
+  "p74": {
+    "name": "Djevelporten",
+    "has_image": false,
+    "verified": false
+  },
+  "p75": {
+    "name": "Trollfjord",
+    "has_image": false,
+    "verified": false
+  },
+  "p76": {
+    "name": "Måtinden",
+    "has_image": false,
+    "verified": false
+  },
+  "p77": {
+    "name": "Bleikstranda",
+    "has_image": false,
+    "verified": false
+  },
+  "p78": {
+    "name": "Dronningruta",
+    "has_image": false,
+    "verified": false
+  },
+  "p79": {
+    "name": "Møysalen Nationalpark",
+    "has_image": false,
+    "verified": false
+  },
+  "p80": {
+    "name": "Tungeneset",
+    "has_image": false,
+    "verified": false
+  },
+  "p81": {
+    "name": "Bergsbotn",
+    "has_image": false,
+    "verified": false
+  },
+  "p82": {
+    "name": "Segla",
+    "has_image": false,
+    "verified": false
+  },
+  "p83": {
+    "name": "Hesten",
+    "has_image": false,
+    "verified": false
+  },
+  "p84": {
+    "name": "Ersfjordstranda Senja",
+    "has_image": false,
+    "verified": false
+  },
+  "p85": {
+    "name": "Sommarøy",
+    "has_image": false,
+    "verified": false
+  },
+  "p86": {
+    "name": "Tromsdalstinden",
+    "has_image": false,
+    "verified": false
+  },
+  "p87": {
+    "name": "Sherpatrappa Tromsø",
+    "has_image": false,
+    "verified": false
+  },
+  "p88": {
+    "name": "Blåisvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p89": {
+    "name": "Gorsa Bridge",
+    "has_image": false,
+    "verified": false
+  },
+  "p90": {
+    "name": "Reisadalen: Imofossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p91": {
+    "name": "Alta Canyon – Sautso",
+    "has_image": false,
+    "verified": false
+  },
+  "p92": {
+    "name": "Nordkap-Klippe",
+    "has_image": false,
+    "verified": false
+  },
+  "p93": {
+    "name": "Kirkeporten",
+    "has_image": false,
+    "verified": false
+  },
+  "p94": {
+    "name": "Knivskjellodden",
+    "has_image": false,
+    "verified": false
+  },
+  "p95": {
+    "name": "Hamningberg",
+    "has_image": false,
+    "verified": false
+  },
+  "p96": {
+    "name": "Ekkerøy",
+    "has_image": false,
+    "verified": false
+  },
+  "p97": {
+    "name": "Hornøya",
+    "has_image": false,
+    "verified": false
+  },
+  "p98": {
+    "name": "Stabbursdalen Nationalpark",
+    "has_image": false,
+    "verified": false
+  },
+  "p99": {
+    "name": "Øvre Pasvik: Nyrud",
+    "has_image": false,
+    "verified": false
+  },
+  "p100": {
+    "name": "Kjelfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p101": {
+    "name": "Rjukandefoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p102": {
+    "name": "Sarpefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p103": {
+    "name": "Tyssestrengene",
+    "has_image": false,
+    "verified": false
+  },
+  "p104": {
+    "name": "Tvindefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p105": {
+    "name": "Skrikjofossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p106": {
+    "name": "Hellefoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p107": {
+    "name": "Kvernhusfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p108": {
+    "name": "Trælefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p109": {
+    "name": "Nykkfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p110": {
+    "name": "Lauvåfalla",
+    "has_image": false,
+    "verified": false
+  },
+  "p111": {
+    "name": "Ytste Mardalsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p112": {
+    "name": "Brudesløret",
+    "has_image": false,
+    "verified": false
+  },
+  "p113": {
+    "name": "Fallfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p114": {
+    "name": "Tverrelvfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p115": {
+    "name": "Tollåsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p116": {
+    "name": "Fossan",
+    "has_image": false,
+    "verified": false
+  },
+  "p117": {
+    "name": "Drivandfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p118": {
+    "name": "Grøvelfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p119": {
+    "name": "Sagfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p120": {
+    "name": "Stampefoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p121": {
+    "name": "Kalvehagfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p122": {
+    "name": "Torgunrudkastet",
+    "has_image": false,
+    "verified": false
+  },
+  "p123": {
+    "name": "Skulbørstadfoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p124": {
+    "name": "Storfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p125": {
+    "name": "Gardhammarfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p126": {
+    "name": "Angerfoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p127": {
+    "name": "Ulvefoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p128": {
+    "name": "Skuggehølfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p129": {
+    "name": "Kvernhusfoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p130": {
+    "name": "Rindefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p131": {
+    "name": "Viulfoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p132": {
+    "name": "Migaren",
+    "has_image": false,
+    "verified": false
+  },
+  "p133": {
+    "name": "Kjerkestrupen",
+    "has_image": false,
+    "verified": false
+  },
+  "p134": {
+    "name": "Gælenevjufossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p135": {
+    "name": "Storstyggen",
+    "has_image": false,
+    "verified": false
+  },
+  "p136": {
+    "name": "Veslestyggen",
+    "has_image": false,
+    "verified": false
+  },
+  "p137": {
+    "name": "Korpreiret",
+    "has_image": false,
+    "verified": false
+  },
+  "p138": {
+    "name": "Høljefallet",
+    "has_image": false,
+    "verified": false
+  },
+  "p139": {
+    "name": "Reipefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p140": {
+    "name": "Fannaråkfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p141": {
+    "name": "Ryfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p142": {
+    "name": "Hesjateigfossane",
+    "has_image": false,
+    "verified": false
+  },
+  "p143": {
+    "name": "Spildrefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p144": {
+    "name": "Morfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p145": {
+    "name": "Kaldvellfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p146": {
+    "name": "Gaulfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p147": {
+    "name": "Storfallet",
+    "has_image": false,
+    "verified": false
+  },
+  "p148": {
+    "name": "Sjøfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p149": {
+    "name": "Selbufossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p150": {
+    "name": "Kvelvfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p151": {
+    "name": "Kråkfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p152": {
+    "name": "Bjørgafossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p153": {
+    "name": "Høgfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p154": {
+    "name": "Kvernfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p155": {
+    "name": "Minnestufossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p156": {
+    "name": "Ljosafossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p157": {
+    "name": "Malmeifossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p158": {
+    "name": "Skarfoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p159": {
+    "name": "Urfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p160": {
+    "name": "Ikkonfoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p161": {
+    "name": "Steinsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p162": {
+    "name": "Gysfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p163": {
+    "name": "Fotlandsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p164": {
+    "name": "Granefossane",
+    "has_image": false,
+    "verified": false
+  },
+  "p165": {
+    "name": "Sendingfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p166": {
+    "name": "Glommedalsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p167": {
+    "name": "Eigeskogfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p168": {
+    "name": "Svendsbøfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p169": {
+    "name": "Prestfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p275": {
+    "name": "Tussen",
+    "has_image": false,
+    "verified": false
+  },
+  "p276": {
+    "name": "Lufthavnvakta",
+    "has_image": false,
+    "verified": false
+  },
+  "p277": {
+    "name": "Utsikten",
+    "has_image": false,
+    "verified": false
+  },
+  "p278": {
+    "name": "Ringknuten",
+    "has_image": false,
+    "verified": false
+  },
+  "p279": {
+    "name": "Holmenkollen",
+    "has_image": false,
+    "verified": false
+  },
+  "p280": {
+    "name": "Kanonstilling Krageviga",
+    "has_image": false,
+    "verified": false
+  },
+  "p281": {
+    "name": "Sauetoppen",
+    "has_image": false,
+    "verified": false
+  },
+  "p282": {
+    "name": "Varen",
+    "has_image": false,
+    "verified": false
+  },
+  "p283": {
+    "name": "Sotåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p284": {
+    "name": "Rønnsåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p285": {
+    "name": "Storåstoppen",
+    "has_image": false,
+    "verified": false
+  },
+  "p286": {
+    "name": "Mokollen",
+    "has_image": false,
+    "verified": false
+  },
+  "p287": {
+    "name": "Sjuberget",
+    "has_image": false,
+    "verified": false
+  },
+  "p288": {
+    "name": "Vetan",
+    "has_image": false,
+    "verified": false
+  },
+  "p289": {
+    "name": "Kringlefjell",
+    "has_image": false,
+    "verified": false
+  },
+  "p290": {
+    "name": "Svartaberget",
+    "has_image": false,
+    "verified": false
+  },
+  "p291": {
+    "name": "Bordalsgjel Schlucht",
+    "has_image": false,
+    "verified": false
+  },
+  "p292": {
+    "name": "Orsetra",
+    "has_image": false,
+    "verified": false
+  },
+  "p293": {
+    "name": "Lågfjellet",
+    "has_image": false,
+    "verified": false
+  },
+  "p294": {
+    "name": "Bjønnahaugen",
+    "has_image": false,
+    "verified": false
+  },
+  "p295": {
+    "name": "Lysebotn-Aussichtspunkt",
+    "has_image": false,
+    "verified": false
+  },
+  "p296": {
+    "name": "Skåkåsstenen",
+    "has_image": false,
+    "verified": false
+  },
+  "p297": {
+    "name": "Skallhaugen",
+    "has_image": false,
+    "verified": false
+  },
+  "p298": {
+    "name": "Ulvstugguhaugen",
+    "has_image": false,
+    "verified": false
+  },
+  "p299": {
+    "name": "Slegghaugan",
+    "has_image": false,
+    "verified": false
+  },
+  "p300": {
+    "name": "Storvarden",
+    "has_image": false,
+    "verified": false
+  },
+  "p301": {
+    "name": "Stor-Gråberget",
+    "has_image": false,
+    "verified": false
+  },
+  "p302": {
+    "name": "Skreikampen",
+    "has_image": false,
+    "verified": false
+  },
+  "p303": {
+    "name": "Branntårnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p304": {
+    "name": "Trollåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p305": {
+    "name": "Videfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p306": {
+    "name": "Øvstefoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p307": {
+    "name": "Øvstedalsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p308": {
+    "name": "Langhammarkvilet",
+    "has_image": false,
+    "verified": false
+  },
+  "p309": {
+    "name": "Lundkvassberget",
+    "has_image": false,
+    "verified": false
+  },
+  "p310": {
+    "name": "Vardåsen Tårn",
+    "has_image": false,
+    "verified": false
+  },
+  "p311": {
+    "name": "Kristianvarden",
+    "has_image": false,
+    "verified": false
+  },
+  "p312": {
+    "name": "Plane spotter sight Bunkeren",
+    "has_image": false,
+    "verified": false
+  },
+  "p313": {
+    "name": "Planespotters site",
+    "has_image": false,
+    "verified": false
+  },
+  "p314": {
+    "name": "Nebba",
+    "has_image": false,
+    "verified": false
+  },
+  "p315": {
+    "name": "Sjøsanden",
+    "has_image": false,
+    "verified": false
+  },
+  "p316": {
+    "name": "Skiphellebukta badeplass",
+    "has_image": false,
+    "verified": false
+  },
+  "p317": {
+    "name": "Flømolostrand",
+    "has_image": false,
+    "verified": false
+  },
+  "p318": {
+    "name": "Sørenga Sjøbad",
+    "has_image": false,
+    "verified": false
+  },
+  "p319": {
+    "name": "Lutvann badeplass",
+    "has_image": false,
+    "verified": false
+  },
+  "p320": {
+    "name": "Sundveien badeplass",
+    "has_image": false,
+    "verified": false
+  },
+  "p321": {
+    "name": "Buktafjæra",
+    "has_image": false,
+    "verified": false
+  },
+  "p322": {
+    "name": "Hansbakkfjæra",
+    "has_image": false,
+    "verified": false
+  },
+  "p323": {
+    "name": "Grilstadstranda",
+    "has_image": false,
+    "verified": false
+  },
+  "p324": {
+    "name": "Fagerheimbukta",
+    "has_image": false,
+    "verified": false
+  },
+  "p325": {
+    "name": "Vollane",
+    "has_image": false,
+    "verified": false
+  },
+  "p326": {
+    "name": "Møhlenpris badeplass",
+    "has_image": false,
+    "verified": false
+  },
+  "p327": {
+    "name": "Skjoldbukta",
+    "has_image": false,
+    "verified": false
+  },
+  "p328": {
+    "name": "Nygardsvika friluftsområde",
+    "has_image": false,
+    "verified": false
+  },
+  "p329": {
+    "name": "Åros stranda",
+    "has_image": false,
+    "verified": false
+  },
+  "p330": {
+    "name": "Høllesanden",
+    "has_image": false,
+    "verified": false
+  },
+  "p331": {
+    "name": "Torvesanden",
+    "has_image": false,
+    "verified": false
+  },
+  "p332": {
+    "name": "Storøyspissen",
+    "has_image": false,
+    "verified": false
+  },
+  "p333": {
+    "name": "Rolfstangen badestrand",
+    "has_image": false,
+    "verified": false
+  },
+  "p334": {
+    "name": "Pelvikodden Badeplass",
+    "has_image": false,
+    "verified": false
+  },
+  "p335": {
+    "name": "Bakkesanden",
+    "has_image": false,
+    "verified": false
+  },
+  "p336": {
+    "name": "Munkebukta",
+    "has_image": false,
+    "verified": false
+  },
+  "p337": {
+    "name": "Vispen",
+    "has_image": false,
+    "verified": false
+  },
+  "p338": {
+    "name": "Rostadneset",
+    "has_image": false,
+    "verified": false
+  },
+  "p339": {
+    "name": "Glombo brygge",
+    "has_image": false,
+    "verified": false
+  },
+  "p340": {
+    "name": "Nordkolvika",
+    "has_image": false,
+    "verified": false
+  },
+  "p341": {
+    "name": "Skjerva",
+    "has_image": false,
+    "verified": false
+  },
+  "p342": {
+    "name": "Kremmerodden",
+    "has_image": false,
+    "verified": false
+  },
+  "p343": {
+    "name": "Borrestranda",
+    "has_image": false,
+    "verified": false
+  },
+  "p344": {
+    "name": "Bastøybukta",
+    "has_image": false,
+    "verified": false
+  },
+  "p370": {
+    "name": "Botanisk hage",
+    "has_image": false,
+    "verified": false
+  },
+  "p371": {
+    "name": "Fredriksten festning",
+    "has_image": false,
+    "verified": false
+  },
+  "p372": {
+    "name": "Lillesand Flaksbandsbanen",
+    "has_image": false,
+    "verified": false
+  },
+  "p373": {
+    "name": "Refsdal Kraftstasjon 1913",
+    "has_image": false,
+    "verified": false
+  },
+  "p374": {
+    "name": "Steinvikholm slott",
+    "has_image": false,
+    "verified": false
+  },
+  "p375": {
+    "name": "Arboretet på Milde",
+    "has_image": false,
+    "verified": false
+  },
+  "p376": {
+    "name": "Borrehaugene",
+    "has_image": false,
+    "verified": false
+  },
+  "p377": {
+    "name": "Gardnos Crater",
+    "has_image": false,
+    "verified": false
+  },
+  "p378": {
+    "name": "Dalen hotel",
+    "has_image": false,
+    "verified": false
+  },
+  "p379": {
+    "name": "Tautra kloster",
+    "has_image": false,
+    "verified": false
+  },
+  "p380": {
+    "name": "Muséhagen",
+    "has_image": false,
+    "verified": false
+  },
+  "p381": {
+    "name": "Stoplesteinan",
+    "has_image": false,
+    "verified": false
+  },
+  "p382": {
+    "name": "Stavanger Botanisk Hage",
+    "has_image": false,
+    "verified": false
+  },
+  "p383": {
+    "name": "Kviteseid Bygdetun",
+    "has_image": false,
+    "verified": false
+  },
+  "p384": {
+    "name": "Kvitskriuprestan",
+    "has_image": false,
+    "verified": false
+  },
+  "p385": {
+    "name": "Svinviks arboretum",
+    "has_image": false,
+    "verified": false
+  },
+  "p386": {
+    "name": "Odden Hagen",
+    "has_image": false,
+    "verified": false
+  },
+  "p387": {
+    "name": "Kneiken felleshage",
+    "has_image": false,
+    "verified": false
+  },
+  "p388": {
+    "name": "Brundalen Borettslag Parsellhager",
+    "has_image": false,
+    "verified": false
+  },
+  "p389": {
+    "name": "Posebyen",
+    "has_image": false,
+    "verified": false
+  },
+  "p390": {
+    "name": "Mølen gravrøyser",
+    "has_image": false,
+    "verified": false
+  },
+  "p391": {
+    "name": "Rosariet",
+    "has_image": false,
+    "verified": false
+  },
+  "p392": {
+    "name": "Urtehagen",
+    "has_image": false,
+    "verified": false
+  },
+  "p393": {
+    "name": "Staudehagen",
+    "has_image": false,
+    "verified": false
+  },
+  "p394": {
+    "name": "Huskebråtan",
+    "has_image": false,
+    "verified": false
+  },
+  "p395": {
+    "name": "Kosevika friområde",
+    "has_image": false,
+    "verified": false
+  },
+  "p396": {
+    "name": "Holemark",
+    "has_image": false,
+    "verified": false
+  },
+  "p397": {
+    "name": "Lerøys plass",
+    "has_image": false,
+    "verified": false
+  },
+  "p398": {
+    "name": "Kvernbenken",
+    "has_image": false,
+    "verified": false
+  },
+  "p399": {
+    "name": "Lensmannsvangen",
+    "has_image": false,
+    "verified": false
+  },
+  "p400": {
+    "name": "Bokkedalen",
+    "has_image": false,
+    "verified": false
+  },
+  "p401": {
+    "name": "Mosaviki",
+    "has_image": false,
+    "verified": false
+  },
+  "p402": {
+    "name": "Øvre Teiatjønna",
+    "has_image": false,
+    "verified": false
+  },
+  "p403": {
+    "name": "Haraldsvangen",
+    "has_image": false,
+    "verified": false
+  },
+  "p404": {
+    "name": "Paradis",
+    "has_image": false,
+    "verified": false
+  },
+  "p405": {
+    "name": "Tolvstein syd",
+    "has_image": false,
+    "verified": false
+  },
+  "p406": {
+    "name": "Randsetfjellet",
+    "has_image": false,
+    "verified": false
+  },
+  "p407": {
+    "name": "Krigsvollbekken",
+    "has_image": false,
+    "verified": false
+  },
+  "p408": {
+    "name": "Synnerdalen",
+    "has_image": false,
+    "verified": false
+  },
+  "p409": {
+    "name": "Nessmoen",
+    "has_image": false,
+    "verified": false
+  },
+  "p410": {
+    "name": "Carl Fredrik Hellevang-Larsens plass",
+    "has_image": false,
+    "verified": false
+  },
+  "p411": {
+    "name": "Tvedestrand",
+    "has_image": false,
+    "verified": false
+  },
+  "p412": {
+    "name": "Maryland",
+    "has_image": false,
+    "verified": false
+  },
+  "p413": {
+    "name": "Midtfjordsplassen",
+    "has_image": false,
+    "verified": false
+  },
+  "p414": {
+    "name": "Varmestue",
+    "has_image": false,
+    "verified": false
+  },
+  "p415": {
+    "name": "Bjøråa",
+    "has_image": false,
+    "verified": false
+  },
+  "p416": {
+    "name": "Lyngnes",
+    "has_image": false,
+    "verified": false
+  },
+  "p417": {
+    "name": "Steinbord",
+    "has_image": false,
+    "verified": false
+  },
+  "p418": {
+    "name": "Osterfloten",
+    "has_image": false,
+    "verified": false
+  },
+  "p419": {
+    "name": "Slettafossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p420": {
+    "name": "Florsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p421": {
+    "name": "Gammelfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p422": {
+    "name": "Bekkefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p423": {
+    "name": "Bergsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p424": {
+    "name": "Langefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p425": {
+    "name": "Pøylefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p426": {
+    "name": "Strifossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p427": {
+    "name": "Haugfossane",
+    "has_image": false,
+    "verified": false
+  },
+  "p428": {
+    "name": "Giljafossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p429": {
+    "name": "Lifossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p430": {
+    "name": "Kvernafossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p431": {
+    "name": "Bergafossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p432": {
+    "name": "Smellefoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p433": {
+    "name": "Botolvsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p434": {
+    "name": "Litlfallet",
+    "has_image": false,
+    "verified": false
+  },
+  "p435": {
+    "name": "Sagnfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p436": {
+    "name": "Falla",
+    "has_image": false,
+    "verified": false
+  },
+  "p437": {
+    "name": "Strypefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p438": {
+    "name": "Nyseterfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p439": {
+    "name": "Nekfallet",
+    "has_image": false,
+    "verified": false
+  },
+  "p440": {
+    "name": "Kolåsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p441": {
+    "name": "Berlifossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p442": {
+    "name": "Hestskofossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p443": {
+    "name": "Litlefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p444": {
+    "name": "Kvennfalla",
+    "has_image": false,
+    "verified": false
+  },
+  "p445": {
+    "name": "Aurdalsfossa",
+    "has_image": false,
+    "verified": false
+  },
+  "p446": {
+    "name": "Fagerhaugfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p447": {
+    "name": "Glømsefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p448": {
+    "name": "Skynnfallet",
+    "has_image": false,
+    "verified": false
+  },
+  "p449": {
+    "name": "Hynnfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p450": {
+    "name": "Styggfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p451": {
+    "name": "Stamfoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p452": {
+    "name": "Sagfallet",
+    "has_image": false,
+    "verified": false
+  },
+  "p453": {
+    "name": "Storstoen",
+    "has_image": false,
+    "verified": false
+  },
+  "p454": {
+    "name": "Gådalsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p455": {
+    "name": "Rivdalsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p456": {
+    "name": "Tussfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p457": {
+    "name": "Børsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p458": {
+    "name": "Linndalsfallet",
+    "has_image": false,
+    "verified": false
+  },
+  "p459": {
+    "name": "Klevfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p460": {
+    "name": "Renåfallet",
+    "has_image": false,
+    "verified": false
+  },
+  "p461": {
+    "name": "Gammelreita",
+    "has_image": false,
+    "verified": false
+  },
+  "p462": {
+    "name": "Hælufossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p463": {
+    "name": "Kvernbekkfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p464": {
+    "name": "Fossøyfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p465": {
+    "name": "Gravdefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p466": {
+    "name": "Døntefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p467": {
+    "name": "Tjønnfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p468": {
+    "name": "Stupen",
+    "has_image": false,
+    "verified": false
+  },
+  "p469": {
+    "name": "Sandåstoen",
+    "has_image": false,
+    "verified": false
+  },
+  "p470": {
+    "name": "Haugabotsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p471": {
+    "name": "Fossakroken",
+    "has_image": false,
+    "verified": false
+  },
+  "p472": {
+    "name": "Mongefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p473": {
+    "name": "Gudbrandsdalsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p474": {
+    "name": "Idlefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p475": {
+    "name": "Kleivafossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p476": {
+    "name": "Fossatromma",
+    "has_image": false,
+    "verified": false
+  },
+  "p477": {
+    "name": "Øyrafossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p478": {
+    "name": "Ismalfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p479": {
+    "name": "Seterhølen",
+    "has_image": false,
+    "verified": false
+  },
+  "p480": {
+    "name": "Søre Steintjønnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p481": {
+    "name": "Sivertdammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p482": {
+    "name": "Ormetjern",
+    "has_image": false,
+    "verified": false
+  },
+  "p483": {
+    "name": "Lintjønna",
+    "has_image": false,
+    "verified": false
+  },
+  "p484": {
+    "name": "Vetletjørni",
+    "has_image": false,
+    "verified": false
+  },
+  "p485": {
+    "name": "Sløtatjernet",
+    "has_image": false,
+    "verified": false
+  },
+  "p486": {
+    "name": "Nørdre Steintjønnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p487": {
+    "name": "Gututjørnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p488": {
+    "name": "Øvre Røytjern",
+    "has_image": false,
+    "verified": false
+  },
+  "p489": {
+    "name": "Kjerringvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p490": {
+    "name": "Øvre Bergetjønna",
+    "has_image": false,
+    "verified": false
+  },
+  "p491": {
+    "name": "Vikadalsvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p492": {
+    "name": "Berdalsvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p493": {
+    "name": "Lusetjernet",
+    "has_image": false,
+    "verified": false
+  },
+  "p494": {
+    "name": "Hallsettjønna",
+    "has_image": false,
+    "verified": false
+  },
+  "p495": {
+    "name": "Langevatn",
+    "has_image": false,
+    "verified": false
+  },
+  "p496": {
+    "name": "Trytetjern",
+    "has_image": false,
+    "verified": false
+  },
+  "p497": {
+    "name": "Kvannebakktjerne",
+    "has_image": false,
+    "verified": false
+  },
+  "p498": {
+    "name": "Butjønne",
+    "has_image": false,
+    "verified": false
+  },
+  "p499": {
+    "name": "Bakkvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p500": {
+    "name": "Assvaldsvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p501": {
+    "name": "Kroktjønna",
+    "has_image": false,
+    "verified": false
+  },
+  "p502": {
+    "name": "Øvre Snelletjern",
+    "has_image": false,
+    "verified": false
+  },
+  "p503": {
+    "name": "Stormyrtjønnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p504": {
+    "name": "Torvikvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p505": {
+    "name": "Ovadalsvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p506": {
+    "name": "Midtvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p507": {
+    "name": "Litltjønna",
+    "has_image": false,
+    "verified": false
+  },
+  "p508": {
+    "name": "Litløyvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p509": {
+    "name": "Hatlatjørna",
+    "has_image": false,
+    "verified": false
+  },
+  "p510": {
+    "name": "Ralletjern",
+    "has_image": false,
+    "verified": false
+  },
+  "p511": {
+    "name": "Orvillingen",
+    "has_image": false,
+    "verified": false
+  },
+  "p512": {
+    "name": "Vinddalsvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p513": {
+    "name": "Lona",
+    "has_image": false,
+    "verified": false
+  },
+  "p514": {
+    "name": "Embretsgardtjerne",
+    "has_image": false,
+    "verified": false
+  },
+  "p515": {
+    "name": "Gilsvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p516": {
+    "name": "Heilstuguvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p517": {
+    "name": "Håkontjern",
+    "has_image": false,
+    "verified": false
+  },
+  "p518": {
+    "name": "Nølegmanntjernet",
+    "has_image": false,
+    "verified": false
+  },
+  "p519": {
+    "name": "Fresketjønnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p520": {
+    "name": "Heimdalsvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p521": {
+    "name": "Simla",
+    "has_image": false,
+    "verified": false
+  },
+  "p522": {
+    "name": "Østre Vikbutjønna",
+    "has_image": false,
+    "verified": false
+  },
+  "p523": {
+    "name": "Mefjellsvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p524": {
+    "name": "Guttormstjønne",
+    "has_image": false,
+    "verified": false
+  },
+  "p525": {
+    "name": "Kummen",
+    "has_image": false,
+    "verified": false
+  },
+  "p526": {
+    "name": "Røykeskålvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p527": {
+    "name": "Litlslættestjønna",
+    "has_image": false,
+    "verified": false
+  },
+  "p528": {
+    "name": "Krongeltjørni",
+    "has_image": false,
+    "verified": false
+  },
+  "p529": {
+    "name": "Stabbeskaret",
+    "has_image": false,
+    "verified": false
+  },
+  "p530": {
+    "name": "Soggebrua",
+    "has_image": false,
+    "verified": false
+  },
+  "p531": {
+    "name": "Korsmyra",
+    "has_image": false,
+    "verified": false
+  },
+  "p532": {
+    "name": "Krunesfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p533": {
+    "name": "Bålhuset",
+    "has_image": false,
+    "verified": false
+  },
+  "p534": {
+    "name": "Ørnesvingen",
+    "has_image": false,
+    "verified": false
+  },
+  "p535": {
+    "name": "Kleivahammaren",
+    "has_image": false,
+    "verified": false
+  },
+  "p536": {
+    "name": "Irmahytta",
+    "has_image": false,
+    "verified": false
+  },
+  "p537": {
+    "name": "Slottet",
+    "has_image": false,
+    "verified": false
+  },
+  "p538": {
+    "name": "Hosetlia",
+    "has_image": false,
+    "verified": false
+  },
+  "p539": {
+    "name": "Skårhåmmåren",
+    "has_image": false,
+    "verified": false
+  },
+  "p540": {
+    "name": "Strætasfjellet",
+    "has_image": false,
+    "verified": false
+  },
+  "p541": {
+    "name": "Pavan",
+    "has_image": false,
+    "verified": false
+  },
+  "p542": {
+    "name": "Flaskå",
+    "has_image": false,
+    "verified": false
+  },
+  "p543": {
+    "name": "Hundkjerka",
+    "has_image": false,
+    "verified": false
+  },
+  "p544": {
+    "name": "Øyungskuven",
+    "has_image": false,
+    "verified": false
+  },
+  "p545": {
+    "name": "Snauskallen",
+    "has_image": false,
+    "verified": false
+  },
+  "p546": {
+    "name": "Raudsandberget",
+    "has_image": false,
+    "verified": false
+  },
+  "p547": {
+    "name": "Storenipa",
+    "has_image": false,
+    "verified": false
+  },
+  "p548": {
+    "name": "Varden",
+    "has_image": false,
+    "verified": false
+  },
+  "p549": {
+    "name": "Segalstadsæterkampen",
+    "has_image": false,
+    "verified": false
+  },
+  "p550": {
+    "name": "Skarvan",
+    "has_image": false,
+    "verified": false
+  },
+  "p551": {
+    "name": "Ølemannbenken",
+    "has_image": false,
+    "verified": false
+  },
+  "p552": {
+    "name": "Dalestølen utsiktspunkt",
+    "has_image": false,
+    "verified": false
+  },
+  "p553": {
+    "name": "Synsåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p554": {
+    "name": "Tørråsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p555": {
+    "name": "Svarthammaren",
+    "has_image": false,
+    "verified": false
+  },
+  "p556": {
+    "name": "Storafjellet utsiktspunkt",
+    "has_image": false,
+    "verified": false
+  },
+  "p557": {
+    "name": "Glomnesfossen utsiktspunkt",
+    "has_image": false,
+    "verified": false
+  },
+  "p558": {
+    "name": "Storekvilet",
+    "has_image": false,
+    "verified": false
+  },
+  "p559": {
+    "name": "Brandbustrønde",
+    "has_image": false,
+    "verified": false
+  },
+  "p560": {
+    "name": "Kløvningadn",
+    "has_image": false,
+    "verified": false
+  },
+  "p561": {
+    "name": "Pålssanden",
+    "has_image": false,
+    "verified": false
+  },
+  "p562": {
+    "name": "Søvelsteinsanden",
+    "has_image": false,
+    "verified": false
+  },
+  "p563": {
+    "name": "Boligvika Badeplass",
+    "has_image": false,
+    "verified": false
+  },
+  "p564": {
+    "name": "Kriksvika",
+    "has_image": false,
+    "verified": false
+  },
+  "p565": {
+    "name": "Eiesand",
+    "has_image": false,
+    "verified": false
+  },
+  "p566": {
+    "name": "Kjemsjø",
+    "has_image": false,
+    "verified": false
+  },
+  "p567": {
+    "name": "Klokkarstranda",
+    "has_image": false,
+    "verified": false
+  },
+  "p568": {
+    "name": "Korsvika",
+    "has_image": false,
+    "verified": false
+  },
+  "p569": {
+    "name": "Brænnebukta",
+    "has_image": false,
+    "verified": false
+  },
+  "p570": {
+    "name": "Ringvebukta",
+    "has_image": false,
+    "verified": false
+  },
+  "p571": {
+    "name": "Skjellbreia",
+    "has_image": false,
+    "verified": false
+  },
+  "p572": {
+    "name": "Øysanden",
+    "has_image": false,
+    "verified": false
+  },
+  "p573": {
+    "name": "Kalkstranda",
+    "has_image": false,
+    "verified": false
+  },
+  "p574": {
+    "name": "Blimsanden",
+    "has_image": false,
+    "verified": false
+  },
+  "p575": {
+    "name": "Gjerdesanden",
+    "has_image": false,
+    "verified": false
+  },
+  "p576": {
+    "name": "Korsvollstranda",
+    "has_image": false,
+    "verified": false
+  },
+  "p577": {
+    "name": "Osnesanden",
+    "has_image": false,
+    "verified": false
+  },
+  "p578": {
+    "name": "Ulsteinsanden",
+    "has_image": false,
+    "verified": false
+  },
+  "p579": {
+    "name": "Krokåttbekken",
+    "has_image": false,
+    "verified": false
+  },
+  "p580": {
+    "name": "Bergsøysundbrua",
+    "has_image": false,
+    "verified": false
+  },
+  "p581": {
+    "name": "Gjemnessundbrua",
+    "has_image": false,
+    "verified": false
+  },
+  "p582": {
+    "name": "Svalåsen rasteplass",
+    "has_image": false,
+    "verified": false
+  },
+  "p583": {
+    "name": "Krokatbekkbue",
+    "has_image": false,
+    "verified": false
+  },
+  "p584": {
+    "name": "Hola",
+    "has_image": false,
+    "verified": false
+  },
+  "p585": {
+    "name": "Birkebeiner kilden",
+    "has_image": false,
+    "verified": false
+  },
+  "p586": {
+    "name": "St. Olavskilden",
+    "has_image": false,
+    "verified": false
+  },
+  "p587": {
+    "name": "St. Olavskilden på Dovre",
+    "has_image": false,
+    "verified": false
+  },
+  "p588": {
+    "name": "Hopakjelda",
+    "has_image": false,
+    "verified": false
+  },
+  "p589": {
+    "name": "Bjørns kilde",
+    "has_image": false,
+    "verified": false
+  },
+  "p590": {
+    "name": "Dølkjøylla",
+    "has_image": false,
+    "verified": false
+  },
+  "p591": {
+    "name": "Trollkjelda",
+    "has_image": false,
+    "verified": false
+  },
+  "p592": {
+    "name": "Vasstrone",
+    "has_image": false,
+    "verified": false
+  },
+  "p593": {
+    "name": "Elgkjelda",
+    "has_image": false,
+    "verified": false
+  },
+  "p594": {
+    "name": "Steinkjelda",
+    "has_image": false,
+    "verified": false
+  },
+  "p595": {
+    "name": "Doktorkjelda",
+    "has_image": false,
+    "verified": false
+  },
+  "p596": {
+    "name": "Rosemaries kilde",
+    "has_image": false,
+    "verified": false
+  },
+  "p597": {
+    "name": "Bjørkkjelda",
+    "has_image": false,
+    "verified": false
+  },
+  "p598": {
+    "name": "Didrikskjelda",
+    "has_image": false,
+    "verified": false
+  },
+  "p599": {
+    "name": "Stalheimskleivi",
+    "has_image": false,
+    "verified": false
+  },
+  "p600": {
+    "name": "Vetlahelvete",
+    "has_image": false,
+    "verified": false
+  },
+  "p601": {
+    "name": "Golsjuvet",
+    "has_image": false,
+    "verified": false
+  },
+  "p602": {
+    "name": "Lygnstøylvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p603": {
+    "name": "Helvete Jettegrytene / Potholes",
+    "has_image": false,
+    "verified": false
+  },
+  "p604": {
+    "name": "Bøverfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p605": {
+    "name": "Tegningfallet",
+    "has_image": false,
+    "verified": false
+  },
+  "p606": {
+    "name": "Steinparken",
+    "has_image": false,
+    "verified": false
+  },
+  "p607": {
+    "name": "Magalaupet",
+    "has_image": false,
+    "verified": false
+  },
+  "p608": {
+    "name": "Jettegrytene ved Lona",
+    "has_image": false,
+    "verified": false
+  },
+  "p609": {
+    "name": "Dødisgropene",
+    "has_image": false,
+    "verified": false
+  },
+  "p610": {
+    "name": "Grønnvollsteinen",
+    "has_image": false,
+    "verified": false
+  },
+  "p611": {
+    "name": "Trollkyrkja",
+    "has_image": false,
+    "verified": false
+  },
+  "p612": {
+    "name": "Trollkyrkja – Oppdal",
+    "has_image": false,
+    "verified": false
+  },
+  "p613": {
+    "name": "Skjonghellaren",
+    "has_image": false,
+    "verified": false
+  },
+  "p614": {
+    "name": "Bremsneshula",
+    "has_image": false,
+    "verified": false
+  },
+  "p615": {
+    "name": "Jutulholet",
+    "has_image": false,
+    "verified": false
+  },
+  "p616": {
+    "name": "Jøtulomnen",
+    "has_image": false,
+    "verified": false
+  },
+  "p617": {
+    "name": "Kaldehola",
+    "has_image": false,
+    "verified": false
+  },
+  "p618": {
+    "name": "Kvitflekken",
+    "has_image": false,
+    "verified": false
+  },
+  "p619": {
+    "name": "Romsdalshornet",
+    "has_image": false,
+    "verified": false
+  },
+  "p620": {
+    "name": "Store Venjetinden",
+    "has_image": false,
+    "verified": false
+  },
+  "p621": {
+    "name": "Salhøa",
+    "has_image": false,
+    "verified": false
+  },
+  "p622": {
+    "name": "Skarven",
+    "has_image": false,
+    "verified": false
+  },
+  "p623": {
+    "name": "Rjuptinden",
+    "has_image": false,
+    "verified": false
+  },
+  "p624": {
+    "name": "Heimre Rjuptinden",
+    "has_image": false,
+    "verified": false
+  },
+  "p625": {
+    "name": "Snarketinden",
+    "has_image": false,
+    "verified": false
+  },
+  "p626": {
+    "name": "Daurmålhaugen",
+    "has_image": false,
+    "verified": false
+  },
+  "p627": {
+    "name": "Vaffeltoppen",
+    "has_image": false,
+    "verified": false
+  },
+  "p628": {
+    "name": "Takseråsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p629": {
+    "name": "Øygardsåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p630": {
+    "name": "Hvalåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p631": {
+    "name": "Furukongen",
+    "has_image": false,
+    "verified": false
+  },
+  "p632": {
+    "name": "Ulleråsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p633": {
+    "name": "Påskedagsheia",
+    "has_image": false,
+    "verified": false
+  },
+  "p634": {
+    "name": "Trollefjell",
+    "has_image": false,
+    "verified": false
+  },
+  "p635": {
+    "name": "Åkerslia",
+    "has_image": false,
+    "verified": false
+  },
+  "p636": {
+    "name": "Gamphaugen",
+    "has_image": false,
+    "verified": false
+  },
+  "p637": {
+    "name": "Gjeddsjøberget",
+    "has_image": false,
+    "verified": false
+  },
+  "p638": {
+    "name": "Håberget",
+    "has_image": false,
+    "verified": false
+  },
+  "p639": {
+    "name": "Flisberget",
+    "has_image": false,
+    "verified": false
+  },
+  "p640": {
+    "name": "Nonshøa",
+    "has_image": false,
+    "verified": false
+  },
+  "p641": {
+    "name": "Ingebjørgsfjellet",
+    "has_image": false,
+    "verified": false
+  },
+  "p642": {
+    "name": "Holtane",
+    "has_image": false,
+    "verified": false
+  },
+  "p643": {
+    "name": "Kinnfokfjellet",
+    "has_image": false,
+    "verified": false
+  },
+  "p644": {
+    "name": "Greineggi",
+    "has_image": false,
+    "verified": false
+  },
+  "p645": {
+    "name": "Leirbotnnosi",
+    "has_image": false,
+    "verified": false
+  },
+  "p646": {
+    "name": "Martadalsnosi",
+    "has_image": false,
+    "verified": false
+  },
+  "p647": {
+    "name": "Sprangdalseggi",
+    "has_image": false,
+    "verified": false
+  },
+  "p648": {
+    "name": "Kolinosi",
+    "has_image": false,
+    "verified": false
+  },
+  "p649": {
+    "name": "Kalianoppknuvlen",
+    "has_image": false,
+    "verified": false
+  },
+  "p650": {
+    "name": "Gudfallknappen",
+    "has_image": false,
+    "verified": false
+  },
+  "p651": {
+    "name": "Knappa",
+    "has_image": false,
+    "verified": false
+  },
+  "p652": {
+    "name": "Batteriåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p653": {
+    "name": "Romsåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p654": {
+    "name": "Kråkåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p655": {
+    "name": "Falkenuten",
+    "has_image": false,
+    "verified": false
+  },
+  "p656": {
+    "name": "Brasfetnuten",
+    "has_image": false,
+    "verified": false
+  },
+  "p657": {
+    "name": "Kikkeråsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p658": {
+    "name": "Store Hiesten",
+    "has_image": false,
+    "verified": false
+  },
+  "p659": {
+    "name": "Østbyseterhøyda",
+    "has_image": false,
+    "verified": false
+  },
+  "p660": {
+    "name": "Kåsheia",
+    "has_image": false,
+    "verified": false
+  },
+  "p661": {
+    "name": "Måna",
+    "has_image": false,
+    "verified": false
+  },
+  "p662": {
+    "name": "Rønnomnibben",
+    "has_image": false,
+    "verified": false
+  },
+  "p663": {
+    "name": "Netten",
+    "has_image": false,
+    "verified": false
+  },
+  "p664": {
+    "name": "Velaus",
+    "has_image": false,
+    "verified": false
+  },
+  "p665": {
+    "name": "Solhomfjell",
+    "has_image": false,
+    "verified": false
+  },
+  "p666": {
+    "name": "Rakelstadfjellet",
+    "has_image": false,
+    "verified": false
+  },
+  "p667": {
+    "name": "Spydeberg varde",
+    "has_image": false,
+    "verified": false
+  },
+  "p668": {
+    "name": "Klompåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p669": {
+    "name": "Bjørnåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p670": {
+    "name": "Midtskogåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p671": {
+    "name": "Årosfjellet",
+    "has_image": false,
+    "verified": false
+  },
+  "p672": {
+    "name": "Tivoliåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p673": {
+    "name": "Lauvåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p674": {
+    "name": "Stikkvannskollen",
+    "has_image": false,
+    "verified": false
+  },
+  "p675": {
+    "name": "Dustadkollen",
+    "has_image": false,
+    "verified": false
+  },
+  "p676": {
+    "name": "Måsvasstind",
+    "has_image": false,
+    "verified": false
+  },
+  "p677": {
+    "name": "Viddefladen",
+    "has_image": false,
+    "verified": false
+  },
+  "p678": {
+    "name": "Ankerfjellet",
+    "has_image": false,
+    "verified": false
+  },
+  "p679": {
+    "name": "Lindesnes fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p680": {
+    "name": "Lista fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p681": {
+    "name": "Færder fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p682": {
+    "name": "Oksøy fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p683": {
+    "name": "Ryvingen fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p684": {
+    "name": "Marstein fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p685": {
+    "name": "Grønningen fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p686": {
+    "name": "Eigerøy fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p687": {
+    "name": "Hellisøy fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p688": {
+    "name": "Ryvarden fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p689": {
+    "name": "Torungen fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p690": {
+    "name": "Ona fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p691": {
+    "name": "Lille Torungen fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p692": {
+    "name": "Grip fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p693": {
+    "name": "Kvitsøy",
+    "has_image": false,
+    "verified": false
+  },
+  "p694": {
+    "name": "Utsira fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p695": {
+    "name": "Ulla fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p696": {
+    "name": "Obrestad fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p697": {
+    "name": "Hellevik Lighthouse (Range Rear)",
+    "has_image": false,
+    "verified": false
+  },
+  "p698": {
+    "name": "Skalmen fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p699": {
+    "name": "Svenner fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p700": {
+    "name": "Fulehuk fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p701": {
+    "name": "Tvistein fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p702": {
+    "name": "Langøytangen fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p703": {
+    "name": "Torbjørnskjær fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p704": {
+    "name": "Gullholmen fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p705": {
+    "name": "Stavernsodden fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p706": {
+    "name": "Molja fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p707": {
+    "name": "Homlungen fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p708": {
+    "name": "Jomfruland fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p709": {
+    "name": "Strømtangen fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p710": {
+    "name": "Struten fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p711": {
+    "name": "Strømtangen fyr – Kragerø",
+    "has_image": false,
+    "verified": false
+  },
+  "p712": {
+    "name": "Kavringen fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p713": {
+    "name": "Slevik",
+    "has_image": false,
+    "verified": false
+  },
+  "p714": {
+    "name": "Fløberg lykt",
+    "has_image": false,
+    "verified": false
+  },
+  "p715": {
+    "name": "Leirvik Fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p716": {
+    "name": "Tyneset Fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p717": {
+    "name": "Terningen fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p718": {
+    "name": "Fladholmen fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p719": {
+    "name": "Slåtterøy fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p720": {
+    "name": "Feistein fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p721": {
+    "name": "Litle Prestskjeret fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p722": {
+    "name": "Lyngør fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p723": {
+    "name": "Odderøya Fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p724": {
+    "name": "Hattholmen fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p725": {
+    "name": "Høgfallet",
+    "has_image": false,
+    "verified": false
+  },
+  "p726": {
+    "name": "Hovsfoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p727": {
+    "name": "Hensfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p728": {
+    "name": "Hattebergfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p729": {
+    "name": "Furebergsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p730": {
+    "name": "Sundefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p731": {
+    "name": "Skyrdalsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p732": {
+    "name": "Stødnafossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p733": {
+    "name": "Rønningsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p734": {
+    "name": "Grønmyrfallet",
+    "has_image": false,
+    "verified": false
+  },
+  "p735": {
+    "name": "Kongsbekkfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p736": {
+    "name": "Veslfallet",
+    "has_image": false,
+    "verified": false
+  },
+  "p737": {
+    "name": "Vetlefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p738": {
+    "name": "Brurasløret",
+    "has_image": false,
+    "verified": false
+  },
+  "p739": {
+    "name": "Gluterfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p740": {
+    "name": "Ljosurfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p741": {
+    "name": "Svartåsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p742": {
+    "name": "Skeidslåfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p743": {
+    "name": "Kyrfoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p744": {
+    "name": "Grønnmyrfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p745": {
+    "name": "Presten",
+    "has_image": false,
+    "verified": false
+  },
+  "p746": {
+    "name": "Ner Kvernfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p747": {
+    "name": "Kvislefoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p748": {
+    "name": "Brattfoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p749": {
+    "name": "Hagafossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p750": {
+    "name": "Kvåsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p751": {
+    "name": "Skrelifallan",
+    "has_image": false,
+    "verified": false
+  },
+  "p752": {
+    "name": "Glofossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p753": {
+    "name": "Furafalla",
+    "has_image": false,
+    "verified": false
+  },
+  "p754": {
+    "name": "Nedre Frysihjelfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p755": {
+    "name": "Bergføss",
+    "has_image": false,
+    "verified": false
+  },
+  "p756": {
+    "name": "Svae",
+    "has_image": false,
+    "verified": false
+  },
+  "p757": {
+    "name": "Skjerkefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p758": {
+    "name": "Bjorlofoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p759": {
+    "name": "Knarvestølfallet",
+    "has_image": false,
+    "verified": false
+  },
+  "p760": {
+    "name": "Røylandsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p761": {
+    "name": "Ruganfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p762": {
+    "name": "Fosshøgget",
+    "has_image": false,
+    "verified": false
+  },
+  "p763": {
+    "name": "Storstraum",
+    "has_image": false,
+    "verified": false
+  },
+  "p764": {
+    "name": "Fosshogget – Kviteseid",
+    "has_image": false,
+    "verified": false
+  },
+  "p765": {
+    "name": "Hallingbrufossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p766": {
+    "name": "Bråtaseterfoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p767": {
+    "name": "Langefoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p768": {
+    "name": "Fosserfoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p769": {
+    "name": "Julsrud foss",
+    "has_image": false,
+    "verified": false
+  },
+  "p770": {
+    "name": "Dritufoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p771": {
+    "name": "Storetorpfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p772": {
+    "name": "Sørdalsfoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p773": {
+    "name": "Svenstadånfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p774": {
+    "name": "Fentefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p775": {
+    "name": "Svarthola/Vistehålå",
+    "has_image": false,
+    "verified": false
+  },
+  "p776": {
+    "name": "Mikaelshulen",
+    "has_image": false,
+    "verified": false
+  },
+  "p777": {
+    "name": "Jarlshola",
+    "has_image": false,
+    "verified": false
+  },
+  "p778": {
+    "name": "Radiohola",
+    "has_image": false,
+    "verified": false
+  },
+  "p779": {
+    "name": "Mareminnehollet",
+    "has_image": false,
+    "verified": false
+  },
+  "p780": {
+    "name": "Røverhulene",
+    "has_image": false,
+    "verified": false
+  },
+  "p781": {
+    "name": "Milorghula",
+    "has_image": false,
+    "verified": false
+  },
+  "p782": {
+    "name": "Kjerringhula",
+    "has_image": false,
+    "verified": false
+  },
+  "p783": {
+    "name": "Wernerhula",
+    "has_image": false,
+    "verified": false
+  },
+  "p784": {
+    "name": "Tolvmannshula",
+    "has_image": false,
+    "verified": false
+  },
+  "p785": {
+    "name": "Finnpålstuggu",
+    "has_image": false,
+    "verified": false
+  },
+  "p786": {
+    "name": "Sigurd Slembe hola",
+    "has_image": false,
+    "verified": false
+  },
+  "p787": {
+    "name": "Svartahålå",
+    "has_image": false,
+    "verified": false
+  },
+  "p788": {
+    "name": "Grashålå",
+    "has_image": false,
+    "verified": false
+  },
+  "p789": {
+    "name": "Kjetil Rasks ur",
+    "has_image": false,
+    "verified": false
+  },
+  "p790": {
+    "name": "Ole Høylands hule",
+    "has_image": false,
+    "verified": false
+  },
+  "p791": {
+    "name": "Svarttjernsgrotta",
+    "has_image": false,
+    "verified": false
+  },
+  "p792": {
+    "name": "Tyskerhula",
+    "has_image": false,
+    "verified": false
+  },
+  "p793": {
+    "name": "Busopphola",
+    "has_image": false,
+    "verified": false
+  },
+  "p794": {
+    "name": "Franskhellaren",
+    "has_image": false,
+    "verified": false
+  },
+  "p795": {
+    "name": "Hattehulene",
+    "has_image": false,
+    "verified": false
+  },
+  "p796": {
+    "name": "MILORG Våpenlager fra 2.verdenskrig",
+    "has_image": false,
+    "verified": false
+  },
+  "p797": {
+    "name": "Rottenikkens hule",
+    "has_image": false,
+    "verified": false
+  },
+  "p798": {
+    "name": "Bjødnahiet",
+    "has_image": false,
+    "verified": false
+  },
+  "p799": {
+    "name": "Bjørnehulen",
+    "has_image": false,
+    "verified": false
+  },
+  "p800": {
+    "name": "Smiehålå",
+    "has_image": false,
+    "verified": false
+  },
+  "p801": {
+    "name": "Røverhula",
+    "has_image": false,
+    "verified": false
+  },
+  "p802": {
+    "name": "Helleramshula",
+    "has_image": false,
+    "verified": false
+  },
+  "p803": {
+    "name": "Fleske-Lars' sommerhule",
+    "has_image": false,
+    "verified": false
+  },
+  "p804": {
+    "name": "Tjuvenborghula",
+    "has_image": false,
+    "verified": false
+  },
+  "p805": {
+    "name": "Milorghula – Lørenskog",
+    "has_image": false,
+    "verified": false
+  },
+  "p806": {
+    "name": "Nilsehula",
+    "has_image": false,
+    "verified": false
+  },
+  "p807": {
+    "name": "Gålo i Gullberg",
+    "has_image": false,
+    "verified": false
+  },
+  "p808": {
+    "name": "Dragens hule",
+    "has_image": false,
+    "verified": false
+  },
+  "p809": {
+    "name": "Lågåsmyrhelleren",
+    "has_image": false,
+    "verified": false
+  },
+  "p810": {
+    "name": "Hestneshola",
+    "has_image": false,
+    "verified": false
+  },
+  "p811": {
+    "name": "Holet",
+    "has_image": false,
+    "verified": false
+  },
+  "p812": {
+    "name": "Hedlebergshidleren",
+    "has_image": false,
+    "verified": false
+  },
+  "p813": {
+    "name": "Tjuvolahula",
+    "has_image": false,
+    "verified": false
+  },
+  "p814": {
+    "name": "Veslegruva",
+    "has_image": false,
+    "verified": false
+  },
+  "p815": {
+    "name": "Solbergfoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p816": {
+    "name": "Zakkariasdammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p817": {
+    "name": "Ringedalsdammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p818": {
+    "name": "Elvåga dam",
+    "has_image": false,
+    "verified": false
+  },
+  "p819": {
+    "name": "Breisjødammene",
+    "has_image": false,
+    "verified": false
+  },
+  "p820": {
+    "name": "Alunsjødammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p821": {
+    "name": "Sandungsdammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p822": {
+    "name": "Myrdammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p823": {
+    "name": "Skådammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p824": {
+    "name": "Osdammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p825": {
+    "name": "Osen dam",
+    "has_image": false,
+    "verified": false
+  },
+  "p826": {
+    "name": "Baklidammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p827": {
+    "name": "Kobberdammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p828": {
+    "name": "Holstdammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p829": {
+    "name": "Lykkjdammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p830": {
+    "name": "Nedrediket",
+    "has_image": false,
+    "verified": false
+  },
+  "p831": {
+    "name": "Nyediket",
+    "has_image": false,
+    "verified": false
+  },
+  "p832": {
+    "name": "Grotjønnstemmen",
+    "has_image": false,
+    "verified": false
+  },
+  "p833": {
+    "name": "Kloppavassteppinga",
+    "has_image": false,
+    "verified": false
+  },
+  "p834": {
+    "name": "Kleivdammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p835": {
+    "name": "Flatsetdammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p836": {
+    "name": "Storåna",
+    "has_image": false,
+    "verified": false
+  },
+  "p837": {
+    "name": "Svarkedammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p838": {
+    "name": "Flisflodammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p839": {
+    "name": "Høgåsdammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p840": {
+    "name": "Klasdammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p841": {
+    "name": "Skovholtdammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p842": {
+    "name": "Tunsbergdals dam",
+    "has_image": false,
+    "verified": false
+  },
+  "p843": {
+    "name": "Styggevassdammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p844": {
+    "name": "Smådøla",
+    "has_image": false,
+    "verified": false
+  },
+  "p845": {
+    "name": "Camera Obscura",
+    "has_image": false,
+    "verified": false
+  },
+  "p846": {
+    "name": "Jettegryter",
+    "has_image": false,
+    "verified": false
+  },
+  "p847": {
+    "name": "Jettegryter – Fredrikstad",
+    "has_image": false,
+    "verified": false
+  },
+  "p848": {
+    "name": "Hunn (Steinringfeltet)",
+    "has_image": false,
+    "verified": false
+  },
+  "p849": {
+    "name": "Stalheimsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p850": {
+    "name": "KNM Utstein",
+    "has_image": false,
+    "verified": false
+  },
+  "p851": {
+    "name": "Steintippen",
+    "has_image": false,
+    "verified": false
+  },
+  "p852": {
+    "name": "Jotulstein",
+    "has_image": false,
+    "verified": false
+  },
+  "p853": {
+    "name": "Partisanersteinen",
+    "has_image": false,
+    "verified": false
+  },
+  "p854": {
+    "name": "Oddmundsteinen",
+    "has_image": false,
+    "verified": false
+  },
+  "p855": {
+    "name": "Old Strynefjell Mountain Road",
+    "has_image": false,
+    "verified": false
+  },
+  "p856": {
+    "name": "Hjørundfjorden",
+    "has_image": false,
+    "verified": false
+  },
+  "p857": {
+    "name": "Jettegryter – Sunndal",
+    "has_image": false,
+    "verified": false
+  },
+  "p858": {
+    "name": "Jettegryte",
+    "has_image": false,
+    "verified": false
+  },
+  "p859": {
+    "name": "Ritlandskrateret",
+    "has_image": false,
+    "verified": false
+  },
+  "p860": {
+    "name": "Jettegryter – Sør-Aurdal",
+    "has_image": false,
+    "verified": false
+  },
+  "p861": {
+    "name": "Syngjarstein",
+    "has_image": false,
+    "verified": false
+  },
+  "p862": {
+    "name": "Jettegryte – Kvinesdal",
+    "has_image": false,
+    "verified": false
+  },
+  "p863": {
+    "name": "Gloppedalsura",
+    "has_image": false,
+    "verified": false
+  },
+  "p864": {
+    "name": "Bruresteinen",
+    "has_image": false,
+    "verified": false
+  },
+  "p865": {
+    "name": "Klovsteinen",
+    "has_image": false,
+    "verified": false
+  },
+  "p866": {
+    "name": "Jettegrytene",
+    "has_image": false,
+    "verified": false
+  },
+  "p867": {
+    "name": "Jettegryte – Skien",
+    "has_image": false,
+    "verified": false
+  },
+  "p868": {
+    "name": "Huk",
+    "has_image": false,
+    "verified": false
+  },
+  "p869": {
+    "name": "Fippeviga",
+    "has_image": false,
+    "verified": false
+  },
+  "p870": {
+    "name": "Braneset",
+    "has_image": false,
+    "verified": false
+  },
+  "p871": {
+    "name": "Saueviga",
+    "has_image": false,
+    "verified": false
+  },
+  "p872": {
+    "name": "Farvannet badeplass",
+    "has_image": false,
+    "verified": false
+  },
+  "p873": {
+    "name": "Klaveness Stranden",
+    "has_image": false,
+    "verified": false
+  },
+  "p874": {
+    "name": "Vassløkka",
+    "has_image": false,
+    "verified": false
+  },
+  "p875": {
+    "name": "Samhold",
+    "has_image": false,
+    "verified": false
+  },
+  "p876": {
+    "name": "Humlekjærstranda",
+    "has_image": false,
+    "verified": false
+  },
+  "p877": {
+    "name": "Korset",
+    "has_image": false,
+    "verified": false
+  },
+  "p878": {
+    "name": "Storvika",
+    "has_image": false,
+    "verified": false
+  },
+  "p879": {
+    "name": "Kollevåg badestrand",
+    "has_image": false,
+    "verified": false
+  },
+  "p880": {
+    "name": "Kollavågen",
+    "has_image": false,
+    "verified": false
+  },
+  "p881": {
+    "name": "Vesletjern badeplass",
+    "has_image": false,
+    "verified": false
+  },
+  "p882": {
+    "name": "Raudøra",
+    "has_image": false,
+    "verified": false
+  },
+  "p883": {
+    "name": "Sponavikjo Strand",
+    "has_image": false,
+    "verified": false
+  },
+  "p884": {
+    "name": "Aslaksvikjo",
+    "has_image": false,
+    "verified": false
+  },
+  "p885": {
+    "name": "Reksafjæra",
+    "has_image": false,
+    "verified": false
+  },
+  "p886": {
+    "name": "Alværnbukta",
+    "has_image": false,
+    "verified": false
+  },
+  "p887": {
+    "name": "Sørstrand",
+    "has_image": false,
+    "verified": false
+  },
+  "p888": {
+    "name": "Midtsandtangen friluftsområde",
+    "has_image": false,
+    "verified": false
+  },
+  "p889": {
+    "name": "Tjeldeneset",
+    "has_image": false,
+    "verified": false
+  },
+  "p890": {
+    "name": "Storsanden",
+    "has_image": false,
+    "verified": false
+  },
+  "p891": {
+    "name": "Horremstranda",
+    "has_image": false,
+    "verified": false
+  },
+  "p892": {
+    "name": "Lausundsanden",
+    "has_image": false,
+    "verified": false
+  },
+  "p893": {
+    "name": "Havsyn",
+    "has_image": false,
+    "verified": false
+  },
+  "p894": {
+    "name": "Merkestrengen",
+    "has_image": false,
+    "verified": false
+  },
+  "p895": {
+    "name": "Bustingen",
+    "has_image": false,
+    "verified": false
+  },
+  "p896": {
+    "name": "Holtvollen",
+    "has_image": false,
+    "verified": false
+  },
+  "p897": {
+    "name": "Vollshaugen",
+    "has_image": false,
+    "verified": false
+  },
+  "p898": {
+    "name": "Svulluskaret",
+    "has_image": false,
+    "verified": false
+  },
+  "p899": {
+    "name": "Bruraskaret",
+    "has_image": false,
+    "verified": false
+  },
+  "p900": {
+    "name": "Tarloysa",
+    "has_image": false,
+    "verified": false
+  },
+  "p901": {
+    "name": "Vindsåshornet",
+    "has_image": false,
+    "verified": false
+  },
+  "p902": {
+    "name": "Smørstakken",
+    "has_image": false,
+    "verified": false
+  },
+  "p903": {
+    "name": "Lysenuten",
+    "has_image": false,
+    "verified": false
+  },
+  "p904": {
+    "name": "Myfallet – mittlerer Aussichtspunkt",
+    "has_image": false,
+    "verified": false
+  },
+  "p905": {
+    "name": "Myfallet – unterer Aussichtspunkt",
+    "has_image": false,
+    "verified": false
+  },
+  "p906": {
+    "name": "Myfallet – oberer Aussichtspunkt",
+    "has_image": false,
+    "verified": false
+  },
+  "p907": {
+    "name": "Høgåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p908": {
+    "name": "Finsådammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p909": {
+    "name": "Gloppefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p910": {
+    "name": "Høgenut",
+    "has_image": false,
+    "verified": false
+  },
+  "p911": {
+    "name": "Ilene Fugletårn",
+    "has_image": false,
+    "verified": false
+  },
+  "p912": {
+    "name": "Nieidagorži - Pikefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p913": {
+    "name": "Kalvedalsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p914": {
+    "name": "Gamforsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p915": {
+    "name": "Valnesforsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p916": {
+    "name": "Durmålsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p917": {
+    "name": "Bartageavŋŋis",
+    "has_image": false,
+    "verified": false
+  },
+  "p918": {
+    "name": "Rohčiguoika",
+    "has_image": false,
+    "verified": false
+  },
+  "p919": {
+    "name": "Bajit Guorgu",
+    "has_image": false,
+    "verified": false
+  },
+  "p920": {
+    "name": "Fuldalsfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p921": {
+    "name": "Svarvarfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p922": {
+    "name": "Seterfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p923": {
+    "name": "Skvallfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p924": {
+    "name": "Moafossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p925": {
+    "name": "Andfinnfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p926": {
+    "name": "Hyttfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p927": {
+    "name": "Ormsetfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p928": {
+    "name": "Lauvlifossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p929": {
+    "name": "Selforsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p930": {
+    "name": "Lillefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p931": {
+    "name": "Skallelvporten",
+    "has_image": false,
+    "verified": false
+  },
+  "p932": {
+    "name": "Falkorfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p933": {
+    "name": "Andrefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p934": {
+    "name": "Hengebrofossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p935": {
+    "name": "Fjerdefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p936": {
+    "name": "Tredjefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p937": {
+    "name": "Førstefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p938": {
+    "name": "Benserafossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p939": {
+    "name": "Næringsforsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p940": {
+    "name": "Sagforsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p941": {
+    "name": "Bjynnhaugforsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p942": {
+    "name": "Skarforsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p943": {
+    "name": "Sprutforsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p944": {
+    "name": "Spruten",
+    "has_image": false,
+    "verified": false
+  },
+  "p945": {
+    "name": "Agnetforsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p946": {
+    "name": "Holmfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p947": {
+    "name": "Hærfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p948": {
+    "name": "Kløftafossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p949": {
+    "name": "Granfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p950": {
+    "name": "Nedre Markafossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p951": {
+    "name": "Hofossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p952": {
+    "name": "Vollafossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p953": {
+    "name": "Svartfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p954": {
+    "name": "Sagholet",
+    "has_image": false,
+    "verified": false
+  },
+  "p955": {
+    "name": "Rinnfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p956": {
+    "name": "Lappgammforsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p957": {
+    "name": "Austerdalsforsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p958": {
+    "name": "Mølnforsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p959": {
+    "name": "Tjuvdalsforsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p960": {
+    "name": "Mølnfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p961": {
+    "name": "Fridalforsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p962": {
+    "name": "Vullesámmolgorži",
+    "has_image": false,
+    "verified": false
+  },
+  "p963": {
+    "name": "Botnjegorži",
+    "has_image": false,
+    "verified": false
+  },
+  "p964": {
+    "name": "Gumpegorži",
+    "has_image": false,
+    "verified": false
+  },
+  "p965": {
+    "name": "Láillágorži",
+    "has_image": false,
+    "verified": false
+  },
+  "p966": {
+    "name": "Ceakkoguoika",
+    "has_image": false,
+    "verified": false
+  },
+  "p967": {
+    "name": "Ceakkoguoika – Kautokeino",
+    "has_image": false,
+    "verified": false
+  },
+  "p968": {
+    "name": "Šuorpmogorži",
+    "has_image": false,
+    "verified": false
+  },
+  "p969": {
+    "name": "Gievdneguoika",
+    "has_image": false,
+    "verified": false
+  },
+  "p970": {
+    "name": "Virdneguoika",
+    "has_image": false,
+    "verified": false
+  },
+  "p971": {
+    "name": "Holmfossen – Sør-Varanger",
+    "has_image": false,
+    "verified": false
+  },
+  "p972": {
+    "name": "Munkelvfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p973": {
+    "name": "Liafossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p974": {
+    "name": "Gammelkvennfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p975": {
+    "name": "Hyllfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p976": {
+    "name": "Perholfossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p977": {
+    "name": "Rostadforsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p978": {
+    "name": "Brufossan",
+    "has_image": false,
+    "verified": false
+  },
+  "p979": {
+    "name": "Kråkselmyrfossan",
+    "has_image": false,
+    "verified": false
+  },
+  "p980": {
+    "name": "Njallajåkgårttje",
+    "has_image": false,
+    "verified": false
+  },
+  "p981": {
+    "name": "Dettforsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p982": {
+    "name": "Norges geografiske midtpunkt",
+    "has_image": false,
+    "verified": false
+  },
+  "p983": {
+    "name": "Mokk Gruver",
+    "has_image": false,
+    "verified": false
+  },
+  "p984": {
+    "name": "Watherfall",
+    "has_image": false,
+    "verified": false
+  },
+  "p985": {
+    "name": "Oftenåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p986": {
+    "name": "Prestefjellet",
+    "has_image": false,
+    "verified": false
+  },
+  "p987": {
+    "name": "Jaras Gruppen utkikkspunkt",
+    "has_image": false,
+    "verified": false
+  },
+  "p988": {
+    "name": "Våttåheia",
+    "has_image": false,
+    "verified": false
+  },
+  "p989": {
+    "name": "Bjørumsklumpen",
+    "has_image": false,
+    "verified": false
+  },
+  "p990": {
+    "name": "Jakobselva bird hide",
+    "has_image": false,
+    "verified": false
+  },
+  "p991": {
+    "name": "Melkevarden",
+    "has_image": false,
+    "verified": false
+  },
+  "p992": {
+    "name": "Torsvarden",
+    "has_image": false,
+    "verified": false
+  },
+  "p993": {
+    "name": "Birdwatching hide",
+    "has_image": false,
+    "verified": false
+  },
+  "p994": {
+    "name": "Steilnes bird hide",
+    "has_image": false,
+    "verified": false
+  },
+  "p995": {
+    "name": "Klondyke",
+    "has_image": false,
+    "verified": false
+  },
+  "p996": {
+    "name": "Domen",
+    "has_image": false,
+    "verified": false
+  },
+  "p997": {
+    "name": "Kausmofjæra fugletårn",
+    "has_image": false,
+    "verified": false
+  },
+  "p998": {
+    "name": "Verdalsraset",
+    "has_image": false,
+    "verified": false
+  },
+  "p999": {
+    "name": "Marsteinsvola",
+    "has_image": false,
+    "verified": false
+  },
+  "p1000": {
+    "name": "Porten",
+    "has_image": false,
+    "verified": false
+  },
+  "p1001": {
+    "name": "Høgkammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1002": {
+    "name": "Verdals geografiske midtpunkt",
+    "has_image": false,
+    "verified": false
+  },
+  "p1003": {
+    "name": "96-høyden",
+    "has_image": false,
+    "verified": false
+  },
+  "p1004": {
+    "name": "Olstolen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1005": {
+    "name": "IngjalshåLån",
+    "has_image": false,
+    "verified": false
+  },
+  "p1006": {
+    "name": "Drammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1007": {
+    "name": "Panorama",
+    "has_image": false,
+    "verified": false
+  },
+  "p1008": {
+    "name": "Kaukarberget",
+    "has_image": false,
+    "verified": false
+  },
+  "p1009": {
+    "name": "On south island",
+    "has_image": false,
+    "verified": false
+  },
+  "p1010": {
+    "name": "Aussicht am See bei Å",
+    "has_image": false,
+    "verified": false
+  },
+  "p1011": {
+    "name": "Andstabben 512 m osl",
+    "has_image": false,
+    "verified": false
+  },
+  "p1012": {
+    "name": "kollfjelle",
+    "has_image": false,
+    "verified": false
+  },
+  "p1013": {
+    "name": "Sørvågen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1014": {
+    "name": "Reinehalsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1015": {
+    "name": "Preikstolen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1016": {
+    "name": "Kings View",
+    "has_image": false,
+    "verified": false
+  },
+  "p1017": {
+    "name": "Ettertanken",
     "has_image": true,
     "verified": true,
     "verification_score": 4.0,
     "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Trolltunga%2C_Odda%2C_Norway_%28Unsplash_Xj8TdoAbmos%29.jpg",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Trolltunga%2C_Odda%2C_Norway_%28Unsplash_Xj8TdoAbmos%29.jpg/500px-Trolltunga%2C_Odda%2C_Norway_%28Unsplash_Xj8TdoAbmos%29.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Trolltunga,_Odda,_Norway_(Unsplash_Xj8TdoAbmos).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Ettertanken%2C_R%C3%B8st_2024.jpg",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Ettertanken%2C_R%C3%B8st_2024.jpg/500px-Ettertanken%2C_R%C3%B8st_2024.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Ettertanken,_R%C3%B8st_2024.jpg",
     "license": "cc0",
     "attribution_required": false
   },
+  "p1018": {
+    "name": "Varde",
+    "has_image": false,
+    "verified": false
+  },
+  "p1019": {
+    "name": "Nonshaugen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1020": {
+    "name": "Guristraumen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1021": {
+    "name": "Laksforsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1022": {
+    "name": "Reinesaksla utsiktspunkt",
+    "has_image": false,
+    "verified": false
+  },
+  "p1023": {
+    "name": "Major Hyldmos Plass",
+    "has_image": false,
+    "verified": false
+  },
+  "p1024": {
+    "name": "Øvre Fjellheisstation",
+    "has_image": false,
+    "verified": false
+  },
+  "p1025": {
+    "name": "Krona",
+    "has_image": false,
+    "verified": false
+  },
+  "p1026": {
+    "name": "Hikkelen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1027": {
+    "name": "Vattind",
+    "has_image": false,
+    "verified": false
+  },
+  "p1028": {
+    "name": "Silfar Canyon",
+    "has_image": false,
+    "verified": false
+  },
+  "p1029": {
+    "name": "Blue Lake",
+    "has_image": false,
+    "verified": false
+  },
+  "p1030": {
+    "name": "Rødhammaren",
+    "has_image": false,
+    "verified": false
+  },
+  "p1031": {
+    "name": "Klungbakkan",
+    "has_image": false,
+    "verified": false
+  },
+  "p1032": {
+    "name": "Aldon",
+    "has_image": false,
+    "verified": false
+  },
+  "p1033": {
+    "name": "Biotope.no shelter",
+    "has_image": false,
+    "verified": false
+  },
+  "p1034": {
+    "name": "Henrikkafosen – Aussichtspunkt",
+    "has_image": false,
+    "verified": false
+  },
+  "p1035": {
+    "name": "Bokkhaugen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1036": {
+    "name": "Birdwatching spot",
+    "has_image": false,
+    "verified": false
+  },
+  "p1037": {
+    "name": "Stor-Kappa",
+    "has_image": false,
+    "verified": false
+  },
+  "p1038": {
+    "name": "Nordkapp",
+    "has_image": false,
+    "verified": false
+  },
+  "p1039": {
+    "name": "Segla – Aussichtspunkt am Parkplatz",
+    "has_image": false,
+    "verified": false
+  },
+  "p1040": {
+    "name": "Storsegla",
+    "has_image": false,
+    "verified": false
+  },
+  "p1041": {
+    "name": "Rødstranda",
+    "has_image": false,
+    "verified": false
+  },
+  "p1042": {
+    "name": "Hjellnessand",
+    "has_image": false,
+    "verified": false
+  },
+  "p1043": {
+    "name": "Sandvika",
+    "has_image": false,
+    "verified": false
+  },
+  "p1044": {
+    "name": "Barsvika",
+    "has_image": false,
+    "verified": false
+  },
+  "p1045": {
+    "name": "Fjøsvalen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1046": {
+    "name": "Adamsanden",
+    "has_image": false,
+    "verified": false
+  },
+  "p1047": {
+    "name": "Gjellvika",
+    "has_image": false,
+    "verified": false
+  },
+  "p1048": {
+    "name": "Nakkesanden",
+    "has_image": false,
+    "verified": false
+  },
+  "p1049": {
+    "name": "Mola - Moalut",
+    "has_image": false,
+    "verified": false
+  },
+  "p1050": {
+    "name": "Breiosen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1051": {
+    "name": "Ausvika",
+    "has_image": false,
+    "verified": false
+  },
+  "p1052": {
+    "name": "Kuttvågen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1053": {
+    "name": "Bremnesstranda",
+    "has_image": false,
+    "verified": false
+  },
+  "p1054": {
+    "name": "Lathari",
+    "has_image": false,
+    "verified": false
+  },
+  "p1055": {
+    "name": "Sortland, Risvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1056": {
+    "name": "Vestersand",
+    "has_image": false,
+    "verified": false
+  },
+  "p1057": {
+    "name": "Hestbergfjurru",
+    "has_image": false,
+    "verified": false
+  },
+  "p1058": {
+    "name": "Gautviken Naturiststrand",
+    "has_image": false,
+    "verified": false
+  },
+  "p1059": {
+    "name": "Vikbukta strand",
+    "has_image": false,
+    "verified": false
+  },
+  "p1060": {
+    "name": "Beian badestrand",
+    "has_image": false,
+    "verified": false
+  },
+  "p1061": {
+    "name": "Bystranda",
+    "has_image": false,
+    "verified": false
+  },
+  "p1062": {
+    "name": "Høybakken badestrand",
+    "has_image": false,
+    "verified": false
+  },
+  "p1063": {
+    "name": "Mebostad badestrand",
+    "has_image": false,
+    "verified": false
+  },
+  "p1064": {
+    "name": "Austrått badestrand",
+    "has_image": false,
+    "verified": false
+  },
+  "p1065": {
+    "name": "Sjøgata badestrand",
+    "has_image": false,
+    "verified": false
+  },
+  "p1066": {
+    "name": "Likskjæret badestrand",
+    "has_image": false,
+    "verified": false
+  },
+  "p1067": {
+    "name": "Rusasetvatnet flytebrygge",
+    "has_image": false,
+    "verified": false
+  },
+  "p1068": {
+    "name": "Stranda under fjellet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1069": {
+    "name": "Rorvika",
+    "has_image": false,
+    "verified": false
+  },
+  "p1070": {
+    "name": "Raen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1071": {
+    "name": "Hellsanden",
+    "has_image": false,
+    "verified": false
+  },
+  "p1072": {
+    "name": "Buneset",
+    "has_image": false,
+    "verified": false
+  },
+  "p1073": {
+    "name": "Horseid",
+    "has_image": false,
+    "verified": false
+  },
+  "p1074": {
+    "name": "Kollvika",
+    "has_image": false,
+    "verified": false
+  },
+  "p1075": {
+    "name": "Vallan",
+    "has_image": false,
+    "verified": false
+  },
+  "p1076": {
+    "name": "Bankfjæra",
+    "has_image": false,
+    "verified": false
+  },
+  "p1077": {
+    "name": "Punn Sanden",
+    "has_image": false,
+    "verified": false
+  },
+  "p1078": {
+    "name": "Nordlandshagen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1079": {
+    "name": "Vassbotnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1080": {
+    "name": "Hosnasanden",
+    "has_image": false,
+    "verified": false
+  },
+  "p1081": {
+    "name": "Sannan",
+    "has_image": false,
+    "verified": false
+  },
+  "p1082": {
+    "name": "Rullesteinsfjæra",
+    "has_image": false,
+    "verified": false
+  },
+  "p1083": {
+    "name": "Årdalssanden",
+    "has_image": false,
+    "verified": false
+  },
+  "p1084": {
+    "name": "Tjeldnesbukta",
+    "has_image": false,
+    "verified": false
+  },
+  "p1085": {
+    "name": "Kråkskarvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1086": {
+    "name": "Litleskarvatnet - Gáranasjávri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1087": {
+    "name": "Trollvatnet - Bávatjávri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1088": {
+    "name": "Movikvatnet - Šlubbojávri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1089": {
+    "name": "Reinvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1090": {
+    "name": "Bakvatnet - Skearranjávri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1091": {
+    "name": "Søre Holmevatnet - Lágujávri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1092": {
+    "name": "Nordre Holmevatnet - Suorgejávri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1093": {
+    "name": "Hjørnevatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1094": {
+    "name": "Kulivatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1095": {
+    "name": "Nordre Reinvatn",
+    "has_image": false,
+    "verified": false
+  },
+  "p1096": {
+    "name": "Josvavatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1097": {
+    "name": "Tindvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1098": {
+    "name": "Andrevatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1099": {
+    "name": "Langvatnet - Hoavgajávri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1100": {
+    "name": "Førstevatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1101": {
+    "name": "Nordre Snyfjellvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1102": {
+    "name": "Heaikkaunnajávrrit",
+    "has_image": false,
+    "verified": false
+  },
+  "p1103": {
+    "name": "Tidelvvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1104": {
+    "name": "Kjoselvvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1105": {
+    "name": "Moldbakkvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1106": {
+    "name": "Kynnmovatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1107": {
+    "name": "Skarvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1108": {
+    "name": "Seinesvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1109": {
+    "name": "Osvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1110": {
+    "name": "Innervatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1111": {
+    "name": "Yttervatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1112": {
+    "name": "Rundhågvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1113": {
+    "name": "Lomtjønnan",
+    "has_image": false,
+    "verified": false
+  },
+  "p1114": {
+    "name": "Pallvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1115": {
+    "name": "Tjønna",
+    "has_image": false,
+    "verified": false
+  },
+  "p1116": {
+    "name": "Vardhågvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1117": {
+    "name": "Foravatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1118": {
+    "name": "Ålvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1119": {
+    "name": "Laksevannet - Geinnodatjávri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1120": {
+    "name": "Bollovannet - Bollojávri - Pollojärvi",
+    "has_image": false,
+    "verified": false
+  },
+  "p1121": {
+    "name": "Vuolit Orvvošjávri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1122": {
+    "name": "Gálbmejávri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1123": {
+    "name": "Tverrelvvannet - Vuolit Doaresvuomejávri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1124": {
+    "name": "Åsvatna - Čorrojávri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1125": {
+    "name": "Rávdoluobbalat",
+    "has_image": false,
+    "verified": false
+  },
+  "p1126": {
+    "name": "Nallovarrevannet - Nállovárjávri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1127": {
+    "name": "Bukselårvannet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1128": {
+    "name": "Lille Ingersvannet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1129": {
+    "name": "Varvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1130": {
+    "name": "Fløtatjønna",
+    "has_image": false,
+    "verified": false
+  },
+  "p1131": {
+    "name": "Stamtjønna",
+    "has_image": false,
+    "verified": false
+  },
+  "p1132": {
+    "name": "Brilltjønnan",
+    "has_image": false,
+    "verified": false
+  },
+  "p1133": {
+    "name": "Hestholman",
+    "has_image": false,
+    "verified": false
+  },
+  "p1134": {
+    "name": "Litlhøgsettjønna",
+    "has_image": false,
+    "verified": false
+  },
+  "p1135": {
+    "name": "Valøyvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1136": {
+    "name": "Stengvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1137": {
+    "name": "Holmtjønna",
+    "has_image": false,
+    "verified": false
+  },
+  "p1138": {
+    "name": "Pissvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1139": {
+    "name": "Loavskajávri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1140": {
+    "name": "Áhkkanasjávri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1141": {
+    "name": "Bealgejávri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1142": {
+    "name": "Gobba-Suolojávri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1143": {
+    "name": "Luomejávri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1144": {
+    "name": "Spielgasáiva",
+    "has_image": false,
+    "verified": false
+  },
+  "p1145": {
+    "name": "Rássášjávri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1146": {
+    "name": "Stordammen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1147": {
+    "name": "Uitojávri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1148": {
+    "name": "Mihkkalaláttu",
+    "has_image": false,
+    "verified": false
+  },
+  "p1149": {
+    "name": "Divreláttu",
+    "has_image": false,
+    "verified": false
+  },
+  "p1150": {
+    "name": "Ájotluoppal",
+    "has_image": false,
+    "verified": false
+  },
+  "p1151": {
+    "name": "Steinholmvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1152": {
+    "name": "Store Skarvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1153": {
+    "name": "Stemtjønna",
+    "has_image": false,
+    "verified": false
+  },
+  "p1154": {
+    "name": "Grøvtjønna",
+    "has_image": false,
+    "verified": false
+  },
+  "p1155": {
+    "name": "Sauskardtjønnen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1156": {
+    "name": "Store Lenangstinden",
+    "has_image": false,
+    "verified": false
+  },
+  "p1157": {
+    "name": "Suliskongen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1158": {
+    "name": "Koalla",
+    "has_image": false,
+    "verified": false
+  },
+  "p1159": {
+    "name": "Vázzoalgi",
+    "has_image": false,
+    "verified": false
+  },
+  "p1160": {
+    "name": "Sieidi",
+    "has_image": false,
+    "verified": false
+  },
+  "p1161": {
+    "name": "Straumhaugan - Rávdnjegátdievvá",
+    "has_image": false,
+    "verified": false
+  },
+  "p1162": {
+    "name": "Straumsbergan - Rávdnjebávttit",
+    "has_image": false,
+    "verified": false
+  },
+  "p1163": {
+    "name": "Ahkedisdievvá",
+    "has_image": false,
+    "verified": false
+  },
+  "p1164": {
+    "name": "Váráš",
+    "has_image": false,
+    "verified": false
+  },
+  "p1165": {
+    "name": "Lille Rieppefjell - Riehppevárdu",
+    "has_image": false,
+    "verified": false
+  },
+  "p1166": {
+    "name": "Fankahøgda - Faŋkialáš",
+    "has_image": false,
+    "verified": false
+  },
+  "p1167": {
+    "name": "Gjømmertinden - Juopmočohkka",
+    "has_image": false,
+    "verified": false
+  },
+  "p1168": {
+    "name": "Durmålsskolten",
+    "has_image": false,
+    "verified": false
+  },
+  "p1169": {
+    "name": "Svartnestinden - Spearronjárčohkka",
+    "has_image": false,
+    "verified": false
+  },
+  "p1170": {
+    "name": "Stortinden - Gobigáisi",
+    "has_image": false,
+    "verified": false
+  },
+  "p1171": {
+    "name": "Sultindan",
+    "has_image": false,
+    "verified": false
+  },
+  "p1172": {
+    "name": "Børnupen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1173": {
+    "name": "Holandsåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1174": {
+    "name": "Finnkonnakken",
+    "has_image": false,
+    "verified": false
+  },
+  "p1175": {
+    "name": "Mjønesfjellet - Mävvavárre",
+    "has_image": false,
+    "verified": false
+  },
+  "p1176": {
+    "name": "Blombakkfjellet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1177": {
+    "name": "Bjørkliheia",
+    "has_image": false,
+    "verified": false
+  },
+  "p1178": {
+    "name": "Rávdoaivi",
+    "has_image": false,
+    "verified": false
+  },
+  "p1179": {
+    "name": "Sårjåstjåhkkå",
+    "has_image": false,
+    "verified": false
+  },
+  "p1180": {
+    "name": "Dama",
+    "has_image": false,
+    "verified": false
+  },
+  "p1181": {
+    "name": "Brattberget - Ráhpesvárre",
+    "has_image": false,
+    "verified": false
+  },
+  "p1182": {
+    "name": "Koppartoppen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1183": {
+    "name": "Såkiåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1184": {
+    "name": "Cuhppulčohkka",
+    "has_image": false,
+    "verified": false
+  },
+  "p1185": {
+    "name": "Šuojáčohkka",
+    "has_image": false,
+    "verified": false
+  },
+  "p1186": {
+    "name": "Geatkevárri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1187": {
+    "name": "Ruvŋavárri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1188": {
+    "name": "Buvroaivi",
+    "has_image": false,
+    "verified": false
+  },
+  "p1189": {
+    "name": "Báhtoaivi",
+    "has_image": false,
+    "verified": false
+  },
+  "p1190": {
+    "name": "Gavdnjavárri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1191": {
+    "name": "Livlanvárri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1192": {
+    "name": "Čivttasmaroaivi",
+    "has_image": false,
+    "verified": false
+  },
+  "p1193": {
+    "name": "Muorjevárri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1194": {
+    "name": "Guovŋavárri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1195": {
+    "name": "Čuoikaduottar",
+    "has_image": false,
+    "verified": false
+  },
+  "p1196": {
+    "name": "Dállosaičohkka",
+    "has_image": false,
+    "verified": false
+  },
+  "p1197": {
+    "name": "Noarvváš",
+    "has_image": false,
+    "verified": false
+  },
+  "p1198": {
+    "name": "Rádjevárri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1199": {
+    "name": "Skiehččanoaivi",
+    "has_image": false,
+    "verified": false
+  },
+  "p1200": {
+    "name": "Geađgeborgielas",
+    "has_image": false,
+    "verified": false
+  },
+  "p1201": {
+    "name": "Buollánčopma",
+    "has_image": false,
+    "verified": false
+  },
+  "p1202": {
+    "name": "Luossačearru",
+    "has_image": false,
+    "verified": false
+  },
+  "p1203": {
+    "name": "Gállovárri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1204": {
+    "name": "Luossaoaivvit",
+    "has_image": false,
+    "verified": false
+  },
+  "p1205": {
+    "name": "Sieiddevárri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1206": {
+    "name": "Sieiddečearru",
+    "has_image": false,
+    "verified": false
+  },
+  "p1207": {
+    "name": "Hárdilangielas",
+    "has_image": false,
+    "verified": false
+  },
+  "p1208": {
+    "name": "Skielgan",
+    "has_image": false,
+    "verified": false
+  },
+  "p1209": {
+    "name": "Giđđavárri",
+    "has_image": false,
+    "verified": false
+  },
+  "p1210": {
+    "name": "Speajal",
+    "has_image": false,
+    "verified": false
+  },
+  "p1211": {
+    "name": "Dierbmároavvi",
+    "has_image": false,
+    "verified": false
+  },
+  "p1212": {
+    "name": "Várssáváráš",
+    "has_image": false,
+    "verified": false
+  },
+  "p1213": {
+    "name": "Kulstadåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1214": {
+    "name": "Valen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1215": {
+    "name": "Finnkneet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1216": {
+    "name": "Smalmoåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1217": {
+    "name": "Tverråsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1218": {
+    "name": "Øyfjellvarden",
+    "has_image": false,
+    "verified": false
+  },
+  "p1219": {
+    "name": "Resmålstuva",
+    "has_image": false,
+    "verified": false
+  },
+  "p1220": {
+    "name": "Røyåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1221": {
+    "name": "Daudnilsåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1222": {
+    "name": "Haugåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1223": {
+    "name": "Øyfjellet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1224": {
+    "name": "Grøvfjellet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1225": {
+    "name": "Hevlan",
+    "has_image": false,
+    "verified": false
+  },
+  "p1226": {
+    "name": "Finnkjerringfjellet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1227": {
+    "name": "Andorfjellet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1228": {
+    "name": "Vestre Brandsfjell",
+    "has_image": false,
+    "verified": false
+  },
+  "p1229": {
+    "name": "Duolbbavárddo",
+    "has_image": false,
+    "verified": false
+  },
+  "p1230": {
+    "name": "Nordre Saulo – Nuortta Sávllo",
+    "has_image": false,
+    "verified": false
+  },
+  "p1231": {
+    "name": "Risfjellet - Sierggavárddo",
+    "has_image": false,
+    "verified": false
+  },
+  "p1232": {
+    "name": "Baes'segama",
+    "has_image": false,
+    "verified": false
+  },
+  "p1233": {
+    "name": "Skungevarre",
+    "has_image": false,
+    "verified": false
+  },
+  "p1234": {
+    "name": "Bájsátjåjhkka",
+    "has_image": false,
+    "verified": false
+  },
+  "p1235": {
+    "name": "Lossviktinden",
+    "has_image": false,
+    "verified": false
+  },
+  "p1236": {
+    "name": "Jordbrugrotta",
+    "has_image": false,
+    "verified": false
+  },
+  "p1237": {
+    "name": "Pluragrotta",
+    "has_image": false,
+    "verified": false
+  },
+  "p1238": {
+    "name": "Grønligrotta",
+    "has_image": false,
+    "verified": false
+  },
+  "p1239": {
+    "name": "Setergrotta",
+    "has_image": false,
+    "verified": false
+  },
+  "p1240": {
+    "name": "Heller",
+    "has_image": false,
+    "verified": false
+  },
+  "p1241": {
+    "name": "trollhula",
+    "has_image": false,
+    "verified": false
+  },
+  "p1242": {
+    "name": "Steinugleflåget",
+    "has_image": false,
+    "verified": false
+  },
+  "p1243": {
+    "name": "Kristihola",
+    "has_image": false,
+    "verified": false
+  },
+  "p1244": {
+    "name": "Okshola",
+    "has_image": false,
+    "verified": false
+  },
+  "p1245": {
+    "name": "Duehallaren",
+    "has_image": false,
+    "verified": false
+  },
+  "p1246": {
+    "name": "Refsvikhula",
+    "has_image": false,
+    "verified": false
+  },
+  "p1247": {
+    "name": "Grotta i Søvicskaret",
+    "has_image": false,
+    "verified": false
+  },
+  "p1248": {
+    "name": "Torjeråskjerka",
+    "has_image": false,
+    "verified": false
+  },
+  "p1249": {
+    "name": "Kjølna",
+    "has_image": false,
+    "verified": false
+  },
+  "p1250": {
+    "name": "Nyphogget",
+    "has_image": false,
+    "verified": false
+  },
+  "p1251": {
+    "name": "Iverhallen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1252": {
+    "name": "Hønheia",
+    "has_image": false,
+    "verified": false
+  },
+  "p1253": {
+    "name": "Snørrehallen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1254": {
+    "name": "Harbakhula",
+    "has_image": false,
+    "verified": false
+  },
+  "p1255": {
+    "name": "Håkkahelleren",
+    "has_image": false,
+    "verified": false
+  },
+  "p1256": {
+    "name": "Skomvær fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1257": {
+    "name": "Andenes fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1258": {
+    "name": "Slettnes fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1259": {
+    "name": "Anda fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1260": {
+    "name": "Måløy-Skarholmen fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1261": {
+    "name": "Skrova fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1262": {
+    "name": "Træna fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1263": {
+    "name": "Åsvær fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1264": {
+    "name": "Bremstein fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1265": {
+    "name": "Tennholmen fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1266": {
+    "name": "Ytterholmen fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1267": {
+    "name": "Værøy fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1268": {
+    "name": "Moholmen fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1269": {
+    "name": "Kalsholmen fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1270": {
+    "name": "Kaura fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1271": {
+    "name": "Fruholmen fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1272": {
+    "name": "Gjæslingan fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1273": {
+    "name": "Nærøysund fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1274": {
+    "name": "Makkaur fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1275": {
+    "name": "Torsvåg fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1276": {
+    "name": "Bøkfjord fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1277": {
+    "name": "Helneset fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1278": {
+    "name": "Landegode fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1279": {
+    "name": "Vardø fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1280": {
+    "name": "Høsholmen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1281": {
+    "name": "Lighthouse",
+    "has_image": false,
+    "verified": false
+  },
+  "p1282": {
+    "name": "Asenvågsøya fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1283": {
+    "name": "Kjeungskjæret fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1284": {
+    "name": "Finnvær fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1285": {
+    "name": "Halten fyr",
+    "has_image": false,
+    "verified": false
+  },
+  "p1286": {
+    "name": "Skulpurlandskap Nordland (Sortland)",
+    "has_image": false,
+    "verified": false
+  },
+  "p1287": {
+    "name": "Skulpturlandskap Nordland (Vågan)",
+    "has_image": false,
+    "verified": false
+  },
+  "p1288": {
+    "name": "Fiskumfoss",
+    "has_image": false,
+    "verified": false
+  },
+  "p1289": {
+    "name": "Steinkirka - Skulpturlandskap Nordland (Evenes)",
+    "has_image": false,
+    "verified": false
+  },
+  "p1290": {
+    "name": "Skulpturlandskap Nordland (Flakstad)",
+    "has_image": false,
+    "verified": false
+  },
+  "p1291": {
+    "name": "Jens Hanso-steinen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1292": {
+    "name": "Skulpturlandskap Nordland Tollå",
+    "has_image": false,
+    "verified": false
+  },
+  "p1293": {
+    "name": "Vistenfjorden",
+    "has_image": false,
+    "verified": false
+  },
+  "p1294": {
+    "name": "Syltefjordkjærringa",
+    "has_image": false,
+    "verified": false
+  },
+  "p1295": {
+    "name": "Freidigtunet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1296": {
+    "name": "Grill",
+    "has_image": false,
+    "verified": false
+  },
+  "p1297": {
+    "name": "Parkbenker",
+    "has_image": false,
+    "verified": false
+  },
+  "p1298": {
+    "name": "Nudiststranja",
+    "has_image": false,
+    "verified": false
+  },
+  "p1299": {
+    "name": "Stone Table and Benches",
+    "has_image": false,
+    "verified": false
+  },
+  "p1300": {
+    "name": "rastplats",
+    "has_image": false,
+    "verified": false
+  },
+  "p1301": {
+    "name": "Havfrua",
+    "has_image": false,
+    "verified": false
+  },
+  "p1302": {
+    "name": "Rostad Kaia",
+    "has_image": false,
+    "verified": false
+  },
+  "p1303": {
+    "name": "Bjørkåselva rasteplass",
+    "has_image": false,
+    "verified": false
+  },
+  "p1304": {
+    "name": "Kotvika",
+    "has_image": false,
+    "verified": false
+  },
+  "p1305": {
+    "name": "Grillhytta",
+    "has_image": false,
+    "verified": false
+  },
+  "p1306": {
+    "name": "Hellern",
+    "has_image": false,
+    "verified": false
+  },
+  "p1307": {
+    "name": "Grillhytta – Grong",
+    "has_image": false,
+    "verified": false
+  },
+  "p1308": {
+    "name": "Grillhytta – Gamvik",
+    "has_image": false,
+    "verified": false
+  },
+  "p1309": {
+    "name": "Nordtun",
+    "has_image": false,
+    "verified": false
+  },
+  "p1310": {
+    "name": "Kvernhusfoss – Luster",
+    "has_image": false,
+    "verified": false
+  },
+  "p1311": {
+    "name": "Skoltefossen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1312": {
+    "name": "Forsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1313": {
+    "name": "Fierbmesaiguoika",
+    "has_image": false,
+    "verified": false
+  },
+  "p1314": {
+    "name": "Horndalsforsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1315": {
+    "name": "Faulvassforsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1316": {
+    "name": "Lappforsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1317": {
+    "name": "Forsan",
+    "has_image": false,
+    "verified": false
+  },
+  "p1318": {
+    "name": "Raukforsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1319": {
+    "name": "Kjenndalsbreen – Stryn",
+    "has_image": false,
+    "verified": false
+  },
+  "p1320": {
+    "name": "Nigardsbreen – Luster",
+    "has_image": false,
+    "verified": false
+  },
+  "p1321": {
+    "name": "Blomberg",
+    "has_image": false,
+    "verified": false
+  },
+  "p1322": {
+    "name": "Skageflå",
+    "has_image": false,
+    "verified": false
+  },
+  "p1323": {
+    "name": "Løstad",
+    "has_image": false,
+    "verified": false
+  },
+  "p1324": {
+    "name": "Planespotters site Vollen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1325": {
+    "name": "Bevøstranda",
+    "has_image": false,
+    "verified": false
+  },
+  "p1326": {
+    "name": "Mjølnarbukta",
+    "has_image": false,
+    "verified": false
+  },
+  "p1327": {
+    "name": "Askedalstangen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1328": {
+    "name": "Brakkebaugsanden",
+    "has_image": false,
+    "verified": false
+  },
+  "p1329": {
+    "name": "De brente buktene",
+    "has_image": false,
+    "verified": false
+  },
+  "p1330": {
+    "name": "Vanninga",
+    "has_image": false,
+    "verified": false
+  },
+  "p1331": {
+    "name": "Pina",
+    "has_image": false,
+    "verified": false
+  },
+  "p1332": {
+    "name": "Svalerødkilen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1333": {
+    "name": "Engevika",
+    "has_image": false,
+    "verified": false
+  },
+  "p1334": {
+    "name": "Sanderødstranda",
+    "has_image": false,
+    "verified": false
+  },
+  "p1335": {
+    "name": "Breivikjo",
+    "has_image": false,
+    "verified": false
+  },
+  "p1336": {
+    "name": "Sætravikjo Strand",
+    "has_image": false,
+    "verified": false
+  },
+  "p1337": {
+    "name": "Kyvikjo",
+    "has_image": false,
+    "verified": false
+  },
+  "p1338": {
+    "name": "Apalvikjo",
+    "has_image": false,
+    "verified": false
+  },
+  "p1339": {
+    "name": "Fuglavikjo",
+    "has_image": false,
+    "verified": false
+  },
+  "p1340": {
+    "name": "Leirviki",
+    "has_image": false,
+    "verified": false
+  },
+  "p1341": {
+    "name": "Fylkesmannsstrondi",
+    "has_image": false,
+    "verified": false
+  },
+  "p1342": {
+    "name": "Litlevatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1343": {
+    "name": "Skjørsetervatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1344": {
+    "name": "Måsvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1345": {
+    "name": "Ytste Sotnakkvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1346": {
+    "name": "Nørdre Sotnakkvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1347": {
+    "name": "Fagervatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1348": {
+    "name": "Gauprørvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1349": {
+    "name": "Kjerringtjørnin",
+    "has_image": false,
+    "verified": false
+  },
+  "p1350": {
+    "name": "Nørdre Domvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1351": {
+    "name": "Vasslivatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1352": {
+    "name": "Svarttjønna",
+    "has_image": false,
+    "verified": false
+  },
+  "p1353": {
+    "name": "Bekkavatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1354": {
+    "name": "Holmsvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1355": {
+    "name": "Barsteintjørna",
+    "has_image": false,
+    "verified": false
+  },
+  "p1356": {
+    "name": "Digergubbvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1357": {
+    "name": "Ytste Domvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1358": {
+    "name": "Steinløystjørna",
+    "has_image": false,
+    "verified": false
+  },
+  "p1359": {
+    "name": "Fagerlitjønna",
+    "has_image": false,
+    "verified": false
+  },
+  "p1360": {
+    "name": "Svarttjønna – Molde",
+    "has_image": false,
+    "verified": false
+  },
+  "p1361": {
+    "name": "Sprikltjønnin",
+    "has_image": false,
+    "verified": false
+  },
+  "p1362": {
+    "name": "Svorundtjønna",
+    "has_image": false,
+    "verified": false
+  },
+  "p1363": {
+    "name": "Daudmanntjønna",
+    "has_image": false,
+    "verified": false
+  },
+  "p1364": {
+    "name": "Fisktjønna",
+    "has_image": false,
+    "verified": false
+  },
+  "p1365": {
+    "name": "Fjærlandssetvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1366": {
+    "name": "Trollabotsvotni",
+    "has_image": false,
+    "verified": false
+  },
+  "p1367": {
+    "name": "Brevatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1368": {
+    "name": "Røysetevatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1369": {
+    "name": "Tverrdalsvotni",
+    "has_image": false,
+    "verified": false
+  },
+  "p1370": {
+    "name": "Grønamyrvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1371": {
+    "name": "Skriksvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1372": {
+    "name": "Kyrauga",
+    "has_image": false,
+    "verified": false
+  },
+  "p1373": {
+    "name": "Plassavotni",
+    "has_image": false,
+    "verified": false
+  },
+  "p1374": {
+    "name": "Lomstjørni",
+    "has_image": false,
+    "verified": false
+  },
+  "p1375": {
+    "name": "Botnavatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1376": {
+    "name": "Kiggavatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1377": {
+    "name": "Barmvatnet",
+    "has_image": false,
+    "verified": false
+  },
+  "p1378": {
+    "name": "Røyrtjørna",
+    "has_image": false,
+    "verified": false
+  },
+  "p1379": {
+    "name": "Inner Stakkengtjørna",
+    "has_image": false,
+    "verified": false
+  },
+  "p1380": {
+    "name": "Rathaugtjørna",
+    "has_image": false,
+    "verified": false
+  },
+  "p1381": {
+    "name": "Stortinden",
+    "has_image": false,
+    "verified": false
+  },
+  "p1382": {
+    "name": "Storvarden – Bodø",
+    "has_image": false,
+    "verified": false
+  },
+  "p1383": {
+    "name": "Høyåsen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1384": {
+    "name": "Lauvknollen",
+    "has_image": false,
+    "verified": false
+  },
+  "p1385": {
+    "name": "Rossekniben",
+    "has_image": false,
+    "verified": false
+  },
+  "p1386": {
+    "name": "Store Imås",
+    "has_image": false,
+    "verified": false
+  },
+  "p1387": {
+    "name": "Voreheia",
+    "has_image": false,
+    "verified": false
+  },
+  "p1388": {
+    "name": "Høa",
+    "has_image": false,
+    "verified": false
+  },
+  "p1389": {
+    "name": "Badeplass hvamsetra",
+    "has_image": false,
+    "verified": false
+  },
+  "p1390": {
+    "name": "Badeplass med benk",
+    "has_image": false,
+    "verified": false
+  },
+  "p1391": {
+    "name": "Hvamsetra",
+    "has_image": false,
+    "verified": false
+  },
+  "p1392": {
+    "name": "Storvika – Gildeskål",
+    "has_image": false,
+    "verified": false
+  },
+  "c0": {
+    "name": "Stavern Bo & Fritid Bobilpark",
+    "has_image": false,
+    "verified": false
+  },
+  "c1": {
+    "name": "Midttun Motell & Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c2": {
+    "name": "Gunnarsbø bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c3": {
+    "name": "Øra bobilcamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c4": {
+    "name": "Marivold Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c5": {
+    "name": "Moysand Familiecamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c6": {
+    "name": "Veiholmen Bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c7": {
+    "name": "Neset Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c8": {
+    "name": "Sandefjord bobilpark",
+    "has_image": false,
+    "verified": false
+  },
+  "c9": {
+    "name": "Fredrikstad bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c10": {
+    "name": "Homannsberget Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c11": {
+    "name": "Hedmarktoppen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c12": {
+    "name": "Topcamp Bogstad",
+    "has_image": false,
+    "verified": false
+  },
+  "c13": {
+    "name": "Fjellstova Ørskogfjellet",
+    "has_image": false,
+    "verified": false
+  },
+  "c14": {
+    "name": "Brønnøysund Bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c15": {
+    "name": "Sokn Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c16": {
+    "name": "Lovund Arkipel Gjestehavn",
+    "has_image": false,
+    "verified": false
+  },
+  "c17": {
+    "name": "Skaiti Fjellcamp og Fjellteneste",
+    "has_image": false,
+    "verified": false
+  },
+  "c18": {
+    "name": "Bagatell Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c19": {
+    "name": "Solviken Feriehjemmet",
+    "has_image": false,
+    "verified": false
+  },
+  "c20": {
+    "name": "Bystøl Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c21": {
+    "name": "Sletta Kai og fritid",
+    "has_image": false,
+    "verified": false
+  },
+  "c22": {
+    "name": "Songnabben Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c23": {
+    "name": "Bjorli Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c24": {
+    "name": "Bobilparkering - Røros IL",
+    "has_image": false,
+    "verified": false
+  },
+  "c25": {
+    "name": "Båtsfjord bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c26": {
+    "name": "Vesterland Feriepark",
+    "has_image": false,
+    "verified": false
+  },
+  "c27": {
+    "name": "Torghatten",
+    "has_image": false,
+    "verified": false
+  },
+  "c28": {
+    "name": "Solsiden",
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Fredriksvern_verftsporten.jpg",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Fredriksvern_verftsporten.jpg/500px-Fredriksvern_verftsporten.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Fredriksvern_verftsporten.jpg",
+    "license": "public domain",
+    "attribution_required": false
+  },
+  "c29": {
+    "name": "Horten Gjesthavn",
+    "has_image": false,
+    "verified": false
+  },
+  "c30": {
+    "name": "Rjukan Næringspark",
+    "has_image": false,
+    "verified": false
+  },
+  "c31": {
+    "name": "Rjukan bobilparkering Såheimsveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c32": {
+    "name": "Bobilparkering Åndalsnes Tindekaia",
+    "has_image": false,
+    "verified": false
+  },
+  "c33": {
+    "name": "Skjerva bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c34": {
+    "name": "Vestnes bobil- og rasteplass",
+    "has_image": false,
+    "verified": false
+  },
+  "c35": {
+    "name": "Hjelsetgården bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c36": {
+    "name": "Melbu båtforening bobilcamp",
+    "has_image": false,
+    "verified": false
+  },
+  "c37": {
+    "name": "Lunhulen",
+    "has_image": false,
+    "verified": false
+  },
+  "c38": {
+    "name": "Endestad Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c39": {
+    "name": "Lødingen Bobilcamp",
+    "has_image": false,
+    "verified": false
+  },
+  "c40": {
+    "name": "Hammerfest havn",
+    "has_image": false,
+    "verified": false
+  },
+  "c41": {
+    "name": "Rosfjord Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c42": {
+    "name": "Wohnmobilstellplatz Vaula Gard",
+    "has_image": false,
+    "verified": false
+  },
+  "c43": {
+    "name": "Ogna camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c44": {
+    "name": "Værste bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c45": {
+    "name": "Bjørkeskogen Aktivitetsenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c46": {
+    "name": "Havna Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c47": {
+    "name": "Spornes Bobilcamp",
+    "has_image": false,
+    "verified": false
+  },
+  "c48": {
+    "name": "Røyrane Bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c49": {
+    "name": "Os Bubil- og Caravanparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c50": {
+    "name": "Vikedal Båthavn",
+    "has_image": false,
+    "verified": false
+  },
+  "c51": {
+    "name": "Langefonn Caravanpark",
+    "has_image": false,
+    "verified": false
+  },
+  "c52": {
+    "name": "Rødtangen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c53": {
+    "name": "Sjølyst bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c54": {
+    "name": "Sjuvasslia Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c55": {
+    "name": "Ørsta Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c56": {
+    "name": "Rena Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c57": {
+    "name": "Vestnes Småbåtforening",
+    "has_image": false,
+    "verified": false
+  },
+  "c58": {
+    "name": "Bobilparkering på Servicekaia",
+    "has_image": false,
+    "verified": false
+  },
+  "c59": {
+    "name": "Mysusæter",
+    "has_image": false,
+    "verified": false
+  },
+  "c60": {
+    "name": "Laukvika bobilcamp",
+    "has_image": false,
+    "verified": false
+  },
+  "c61": {
+    "name": "Hakan Bobilhavn",
+    "has_image": false,
+    "verified": false
+  },
+  "c62": {
+    "name": "Vestresand",
+    "has_image": false,
+    "verified": false
+  },
+  "c63": {
+    "name": "Maurnes småbåthavn",
+    "has_image": false,
+    "verified": false
+  },
+  "c65": {
+    "name": "Ogna camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c66": {
+    "name": "Frisk Bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c67": {
+    "name": "Nyksund Bobilcamp",
+    "has_image": false,
+    "verified": false
+  },
+  "c68": {
+    "name": "Brygga bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c69": {
+    "name": "Camp Solbergfjord",
+    "has_image": false,
+    "verified": false
+  },
+  "c70": {
+    "name": "Wohnmobilstellplatz · Sagholmen",
+    "has_image": false,
+    "verified": false
+  },
+  "c71": {
+    "name": "Gruset",
+    "has_image": false,
+    "verified": false
+  },
+  "c72": {
+    "name": "Sokndalsveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c73": {
+    "name": "Farsund Bobil Camp",
+    "has_image": false,
+    "verified": false
+  },
+  "c74": {
+    "name": "Vanse Bobilcamp",
+    "has_image": false,
+    "verified": false
+  },
+  "c75": {
+    "name": "Bobil Parkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c76": {
+    "name": "Larvik Bobilhavn",
+    "has_image": false,
+    "verified": false
+  },
+  "c77": {
+    "name": "Bergenshallen Bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c78": {
+    "name": "Langevåg bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c79": {
+    "name": "Larvikja",
+    "has_image": false,
+    "verified": false
+  },
+  "c80": {
+    "name": "Jondal Båthamn",
+    "has_image": false,
+    "verified": false
+  },
+  "c81": {
+    "name": "Rong bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c82": {
+    "name": "Kanalen bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c83": {
+    "name": "Haugen",
+    "has_image": false,
+    "verified": false
+  },
+  "c84": {
+    "name": "Jachthafen Sandvik",
+    "has_image": false,
+    "verified": false
+  },
+  "c85": {
+    "name": "Livneset Bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c86": {
+    "name": "Terna Bobilhavn",
+    "has_image": false,
+    "verified": false
+  },
+  "c87": {
+    "name": "Oppdalsporten",
+    "has_image": false,
+    "verified": false
+  },
+  "c88": {
+    "name": "Rødberg Bobilcamp",
+    "has_image": false,
+    "verified": false
+  },
+  "c89": {
+    "name": "Levanger Camping & Fritidspark Moan AS",
+    "has_image": false,
+    "verified": false
+  },
+  "c90": {
+    "name": "Leka camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c91": {
+    "name": "Engøya",
+    "has_image": false,
+    "verified": false
+  },
+  "c92": {
+    "name": "Inversant Parking",
+    "has_image": false,
+    "verified": false
+  },
+  "c93": {
+    "name": "Avløysinga bobilcamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c94": {
+    "name": "Wohnmobilstellplatz · Reine ytre havn",
+    "has_image": false,
+    "verified": false
+  },
+  "c95": {
+    "name": "Nye Glennetangen camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c96": {
+    "name": "Dalen Bobilcamp",
+    "has_image": false,
+    "verified": false
+  },
+  "c98": {
+    "name": "Sinclair Bobilpark",
+    "has_image": false,
+    "verified": false
+  },
+  "c99": {
+    "name": "Lapphaugen Turiststajon",
+    "has_image": false,
+    "verified": false
+  },
+  "c100": {
+    "name": "Perrongen",
+    "has_image": false,
+    "verified": false
+  },
+  "c101": {
+    "name": "Hauen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c102": {
+    "name": "Skeie Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c103": {
+    "name": "ånasira bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c104": {
+    "name": "Bobilparkering Kårstø",
+    "has_image": false,
+    "verified": false
+  },
+  "c105": {
+    "name": "Giljastøl",
+    "has_image": false,
+    "verified": false
+  },
+  "c106": {
+    "name": "Legå camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c107": {
+    "name": "Egenes camping drift as",
+    "has_image": false,
+    "verified": false
+  },
+  "c108": {
+    "name": "Sandnes bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c109": {
+    "name": "Lervik Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c110": {
+    "name": "Wohnmobilstellplatz · Sørsvannsveien, Arendal",
+    "has_image": false,
+    "verified": false
+  },
+  "c111": {
+    "name": "Kværnstua",
+    "has_image": false,
+    "verified": false
+  },
+  "c112": {
+    "name": "Huseby Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c113": {
+    "name": "Hestholmen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c114": {
+    "name": "Larkollen camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c115": {
+    "name": "Fuglevik camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c116": {
+    "name": "Solplassen camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c117": {
+    "name": "Olavsberget",
+    "has_image": false,
+    "verified": false
+  },
+  "c118": {
+    "name": "Stretere Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c119": {
+    "name": "Kolbensrød Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c120": {
+    "name": "Lothepus camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c121": {
+    "name": "Camp Lothepus Bobilcamp",
+    "has_image": false,
+    "verified": false
+  },
+  "c122": {
+    "name": "Kulleseidkanalen",
+    "has_image": false,
+    "verified": false
+  },
+  "c123": {
+    "name": "Hagen Vintercaravan",
+    "has_image": false,
+    "verified": false
+  },
+  "c124": {
+    "name": "Joker",
+    "has_image": false,
+    "verified": false
+  },
+  "c125": {
+    "name": "Nautesund",
+    "has_image": false,
+    "verified": false
+  },
+  "c126": {
+    "name": "Kyrping Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c127": {
+    "name": "Fitjar",
+    "has_image": false,
+    "verified": false
+  },
+  "c128": {
+    "name": "Åvika",
+    "has_image": false,
+    "verified": false
+  },
+  "c129": {
+    "name": "Hardanger Bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c130": {
+    "name": "Storli",
+    "has_image": false,
+    "verified": false
+  },
+  "c131": {
+    "name": "Stall Lisletta",
+    "has_image": false,
+    "verified": false
+  },
+  "c132": {
+    "name": "Lygna Camp",
+    "has_image": false,
+    "verified": false
+  },
+  "c133": {
+    "name": "Blestua",
+    "has_image": false,
+    "verified": false
+  },
+  "c135": {
+    "name": "Mysen bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c137": {
+    "name": "Villmarksporten",
+    "has_image": false,
+    "verified": false
+  },
+  "c138": {
+    "name": "Olden Fjordcamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c139": {
+    "name": "Måløy A",
+    "has_image": false,
+    "verified": false
+  },
+  "c140": {
+    "name": "Selje Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c141": {
+    "name": "Skottneset Feriesenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c142": {
+    "name": "Lundecamp",
+    "has_image": false,
+    "verified": false
+  },
+  "c143": {
+    "name": "Vaset Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c144": {
+    "name": "Rondane Haukliseter Fjellhotell",
+    "has_image": false,
+    "verified": false
+  },
+  "c145": {
+    "name": "Wohnmobilstellplatz · Hjellesætervegen, Dovre",
+    "has_image": false,
+    "verified": false
+  },
+  "c146": {
+    "name": "Bobilpark Fyllingsjoen",
+    "has_image": false,
+    "verified": false
+  },
+  "c147": {
+    "name": "Godøy Småbåthavn",
+    "has_image": false,
+    "verified": false
+  },
+  "c148": {
+    "name": "Røros bobil camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c149": {
+    "name": "Vinge",
+    "has_image": false,
+    "verified": false
+  },
+  "c150": {
+    "name": "Krangnes camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c151": {
+    "name": "Brekkøya camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c152": {
+    "name": "Bøfjorden camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c153": {
+    "name": "Wohnmobilstellplatz · Romsdalsvegen",
+    "has_image": false,
+    "verified": false
+  },
+  "c154": {
+    "name": "Granasjøen",
+    "has_image": false,
+    "verified": false
+  },
+  "c155": {
+    "name": "Kjerknesvågen Bobilplass",
+    "has_image": false,
+    "verified": false
+  },
+  "c157": {
+    "name": "Gresssletta",
+    "has_image": false,
+    "verified": false
+  },
+  "c158": {
+    "name": "Korgenfjellet Fjellstue",
+    "has_image": false,
+    "verified": false
+  },
+  "c159": {
+    "name": "Kvina bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c160": {
+    "name": "Bardal Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c161": {
+    "name": "Hannoy",
+    "has_image": false,
+    "verified": false
+  },
+  "c162": {
+    "name": "Bjørnhågen camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c163": {
+    "name": "Reineholmen bobilcamp",
+    "has_image": false,
+    "verified": false
+  },
+  "c164": {
+    "name": "Evenes Lofoten",
+    "has_image": false,
+    "verified": false
+  },
+  "c165": {
+    "name": "Strandparken",
+    "has_image": false,
+    "verified": false
+  },
+  "c166": {
+    "name": "Garsnes camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c167": {
+    "name": "Elsa's caravan & galleri",
+    "has_image": false,
+    "verified": false
+  },
+  "c168": {
+    "name": "Vardø Bobilplass",
+    "has_image": false,
+    "verified": false
+  },
+  "c169": {
+    "name": "Oksfjord Båtforening",
+    "has_image": false,
+    "verified": false
+  },
+  "c171": {
+    "name": "Wohnmobilstellplatz · Molværsvegen",
+    "has_image": false,
+    "verified": false
+  },
+  "c172": {
+    "name": "Wohnmobilstellplatz · Voieveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c173": {
+    "name": "Wohnmobilstellplatz · Eidsvollvegen",
+    "has_image": false,
+    "verified": false
+  },
+  "c174": {
+    "name": "Wohnmobilstellplatz · Batteriveien sør",
+    "has_image": false,
+    "verified": false
+  },
+  "c175": {
+    "name": "Amli Badestrand",
+    "has_image": false,
+    "verified": false
+  },
+  "c176": {
+    "name": "Sigridnes Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c177": {
+    "name": "Roppestad",
+    "has_image": false,
+    "verified": false
+  },
+  "c178": {
+    "name": "Tinnhølen",
+    "has_image": false,
+    "verified": false
+  },
+  "c179": {
+    "name": "Møsvatn",
+    "has_image": false,
+    "verified": false
+  },
+  "c180": {
+    "name": "Oset Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c181": {
+    "name": "Wohnmobilstellplatz · Åsaveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c182": {
+    "name": "Bolstad",
+    "has_image": false,
+    "verified": false
+  },
+  "c183": {
+    "name": "Ortnevik Grendehus",
+    "has_image": false,
+    "verified": false
+  },
+  "c184": {
+    "name": "Gammelsetervangen",
+    "has_image": false,
+    "verified": false
+  },
+  "c185": {
+    "name": "Wohnmobilstellplatz · Sagvegen",
+    "has_image": false,
+    "verified": false
+  },
+  "c186": {
+    "name": "Dovrevegen",
+    "has_image": false,
+    "verified": false
+  },
+  "c187": {
+    "name": "Steinmo bobilparkering",
+    "has_image": false,
+    "verified": false
+  },
+  "c188": {
+    "name": "Wohnmobilstellplatz · Fjordvegen",
+    "has_image": false,
+    "verified": false
+  },
+  "c189": {
+    "name": "Momyra camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c190": {
+    "name": "Wohnmobilstellplatz · Nyvegen",
+    "has_image": false,
+    "verified": false
+  },
+  "c192": {
+    "name": "Trollhøgda Caravan",
+    "has_image": false,
+    "verified": false
+  },
+  "c193": {
+    "name": "Annamo Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c194": {
+    "name": "Målselv Fjellandsby",
+    "has_image": false,
+    "verified": false
+  },
+  "c195": {
+    "name": "Slåttemoen",
+    "has_image": false,
+    "verified": false
+  },
+  "c196": {
+    "name": "Böygefjord",
+    "has_image": false,
+    "verified": false
+  },
+  "c197": {
+    "name": "Nyvoll Caravanplass",
+    "has_image": false,
+    "verified": false
+  },
+  "c198": {
+    "name": "Wohnmobilstellplatz · Sokndalsveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c199": {
+    "name": "Wohnmobilstellplatz · Sjøvegen",
+    "has_image": false,
+    "verified": false
+  },
+  "c200": {
+    "name": "Wohnmobilstellplatz · Allemannsveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c201": {
+    "name": "Wohnmobilstellplatz · Idrottsvegen",
+    "has_image": false,
+    "verified": false
+  },
+  "c202": {
+    "name": "Wohnmobilstellplatz · Nesflōtvegen",
+    "has_image": false,
+    "verified": false
+  },
+  "c203": {
+    "name": "Wohnmobilstellplatz · Sandebuktveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c204": {
+    "name": "Wohnmobilstellplatz · Varen",
+    "has_image": false,
+    "verified": false
+  },
+  "c205": {
+    "name": "Wohnmobilstellplatz · Ekkilsøyveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c206": {
+    "name": "Wohnmobilstellplatz · Trondheim",
+    "has_image": false,
+    "verified": false
+  },
+  "c207": {
+    "name": "Wohnmobilstellplatz · Nessjordet",
+    "has_image": false,
+    "verified": false
+  },
+  "c208": {
+    "name": "Wohnmobilstellplatz · Horsfjordveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c209": {
+    "name": "Wohnmobilstellplatz · Saltstraumveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c210": {
+    "name": "Wohnmobilstellplatz · Vestfjordveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c211": {
+    "name": "Wohnmobilstellplatz · Storgata",
+    "has_image": false,
+    "verified": false
+  },
+  "c212": {
+    "name": "Wohnmobilstellplatz · Hillesøyvegen",
+    "has_image": false,
+    "verified": false
+  },
+  "c213": {
+    "name": "Wohnmobilstellplatz · Trollveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c214": {
+    "name": "Wohnmobilstellplatz · Malmveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c215": {
+    "name": "Wohnmobilstellplatz · Hans Lillengs vei",
+    "has_image": false,
+    "verified": false
+  },
+  "c216": {
+    "name": "Wohnmobilstellplatz · Jøkelfjordveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c217": {
+    "name": "Wohnmobilstellplatz · Stodvegen",
+    "has_image": false,
+    "verified": false
+  },
+  "c218": {
+    "name": "Wohnmobilstellplatz · Hogsdalsveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c219": {
+    "name": "Wohnmobilstellplatz · Flostrandveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c220": {
+    "name": "Wohnmobilstellplatz · Flostrandveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c221": {
+    "name": "Wohnmobilstellplatz · Vestre Porsangerveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c222": {
+    "name": "Wohnmobilstellplatz · Langnesveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c223": {
+    "name": "Wohnmobilstellplatz · Golhaugveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c224": {
+    "name": "Wohnmobilstellplatz · Strandveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c225": {
+    "name": "Wohnmobilstellplatz · Ryfylkevegen",
+    "has_image": false,
+    "verified": false
+  },
+  "c226": {
+    "name": "Wohnmobilstellplatz · Ytstebrødveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c227": {
+    "name": "Wohnmobilstellplatz · Nedstrandsvegen",
+    "has_image": false,
+    "verified": false
+  },
+  "c228": {
+    "name": "Wohnmobilstellplatz · Sirdalsveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c229": {
+    "name": "Wohnmobilstellplatz · Ryfylkevegen",
+    "has_image": false,
+    "verified": false
+  },
+  "c230": {
+    "name": "Wohnmobilstellplatz · Ryfylkevegen",
+    "has_image": false,
+    "verified": false
+  },
+  "c231": {
+    "name": "Wohnmobilstellplatz · Årossanden",
+    "has_image": false,
+    "verified": false
+  },
+  "c232": {
+    "name": "Wohnmobilstellplatz · Svemmelandsveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c233": {
+    "name": "Wohnmobilstellplatz · Nordsjøvegen",
+    "has_image": false,
+    "verified": false
+  },
+  "c234": {
+    "name": "Wohnmobilstellplatz · Nordsjøvegen",
+    "has_image": false,
+    "verified": false
+  },
+  "c235": {
+    "name": "Wohnmobilstellplatz · Søndre Vøra",
+    "has_image": false,
+    "verified": false
+  },
+  "c236": {
+    "name": "Wohnmobilstellplatz · Søsterdalen",
+    "has_image": false,
+    "verified": false
+  },
+  "c237": {
+    "name": "Wohnmobilstellplatz · Streterestranda",
+    "has_image": false,
+    "verified": false
+  },
+  "c238": {
+    "name": "Wohnmobilstellplatz · Anvikveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c239": {
+    "name": "Wohnmobilstellplatz · Hummerbakkveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c240": {
+    "name": "Wohnmobilstellplatz · Elveveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c241": {
+    "name": "Wohnmobilstellplatz · Nordgardseterveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c243": {
+    "name": "Wohnmobilstellplatz · Vesterøyveien",
+    "has_image": false,
+    "verified": false
+  },
+  "c244": {
+    "name": "Wohnmobilstellplatz · Storesand",
+    "has_image": false,
+    "verified": false
+  },
+  "c245": {
+    "name": "Wohnmobilstellplatz · Kvinnhovden",
+    "has_image": false,
+    "verified": false
+  },
+  "c246": {
+    "name": "Wohnmobilstellplatz · Kvamskogen",
+    "has_image": false,
+    "verified": false
+  },
+  "c247": {
+    "name": "Wohnmobilstellplatz · Alhovden",
+    "has_image": false,
+    "verified": false
+  },
+  "c248": {
+    "name": "Wohnmobilstellplatz · Treaskjæret",
+    "has_image": false,
+    "verified": false
+  },
+  "c249": {
+    "name": "Wohnmobilstellplatz · Skogtunvegen",
+    "has_image": false,
+    "verified": false
+  },
+  "c250": {
+    "name": "Geiranger Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c251": {
+    "name": "Berlevåg Motell & Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c252": {
+    "name": "Hytte Camp Nordkapp - former Nordkapp Caravan og Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c253": {
+    "name": "Tana Familiecamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c254": {
+    "name": "Namsos camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c255": {
+    "name": "Odden Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c256": {
+    "name": "Russenes Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c257": {
+    "name": "Nordkapp Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c258": {
+    "name": "Justøyfamiliens Bibelcamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c259": {
+    "name": "Bortelid Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c260": {
+    "name": "Granvin Hytter & Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c261": {
+    "name": "Solvang Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c262": {
+    "name": "Koppang Camping & Hytteutleie",
+    "has_image": false,
+    "verified": false
+  },
+  "c263": {
+    "name": "Fredvang Strand og Skjærgårdscamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c264": {
+    "name": "ab 1.5. Lomsesanden Familiecamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c265": {
+    "name": "Longerak Hyttesenter og Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c266": {
+    "name": "Bie Apartment & Feriesenter, Top Camp",
+    "has_image": false,
+    "verified": false
+  },
+  "c267": {
+    "name": "Nedre Strand Hytteutleie og Familicamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c268": {
+    "name": "Langeby",
+    "has_image": false,
+    "verified": false
+  },
+  "c269": {
+    "name": "Top Camp Sjøsanden Feriepark",
+    "has_image": false,
+    "verified": false
+  },
+  "c270": {
+    "name": "Svindland Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c271": {
+    "name": "Sandnes Camping Mandal",
+    "has_image": false,
+    "verified": false
+  },
+  "c272": {
+    "name": "Åros Feriesenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c273": {
+    "name": "Sageneset Feriesenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c274": {
+    "name": "Tingsaker Familiecamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c275": {
+    "name": "Flåm Camping og Hostel",
+    "has_image": false,
+    "verified": false
+  },
+  "c276": {
+    "name": "Kinsarvik Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c277": {
+    "name": "Ringøy Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c278": {
+    "name": "Sukken Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c279": {
+    "name": "Ekeberg Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c280": {
+    "name": "Tomm Murstad Sjøleir",
+    "has_image": false,
+    "verified": false
+  },
+  "c281": {
+    "name": "Jostedal Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c282": {
+    "name": "Lyngmo Ungdomssenter og Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c283": {
+    "name": "Geirangerfjorden Feriesenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c284": {
+    "name": "Atlanten Motell og Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c285": {
+    "name": "Skogly Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c286": {
+    "name": "Blåhammer Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c287": {
+    "name": "Guldbergaunet Sommerhotell & Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c288": {
+    "name": "Sandnessjøen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c289": {
+    "name": "Kvisterø Fjordcamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c290": {
+    "name": "Polar Camp",
+    "has_image": false,
+    "verified": false
+  },
+  "c291": {
+    "name": "Yttervik Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c292": {
+    "name": "Moskenes Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c293": {
+    "name": "Brustranda Fjordcamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c294": {
+    "name": "Rystad Lofoten camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c295": {
+    "name": "Hatteng Grillbar & Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c296": {
+    "name": "Æra",
+    "has_image": false,
+    "verified": false
+  },
+  "c297": {
+    "name": "Hytte Camp Nordkapp",
+    "has_image": false,
+    "verified": false
+  },
+  "c298": {
+    "name": "Alta River Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c299": {
+    "name": "Tana Hotel og Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c300": {
+    "name": "BaseCamp NorthCape",
+    "has_image": false,
+    "verified": false
+  },
+  "c301": {
+    "name": "Ifjord Camping & Cafe",
+    "has_image": false,
+    "verified": false
+  },
+  "c302": {
+    "name": "Sandvik gjestegård",
+    "has_image": false,
+    "verified": false
+  },
+  "c303": {
+    "name": "Elvmøthei Fjellgård",
+    "has_image": false,
+    "verified": false
+  },
+  "c304": {
+    "name": "Repparfjord Camping og Misjonssenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c305": {
+    "name": "Lofoten Beach Camp",
+    "has_image": false,
+    "verified": false
+  },
+  "c306": {
+    "name": "Støylen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c307": {
+    "name": "Tallaksbru Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c308": {
+    "name": "Velemoen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c309": {
+    "name": "Åpta Camping og Misjonssenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c310": {
+    "name": "Isterfossen Camp & fritid",
+    "has_image": false,
+    "verified": false
+  },
+  "c311": {
+    "name": "Osensjøen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c312": {
+    "name": "Trollstigen Camping & Gjestegård",
+    "has_image": false,
+    "verified": false
+  },
+  "c313": {
+    "name": "Vennesund Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c314": {
+    "name": "Torghatten Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c315": {
+    "name": "Storli Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c316": {
+    "name": "Sandsletta Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c317": {
+    "name": "Brennfjell camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c318": {
+    "name": "Lyngvær Lofoten Bobilcamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c319": {
+    "name": "Camp Lyngdal",
+    "has_image": false,
+    "verified": false
+  },
+  "c320": {
+    "name": "Bornes Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c321": {
+    "name": "KVS Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c322": {
+    "name": "Lyngdal Campingpark",
+    "has_image": false,
+    "verified": false
+  },
+  "c323": {
+    "name": "Kvåsfossen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c324": {
+    "name": "VillmarksCamp Mjåland Gård",
+    "has_image": false,
+    "verified": false
+  },
+  "c325": {
+    "name": "Lindesnes Camping og Hytteutleie",
+    "has_image": false,
+    "verified": false
+  },
+  "c326": {
+    "name": "Solstrand Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c327": {
+    "name": "Bjønndalen Camp",
+    "has_image": false,
+    "verified": false
+  },
+  "c328": {
+    "name": "Flateland Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c329": {
+    "name": "Byklestøylane Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c330": {
+    "name": "Evjetun Leirsted",
+    "has_image": false,
+    "verified": false
+  },
+  "c331": {
+    "name": "Nidelv Brygge og Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c332": {
+    "name": "Sjøbakken Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c333": {
+    "name": "Morvigsanden Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c334": {
+    "name": "Lovisenberg Familiecamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c335": {
+    "name": "Gjeving Marina Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c336": {
+    "name": "Løyne Camping og Hytteutleie",
+    "has_image": false,
+    "verified": false
+  },
+  "c337": {
+    "name": "Omnes Camping og Hytter",
+    "has_image": false,
+    "verified": false
+  },
+  "c338": {
+    "name": "Saga camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c339": {
+    "name": "Vik Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c340": {
+    "name": "Kyrkjeneset Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c341": {
+    "name": "Moen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c342": {
+    "name": "Solplassen og Rakke Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c343": {
+    "name": "Teksten Barnas Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c344": {
+    "name": "Sjøverstø Feriested",
+    "has_image": false,
+    "verified": false
+  },
+  "c345": {
+    "name": "Canvas Hove",
+    "has_image": false,
+    "verified": false
+  },
+  "c346": {
+    "name": "Kragerøfjorden Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c347": {
+    "name": "Skottevik Feriesenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c348": {
+    "name": "Flatlandsmo Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c349": {
+    "name": "Seim Camping Granvin",
+    "has_image": false,
+    "verified": false
+  },
   "c350": {
     "name": "Trolltunga Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c351": {
+    "name": "Lunde Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c352": {
+    "name": "Reception;Vang Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c353": {
+    "name": "Resepsjon;Gudvangen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c354": {
+    "name": "Hemre Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c355": {
+    "name": "Groven Camping og Hyttegrend",
+    "has_image": false,
+    "verified": false
+  },
+  "c356": {
+    "name": "Sæbø Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c357": {
+    "name": "Garen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c358": {
+    "name": "Måbødalen Camping og Hyttesenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c359": {
+    "name": "Kjærtveit Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c360": {
+    "name": "Finnasteinflåten Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c361": {
+    "name": "Myklatun Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c362": {
+    "name": "Ulvik Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c363": {
+    "name": "Lofthus Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c364": {
+    "name": "Lothe Camping og Badeplass - Closed",
+    "has_image": false,
+    "verified": false
+  },
+  "c365": {
+    "name": "Nord Steinby Kro og Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c366": {
+    "name": "Frognerstrand Camping AS",
+    "has_image": false,
+    "verified": false
+  },
+  "c367": {
+    "name": "Montebello Camping og Turistsenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c368": {
+    "name": "Morokulien Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c369": {
+    "name": "Ramton Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c370": {
+    "name": "Solbergstøa camping og hytter",
+    "has_image": false,
+    "verified": false
+  },
+  "c371": {
+    "name": "Sjøstrand Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c372": {
+    "name": "Sigernessjøen Familiecamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c373": {
+    "name": "Olberg Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c374": {
+    "name": "Nes Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c375": {
+    "name": "Vestby Hyttepark",
+    "has_image": false,
+    "verified": false
+  },
+  "c376": {
+    "name": "Finnskogen Kro og Motell",
+    "has_image": false,
+    "verified": false
+  },
+  "c377": {
+    "name": "Sanngrund Servering og Overnatting",
+    "has_image": false,
+    "verified": false
+  },
+  "c378": {
+    "name": "Kjørnes Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c379": {
+    "name": "Amlesanden",
+    "has_image": false,
+    "verified": false
+  },
+  "c380": {
+    "name": "Stryn Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c381": {
+    "name": "Grande Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c382": {
+    "name": "Dalsøren Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c383": {
+    "name": "Vassbakken kro og camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c384": {
+    "name": "Viki Fjordcamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c385": {
+    "name": "Sandvik Camping 1",
+    "has_image": false,
+    "verified": false
+  },
+  "c386": {
+    "name": "Urke Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c387": {
+    "name": "Vinje Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c388": {
+    "name": "Hellesylt Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c389": {
+    "name": "Dalen Gaard Camping & Hytter",
+    "has_image": false,
+    "verified": false
+  },
+  "c390": {
+    "name": "Stadheimfossen Camping & Hytter",
+    "has_image": false,
+    "verified": false
+  },
+  "c391": {
+    "name": "Utladalen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c392": {
+    "name": "Fjellheim Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c393": {
+    "name": "Eidsdal Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c394": {
+    "name": "Nymoen Leirplass",
+    "has_image": false,
+    "verified": false
+  },
+  "c395": {
+    "name": "Lærdal Ferie- og Fritidspark",
+    "has_image": false,
+    "verified": false
+  },
+  "c396": {
+    "name": "Grande Hytteutleige og Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c397": {
+    "name": "Rønningen Camp & Hytter",
+    "has_image": false,
+    "verified": false
+  },
+  "c398": {
+    "name": "Femund Canoe Camp",
+    "has_image": false,
+    "verified": false
+  },
+  "c399": {
+    "name": "Sjøenden Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c400": {
+    "name": "Trysilelva camping",
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Storvegen%2C_Trysil.jpg",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Storvegen%2C_Trysil.jpg/500px-Storvegen%2C_Trysil.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Storvegen,_Trysil.jpg",
+    "license": "public domain",
+    "attribution_required": false
+  },
+  "c401": {
+    "name": "Steinvik Camping og Hyttegrend",
+    "has_image": false,
+    "verified": false
+  },
+  "c403": {
+    "name": "Drevsjø Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c404": {
+    "name": "Sømådalen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c405": {
+    "name": "Osensjøen Turistsenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c406": {
+    "name": "Femund Lodge",
+    "has_image": false,
+    "verified": false
+  },
+  "c407": {
+    "name": "Byskogen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c408": {
+    "name": "Åndalsnes Camping & Motell",
+    "has_image": false,
+    "verified": false
+  },
+  "c409": {
+    "name": "Saltkjelsnes Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c410": {
+    "name": "Trollstigen Resort",
+    "has_image": false,
+    "verified": false
+  },
+  "c411": {
+    "name": "Mjelva Camping & Hytter",
+    "has_image": false,
+    "verified": false
+  },
+  "c412": {
+    "name": "Gjerdset Turistsenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c413": {
+    "name": "Herje Caravan & Hyttesenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c414": {
+    "name": "Rødven Feriesenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c415": {
+    "name": "Skjerneset Bryggecamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c416": {
+    "name": "Akslia Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c417": {
+    "name": "Skoglund Camping I",
+    "has_image": false,
+    "verified": false
+  },
+  "c418": {
+    "name": "Tornes Fjordcamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c419": {
+    "name": "Bjølstad Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c420": {
+    "name": "Kviltorp Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c421": {
+    "name": "Korsbakken Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c422": {
+    "name": "Røros camping (previously Håneset camping)",
+    "has_image": false,
+    "verified": false
+  },
+  "c423": {
+    "name": "Hembre Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c424": {
+    "name": "Ertsgaard Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c425": {
+    "name": "Vinge Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c426": {
+    "name": "Valdøyan Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c427": {
+    "name": "Lundamo Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c428": {
+    "name": "Selbu Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c429": {
+    "name": "Marienborg Gjestgiveri & Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c430": {
+    "name": "Marienborg Gjestgiveri & Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c431": {
+    "name": "Støren Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c432": {
+    "name": "Storsand Gård Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c433": {
+    "name": "Orsand Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c434": {
+    "name": "Korsnes Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c435": {
+    "name": "Røste Hyttetun & Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c436": {
+    "name": "Flora Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c437": {
+    "name": "Namsen Fishing Camp / Utheim Gård",
+    "has_image": false,
+    "verified": false
+  },
+  "c438": {
+    "name": "Kvam Motell & Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c439": {
+    "name": "Selnes Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c440": {
+    "name": "Stiklestad Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c441": {
+    "name": "Soria Moria Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c442": {
+    "name": "Koa Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c443": {
+    "name": "Skogmo Familiecamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c444": {
+    "name": "Mosheim Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c445": {
+    "name": "Climb Flatanger",
+    "has_image": false,
+    "verified": false
+  },
+  "c446": {
+    "name": "Leka Motell og Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c447": {
+    "name": "Høgtun Sjøcamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c448": {
+    "name": "Bjørnvika Natursenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c449": {
+    "name": "Vega Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c450": {
+    "name": "Stokkøya Sjøsenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c451": {
+    "name": "Bjøra Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c452": {
+    "name": "Mosjøen Camping AS",
+    "has_image": false,
+    "verified": false
+  },
+  "c453": {
+    "name": "Storforsen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c454": {
+    "name": "Namsskogan Hotell og Campingplass",
+    "has_image": false,
+    "verified": false
+  },
+  "c455": {
+    "name": "Nyheim Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c456": {
+    "name": "Brekkvasselv Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c457": {
+    "name": "Røst Havfiske Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c458": {
+    "name": "Camp Saltstraumen Elvegård",
+    "has_image": false,
+    "verified": false
+  },
+  "c459": {
+    "name": "Geitvågen Bad & Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c460": {
+    "name": "Saltstraumen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c461": {
+    "name": "Mo i Rana Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c462": {
+    "name": "Åmnes Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c463": {
+    "name": "Reipå Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c464": {
+    "name": "Skarsvatnet Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c465": {
+    "name": "Bjerka Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c466": {
+    "name": "Korgen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c467": {
+    "name": "Topcamp Havblikk Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c468": {
+    "name": "Kjellingstraumen Fjordcamp",
+    "has_image": false,
+    "verified": false
+  },
+  "c469": {
+    "name": "Kvæl Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c470": {
+    "name": "Kvitneset Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c471": {
+    "name": "Sjøbakken Gårdsferie Fiske-camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c472": {
+    "name": "Røssvoll Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c473": {
+    "name": "Sulitjelma Turistsenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c474": {
+    "name": "Lofoten Camp Storfjord",
+    "has_image": false,
+    "verified": false
+  },
+  "c475": {
+    "name": "Tromsø Lodge & Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c476": {
+    "name": "Hov Feriegård Og Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c477": {
+    "name": "Sildpollnes Sjøcamp",
+    "has_image": false,
+    "verified": false
+  },
+  "c478": {
+    "name": "Hammerstad Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c479": {
+    "name": "Kabelvåg Feriehus & Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c480": {
+    "name": "Sørkil Fjordcamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c481": {
+    "name": "Ness Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c482": {
+    "name": "Hamarøy Fiskecamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c483": {
+    "name": "Olderelv Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c484": {
+    "name": "Strandbu Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c485": {
+    "name": "Lofoten Turistsenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c486": {
+    "name": "Sandvika",
+    "has_image": false,
+    "verified": false
+  },
+  "c487": {
+    "name": "Lofoten Feriesenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c488": {
+    "name": "Skårungen",
+    "has_image": false,
+    "verified": false
+  },
+  "c489": {
+    "name": "Ulvsvåg Gjestgiveri AS",
+    "has_image": false,
+    "verified": false
+  },
+  "c490": {
+    "name": "Ramberg Gjestegård",
+    "has_image": false,
+    "verified": false
+  },
+  "c491": {
+    "name": "Arctic Motell",
+    "has_image": false,
+    "verified": false
+  },
+  "c492": {
+    "name": "Tørfoss Fiskecamp",
+    "has_image": false,
+    "verified": false
+  },
+  "c493": {
+    "name": "Løkvollstranda Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c494": {
+    "name": "Karasjok Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c495": {
+    "name": "Camp Alta",
+    "has_image": false,
+    "verified": false
+  },
+  "c496": {
+    "name": "Solvang Camping Alta",
+    "has_image": false,
+    "verified": false
+  },
+  "c497": {
+    "name": "Vestre Jakobselv Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c498": {
+    "name": "Skoganvarre Turist & Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c499": {
+    "name": "Fjordutsikten Motell & Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c500": {
+    "name": "Arctic FjordCamp",
+    "has_image": false,
+    "verified": false
+  },
+  "c501": {
+    "name": "Fosselv Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c502": {
+    "name": "Skjervøy fiskecamp",
+    "has_image": false,
+    "verified": false
+  },
+  "c504": {
+    "name": "Kunes Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c505": {
+    "name": "Storvannet NAF Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c506": {
+    "name": "Adventure Camp Mehamn",
+    "has_image": false,
+    "verified": false
+  },
+  "c507": {
+    "name": "Alta Strand",
+    "has_image": false,
+    "verified": false
+  },
+  "c508": {
+    "name": "Varjjat Ferie og Fritid",
+    "has_image": false,
+    "verified": false
+  },
+  "c509": {
+    "name": "Mjonøy Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c510": {
+    "name": "Hornnes Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c511": {
+    "name": "Møglestu Gård Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c512": {
+    "name": "Kirkevik",
+    "has_image": false,
+    "verified": false
+  },
+  "c513": {
+    "name": "Eplet (Camping)",
+    "has_image": false,
+    "verified": false
+  },
+  "c514": {
+    "name": "Trollstigen-Resort",
+    "has_image": false,
+    "verified": false
+  },
+  "c515": {
+    "name": "Osen Fjordcamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c516": {
+    "name": "Skaugvoll camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c517": {
+    "name": "Knaben Camp",
+    "has_image": false,
+    "verified": false
+  },
+  "c518": {
+    "name": "Kilefjorden Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c519": {
+    "name": "Fennefoss Camping og Hytteutleie",
+    "has_image": false,
+    "verified": false
+  },
+  "c520": {
+    "name": "Høgetveits Naturcamp",
+    "has_image": false,
+    "verified": false
+  },
+  "c521": {
+    "name": "Undeland Misjonsgård",
+    "has_image": false,
+    "verified": false
+  },
+  "c522": {
+    "name": "Suleskard Fjellsenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c523": {
+    "name": "Haugsjåsund Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c524": {
+    "name": "Nisser Hyttegrend og Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c525": {
+    "name": "Kilen Feriesenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c526": {
+    "name": "Kvanndal Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c527": {
+    "name": "Østerbø Fjellstove Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c528": {
+    "name": "Eikhamrane Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c529": {
+    "name": "Dragonmoen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c530": {
+    "name": "Finnskogen Turist & Villmarksenter AS",
+    "has_image": false,
+    "verified": false
+  },
+  "c531": {
+    "name": "Borgund Hyttesenter og Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c532": {
+    "name": "Vindedal Camping og hytter",
+    "has_image": false,
+    "verified": false
+  },
+  "c533": {
+    "name": "Høyseth Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c534": {
+    "name": "Trysil Hyttegrend, Motell og Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c535": {
+    "name": "Kvile Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c536": {
+    "name": "Jonasvollen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c537": {
+    "name": "Storsjøsenteret",
+    "has_image": false,
+    "verified": false
+  },
+  "c538": {
+    "name": "Skramstadseter Fjellstue",
+    "has_image": false,
+    "verified": false
+  },
+  "c539": {
+    "name": "Johnsgård Turistsenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c540": {
+    "name": "Gudbrandsjuvet Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c541": {
+    "name": "Stordal camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c542": {
+    "name": "Trollveggen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c543": {
+    "name": "Gudå Camping & Kiosk",
+    "has_image": false,
+    "verified": false
+  },
+  "c544": {
+    "name": "Moheim Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c545": {
+    "name": "Stugudal Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c546": {
+    "name": "Græslifoss Fiskecamp",
+    "has_image": false,
+    "verified": false
+  },
+  "c547": {
+    "name": "Hauganfjæra Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c548": {
+    "name": "Setersegga Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c549": {
+    "name": "Kvennan Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c550": {
+    "name": "Fagerlia Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c551": {
+    "name": "Nesjø Båtutleie",
+    "has_image": false,
+    "verified": false
+  },
+  "c552": {
+    "name": "Aglen Camping A/S",
+    "has_image": false,
+    "verified": false
+  },
+  "c553": {
+    "name": "Holmset Camping og Hytter",
+    "has_image": false,
+    "verified": false
+  },
+  "c554": {
+    "name": "Østnes Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c555": {
+    "name": "Kleiva Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c556": {
+    "name": "Føllingstua",
+    "has_image": false,
+    "verified": false
+  },
+  "c557": {
+    "name": "Holm Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c558": {
+    "name": "Røytvoll båt og hytteutleie",
+    "has_image": false,
+    "verified": false
+  },
+  "c559": {
+    "name": "Svenningdal Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c560": {
+    "name": "Tosbotn Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c561": {
+    "name": "Lierne Gjestegård",
+    "has_image": false,
+    "verified": false
+  },
+  "c562": {
+    "name": "Nordnes Kro og Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c563": {
+    "name": "Ballangen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c564": {
+    "name": "Polar Park",
+    "has_image": false,
+    "verified": false
+  },
+  "c565": {
+    "name": "Offersøy Feriesenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c566": {
+    "name": "Masi Turistsenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c567": {
+    "name": "Øvre Pasvik Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c568": {
+    "name": "Alteidet Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c569": {
+    "name": "Bjørkenes Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c570": {
+    "name": "Båtsfjord Farmen Syltefjord Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c571": {
+    "name": "Neiden Fjellstue",
+    "has_image": false,
+    "verified": false
+  },
+  "c572": {
+    "name": "Stabbursdalen Resort",
+    "has_image": false,
+    "verified": false
+  },
+  "c573": {
+    "name": "Repvåg Camping og Kafe",
+    "has_image": false,
+    "verified": false
+  },
+  "c574": {
+    "name": "Kjelleidet Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c575": {
+    "name": "Sandnesodden Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c576": {
+    "name": "Graddis Fjellstue & Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c577": {
+    "name": "Valle Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c578": {
+    "name": "Bufjord Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c579": {
+    "name": "Isefjærleiren",
+    "has_image": false,
+    "verified": false
+  },
+  "c580": {
+    "name": "Flothyl Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c581": {
+    "name": "Bruheim camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c582": {
+    "name": "Bogstad Camp & Turistsenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c583": {
+    "name": "Folven camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c584": {
+    "name": "Nygård Kro & Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c585": {
+    "name": "Oppstryn Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c586": {
+    "name": "Undredal Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c587": {
+    "name": "Muri Hytteutleige og camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c588": {
+    "name": "Trya camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c589": {
+    "name": "Camp Eggen",
+    "has_image": false,
+    "verified": false
+  },
+  "c590": {
+    "name": "Offersøy Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c591": {
+    "name": "Basecamp Vega",
+    "has_image": false,
+    "verified": false
+  },
+  "c592": {
+    "name": "Sjøstrand Rorbuer",
+    "has_image": false,
+    "verified": false
+  },
+  "c593": {
+    "name": "Basecamp Birtavarre",
+    "has_image": false,
+    "verified": false
+  },
+  "c594": {
+    "name": "Storfossen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c595": {
+    "name": "Vårvolden",
+    "has_image": false,
+    "verified": false
+  },
+  "c596": {
+    "name": "Skibotn Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c597": {
+    "name": "Sandnes Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c598": {
+    "name": "Rotsundelv Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c599": {
+    "name": "Villmarksgård Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c600": {
+    "name": "Spangereid Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c601": {
+    "name": "Akkarvikodden Teltplass",
+    "has_image": false,
+    "verified": false
+  },
+  "c602": {
+    "name": "Reiårsfossen Camp",
+    "has_image": false,
+    "verified": false
+  },
+  "c603": {
+    "name": "Helle Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c605": {
+    "name": "Espelandsdalen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c606": {
+    "name": "Trysil Camp - Fredbo",
+    "has_image": false,
+    "verified": false
+  },
+  "c607": {
+    "name": "Sæteråsen Hytter & Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c608": {
+    "name": "Olderskogen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c609": {
+    "name": "Strindmo Gård og Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c610": {
+    "name": "Lonin Gård og Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c611": {
+    "name": "Krokstrand Fjellpark",
+    "has_image": false,
+    "verified": false
+  },
+  "c612": {
+    "name": "Saltdal Turistsenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c613": {
+    "name": "Artic-Lyngen",
+    "has_image": false,
+    "verified": false
+  },
+  "c614": {
+    "name": "Breivik Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c615": {
+    "name": "Ås camping og hytter",
+    "has_image": false,
+    "verified": false
+  },
+  "c616": {
+    "name": "Røed Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c617": {
+    "name": "Midttun Camping og Feriehytter",
+    "has_image": false,
+    "verified": false
+  },
+  "c618": {
+    "name": "Hagatun Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c619": {
+    "name": "Grungedal Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c620": {
+    "name": "Bråvoll Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c621": {
+    "name": "Storenga Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c622": {
+    "name": "Kirkevika Camping og Badeplass",
+    "has_image": false,
+    "verified": false
+  },
+  "c623": {
+    "name": "Tangen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c624": {
+    "name": "Hagen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c625": {
+    "name": "Bakkesand Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c626": {
+    "name": "Furuodden Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c627": {
+    "name": "Samuelstuen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c628": {
+    "name": "Brøttum Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c629": {
+    "name": "Visa Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c630": {
+    "name": "Romsdalseggen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c631": {
+    "name": "Mittet Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c632": {
+    "name": "Soggebrua Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c633": {
+    "name": "Elvebakken Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c634": {
+    "name": "Uritun Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c635": {
+    "name": "Fagervik Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c636": {
+    "name": "Vips Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c637": {
+    "name": "Kjelstad Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c638": {
+    "name": "Frosta Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c639": {
+    "name": "Vaagen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c640": {
+    "name": "Velvang Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c641": {
+    "name": "Midtkil Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c642": {
+    "name": "Sona Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c643": {
+    "name": "Langnes Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c644": {
+    "name": "Holmen Kystcamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c645": {
+    "name": "Harran Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c646": {
+    "name": "Aspneset Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c647": {
+    "name": "Haugen Camping I",
+    "has_image": false,
+    "verified": false
+  },
+  "c648": {
+    "name": "Naustvollen Camping Aune",
+    "has_image": false,
+    "verified": false
+  },
+  "c649": {
+    "name": "Osen",
+    "has_image": false,
+    "verified": false
+  },
+  "c650": {
+    "name": "Medby Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c651": {
+    "name": "Rørvika Camp Site",
+    "has_image": false,
+    "verified": false
+  },
+  "c652": {
+    "name": "Lofoten Turistsenter",
+    "has_image": false,
+    "verified": false
+  },
+  "c653": {
+    "name": "Kautokeino Fritidssenter og Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c654": {
+    "name": "Duottar",
+    "has_image": false,
+    "verified": false
+  },
+  "c655": {
+    "name": "Varanger Panorama Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c656": {
+    "name": "Sekkemo Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c657": {
+    "name": "Oksfjord Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c658": {
+    "name": "Nilsen Gjestgiveri og Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c659": {
+    "name": "Hogga sluse camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c660": {
+    "name": "Camping Bobil",
+    "has_image": false,
+    "verified": false
+  },
+  "c661": {
+    "name": "Lavvo",
+    "has_image": false,
+    "verified": false
+  },
+  "c662": {
+    "name": "Riddu hovedcamp",
+    "has_image": false,
+    "verified": false
+  },
+  "c663": {
+    "name": "Rakkestad-Vika Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c664": {
+    "name": "Storsjøen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c665": {
+    "name": "Osensjøens Vestside og Berget Turisttun",
+    "has_image": false,
+    "verified": false
+  },
+  "c666": {
+    "name": "Gammelsetra Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c667": {
+    "name": "Bakken Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c668": {
+    "name": "Vaksvikfjellet Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c669": {
+    "name": "Hummelfjell Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c670": {
+    "name": "Hattfjelldal Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c671": {
+    "name": "Tjolmen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c672": {
+    "name": "Polar Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c673": {
+    "name": "Rostadalen Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c674": {
+    "name": "Solbakken Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c675": {
+    "name": "Fosseng Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c676": {
+    "name": "Sagelvvatn Vertshus & Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c677": {
+    "name": "Hestbrinken",
+    "has_image": false,
+    "verified": false
+  },
+  "c678": {
+    "name": "Eggum Outfield Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c679": {
+    "name": "Flateland Camping og badeplass",
+    "has_image": false,
+    "verified": false
+  },
+  "c680": {
+    "name": "Odden",
+    "has_image": false,
+    "verified": false
+  },
+  "c681": {
+    "name": "Jerpøy",
+    "has_image": false,
+    "verified": false
+  },
+  "c682": {
+    "name": "Kassnes",
+    "has_image": false,
+    "verified": false
+  },
+  "c683": {
+    "name": "Haugatun camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c684": {
+    "name": "Camp site",
+    "has_image": false,
+    "verified": false
+  },
+  "c685": {
+    "name": "Free camping site",
+    "has_image": false,
+    "verified": false
+  },
+  "c686": {
+    "name": "Designated bonfire place",
+    "has_image": false,
+    "verified": false
+  },
+  "c687": {
+    "name": "Bålplass",
+    "has_image": false,
+    "verified": false
+  },
+  "c688": {
+    "name": "Steinklepp Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c689": {
+    "name": "Stenvåg Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c690": {
+    "name": "Dalsvika Fricamp",
+    "has_image": false,
+    "verified": false
+  },
+  "c691": {
+    "name": "Sundfloen",
+    "has_image": false,
+    "verified": false
+  },
+  "c692": {
+    "name": "Øren Gård Og Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c693": {
+    "name": "Måna Camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c694": {
+    "name": "Øvre Kongleplassen",
+    "has_image": false,
+    "verified": false
+  },
+  "c695": {
+    "name": "Steinalderplassen",
+    "has_image": false,
+    "verified": false
+  },
+  "c696": {
+    "name": "Bålplassen",
+    "has_image": false,
+    "verified": false
+  },
+  "c697": {
+    "name": "Salsnes camping",
+    "has_image": false,
+    "verified": false
+  },
+  "c698": {
+    "name": "Roan sjøcamping",
+    "has_image": false,
+    "verified": false
+  },
+  "c699": {
+    "name": "Festivalcampen",
     "has_image": false,
     "verified": false
   }
