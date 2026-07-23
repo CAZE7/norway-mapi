@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import {
   ArrowDown,
@@ -251,14 +251,14 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
                 const p = byId.get(id);
                 if (!p) return null;
                 return (
-                  <PlaceRow
+                  <MemoizedPlaceRow
                     key={id}
                     place={p}
                     isFav
                     inRoute={route.includes(id)}
-                    onSelect={() => focus(id)}
-                    onFav={() => toggleFav(id)}
-                    onAddRoute={() => addToRoute(id)}
+                    onSelect={focus}
+                    onFav={toggleFav}
+                    onAddRoute={addToRoute}
                     onNavigate={onNavigate}
                   />
                 );
@@ -325,14 +325,14 @@ function PagedResults({
     <>
       <ul className="divide-sidebar-border divide-y">
         {shown.map((p) => (
-          <PlaceRow
+          <MemoizedPlaceRow
             key={p.id}
             place={p}
             isFav={favorites.includes(p.id)}
             inRoute={route.includes(p.id)}
-            onSelect={() => onFocus(p.id)}
-            onFav={() => onFav(p.id)}
-            onAddRoute={() => onAddRoute(p.id)}
+            onSelect={onFocus}
+            onFav={onFav}
+            onAddRoute={onAddRoute}
             onNavigate={onNavigate}
           />
         ))}
@@ -353,7 +353,7 @@ function PagedResults({
   );
 }
 
-function PlaceRow({
+const MemoizedPlaceRow = React.memo(function PlaceRow({
   place,
   isFav,
   inRoute,
@@ -365,16 +365,16 @@ function PlaceRow({
   place: Place;
   isFav: boolean;
   inRoute: boolean;
-  onSelect: () => void;
-  onFav: () => void;
-  onAddRoute: () => void;
+  onSelect: (id: string) => void;
+  onFav: (id: string) => void;
+  onAddRoute: (id: string) => void;
   onNavigate?: () => void;
 }) {
   return (
     <li className="hover:bg-sidebar-accent group grid grid-cols-[auto_minmax(0,1fr)_auto] items-start gap-3 p-3 transition-colors">
       <button
         className="focus-visible:ring-ring rounded-md focus-visible:outline-none focus-visible:ring-2"
-        onClick={onSelect}
+        onClick={() => onSelect(place.id)}
         aria-label={`${place.name} auf Karte anzeigen`}
       >
         <PlaceThumb
@@ -413,7 +413,7 @@ function PlaceRow({
         <Button
           size="icon"
           variant={isFav ? "default" : "ghost"}
-          onClick={onFav}
+          onClick={() => onFav(place.id)}
           aria-label={isFav ? "Favorit entfernen" : "Als Favorit speichern"}
           className="h-9 w-9 sm:h-8 sm:w-8 active:scale-95 transition-transform"
         >
@@ -422,7 +422,7 @@ function PlaceRow({
         <Button
           size="icon"
           variant={inRoute ? "default" : "ghost"}
-          onClick={onAddRoute}
+          onClick={() => onAddRoute(place.id)}
           aria-label={inRoute ? "Bereits in Route" : "Zur Route hinzufügen"}
           className="h-9 w-9 sm:h-8 sm:w-8 active:scale-95 transition-transform"
           disabled={inRoute}
@@ -443,7 +443,7 @@ function PlaceRow({
       </div>
     </li>
   );
-}
+});
 
 function RoutePanel({
   route,
