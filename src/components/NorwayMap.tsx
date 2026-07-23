@@ -374,10 +374,19 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       markerLayer.addLayer(m);
       currentVisibleRef.current.add(p.id);
     }
-    mapRef.current.flyTo([p.lat, p.lng], Math.max(mapRef.current.getZoom(), 9), {
-      duration: 0.8,
-    });
-    if (m) setTimeout(() => m.openPopup(), 400);
+    const map = mapRef.current;
+    const targetZoom = Math.max(map.getZoom(), 11);
+    map.flyTo([p.lat, p.lng], targetZoom, { duration: 0.9 });
+    const marker = m;
+    const openWhenReady = () => {
+      if (marker) marker.openPopup();
+    };
+    map.once("moveend", openWhenReady);
+    // Fallback in case moveend doesn't fire (already at target)
+    setTimeout(() => {
+      map.off("moveend", openWhenReady);
+      openWhenReady();
+    }, 1200);
   }, [focusId, focusNonce, placesById]);
 
   // Draw ordered route polyline with numbered stop markers.
