@@ -166,8 +166,8 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
           onRoute: () => actionsRef.current.addToRoute(p.id),
           onDetails: () => actionsRef.current.navigate({ to: "/place/$id", params: { id: p.id } }),
         });
-        marker.bindPopup(popup, { maxWidth: 280, minWidth: 260, closeButton: true }).openPopup();
-        marker.on("popupopen", () => {
+        marker.bindPopup(popup, { maxWidth: 280, minWidth: 260, closeButton: true });
+        const loadImage = () => {
           const holder = popup.querySelector("[data-img-inner]") as HTMLElement | null;
           if (!holder || holder.querySelector("img")) return;
           lookupPlaceImage(p.name, p.aliases).then((hit) => {
@@ -184,7 +184,10 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
             };
             holder.appendChild(img);
           });
-        });
+        };
+        marker.on("popupopen", loadImage);
+        marker.openPopup();
+        loadImage();
       } else {
         marker.openPopup();
       }
