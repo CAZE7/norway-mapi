@@ -23,6 +23,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { z } from "zod";
 import {
   CATEGORY_LABEL,
   CUSTOM_PLACES,
@@ -34,6 +35,19 @@ import {
 } from "@/data/places";
 
 import { useAppStore } from "@/lib/store";
+
+const placeSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  region: z.string(),
+  category: z.string(),
+  tier: z.enum(["geheimtipp", "touristisch", "service"]),
+  lat: z.number().min(-90).max(90),
+  lng: z.number().min(-180).max(180),
+  description: z.string(),
+  aliases: z.array(z.string()).optional(),
+  quality: z.number().optional(),
+});
 
 export const Route = createFileRoute("/admin")({
   component: AdminPage,
@@ -236,17 +250,10 @@ function AdminPage() {
         const merged = [...custom];
         const existingIds = new Set(merged.map((x) => x.id));
         let importedCount = 0;
-        for (const p of parsed) {
-          if (
-            !p.id ||
-            !p.name ||
-            typeof p.lat !== "number" ||
-            typeof p.lng !== "number" ||
-            !p.region ||
-            !p.category ||
-            !p.tier
-          )
-            continue;
+        for (const raw of parsed) {
+          const result = placeSchema.safeParse(raw);
+          if (!result.success) continue;
+          const p = result.data as Place;
           if (!existingIds.has(p.id)) {
             existingIds.add(p.id);
             merged.push(p);
