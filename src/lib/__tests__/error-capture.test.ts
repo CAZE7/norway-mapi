@@ -46,7 +46,7 @@ describe("error-capture", () => {
     const reason = new Error("Test rejection reason");
     // Some environments don't have PromiseRejectionEvent constructor or we can mock it
     const event = new Event("unhandledrejection") as PromiseRejectionEvent;
-    Object.defineProperty(event, 'reason', { value: reason });
+    Object.defineProperty(event, "reason", { value: reason });
     globalThis.dispatchEvent(event);
 
     const capturedError = consumeLastCapturedError();
