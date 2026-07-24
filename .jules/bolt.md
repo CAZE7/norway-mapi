@@ -23,6 +23,10 @@
 **Learning:** Recalculating a full $O(N^2)$ distance matrix on every route improvement during a 2-opt loop introduces massive overhead that dwarfs the actual optimization calculations.
 **Action:** In 2-opt loops, avoid recalculating or maintaining a full matrix. Instead, calculate the distances dynamically for only the specific affected nodes (e.g., using haversine directly on the 4 affected node pairs) during evaluation to drastically reduce inner loop overhead.
 
+## 2024-05-25 - Avoid temporary array allocations in render/sync loops
+
+**Learning:** Creating intermediate arrays via spread operators (`[...arr]`), `.slice()`, or `.map()` inside high-frequency recursive timeouts or React `useEffect` loops leads to significant temporary memory allocations and Garbage Collection pressure, hurting rendering/UI performance (e.g., when syncing thousands of map markers).
+**Action:** Replace chaining array methods with direct `for` loops. When collecting batches of items, pre-allocate arrays (e.g., `new Array(batchSize)`) and populate them by index to eliminate intermediary allocations and significantly reduce execution overhead.
 ## 2024-05-24 - Parallelize independent network requests
 
 **Learning:** Running network calls in sequence inside a `for...of` loop creates an unnecessary performance bottleneck by blocking on each network request, even when the requests are fully independent.
