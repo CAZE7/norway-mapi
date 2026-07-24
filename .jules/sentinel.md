@@ -16,6 +16,10 @@
 **Learning:** Even in purely client-side static applications without a backend, importing and deserializing arbitrary JSON files into the application state is dangerous. If the data is persisted and rendered, missing schema validation can lead to persistent application crashes and client-side DoS vulnerabilities.
 **Prevention:** Always validate imported data structures against a strict schema (e.g., using `zod`) before merging them into the application state or persisting them to storage, ensuring that untrusted data strictly matches the expected types.
 
+## 2024-05-24 - [MEDIUM] Fix XSS vulnerability in Chart component
+**Vulnerability:** The `ChartStyle` functional component used `dangerouslySetInnerHTML` on a `<style>` tag to render dynamic CSS generated from chart configurations. If a user can inject malicious payload like `</style><script>alert(1)</script>` into configuration, it might lead to Cross-Site Scripting (XSS).
+**Learning:** Using `children` on `<style>` tags directly in React prevents XSS because React automatically mitigates XSS by transforming elements into valid CSS characters (e.g. `</style>` is output as `</\73 tyle>`).
+**Prevention:** Avoid `dangerouslySetInnerHTML` for `<style>` tags in React; always use standard `children` content instead so React handles escaping.
 ## 2024-07-24 - Insecure SSL Certificate Verification in Python Scripts
 
 **Vulnerability:** Disabled SSL certificate verification (`ctx.check_hostname = False` and `ctx.verify_mode = ssl.CERT_NONE`) in `audit_places.py` and `audit_places_v2.py`.
