@@ -406,15 +406,16 @@ function AdminExportImport({ custom }: { custom: Place[] }) {
     if (!file) return;
     file.text().then((text) => {
       try {
-        const parsed = JSON.parse(text) as Place[];
+        const parsed = JSON.parse(text);
         if (!Array.isArray(parsed)) throw new Error("Kein Array");
+
+        // Strict schema validation for the entire imported structure using zod array
+        const validatedArray = z.array(placeSchema).parse(parsed) as Place[];
+
         const merged = [...custom];
         const existingIds = new Set(merged.map((x) => x.id));
         let importedCount = 0;
-        for (const raw of parsed) {
-          const result = placeSchema.safeParse(raw);
-          if (!result.success) continue;
-          const p = result.data as Place;
+        for (const p of validatedArray) {
           if (!existingIds.has(p.id)) {
             existingIds.add(p.id);
             merged.push(p);
@@ -424,7 +425,7 @@ function AdminExportImport({ custom }: { custom: Place[] }) {
         setCustomPlaces(merged);
         toast.success(`${importedCount} Orte importiert`);
       } catch (err) {
-        toast.error("Import fehlgeschlagen – ungültiges JSON");
+        toast.error("Import fehlgeschlagen – ungültiges JSON oder Schema-Fehler");
       }
     });
     e.target.value = "";

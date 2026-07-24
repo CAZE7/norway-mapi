@@ -34,6 +34,11 @@
 **Learning:** Hardcoding overrides that disable SSL verification compromises data integrity and confidentiality, allowing attackers to intercept or alter traffic undetected. Always use default, secure SSL contexts unless explicitly debugging in a controlled environment.
 **Prevention:** Avoid disabling `check_hostname` and `verify_mode` in production code. Rely on `ssl.create_default_context()` to handle secure validation out of the box. Use libraries like `requests` which provide secure defaults by default.
 
+## 2024-05-24 - Fix JSON Import DoS Vulnerability
+
+**Vulnerability:** The application allowed importing arbitrary JSON structures from files directly into memory and application state without enforcing a strict schema for the root array or its elements, leading to potential client-side Denial of Service if malicious payloads (e.g. empty objects for fields expecting strings) were rendered.
+**Learning:** For bulk data imports (e.g., JSON file uploads), relying on piecemeal validation with `safeParse` inside a loop can leave the application in an incomplete state and fails to guarantee the structural integrity of the root payload.
+**Prevention:** Always validate imported data structures entirely against a strict schema (like `z.array(schema).parse(data)`) immediately upon deserialization, before merging them into the application state or persisting them to storage.
 ## 2023-10-27 - Replace Weak PIN Fallback with Pure JS SHA-256
 **Vulnerability:** A weak 32-bit bitwise hash fallback was used for admin PINs when the Web Crypto API was unavailable (e.g. in non-HTTPS secure contexts), making offline cracking significantly easier due to weak bitwise constraints.
 **Learning:** For client-side hashing in non-secure contexts where `crypto.subtle` is unavailable, robust hash functions (like SHA-256) should still be used by utilizing pure-JS fallback implementations instead of homemade weak bitwise loops.

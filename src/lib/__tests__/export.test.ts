@@ -194,7 +194,7 @@ describe("downloadTextFile", () => {
       .mockReturnValue(mockAnchor as unknown as HTMLAnchorElement);
     const appendChildSpy = vi
       .spyOn(document.body, "appendChild")
-      .mockImplementation((() => {}) as any);
+      .mockImplementation((() => {}) as unknown as (node: Node) => Node);
 
     downloadTextFile("test.gpx", "<gpx></gpx>", "application/gpx+xml");
 
