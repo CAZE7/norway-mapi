@@ -296,13 +296,14 @@ async function lookupPlaceImageUncached(
 
   // Phase 2: Wikimedia Commons — catches campsites, viewpoints, minor spots
   // that don't have their own Wikipedia article but do have photos on Commons.
-  for (const candidate of candidates) {
-    const hit = await withNetworkSlot(() => fetchCommons(candidate));
-    if (hit) {
-      cache[cacheKey] = { at: Date.now(), value: hit };
-      writeCache(cache);
-      return hit;
-    }
+  const commonsHits = await Promise.all(
+    candidates.map((candidate) => withNetworkSlot(() => fetchCommons(candidate))),
+  );
+  const hit = commonsHits.find((h) => h !== null) ?? null;
+  if (hit) {
+    cache[cacheKey] = { at: Date.now(), value: hit };
+    writeCache(cache);
+    return hit;
   }
 
   cache[cacheKey] = { at: Date.now(), value: null };

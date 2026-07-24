@@ -1,5 +1,22 @@
 import { describe, it, expect } from "vitest";
-import { distanceKm } from "./category-color";
+import { distanceKm, colorFor, CATEGORY_COLOR } from "./category-color";
+
+describe("colorFor", () => {
+  it("should return the correct color for a known category", () => {
+    expect(colorFor("fjord")).toBe(CATEGORY_COLOR["fjord"]);
+    expect(colorFor("camper_motorhome")).toBe(CATEGORY_COLOR["camper_motorhome"]);
+  });
+
+  it("should return the camper fallback color for unknown categories starting with camper_", () => {
+    expect(colorFor("camper_unknown")).toBe("#a0522d");
+    expect(colorFor("camper_")).toBe("#a0522d");
+  });
+
+  it("should return the default fallback color for unknown categories not starting with camper_", () => {
+    expect(colorFor("unknown_category")).toBe("#2d5a3d");
+    expect(colorFor("")).toBe("#2d5a3d");
+  });
+});
 
 describe("distanceKm", () => {
   it("should return 0 for the exact same coordinates", () => {

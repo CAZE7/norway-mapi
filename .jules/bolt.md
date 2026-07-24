@@ -27,3 +27,7 @@
 
 **Learning:** Creating intermediate arrays via spread operators (`[...arr]`), `.slice()`, or `.map()` inside high-frequency recursive timeouts or React `useEffect` loops leads to significant temporary memory allocations and Garbage Collection pressure, hurting rendering/UI performance (e.g., when syncing thousands of map markers).
 **Action:** Replace chaining array methods with direct `for` loops. When collecting batches of items, pre-allocate arrays (e.g., `new Array(batchSize)`) and populate them by index to eliminate intermediary allocations and significantly reduce execution overhead.
+## 2024-05-24 - Parallelize independent network requests
+
+**Learning:** Running network calls in sequence inside a `for...of` loop creates an unnecessary performance bottleneck by blocking on each network request, even when the requests are fully independent.
+**Action:** Use `Promise.all` alongside `.map()` to execute independent network calls concurrently. This allows the process to overlap the network latency of multiple requests, resulting in significantly faster overall resolution time.
