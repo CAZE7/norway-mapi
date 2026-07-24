@@ -133,6 +133,7 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
             value={localQuery}
             onChange={(e) => setLocalQuery(e.target.value)}
             placeholder="Suche Orte, Region, Kategorie…"
+            aria-label="Suche Orte, Region, Kategorie…"
             className="pl-9"
             autoCorrect="off"
             autoCapitalize="off"
@@ -195,6 +196,7 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
                       ? "border-primary bg-primary text-primary-foreground"
                       : "border-sidebar-border bg-sidebar hover:bg-sidebar-accent",
                   )}
+                  aria-pressed={active}
                 >
                   {CATEGORY_LABEL[c]}
                 </button>
@@ -205,6 +207,7 @@ export function AppSidebar({ results, onNavigate }: { results: Place[]; onNaviga
             <button
               onClick={() => setShowAllCats((v) => !v)}
               className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1 text-xs"
+              aria-expanded={showAllCats}
             >
               <ChevronDown
                 className={cn("h-3.5 w-3.5 transition-transform", showAllCats && "rotate-180")}
