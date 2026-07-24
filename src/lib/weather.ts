@@ -111,24 +111,37 @@ export async function fetchWeather(lat: number, lng: number): Promise<WeatherRes
   };
 
   const now = toHour(series[0]);
-  const next24 = series.slice(0, 24).map(toHour);
+
+  const limit24 = Math.min(24, series.length);
+  const next24 = new Array(limit24);
+  for (let i = 0; i < limit24; i++) {
+    next24[i] = toHour(series[i]);
+  }
 
   // Daily: group by yyyy-mm-dd, 5 days
   const byDay = new Map<string, HourForecast[]>();
-  for (const s of series.slice(0, 24 * 6).map(toHour)) {
+  const limitDaily = Math.min(24 * 6, series.length);
+  for (let i = 0; i < limitDaily; i++) {
+    const s = toHour(series[i]);
     const d = s.time.slice(0, 10);
     if (!byDay.has(d)) byDay.set(d, []);
     byDay.get(d)!.push(s);
   }
-  const daily = Array.from(byDay.entries())
-    .slice(0, 5)
-    .map(([date, hours]) => ({
+
+  const daily = [];
+  let count = 0;
+  for (const date of byDay.keys()) {
+    if (count >= 5) break;
+    const hours = byDay.get(date)!;
+    daily.push({
       date,
       min: Math.min(...hours.map((h) => h.tempC)),
       max: Math.max(...hours.map((h) => h.tempC)),
       precip: hours.reduce((a, h) => a + h.precip, 0),
       symbol: hours[Math.floor(hours.length / 2)].symbol,
-    }));
+    });
+    count++;
+  }
 
   const data: WeatherResult = { updatedAt: json.properties.meta.updated_at, now, next24, daily };
   writeCache(key, data);
@@ -145,10 +158,15 @@ export async function fetchAurora(): Promise<AuroraResult> {
   if (!res.ok) throw new Error(`Aurora-API: ${res.status}`);
   const rows = (await res.json()) as Array<[string, string, string]>;
   // First row is header
-  const timeline: KpEntry[] = rows.slice(1).map((r) => ({
-    time: r[0].replace(" ", "T") + "Z",
-    kp: Number(r[1]),
-  }));
+  const len = rows.length - 1;
+  const timeline: KpEntry[] = new Array(len > 0 ? len : 0);
+  for (let i = 1; i < rows.length; i++) {
+    const r = rows[i];
+    timeline[i - 1] = {
+      time: r[0].replace(" ", "T") + "Z",
+      kp: Number(r[1]),
+    };
+  }
   const now = Date.now();
   const past = timeline.filter((t) => new Date(t.time).getTime() <= now);
   const future24 = timeline.filter((t) => {

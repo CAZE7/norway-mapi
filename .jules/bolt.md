@@ -27,3 +27,7 @@
 
 **Learning:** Running network calls in sequence inside a `for...of` loop creates an unnecessary performance bottleneck by blocking on each network request, even when the requests are fully independent.
 **Action:** Use `Promise.all` alongside `.map()` to execute independent network calls concurrently. This allows the process to overlap the network latency of multiple requests, resulting in significantly faster overall resolution time.
+
+## 2024-07-24 - Avoid intermediate array allocations in frequent tight loops
+**Learning:** Frequent array creation operations like `[...arr, item].forEach(...)` or `.slice(...).map(...)` inside rapidly executing intervals (such as Leaflet map syncing or processing data arrays) create excessive intermediate arrays. This results in heavy memory allocation and triggers frequent Garbage Collection (GC) pauses, which cause UI stuttering and degrade performance.
+**Action:** Replace functional array chaining with direct `for` loops and fixed-size pre-allocated arrays where appropriate. E.g., replace `slice(start, end).map(fn)` with a pre-allocated `new Array(batchSize)` populated via a `for` loop, eliminating the intermediate array entirely.

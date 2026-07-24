@@ -99,14 +99,16 @@ describe("buildGpx", () => {
     expect(result).toContain("<name>1. Test &amp; Name &lt; &gt; &quot;</name>");
     expect(result).toContain("<desc>Desc with &apos;apostrophe&apos;</desc>");
     expect(result).toContain("<type>TestCat &amp; More</type>");
-    expect(result).toContain('</wpt>');
+    expect(result).toContain("</wpt>");
 
     expect(result).toContain('<wpt lat="60.123" lon="11.456">');
     expect(result).toContain("<name>2. Normal Stop</name>");
 
     // Check Route
     expect(result).toContain("<rte>");
-    expect(result).toContain('<rtept lat="59.9139" lon="10.7522"><name>Test &amp; Name &lt; &gt; &quot;</name></rtept>');
+    expect(result).toContain(
+      '<rtept lat="59.9139" lon="10.7522"><name>Test &amp; Name &lt; &gt; &quot;</name></rtept>',
+    );
     expect(result).toContain('<rtept lat="60.123" lon="11.456"><name>Normal Stop</name></rtept>');
     expect(result).toContain("</rte>");
   });
@@ -146,7 +148,9 @@ describe("buildKml", () => {
     expect(result).toContain("<Point><coordinates>11.456,60.123,0</coordinates></Point>");
 
     // Check Route LineString
-    expect(result).toContain("<LineString><tessellate>1</tessellate><coordinates>10.7522,59.9139,0 11.456,60.123,0</coordinates></LineString>");
+    expect(result).toContain(
+      "<LineString><tessellate>1</tessellate><coordinates>10.7522,59.9139,0 11.456,60.123,0</coordinates></LineString>",
+    );
   });
 });
 
@@ -165,7 +169,12 @@ describe("downloadTextFile", () => {
     const mockUrl = "blob:http://localhost/1234";
 
     // Mock Blob and URL
-    vi.stubGlobal("Blob", vi.fn(function() { return mockBlob; }));
+    vi.stubGlobal(
+      "Blob",
+      vi.fn(function () {
+        return mockBlob;
+      }),
+    );
     const createObjectURLMock = vi.fn(() => mockUrl);
     const revokeObjectURLMock = vi.fn();
     vi.stubGlobal("URL", {
@@ -180,8 +189,12 @@ describe("downloadTextFile", () => {
       click: vi.fn(),
       remove: vi.fn(),
     };
-    const createElementSpy = vi.spyOn(document, "createElement").mockReturnValue(mockAnchor as unknown as HTMLAnchorElement);
-    const appendChildSpy = vi.spyOn(document.body, "appendChild").mockImplementation((() => {}) as any);
+    const createElementSpy = vi
+      .spyOn(document, "createElement")
+      .mockReturnValue(mockAnchor as unknown as HTMLAnchorElement);
+    const appendChildSpy = vi
+      .spyOn(document.body, "appendChild")
+      .mockImplementation((() => {}) as unknown as (node: Node) => Node);
 
     downloadTextFile("test.gpx", "<gpx></gpx>", "application/gpx+xml");
 
