@@ -253,9 +253,11 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
     if (syncTimerRef.current) window.clearTimeout(syncTimerRef.current);
     syncTimerRef.current = window.setTimeout(() => {
       const targetIds = new Set(visibleIds);
-      [...route, focusId].forEach((id) => {
+      for (let j = 0; j < route.length; j++) {
+        const id = route[j];
         if (id && placesById.has(id)) targetIds.add(id);
-      });
+      }
+      if (focusId && placesById.has(focusId)) targetIds.add(focusId);
 
       const current = currentIdsRef.current;
       const toAdd: { id: string; marker: L.Marker }[] = [];
@@ -283,13 +285,17 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       if (batchTimerRef.current) window.clearTimeout(batchTimerRef.current);
       let i = 0;
       const addChunk = () => {
-        const slice = toAdd.slice(i, i + ADD_BATCH);
-        if (slice.length) {
-          cluster.addLayers(slice.map((t) => t.marker));
-          slice.forEach((t) => {
-            current.add(t.id);
-          });
-          i += ADD_BATCH;
+        const batchEnd = Math.min(i + ADD_BATCH, toAdd.length);
+        if (i < batchEnd) {
+          const batchSize = batchEnd - i;
+          const markers = new Array(batchSize);
+          for (let j = 0; j < batchSize; j++) {
+            const item = toAdd[i + j];
+            markers[j] = item.marker;
+            current.add(item.id);
+          }
+          cluster.addLayers(markers);
+          i = batchEnd;
           setMarkerProgress({ done: current.size, total: targetIds.size });
           if (i < toAdd.length) {
             batchTimerRef.current = window.setTimeout(addChunk, 16);
