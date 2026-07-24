@@ -22,3 +22,8 @@
 
 **Learning:** Recalculating a full $O(N^2)$ distance matrix on every route improvement during a 2-opt loop introduces massive overhead that dwarfs the actual optimization calculations.
 **Action:** In 2-opt loops, avoid recalculating or maintaining a full matrix. Instead, calculate the distances dynamically for only the specific affected nodes (e.g., using haversine directly on the 4 affected node pairs) during evaluation to drastically reduce inner loop overhead.
+
+## 2024-05-24 - Parallelize independent network requests
+
+**Learning:** Running network calls in sequence inside a `for...of` loop creates an unnecessary performance bottleneck by blocking on each network request, even when the requests are fully independent.
+**Action:** Use `Promise.all` alongside `.map()` to execute independent network calls concurrently. This allows the process to overlap the network latency of multiple requests, resulting in significantly faster overall resolution time.
