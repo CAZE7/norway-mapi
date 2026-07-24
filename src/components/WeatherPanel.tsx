@@ -8,6 +8,7 @@ import {
   type AuroraResult,
   type WeatherResult,
 } from "@/lib/weather";
+import { Skeleton } from "@/components/ui/skeleton";
 
 type Props = { lat: number; lng: number };
 
@@ -43,9 +44,48 @@ export default function WeatherPanel({ lat, lng }: Props) {
 
   if (loading) {
     return (
-      <div className="bg-card border-border rounded-xl border p-5">
-        <div className="text-muted-foreground text-sm">Wetter & Nordlicht werden geladen…</div>
-      </div>
+      <section className="grid gap-4 md:grid-cols-2" aria-live="polite" aria-busy="true">
+        <span className="sr-only">Wetter und Nordlicht werden geladen…</span>
+        {/* Wetter Skeleton */}
+        <div className="bg-card border-border rounded-xl border p-5" aria-hidden="true">
+          <div className="mb-3 flex items-center justify-between">
+            <Skeleton className="h-6 w-24" />
+            <Skeleton className="h-4 w-32" />
+          </div>
+          <div className="flex items-center gap-4">
+            <Skeleton className="h-12 w-12 rounded-full" />
+            <div className="space-y-2">
+              <Skeleton className="h-10 w-24" />
+              <Skeleton className="h-4 w-48" />
+            </div>
+          </div>
+          <div className="mt-4 grid grid-cols-5 gap-1.5">
+            {[...Array(5)].map((_, i) => (
+              <Skeleton key={i} className="h-20 w-full" />
+            ))}
+          </div>
+        </div>
+        {/* Nordlicht Skeleton */}
+        <div className="bg-card border-border rounded-xl border p-5" aria-hidden="true">
+          <div className="mb-3 flex items-center justify-between">
+            <Skeleton className="h-6 w-28" />
+            <Skeleton className="h-4 w-24" />
+          </div>
+          <div className="flex items-center gap-4">
+            <div className="space-y-2">
+              <Skeleton className="h-10 w-32" />
+              <Skeleton className="h-4 w-24" />
+            </div>
+            <Skeleton className="ml-auto h-6 w-24 rounded-full" />
+          </div>
+          <div className="mt-4 space-y-2">
+            <Skeleton className="h-4 w-full" />
+            <Skeleton className="h-4 w-5/6" />
+            <Skeleton className="h-4 w-4/6" />
+          </div>
+          <Skeleton className="mt-3 h-10 w-full" />
+        </div>
+      </section>
     );
   }
 
