@@ -10,7 +10,7 @@
 
 ## 2026-07-23 - Optimize list rendering lookups with Set
 
-**Learning:** Using `Array.includes()` inside a large list render loop (`.map`) creates an O(N * M) performance bottleneck (where N is the rendered list and M is the array to check against).
+**Learning:** Using `Array.includes()` inside a large list render loop (`.map`) creates an O(N \* M) performance bottleneck (where N is the rendered list and M is the array to check against).
 **Action:** Always pre-compute a `Set` wrapped in `useMemo` (e.g. `useMemo(() => new Set(arr), [arr])`) and use `Set.has()` for O(1) lookups during rendering to eliminate the nested iteration.
 
 ## 2024-05-19 - Set Lookup in Render Loop Optimization

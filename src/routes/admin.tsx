@@ -23,6 +23,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { z } from "zod";
 import {
   CATEGORY_LABEL,
   CUSTOM_PLACES,
@@ -34,6 +35,19 @@ import {
 } from "@/data/places";
 
 import { useAppStore } from "@/lib/store";
+
+const placeSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  region: z.string(),
+  category: z.string(),
+  tier: z.enum(["geheimtipp", "touristisch", "service"]),
+  lat: z.number().min(-90).max(90),
+  lng: z.number().min(-180).max(180),
+  description: z.string(),
+  aliases: z.array(z.string()).optional(),
+  quality: z.number().optional(),
+});
 
 export const Route = createFileRoute("/admin")({
   component: AdminPage,
@@ -75,9 +89,9 @@ async function hashPin(pin: string): Promise<string> {
   }
 }
 
-function getStoredPin(): string {
-  if (typeof window === "undefined") return "1234";
-  return window.localStorage.getItem(PIN_STORAGE_KEY) || "1234";
+function getStoredPin(): string | null {
+  if (typeof window === "undefined") return null;
+  return window.localStorage.getItem(PIN_STORAGE_KEY) || import.meta.env.VITE_ADMIN_PIN || null;
 }
 
 function download(name: string, data: unknown) {
@@ -106,6 +120,8 @@ function AdminPage() {
     // across refreshes for convenience, accepting the inherent limitations of client-side-only auth.
     const sessionHash = window.sessionStorage.getItem(SESSION_TOKEN_KEY);
     const storedPin = getStoredPin();
+    if (!storedPin) return false;
+
     if (sessionHash && sessionHash === storedPin && sessionHash.length === 64) {
       return true;
     }
@@ -130,11 +146,16 @@ function AdminPage() {
   async function handleUnlock(e: React.FormEvent) {
     e.preventDefault();
     const correctPin = getStoredPin();
+
+    if (!correctPin) {
+      return toast.error("Admin-PIN nicht konfiguriert");
+    }
+
     const input = pinInput.trim();
 
     let isMatch = false;
 
-    // Migration logic for old plaintext PINs (including the default '1234')
+    // Migration logic for old plaintext PINs
     if (correctPin.length < 64) {
       if (input === correctPin) {
         isMatch = true;
@@ -236,17 +257,10 @@ function AdminPage() {
         const merged = [...custom];
         const existingIds = new Set(merged.map((x) => x.id));
         let importedCount = 0;
-        for (const p of parsed) {
-          if (
-            !p.id ||
-            !p.name ||
-            typeof p.lat !== "number" ||
-            typeof p.lng !== "number" ||
-            !p.region ||
-            !p.category ||
-            !p.tier
-          )
-            continue;
+        for (const raw of parsed) {
+          const result = placeSchema.safeParse(raw);
+          if (!result.success) continue;
+          const p = result.data as Place;
           if (!existingIds.has(p.id)) {
             existingIds.add(p.id);
             merged.push(p);
@@ -286,9 +300,6 @@ function AdminPage() {
               <h1 className="font-display text-2xl font-bold">Admin-Zugang geschützt</h1>
               <p className="mt-1 text-sm text-muted-foreground">
                 Gib den PIN ein, um Orte verwalten und exportieren zu können.
-                <br />
-                (Standard-PIN: <code className="font-mono font-semibold text-foreground">1234</code>
-                )
               </p>
             </div>
 

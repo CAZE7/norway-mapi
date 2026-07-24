@@ -212,9 +212,11 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       setTileProgress((p) => ({ ...p, finished: true, done: Math.max(p.done, p.total) }));
     });
 
-    const cluster = (L as unknown as {
-      markerClusterGroup: (opts: L.MarkerClusterGroupOptions) => ClusterGroup;
-    }).markerClusterGroup({
+    const cluster = (
+      L as unknown as {
+        markerClusterGroup: (opts: L.MarkerClusterGroupOptions) => ClusterGroup;
+      }
+    ).markerClusterGroup({
       chunkedLoading: true,
       chunkInterval: 60,
       chunkDelay: 20,
@@ -324,13 +326,23 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
     const paddingTopLeft: L.PointExpression = isMobile ? [20, 80] : [400, 40];
     const paddingBottomRight: L.PointExpression = isMobile ? [20, 260] : [60, 60];
     const targetZoom = Math.max(map.getZoom(), 13);
-    map.flyTo([p.lat, p.lng], targetZoom, { duration: 0.9, paddingTopLeft, paddingBottomRight } as L.ZoomPanOptions);
+    map.flyTo([p.lat, p.lng], targetZoom, {
+      duration: 0.9,
+      paddingTopLeft,
+      paddingBottomRight,
+    } as L.ZoomPanOptions);
     const marker = m;
     const openWhenReady = () => {
       if (!marker) return;
       const c = clusterRef.current;
-      if (c && typeof (c as unknown as { zoomToShowLayer: (m: L.Marker, cb: () => void) => void }).zoomToShowLayer === "function") {
-        (c as unknown as { zoomToShowLayer: (m: L.Marker, cb: () => void) => void }).zoomToShowLayer(marker, () => marker.openPopup());
+      if (
+        c &&
+        typeof (c as unknown as { zoomToShowLayer: (m: L.Marker, cb: () => void) => void })
+          .zoomToShowLayer === "function"
+      ) {
+        (
+          c as unknown as { zoomToShowLayer: (m: L.Marker, cb: () => void) => void }
+        ).zoomToShowLayer(marker, () => marker.openPopup());
       } else {
         marker.openPopup();
       }
@@ -376,7 +388,9 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
           ? getComputedStyle(document.documentElement).getPropertyValue("--primary").trim() ||
             "#0a0a0a"
           : "#0a0a0a";
-      L.polyline(pts, { color: primaryColor, weight: 4, opacity: 0.85, dashArray: "8 6" }).addTo(layer);
+      L.polyline(pts, { color: primaryColor, weight: 4, opacity: 0.85, dashArray: "8 6" }).addTo(
+        layer,
+      );
     }
     layer.addTo(map);
     routeLayerRef.current = layer;
