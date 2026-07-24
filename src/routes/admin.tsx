@@ -89,9 +89,9 @@ async function hashPin(pin: string): Promise<string> {
   }
 }
 
-function getStoredPin(): string {
-  if (typeof window === "undefined") return "1234";
-  return window.localStorage.getItem(PIN_STORAGE_KEY) || "1234";
+function getStoredPin(): string | null {
+  if (typeof window === "undefined") return null;
+  return window.localStorage.getItem(PIN_STORAGE_KEY) || import.meta.env.VITE_ADMIN_PIN || null;
 }
 
 function download(name: string, data: unknown) {
@@ -120,6 +120,8 @@ function AdminPage() {
     // across refreshes for convenience, accepting the inherent limitations of client-side-only auth.
     const sessionHash = window.sessionStorage.getItem(SESSION_TOKEN_KEY);
     const storedPin = getStoredPin();
+    if (!storedPin) return false;
+
     if (sessionHash && sessionHash === storedPin && sessionHash.length === 64) {
       return true;
     }
@@ -144,11 +146,16 @@ function AdminPage() {
   async function handleUnlock(e: React.FormEvent) {
     e.preventDefault();
     const correctPin = getStoredPin();
+
+    if (!correctPin) {
+      return toast.error("Admin-PIN nicht konfiguriert");
+    }
+
     const input = pinInput.trim();
 
     let isMatch = false;
 
-    // Migration logic for old plaintext PINs (including the default '1234')
+    // Migration logic for old plaintext PINs
     if (correctPin.length < 64) {
       if (input === correctPin) {
         isMatch = true;
@@ -293,9 +300,6 @@ function AdminPage() {
               <h1 className="font-display text-2xl font-bold">Admin-Zugang geschützt</h1>
               <p className="mt-1 text-sm text-muted-foreground">
                 Gib den PIN ein, um Orte verwalten und exportieren zu können.
-                <br />
-                (Standard-PIN: <code className="font-mono font-semibold text-foreground">1234</code>
-                )
               </p>
             </div>
 
