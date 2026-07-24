@@ -1,8 +1,8 @@
-import { describe, it, expect } from 'vitest';
-import { distanceKm } from './category-color';
+import { describe, it, expect } from "vitest";
+import { distanceKm } from "./category-color";
 
-describe('distanceKm', () => {
-  it('should return 0 for the exact same coordinates', () => {
+describe("distanceKm", () => {
+  it("should return 0 for the exact same coordinates", () => {
     const point = { lat: 0, lng: 0 };
     expect(distanceKm(point, point)).toBe(0);
 
@@ -10,7 +10,7 @@ describe('distanceKm', () => {
     expect(distanceKm(anotherPoint, anotherPoint)).toBe(0);
   });
 
-  it('should calculate distance between two known points accurately', () => {
+  it("should calculate distance between two known points accurately", () => {
     const london = { lat: 51.5074, lng: -0.1278 };
     const paris = { lat: 48.8566, lng: 2.3522 };
 
@@ -20,8 +20,8 @@ describe('distanceKm', () => {
     expect(distance).toBeLessThan(350);
   });
 
-  it('should handle negative coordinates correctly', () => {
-    const newYork = { lat: 40.7128, lng: -74.0060 };
+  it("should handle negative coordinates correctly", () => {
+    const newYork = { lat: 40.7128, lng: -74.006 };
     const sydney = { lat: -33.8688, lng: 151.2093 };
 
     const distance = distanceKm(newYork, sydney);
@@ -30,7 +30,7 @@ describe('distanceKm', () => {
     expect(distance).toBeLessThan(16100);
   });
 
-  it('should handle coordinate boundaries (equator and poles)', () => {
+  it("should handle coordinate boundaries (equator and poles)", () => {
     const northPole = { lat: 90, lng: 0 };
     const southPole = { lat: -90, lng: 0 };
 
@@ -40,7 +40,7 @@ describe('distanceKm', () => {
     expect(distance).toBeLessThan(20100);
   });
 
-  it('should handle longitude wraparound properly', () => {
+  it("should handle longitude wraparound properly", () => {
     const point1 = { lat: 0, lng: -179 };
     const point2 = { lat: 0, lng: 179 };
 
