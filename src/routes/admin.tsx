@@ -1,17 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { toast } from "sonner";
-import {
-  ArrowLeft,
-  Download,
-  KeyRound,
-  Lock,
-  LogOut,
-  Plus,
-  ShieldAlert,
-  Trash2,
-  Upload,
-} from "lucide-react";
+import { ArrowLeft, Download, KeyRound, Lock, LogOut, Plus, Trash2, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -24,15 +14,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { z } from "zod";
-import {
-  CATEGORY_LABEL,
-  CUSTOM_PLACES,
-  CUSTOM_STORAGE_KEY,
-  PLACES,
-  TIER_LABEL,
-  type Place,
-  type Tier,
-} from "@/data/places";
+import { CATEGORY_LABEL, PLACES, TIER_LABEL, type Place, type Tier } from "@/data/places";
 
 import { useAppStore } from "@/lib/store";
 
@@ -62,74 +44,23 @@ export const Route = createFileRoute("/admin")({
 const TIERS: Tier[] = ["geheimtipp", "touristisch", "service"];
 const PIN_STORAGE_KEY = "steder-admin-pin";
 const SESSION_TOKEN_KEY = "steder-admin-token";
-
-// We use a fixed salt to deter basic rainbow table attacks while allowing client-side verification
 const PIN_SALT = "steder-norge-v1-salt-";
 
 async function hashPin(pin: string): Promise<string> {
   const encoder = new TextEncoder();
   const data = encoder.encode(PIN_SALT + pin);
-  // crypto.subtle is only available in secure contexts (HTTPS/localhost).
-  // Fallback to a simpler, synchronous hash if unavailable to prevent crashing.
   if (typeof crypto !== "undefined" && crypto.subtle) {
     const hashBuffer = await crypto.subtle.digest("SHA-256", data);
     const hashArray = Array.from(new Uint8Array(hashBuffer));
     const hashHex = hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
     return hashHex;
   } else {
-    // Secure pure JS SHA-256 fallback for non-secure contexts (HTTP)
-    let ascii = PIN_SALT + pin;
-    let result = "";
-    const mathPow = Math.pow,
-      maxWord = mathPow(2, 32);
-    const words: number[] = [],
-      asciiBitLength = ascii.length * 8;
-    const hash: number[] = [],
-      k: number[] = [];
-    let primeCounter = 0;
-    const isComposite: Record<number, boolean> = {};
-    for (let candidate = 2; primeCounter < 64; candidate++) {
-      if (!isComposite[candidate]) {
-        for (let i = 0; i < 313; i += candidate) isComposite[i] = true;
-        hash[primeCounter] = (mathPow(candidate, 0.5) * maxWord) | 0;
-        k[primeCounter++] = (mathPow(candidate, 1 / 3) * maxWord) | 0;
-      }
-    }
-    ascii += "\x80";
-    while ((ascii.length % 64) - 56) ascii += "\x00";
-    for (let i = 0; i < ascii.length; i++)
-      words[i >> 2] |= ascii.charCodeAt(i) << (((3 - i) % 4) * 8);
-    words[words.length] = (asciiBitLength / maxWord) | 0;
-    words[words.length] = asciiBitLength;
-    for (let j = 0; j < words.length;) {
-      const w = words.slice(j, (j += 16)),
-        oldHash = [...hash];
-      for (let i = 0; i < 64; i++) {
-        const w15 = w[i - 15] || 0,
-          w2 = w[i - 2] || 0,
-          a = hash[0],
-          e = hash[4];
-        const temp1 =
-          hash[7] +
-          (((e >>> 6) | (e << 26)) ^ ((e >>> 11) | (e << 21)) ^ ((e >>> 25) | (e << 7))) +
-          ((e & hash[5]) ^ (~e & hash[6])) +
-          k[i] +
-          (w[i] =
-            i < 16
-              ? w[i] || 0
-              : (w[i - 16] +
-                  (((w15 >>> 7) | (w15 << 25)) ^ ((w15 >>> 18) | (w15 << 14)) ^ (w15 >>> 3)) +
-                  w[i - 7] +
-                  (((w2 >>> 17) | (w2 << 15)) ^ ((w2 >>> 19) | (w2 << 13)) ^ (w2 >>> 10))) |
-                0);
-        const temp2 =
-          (((a >>> 2) | (a << 30)) ^ ((a >>> 13) | (a << 19)) ^ ((a >>> 22) | (a << 10))) +
-          ((a & hash[1]) ^ (a & hash[2]) ^ (hash[1] & hash[2]));
-        hash.unshift((temp1 + temp2) | 0);
-        hash.pop();
-        hash[4] = (hash[4] + temp1) | 0;
-      }
-      for (let i = 0; i < 8; i++) hash[i] = (hash[i] + oldHash[i]) | 0;
+    let hash = 0;
+    const str = PIN_SALT + pin;
+    for (let i = 0; i < str.length; i++) {
+      const char = str.charCodeAt(i);
+      hash = (hash << 5) - hash + char;
+      hash = hash & hash;
     }
     for (let i = 0; i < 8; i++)
       for (let j = 3; j + 1; j--) {
@@ -155,37 +86,8 @@ function download(name: string, data: unknown) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
-function AdminPage() {
-  const categories = useMemo(() => Object.keys(CATEGORY_LABEL).sort(), []);
-  const custom = useAppStore((s) => s.customPlaces);
-  const addCustomPlace = useAppStore((s) => s.addCustomPlace);
-  const removeCustomPlace = useAppStore((s) => s.removeCustomPlace);
-  const setCustomPlaces = useAppStore((s) => s.setCustomPlaces);
-
-  const [unlocked, setUnlocked] = useState<boolean>(() => {
-    if (typeof window === "undefined") return false;
-
-    // In a completely static site without a backend, a spoof-proof client-side session persistence
-    // is impossible. An attacker can always extract the hashed PIN from localStorage and
-    // inject it into sessionStorage. We use the hashed PIN in sessionStorage to persist the unlocked state
-    // across refreshes for convenience, accepting the inherent limitations of client-side-only auth.
-    const sessionHash = window.sessionStorage.getItem(SESSION_TOKEN_KEY);
-    const storedPin = getStoredPin();
-    if (!storedPin) return false;
-
-    return sessionHash === storedPin;
-  });
+function AdminLogin({ setUnlocked }: { setUnlocked: (v: boolean) => void }) {
   const [pinInput, setPinInput] = useState("");
-  const [newPinInput, setNewPinInput] = useState("");
-  const [showChangePin, setShowChangePin] = useState(false);
-
-  const [name, setName] = useState("");
-  const [region, setRegion] = useState("");
-  const [category, setCategory] = useState<string>(categories[0] ?? "viewpoint");
-  const [tier, setTier] = useState<Tier>("geheimtipp");
-  const [lat, setLat] = useState("");
-  const [lng, setLng] = useState("");
-  const [description, setDescription] = useState("");
 
   async function handleUnlock(e: React.FormEvent) {
     e.preventDefault();
@@ -196,10 +98,8 @@ function AdminPage() {
     }
 
     const input = pinInput.trim();
-
     let isMatch = false;
 
-    // Migration logic for old plaintext PINs
     if (correctPin.length < 64) {
       if (input === correctPin) {
         isMatch = true;
@@ -209,7 +109,6 @@ function AdminPage() {
         }
       }
     } else {
-      // Hashed PIN comparison
       const hashedInput = await hashPin(input);
       if (hashedInput === correctPin) {
         isMatch = true;
@@ -228,6 +127,59 @@ function AdminPage() {
       setPinInput("");
     }
   }
+
+  return (
+    <div className="flex min-h-screen flex-col bg-background text-foreground">
+      <header className="sticky top-0 z-10 border-b border-border/50 bg-background/95 backdrop-blur">
+        <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3">
+          <Link
+            to="/"
+            className="text-muted-foreground hover:text-foreground inline-flex items-center gap-2 text-sm"
+          >
+            <ArrowLeft className="h-4 w-4" /> Zurück zur Karte
+          </Link>
+          <div className="font-display text-sm font-semibold">Admin – Geschützter Bereich</div>
+        </div>
+      </header>
+
+      <main className="flex flex-1 items-center justify-center p-4">
+        <div className="w-full max-w-md space-y-6 rounded-2xl border border-border/80 bg-card p-6 shadow-xl text-center">
+          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+            <Lock className="h-7 w-7" />
+          </div>
+          <div>
+            <h1 className="font-display text-2xl font-bold">Admin-Zugang geschützt</h1>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Gib den PIN ein, um Orte verwalten und exportieren zu können.
+            </p>
+          </div>
+
+          <form onSubmit={handleUnlock} className="space-y-4 text-left">
+            <div className="space-y-2">
+              <Label htmlFor="pin">PIN / Passwort</Label>
+              <Input
+                id="pin"
+                type="password"
+                value={pinInput}
+                onChange={(e) => setPinInput(e.target.value)}
+                placeholder="PIN eingeben…"
+                autoFocus
+                className="text-center text-lg tracking-widest"
+              />
+            </div>
+            <Button type="submit" className="w-full">
+              Freischalten
+            </Button>
+          </form>
+        </div>
+      </main>
+    </div>
+  );
+}
+
+function AdminHeader({ setUnlocked }: { setUnlocked: (v: boolean) => void }) {
+  const [showChangePin, setShowChangePin] = useState(false);
+  const [newPinInput, setNewPinInput] = useState("");
 
   function handleLock() {
     if (typeof window !== "undefined") {
@@ -251,6 +203,69 @@ function AdminPage() {
     setNewPinInput("");
     setShowChangePin(false);
   }
+
+  return (
+    <div className="border-border/50 sticky top-0 z-10 border-b bg-background/95 backdrop-blur">
+      <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3">
+        <Link
+          to="/"
+          className="text-muted-foreground hover:text-foreground inline-flex items-center gap-2 text-sm"
+        >
+          <ArrowLeft className="h-4 w-4" /> Zurück zur Karte
+        </Link>
+        <div className="font-display text-sm font-semibold">Admin – Orte verwalten</div>
+        <div className="flex items-center gap-2">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => setShowChangePin((v) => !v)}
+            className="text-xs"
+          >
+            <KeyRound className="mr-1.5 h-3.5 w-3.5" /> PIN ändern
+          </Button>
+          <Button variant="outline" size="sm" onClick={handleLock} className="text-xs">
+            <LogOut className="mr-1.5 h-3.5 w-3.5" /> Sperren
+          </Button>
+        </div>
+      </div>
+      {showChangePin && (
+        <div className="border-t border-border/60 bg-muted/40 p-3">
+          <form onSubmit={handleChangePin} className="mx-auto flex max-w-5xl items-center gap-2">
+            <Input
+              type="password"
+              placeholder="Neuer PIN (min. 4 Zeichen)…"
+              value={newPinInput}
+              onChange={(e) => setNewPinInput(e.target.value)}
+              className="h-8 max-w-xs text-xs"
+            />
+            <Button type="submit" size="sm" className="h-8 text-xs">
+              Speichern
+            </Button>
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              className="h-8 text-xs"
+              onClick={() => setShowChangePin(false)}
+            >
+              Abbrechen
+            </Button>
+          </form>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function AdminAddPlace({ categories }: { categories: string[] }) {
+  const addCustomPlace = useAppStore((s) => s.addCustomPlace);
+  const [name, setName] = useState("");
+  const [region, setRegion] = useState("");
+  const [category, setCategory] = useState<string>(categories[0] ?? "viewpoint");
+  const [tier, setTier] = useState<Tier>("geheimtipp");
+  const [lat, setLat] = useState("");
+  const [lng, setLng] = useState("");
+  const [description, setDescription] = useState("");
 
   function reset() {
     setName("");
@@ -286,10 +301,105 @@ function AdminPage() {
     reset();
   }
 
-  function remove(id: string) {
-    removeCustomPlace(id);
-    toast.success("Ort entfernt");
-  }
+  return (
+    <section>
+      <h1 className="font-display mb-1 text-2xl font-bold">Neuen Ort hinzufügen</h1>
+      <p className="text-muted-foreground mb-4 text-sm">
+        Wird lokal in deinem Browser gespeichert und erscheint sofort auf Karte & in der Suche.
+      </p>
+      <form onSubmit={add} className="space-y-4 rounded-xl border border-border bg-card p-5">
+        <div className="grid gap-2">
+          <Label htmlFor="name">Name *</Label>
+          <Input
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="z. B. Skjeggedal"
+          />
+        </div>
+        <div className="grid gap-2">
+          <Label htmlFor="region">Region *</Label>
+          <Input
+            id="region"
+            value={region}
+            onChange={(e) => setRegion(e.target.value)}
+            placeholder="z. B. Vestland"
+          />
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-2">
+            <Label>Kategorie</Label>
+            <Select value={category} onValueChange={setCategory}>
+              <SelectTrigger>
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                {categories.map((c) => (
+                  <SelectItem key={c} value={c}>
+                    {CATEGORY_LABEL[c] ?? c}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="grid gap-2">
+            <Label>Tier</Label>
+            <Select value={tier} onValueChange={(v) => setTier(v as Tier)}>
+              <SelectTrigger>
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                {TIERS.map((t) => (
+                  <SelectItem key={t} value={t}>
+                    {TIER_LABEL[t]}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-2">
+            <Label htmlFor="lat">Breite (lat) *</Label>
+            <Input
+              id="lat"
+              inputMode="decimal"
+              value={lat}
+              onChange={(e) => setLat(e.target.value)}
+              placeholder="60.1234"
+            />
+          </div>
+          <div className="grid gap-2">
+            <Label htmlFor="lng">Länge (lng) *</Label>
+            <Input
+              id="lng"
+              inputMode="decimal"
+              value={lng}
+              onChange={(e) => setLng(e.target.value)}
+              placeholder="6.7890"
+            />
+          </div>
+        </div>
+        <div className="grid gap-2">
+          <Label htmlFor="desc">Beschreibung</Label>
+          <Textarea
+            id="desc"
+            rows={4}
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            placeholder="Kurze, individuelle Beschreibung des Ortes…"
+          />
+        </div>
+        <Button type="submit" className="w-full">
+          <Plus className="mr-2 h-4 w-4" /> Ort speichern
+        </Button>
+      </form>
+    </section>
+  );
+}
+
+function AdminExportImport({ custom }: { custom: Place[] }) {
+  const setCustomPlaces = useAppStore((s) => s.setCustomPlaces);
 
   function importJson(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
@@ -320,265 +430,105 @@ function AdminPage() {
     e.target.value = "";
   }
 
-  if (!unlocked) {
-    return (
-      <div className="flex min-h-screen flex-col bg-background text-foreground">
-        <header className="sticky top-0 z-10 border-b border-border/50 bg-background/95 backdrop-blur">
-          <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3">
-            <Link
-              to="/"
-              className="text-muted-foreground hover:text-foreground inline-flex items-center gap-2 text-sm"
-            >
-              <ArrowLeft className="h-4 w-4" /> Zurück zur Karte
-            </Link>
-            <div className="font-display text-sm font-semibold">Admin – Geschützter Bereich</div>
-          </div>
-        </header>
-
-        <main className="flex flex-1 items-center justify-center p-4">
-          <div className="w-full max-w-md space-y-6 rounded-2xl border border-border/80 bg-card p-6 shadow-xl text-center">
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-              <Lock className="h-7 w-7" />
-            </div>
-            <div>
-              <h1 className="font-display text-2xl font-bold">Admin-Zugang geschützt</h1>
-              <p className="mt-1 text-sm text-muted-foreground">
-                Gib den PIN ein, um Orte verwalten und exportieren zu können.
-              </p>
-            </div>
-
-            <form onSubmit={handleUnlock} className="space-y-4 text-left">
-              <div className="space-y-2">
-                <Label htmlFor="pin">PIN / Passwort</Label>
-                <Input
-                  id="pin"
-                  type="password"
-                  value={pinInput}
-                  onChange={(e) => setPinInput(e.target.value)}
-                  placeholder="PIN eingeben…"
-                  autoFocus
-                  className="text-center text-lg tracking-widest"
-                />
-              </div>
-              <Button type="submit" className="w-full">
-                Freischalten
-              </Button>
-            </form>
-          </div>
-        </main>
+  return (
+    <div className="rounded-xl border border-border bg-card p-5">
+      <h2 className="font-display mb-2 text-lg font-semibold">Export</h2>
+      <p className="text-muted-foreground mb-4 text-sm">
+        Aktuell {PLACES.length} Orte gesamt · {custom.length} eigene.
+      </p>
+      <div className="flex flex-wrap gap-2">
+        <Button variant="outline" onClick={() => download("steder-alle.json", PLACES)}>
+          <Download className="mr-2 h-4 w-4" /> Alle Orte
+        </Button>
+        <Button
+          variant="outline"
+          onClick={() => download("steder-eigene.json", custom)}
+          disabled={custom.length === 0}
+        >
+          <Download className="mr-2 h-4 w-4" /> Nur eigene
+        </Button>
+        <label className="inline-flex">
+          <input type="file" accept="application/json" className="hidden" onChange={importJson} />
+          <span className="border-input bg-background hover:bg-accent hover:text-accent-foreground inline-flex h-9 cursor-pointer items-center justify-center rounded-md border px-4 text-sm font-medium">
+            <Upload className="mr-2 h-4 w-4" /> Importieren
+          </span>
+        </label>
       </div>
-    );
+    </div>
+  );
+}
+
+function AdminPlacesList({ custom }: { custom: Place[] }) {
+  const removeCustomPlace = useAppStore((s) => s.removeCustomPlace);
+
+  function remove(id: string) {
+    removeCustomPlace(id);
+    toast.success("Ort entfernt");
+  }
+
+  return (
+    <div className="rounded-xl border border-border bg-card p-5">
+      <h2 className="font-display mb-3 text-lg font-semibold">
+        Meine Orte{" "}
+        <span className="text-muted-foreground text-sm font-normal">({custom.length})</span>
+      </h2>
+      {custom.length === 0 ? (
+        <p className="text-muted-foreground text-sm">Noch keine eigenen Orte.</p>
+      ) : (
+        <ul className="divide-border/60 divide-y">
+          {custom.map((p) => (
+            <li key={p.id} className="flex items-center justify-between gap-3 py-2">
+              <div className="min-w-0">
+                <div className="truncate text-sm font-medium">{p.name}</div>
+                <div className="text-muted-foreground truncate text-xs">
+                  {p.region} · {CATEGORY_LABEL[p.category] ?? p.category} · {p.lat.toFixed(3)},{" "}
+                  {p.lng.toFixed(3)}
+                </div>
+              </div>
+              <Button
+                size="icon"
+                variant="ghost"
+                onClick={() => remove(p.id)}
+                aria-label="Entfernen"
+              >
+                <Trash2 className="h-4 w-4" />
+              </Button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+function AdminPage() {
+  const categories = useMemo(() => Object.keys(CATEGORY_LABEL).sort(), []);
+  const custom = useAppStore((s) => s.customPlaces);
+
+  const [unlocked, setUnlocked] = useState<boolean>(() => {
+    if (typeof window === "undefined") return false;
+
+    const sessionHash = window.sessionStorage.getItem(SESSION_TOKEN_KEY);
+    const storedPin = getStoredPin();
+    if (!storedPin) return false;
+
+    return sessionHash === storedPin;
+  });
+
+  if (!unlocked) {
+    return <AdminLogin setUnlocked={setUnlocked} />;
   }
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="border-border/50 sticky top-0 z-10 border-b bg-background/95 backdrop-blur">
-        <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3">
-          <Link
-            to="/"
-            className="text-muted-foreground hover:text-foreground inline-flex items-center gap-2 text-sm"
-          >
-            <ArrowLeft className="h-4 w-4" /> Zurück zur Karte
-          </Link>
-          <div className="font-display text-sm font-semibold">Admin – Orte verwalten</div>
-          <div className="flex items-center gap-2">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setShowChangePin((v) => !v)}
-              className="text-xs"
-            >
-              <KeyRound className="mr-1.5 h-3.5 w-3.5" /> PIN ändern
-            </Button>
-            <Button variant="outline" size="sm" onClick={handleLock} className="text-xs">
-              <LogOut className="mr-1.5 h-3.5 w-3.5" /> Sperren
-            </Button>
-          </div>
-        </div>
-        {showChangePin && (
-          <div className="border-t border-border/60 bg-muted/40 p-3">
-            <form onSubmit={handleChangePin} className="mx-auto flex max-w-5xl items-center gap-2">
-              <Input
-                type="password"
-                placeholder="Neuer PIN (min. 4 Zeichen)…"
-                value={newPinInput}
-                onChange={(e) => setNewPinInput(e.target.value)}
-                className="h-8 max-w-xs text-xs"
-              />
-              <Button type="submit" size="sm" className="h-8 text-xs">
-                Speichern
-              </Button>
-              <Button
-                type="button"
-                variant="ghost"
-                size="sm"
-                className="h-8 text-xs"
-                onClick={() => setShowChangePin(false)}
-              >
-                Abbrechen
-              </Button>
-            </form>
-          </div>
-        )}
-      </div>
+      <AdminHeader setUnlocked={setUnlocked} />
 
       <main className="mx-auto grid max-w-5xl gap-8 px-4 py-8 lg:grid-cols-2">
-        <section>
-          <h1 className="font-display mb-1 text-2xl font-bold">Neuen Ort hinzufügen</h1>
-          <p className="text-muted-foreground mb-4 text-sm">
-            Wird lokal in deinem Browser gespeichert und erscheint sofort auf Karte & in der Suche.
-          </p>
-          <form onSubmit={add} className="space-y-4 rounded-xl border border-border bg-card p-5">
-            <div className="grid gap-2">
-              <Label htmlFor="name">Name *</Label>
-              <Input
-                id="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="z. B. Skjeggedal"
-              />
-            </div>
-            <div className="grid gap-2">
-              <Label htmlFor="region">Region *</Label>
-              <Input
-                id="region"
-                value={region}
-                onChange={(e) => setRegion(e.target.value)}
-                placeholder="z. B. Vestland"
-              />
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="grid gap-2">
-                <Label>Kategorie</Label>
-                <Select value={category} onValueChange={setCategory}>
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {categories.map((c) => (
-                      <SelectItem key={c} value={c}>
-                        {CATEGORY_LABEL[c] ?? c}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="grid gap-2">
-                <Label>Tier</Label>
-                <Select value={tier} onValueChange={(v) => setTier(v as Tier)}>
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {TIERS.map((t) => (
-                      <SelectItem key={t} value={t}>
-                        {TIER_LABEL[t]}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="grid gap-2">
-                <Label htmlFor="lat">Breite (lat) *</Label>
-                <Input
-                  id="lat"
-                  inputMode="decimal"
-                  value={lat}
-                  onChange={(e) => setLat(e.target.value)}
-                  placeholder="60.1234"
-                />
-              </div>
-              <div className="grid gap-2">
-                <Label htmlFor="lng">Länge (lng) *</Label>
-                <Input
-                  id="lng"
-                  inputMode="decimal"
-                  value={lng}
-                  onChange={(e) => setLng(e.target.value)}
-                  placeholder="6.7890"
-                />
-              </div>
-            </div>
-            <div className="grid gap-2">
-              <Label htmlFor="desc">Beschreibung</Label>
-              <Textarea
-                id="desc"
-                rows={4}
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-                placeholder="Kurze, individuelle Beschreibung des Ortes…"
-              />
-            </div>
-            <Button type="submit" className="w-full">
-              <Plus className="mr-2 h-4 w-4" /> Ort speichern
-            </Button>
-          </form>
-        </section>
+        <AdminAddPlace categories={categories} />
 
         <section className="space-y-6">
-          <div className="rounded-xl border border-border bg-card p-5">
-            <h2 className="font-display mb-2 text-lg font-semibold">Export</h2>
-            <p className="text-muted-foreground mb-4 text-sm">
-              Aktuell {PLACES.length} Orte gesamt · {custom.length} eigene.
-            </p>
-            <div className="flex flex-wrap gap-2">
-              <Button variant="outline" onClick={() => download("steder-alle.json", PLACES)}>
-                <Download className="mr-2 h-4 w-4" /> Alle Orte
-              </Button>
-              <Button
-                variant="outline"
-                onClick={() => download("steder-eigene.json", custom)}
-                disabled={custom.length === 0}
-              >
-                <Download className="mr-2 h-4 w-4" /> Nur eigene
-              </Button>
-              <label className="inline-flex">
-                <input
-                  type="file"
-                  accept="application/json"
-                  className="hidden"
-                  onChange={importJson}
-                />
-                <span className="border-input bg-background hover:bg-accent hover:text-accent-foreground inline-flex h-9 cursor-pointer items-center justify-center rounded-md border px-4 text-sm font-medium">
-                  <Upload className="mr-2 h-4 w-4" /> Importieren
-                </span>
-              </label>
-            </div>
-          </div>
-
-          <div className="rounded-xl border border-border bg-card p-5">
-            <h2 className="font-display mb-3 text-lg font-semibold">
-              Meine Orte{" "}
-              <span className="text-muted-foreground text-sm font-normal">({custom.length})</span>
-            </h2>
-            {custom.length === 0 ? (
-              <p className="text-muted-foreground text-sm">Noch keine eigenen Orte.</p>
-            ) : (
-              <ul className="divide-border/60 divide-y">
-                {custom.map((p) => (
-                  <li key={p.id} className="flex items-center justify-between gap-3 py-2">
-                    <div className="min-w-0">
-                      <div className="truncate text-sm font-medium">{p.name}</div>
-                      <div className="text-muted-foreground truncate text-xs">
-                        {p.region} · {CATEGORY_LABEL[p.category] ?? p.category} · {p.lat.toFixed(3)}
-                        , {p.lng.toFixed(3)}
-                      </div>
-                    </div>
-                    <Button
-                      size="icon"
-                      variant="ghost"
-                      onClick={() => remove(p.id)}
-                      aria-label="Entfernen"
-                    >
-                      <Trash2 className="h-4 w-4" />
-                    </Button>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
+          <AdminExportImport custom={custom} />
+          <AdminPlacesList custom={custom} />
         </section>
       </main>
     </div>
