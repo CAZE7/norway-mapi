@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ClientOnly } from "@tanstack/react-router";
-import { Suspense, lazy, useDeferredValue, useEffect, useMemo, useState } from "react";
+import { Suspense, lazy, useCallback, useDeferredValue, useEffect, useMemo, useState } from "react";
 import { Menu } from "lucide-react";
 import { getAllPlaces, searchPlaces } from "@/data/places";
 import { useAppStore } from "@/lib/store";
@@ -53,6 +53,11 @@ function Home() {
 
   const visibleIds = useMemo(() => new Set(results.map((p) => p.id)), [results]);
 
+  // ⚡ Bolt: Stable reference for inline navigation callback to prevent `AppSidebar` and list items from re-rendering uselessly.
+  const handleNavigate = useCallback(() => {
+    setMobileOpen(false);
+  }, []);
+
   useEffect(() => {
     let timeout: number | undefined;
     const startWhenUserIsIdle = () => {
@@ -102,7 +107,7 @@ function Home() {
               <VisuallyHidden>
                 <SheetTitle>Orte und Filter</SheetTitle>
               </VisuallyHidden>
-              <AppSidebar results={results} onNavigate={() => setMobileOpen(false)} />
+              <AppSidebar results={results} onNavigate={handleNavigate} />
             </SheetContent>
           </Sheet>
         </div>
