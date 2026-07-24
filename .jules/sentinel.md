@@ -33,3 +33,8 @@
 **Vulnerability:** The Python script `audit_places.py` used insecure SSL context settings (`ctx.check_hostname = False` and `ctx.verify_mode = ssl.CERT_NONE`), making requests vulnerable to Man-in-the-Middle (MitM) attacks by ignoring SSL certificate validation.
 **Learning:** Hardcoding overrides that disable SSL verification compromises data integrity and confidentiality, allowing attackers to intercept or alter traffic undetected. Always use default, secure SSL contexts unless explicitly debugging in a controlled environment.
 **Prevention:** Avoid disabling `check_hostname` and `verify_mode` in production code. Rely on `ssl.create_default_context()` to handle secure validation out of the box. Use libraries like `requests` which provide secure defaults by default.
+
+## 2023-10-27 - Replace Weak PIN Fallback with Pure JS SHA-256
+**Vulnerability:** A weak 32-bit bitwise hash fallback was used for admin PINs when the Web Crypto API was unavailable (e.g. in non-HTTPS secure contexts), making offline cracking significantly easier due to weak bitwise constraints.
+**Learning:** For client-side hashing in non-secure contexts where `crypto.subtle` is unavailable, robust hash functions (like SHA-256) should still be used by utilizing pure-JS fallback implementations instead of homemade weak bitwise loops.
+**Prevention:** Always ensure fallback implementations for cryptographic operations adhere to standard robust hashing algorithms instead of creating custom weak algorithms. Avoid custom bitwise arithmetic for passwords or PINs.

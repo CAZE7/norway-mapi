@@ -77,15 +77,66 @@ async function hashPin(pin: string): Promise<string> {
     const hashHex = hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
     return hashHex;
   } else {
-    // Basic fallback for non-secure contexts (HTTP)
-    let hash = 0;
-    const str = PIN_SALT + pin;
-    for (let i = 0; i < str.length; i++) {
-      const char = str.charCodeAt(i);
-      hash = (hash << 5) - hash + char;
-      hash = hash & hash; // Convert to 32bit integer
+    // Secure pure JS SHA-256 fallback for non-secure contexts (HTTP)
+    let ascii = PIN_SALT + pin;
+    let result = "";
+    const mathPow = Math.pow,
+      maxWord = mathPow(2, 32);
+    const words: number[] = [],
+      asciiBitLength = ascii.length * 8;
+    const hash: number[] = [],
+      k: number[] = [];
+    let primeCounter = 0;
+    const isComposite: Record<number, boolean> = {};
+    for (let candidate = 2; primeCounter < 64; candidate++) {
+      if (!isComposite[candidate]) {
+        for (let i = 0; i < 313; i += candidate) isComposite[i] = true;
+        hash[primeCounter] = (mathPow(candidate, 0.5) * maxWord) | 0;
+        k[primeCounter++] = (mathPow(candidate, 1 / 3) * maxWord) | 0;
+      }
     }
-    return Math.abs(hash).toString(16).padStart(16, "0");
+    ascii += "\x80";
+    while ((ascii.length % 64) - 56) ascii += "\x00";
+    for (let i = 0; i < ascii.length; i++)
+      words[i >> 2] |= ascii.charCodeAt(i) << (((3 - i) % 4) * 8);
+    words[words.length] = (asciiBitLength / maxWord) | 0;
+    words[words.length] = asciiBitLength;
+    for (let j = 0; j < words.length;) {
+      const w = words.slice(j, (j += 16)),
+        oldHash = [...hash];
+      for (let i = 0; i < 64; i++) {
+        const w15 = w[i - 15] || 0,
+          w2 = w[i - 2] || 0,
+          a = hash[0],
+          e = hash[4];
+        const temp1 =
+          hash[7] +
+          (((e >>> 6) | (e << 26)) ^ ((e >>> 11) | (e << 21)) ^ ((e >>> 25) | (e << 7))) +
+          ((e & hash[5]) ^ (~e & hash[6])) +
+          k[i] +
+          (w[i] =
+            i < 16
+              ? w[i] || 0
+              : (w[i - 16] +
+                  (((w15 >>> 7) | (w15 << 25)) ^ ((w15 >>> 18) | (w15 << 14)) ^ (w15 >>> 3)) +
+                  w[i - 7] +
+                  (((w2 >>> 17) | (w2 << 15)) ^ ((w2 >>> 19) | (w2 << 13)) ^ (w2 >>> 10))) |
+                0);
+        const temp2 =
+          (((a >>> 2) | (a << 30)) ^ ((a >>> 13) | (a << 19)) ^ ((a >>> 22) | (a << 10))) +
+          ((a & hash[1]) ^ (a & hash[2]) ^ (hash[1] & hash[2]));
+        hash.unshift((temp1 + temp2) | 0);
+        hash.pop();
+        hash[4] = (hash[4] + temp1) | 0;
+      }
+      for (let i = 0; i < 8; i++) hash[i] = (hash[i] + oldHash[i]) | 0;
+    }
+    for (let i = 0; i < 8; i++)
+      for (let j = 3; j + 1; j--) {
+        const b = (hash[i] >> (j * 8)) & 255;
+        result += (b < 16 ? "0" : "") + b.toString(16);
+      }
+    return result;
   }
 }
 
