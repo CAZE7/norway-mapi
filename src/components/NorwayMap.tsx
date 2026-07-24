@@ -258,26 +258,25 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       });
 
       const current = currentIdsRef.current;
-      const toAdd: L.Marker[] = [];
-      const toRemove: L.Marker[] = [];
+      const toAdd: { id: string; marker: L.Marker }[] = [];
+      const toRemove: { id: string; marker: L.Marker }[] = [];
       targetIds.forEach((id) => {
         if (!current.has(id)) {
           const place = placesById.get(id);
-          if (place) toAdd.push(createMarker(place));
+          if (place) toAdd.push({ id, marker: createMarker(place) });
         }
       });
       current.forEach((id) => {
         if (!targetIds.has(id)) {
           const m = markersRef.current.get(id);
-          if (m) toRemove.push(m);
+          if (m) toRemove.push({ id, marker: m });
         }
       });
 
       if (toRemove.length) {
-        cluster.removeLayers(toRemove);
-        toRemove.forEach((m) => {
-          const entry = [...markersRef.current.entries()].find(([, v]) => v === m);
-          if (entry) current.delete(entry[0]);
+        cluster.removeLayers(toRemove.map((t) => t.marker));
+        toRemove.forEach((t) => {
+          current.delete(t.id);
         });
       }
 
@@ -286,10 +285,9 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       const addChunk = () => {
         const slice = toAdd.slice(i, i + ADD_BATCH);
         if (slice.length) {
-          cluster.addLayers(slice);
-          slice.forEach((m) => {
-            const entry = [...markersRef.current.entries()].find(([, v]) => v === m);
-            if (entry) current.add(entry[0]);
+          cluster.addLayers(slice.map((t) => t.marker));
+          slice.forEach((t) => {
+            current.add(t.id);
           });
           i += ADD_BATCH;
           setMarkerProgress({ done: current.size, total: targetIds.size });

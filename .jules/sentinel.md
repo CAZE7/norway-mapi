@@ -20,3 +20,8 @@
 **Vulnerability:** The `ChartStyle` functional component used `dangerouslySetInnerHTML` on a `<style>` tag to render dynamic CSS generated from chart configurations. If a user can inject malicious payload like `</style><script>alert(1)</script>` into configuration, it might lead to Cross-Site Scripting (XSS).
 **Learning:** Using `children` on `<style>` tags directly in React prevents XSS because React automatically mitigates XSS by transforming elements into valid CSS characters (e.g. `</style>` is output as `</\73 tyle>`).
 **Prevention:** Avoid `dangerouslySetInnerHTML` for `<style>` tags in React; always use standard `children` content instead so React handles escaping.
+## 2024-05-24 - Fix Insecure SSL Certificate Verification
+
+**Vulnerability:** The Python script `audit_places.py` used insecure SSL context settings (`ctx.check_hostname = False` and `ctx.verify_mode = ssl.CERT_NONE`), making requests vulnerable to Man-in-the-Middle (MitM) attacks by ignoring SSL certificate validation.
+**Learning:** Hardcoding overrides that disable SSL verification compromises data integrity and confidentiality, allowing attackers to intercept or alter traffic undetected. Always use default, secure SSL contexts unless explicitly debugging in a controlled environment.
+**Prevention:** Avoid disabling `check_hostname` and `verify_mode` in production code. Rely on `ssl.create_default_context()` to handle secure validation out of the box. Use libraries like `requests` which provide secure defaults by default.

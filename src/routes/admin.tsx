@@ -122,14 +122,7 @@ function AdminPage() {
     const storedPin = getStoredPin();
     if (!storedPin) return false;
 
-    if (sessionHash && sessionHash === storedPin && sessionHash.length === 64) {
-      return true;
-    }
-
-    if (sessionHash && sessionHash === storedPin && sessionHash.length < 64) {
-      return true;
-    }
-    return false;
+    return sessionHash === storedPin;
   });
   const [pinInput, setPinInput] = useState("");
   const [newPinInput, setNewPinInput] = useState("");
