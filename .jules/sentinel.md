@@ -15,3 +15,9 @@
 **Vulnerability:** The application allowed importing a JSON array directly into `customPlaces` and `localStorage` without validating the type of its properties. This insecure deserialization vector allowed an attacker to provide an object with malicious types (e.g., passing `{}` for a string property like `description`). When React attempts to render these objects as children, it crashes the entire application. Because the data is persisted in `localStorage` and loaded on initialization, this results in a persistent client-side Denial of Service (DoS) where the application immediately crashes on load, requiring manual intervention (clearing localStorage) to fix.
 **Learning:** Even in purely client-side static applications without a backend, importing and deserializing arbitrary JSON files into the application state is dangerous. If the data is persisted and rendered, missing schema validation can lead to persistent application crashes and client-side DoS vulnerabilities.
 **Prevention:** Always validate imported data structures against a strict schema (e.g., using `zod`) before merging them into the application state or persisting them to storage, ensuring that untrusted data strictly matches the expected types.
+
+## 2024-07-24 - Insecure SSL Certificate Verification in Python Scripts
+
+**Vulnerability:** Disabled SSL certificate verification (`ctx.check_hostname = False` and `ctx.verify_mode = ssl.CERT_NONE`) in `audit_places.py` and `audit_places_v2.py`.
+**Learning:** Hardcoding insecure defaults for `ssl.create_default_context()` makes HTTPS requests susceptible to Man-in-the-Middle (MITM) attacks as any certificate, even invalid ones, would be accepted.
+**Prevention:** Avoid modifying `ssl.create_default_context()` to disable hostname checking and verification unless strictly necessary for debugging against known self-signed certificates in isolated test environments. In production, always require valid certificates.

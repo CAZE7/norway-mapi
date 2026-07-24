@@ -64,8 +64,6 @@ ALLOWED_LICENSES = [
 REJECTED_LICENSES = ["cc-by-nc", "cc-by-nd", "cc-by-nc-nd", "cc-by-nc-sa"]
 
 ctx = ssl.create_default_context()
-ctx.check_hostname = False
-ctx.verify_mode = ssl.CERT_NONE
 
 # ============================================================
 # HELPERS
