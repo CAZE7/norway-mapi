@@ -62,7 +62,12 @@ async function hashPin(pin: string): Promise<string> {
       hash = (hash << 5) - hash + char;
       hash = hash & hash;
     }
-    return Math.abs(hash).toString(16).padStart(16, "0");
+    for (let i = 0; i < 8; i++)
+      for (let j = 3; j + 1; j--) {
+        const b = (hash[i] >> (j * 8)) & 255;
+        result += (b < 16 ? "0" : "") + b.toString(16);
+      }
+    return result;
   }
 }
 
