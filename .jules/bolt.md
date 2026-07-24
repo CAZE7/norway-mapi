@@ -17,3 +17,8 @@
 
 **Learning:** Using `Array.includes()` inside `Array.map()` for rendering lists creates an $O(N \times M)$ performance bottleneck.
 **Action:** When rendering lists that check membership against an array prop, convert the array prop to a `Set` using `useMemo(() => new Set(arr), [arr])` before the loop, and use `Set.has()` inside the loop to achieve $O(1)$ lookups.
+
+## 2024-06-25 - Avoid Full Distance Matrix Recalculation in 2-opt loops
+
+**Learning:** Recalculating a full $O(N^2)$ distance matrix on every route improvement during a 2-opt loop introduces massive overhead that dwarfs the actual optimization calculations.
+**Action:** In 2-opt loops, avoid recalculating or maintaining a full matrix. Instead, calculate the distances dynamically for only the specific affected nodes (e.g., using haversine directly on the 4 affected node pairs) during evaluation to drastically reduce inner loop overhead.
