@@ -33,7 +33,7 @@ type State = {
   setCustomPlaces: (places: Place[]) => void;
 };
 
-function saveCustomToStorage(list: Place[]) {
+export function saveCustomToStorage(list: Place[]) {
   if (typeof window !== "undefined") {
     try {
       window.localStorage.setItem(CUSTOM_STORAGE_KEY, JSON.stringify(list));
