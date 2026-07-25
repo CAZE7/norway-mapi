@@ -431,8 +431,15 @@
   },
   "p86": {
     "name": "Tromsdalstinden",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Summit_area_of_Tromsdalstinden_2022-09-07_22.jpg",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Summit_area_of_Tromsdalstinden_2022-09-07_22.jpg/500px-Summit_area_of_Tromsdalstinden_2022-09-07_22.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Summit_area_of_Tromsdalstinden_2022-09-07_22.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "p87": {
     "name": "Sherpatrappa Tromsø",
@@ -2381,13 +2388,27 @@
   },
   "p606": {
     "name": "Steinparken",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Bud_-_no-nb_digifoto_20160210_00141_NB_MIT_FNR_12048.jpg",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Bud_-_no-nb_digifoto_20160210_00141_NB_MIT_FNR_12048.jpg/500px-Bud_-_no-nb_digifoto_20160210_00141_NB_MIT_FNR_12048.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Bud_-_no-nb_digifoto_20160210_00141_NB_MIT_FNR_12048.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p607": {
     "name": "Magalaupet",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Magalaupet_1.jpg",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Magalaupet_1.jpg/500px-Magalaupet_1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Magalaupet_1.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p608": {
     "name": "Jettegrytene ved Lona",
@@ -2966,8 +2987,15 @@
   },
   "p723": {
     "name": "Odderøya Fyr",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Odder%C3%B8ya%2C_Kristiansand_-_S-1602U1_066.jpg",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Odder%C3%B8ya%2C_Kristiansand_-_S-1602U1_066.jpg/500px-Odder%C3%B8ya%2C_Kristiansand_-_S-1602U1_066.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Odder%C3%B8ya,_Kristiansand_-_S-1602U1_066.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p724": {
     "name": "Hattholmen fyr",
@@ -3296,8 +3324,15 @@
   },
   "p789": {
     "name": "Kjetil Rasks ur",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Flekkeroy_church.png",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flekkeroy_church.png/500px-Flekkeroy_church.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Flekkeroy_church.png",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p790": {
     "name": "Ole Høylands hule",
@@ -3746,8 +3781,15 @@
   },
   "p879": {
     "name": "Kollevåg badestrand",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Campingomr%C3%A5de.jpg",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Campingomr%C3%A5de.jpg/500px-Campingomr%C3%A5de.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Campingomr%C3%A5de.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p880": {
     "name": "Kollavågen",
@@ -4436,15 +4478,8 @@
   },
   "p1017": {
     "name": "Ettertanken",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Ettertanken%2C_R%C3%B8st_2024.jpg",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Ettertanken%2C_R%C3%B8st_2024.jpg/500px-Ettertanken%2C_R%C3%B8st_2024.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Ettertanken,_R%C3%B8st_2024.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p1018": {
     "name": "Varde",
@@ -6463,15 +6498,8 @@
   },
   "c28": {
     "name": "Solsiden",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Fredriksvern_verftsporten.jpg",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Fredriksvern_verftsporten.jpg/500px-Fredriksvern_verftsporten.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Fredriksvern_verftsporten.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c29": {
     "name": "Horten Gjesthavn",
@@ -7750,8 +7778,15 @@
   },
   "c292": {
     "name": "Moskenes Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Moskenes_kirke%2C_Nordland_-_Riksantikvaren-T424_01_0129.jpg",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Moskenes_kirke%2C_Nordland_-_Riksantikvaren-T424_01_0129.jpg/500px-Moskenes_kirke%2C_Nordland_-_Riksantikvaren-T424_01_0129.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Moskenes_kirke,_Nordland_-_Riksantikvaren-T424_01_0129.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c293": {
     "name": "Brustranda Fjordcamping",
@@ -8290,15 +8325,8 @@
   },
   "c400": {
     "name": "Trysilelva camping",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Storvegen%2C_Trysil.jpg",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Storvegen%2C_Trysil.jpg/500px-Storvegen%2C_Trysil.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Storvegen,_Trysil.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c401": {
     "name": "Steinvik Camping og Hyttegrend",
