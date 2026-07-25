@@ -44,7 +44,7 @@ function getLocalCacheEntry(cand: string): LocalImageCacheEntry | undefined {
   return localCacheIndex.get(cand.toLowerCase());
 }
 
-function checkLocalCache(
+export function checkLocalCache(
   name: string,
   aliases: string[] = [],
 ): { hit: boolean; value: WikiImage | null } {
