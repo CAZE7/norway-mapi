@@ -256,8 +256,6 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       for (let j = 0; j < route.length; j++) {
         const id = route[j];
         if (id && placesById.has(id)) targetIds.add(id);
-      }      if (focusId && placesById.has(focusId)) {
-        targetIds.add(focusId);
       }
       if (focusId && placesById.has(focusId)) targetIds.add(focusId);
 
@@ -287,10 +285,6 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
       if (batchTimerRef.current) window.clearTimeout(batchTimerRef.current);
       let i = 0;
       const addChunk = () => {
-        const limit = Math.min(i + ADD_BATCH, toAdd.length);
-        const batchSize = limit - i;
-
-        if (batchSize > 0) {
         const batchEnd = Math.min(i + ADD_BATCH, toAdd.length);
         if (i < batchEnd) {
           const batchSize = batchEnd - i;
@@ -300,9 +294,6 @@ export default function NorwayMap({ visibleIds }: { visibleIds: Set<string> }) {
             markers[j] = item.marker;
             current.add(item.id);
           }
-
-          cluster.addLayers(markers);
-          i += ADD_BATCH;
           cluster.addLayers(markers);
           i = batchEnd;
           setMarkerProgress({ done: current.size, total: targetIds.size });
