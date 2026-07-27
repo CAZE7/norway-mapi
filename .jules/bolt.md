@@ -27,11 +27,17 @@
 
 **Learning:** Creating intermediate arrays via spread operators (`[...arr]`), `.slice()`, or `.map()` inside high-frequency recursive timeouts or React `useEffect` loops leads to significant temporary memory allocations and Garbage Collection pressure, hurting rendering/UI performance (e.g., when syncing thousands of map markers).
 **Action:** Replace chaining array methods with direct `for` loops. When collecting batches of items, pre-allocate arrays (e.g., `new Array(batchSize)`) and populate them by index to eliminate intermediary allocations and significantly reduce execution overhead.
+
 ## 2024-05-24 - Parallelize independent network requests
 
 **Learning:** Running network calls in sequence inside a `for...of` loop creates an unnecessary performance bottleneck by blocking on each network request, even when the requests are fully independent.
 **Action:** Use `Promise.all` alongside `.map()` to execute independent network calls concurrently. This allows the process to overlap the network latency of multiple requests, resulting in significantly faster overall resolution time.
 
 ## 2024-07-24 - Avoid intermediate array allocations in frequent tight loops
+
 **Learning:** Frequent array creation operations like `[...arr, item].forEach(...)` or `.slice(...).map(...)` inside rapidly executing intervals (such as Leaflet map syncing or processing data arrays) create excessive intermediate arrays. This results in heavy memory allocation and triggers frequent Garbage Collection (GC) pauses, which cause UI stuttering and degrade performance.
 **Action:** Replace functional array chaining with direct `for` loops and fixed-size pre-allocated arrays where appropriate. E.g., replace `slice(start, end).map(fn)` with a pre-allocated `new Array(batchSize)` populated via a `for` loop, eliminating the intermediate array entirely.
+
+## 2024-05-18 - Avoid array methods requiring callbacks in tight loops
+**Learning:** Using array search methods like `.find()` inside consecutive loops over fallback candidates introduces unnecessary micro-overhead because it forces the JS engine to allocate and invoke a new callback function closure for every check. While this doesn't change the O(N) complexity compared to a loop, standard `for` loops are objectively faster as they eliminate this function overhead completely. Additionally, parallelizing a fallback sequence (using `Promise.all` across fallbacks) is dangerous as it prevents short-circuiting and spams APIs with redundant requests.
+**Action:** When micro-optimizing small arrays inside repetitive structures, prefer basic `for` loops with a manual `break` over functional array iterators like `.find()`. Never use `Promise.all` to execute a sequence of fallback requests that are supposed to short-circuit upon the first success.
