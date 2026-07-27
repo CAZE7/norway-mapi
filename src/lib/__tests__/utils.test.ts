@@ -21,6 +21,10 @@ describe("cn utility", () => {
     expect(cn(["class1", "class2"], "class3")).toBe("class1 class2 class3");
   });
 
+  it("handles nested arrays of classes", () => {
+    expect(cn([["class1", "class2"], ["class3"]], "class4")).toBe("class1 class2 class3 class4");
+  });
+
   it("handles falsy values gracefully", () => {
     expect(cn("class1", null, undefined, false, 0, "")).toBe("class1");
   });
@@ -34,5 +38,12 @@ describe("cn utility", () => {
         "p-4", // Overrides p-2
       ),
     ).toBe("base-class text-white flex items-center p-4");
+  });
+
+  it("resolves specific tailwind layout conflicts", () => {
+    expect(cn("px-2 py-1", "p-4")).toBe("p-4");
+    expect(cn("p-4", "px-2")).toBe("p-4 px-2");
+    expect(cn("bg-red-500", "bg-transparent")).toBe("bg-transparent");
+    expect(cn("text-sm", "text-lg")).toBe("text-lg");
   });
 });
