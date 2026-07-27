@@ -27,11 +27,18 @@
 
 **Learning:** Creating intermediate arrays via spread operators (`[...arr]`), `.slice()`, or `.map()` inside high-frequency recursive timeouts or React `useEffect` loops leads to significant temporary memory allocations and Garbage Collection pressure, hurting rendering/UI performance (e.g., when syncing thousands of map markers).
 **Action:** Replace chaining array methods with direct `for` loops. When collecting batches of items, pre-allocate arrays (e.g., `new Array(batchSize)`) and populate them by index to eliminate intermediary allocations and significantly reduce execution overhead.
+
 ## 2024-05-24 - Parallelize independent network requests
 
 **Learning:** Running network calls in sequence inside a `for...of` loop creates an unnecessary performance bottleneck by blocking on each network request, even when the requests are fully independent.
 **Action:** Use `Promise.all` alongside `.map()` to execute independent network calls concurrently. This allows the process to overlap the network latency of multiple requests, resulting in significantly faster overall resolution time.
 
 ## 2024-07-24 - Avoid intermediate array allocations in frequent tight loops
+
 **Learning:** Frequent array creation operations like `[...arr, item].forEach(...)` or `.slice(...).map(...)` inside rapidly executing intervals (such as Leaflet map syncing or processing data arrays) create excessive intermediate arrays. This results in heavy memory allocation and triggers frequent Garbage Collection (GC) pauses, which cause UI stuttering and degrade performance.
 **Action:** Replace functional array chaining with direct `for` loops and fixed-size pre-allocated arrays where appropriate. E.g., replace `slice(start, end).map(fn)` with a pre-allocated `new Array(batchSize)` populated via a `for` loop, eliminating the intermediate array entirely.
+
+## 2024-05-14 - Refactor cache population to skip prototype chain lookups
+
+**Learning:** `for...in` loops on raw JSON objects incur prototype chain lookups. Refactoring to `Object.entries(raw).forEach` is a cleaner approach to avoid these lookups, although in simple caching benchmarks, `for...in` can sometimes be highly optimized by the JIT compiler making it appear faster or comparable in specific microbenchmarks. The refactor improves safety and avoids prototype iteration.
+**Action:** Use `Object.entries().forEach` or `Object.entries()` with `for...of` loops instead of `for...in` when iterating over object keys and values directly to ensure clean, prototype-safe iteration.

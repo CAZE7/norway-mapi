@@ -2,7 +2,7 @@ import { describe, it, expect, vi } from "vitest";
 
 vi.mock("@/data/image-cache.json", () => ({
   default: {
-    "oslo": {
+    oslo: {
       name: "Oslo",
       has_image: true,
       verified: true,
@@ -11,23 +11,23 @@ vi.mock("@/data/image-cache.json", () => ({
       license: "CC-BY",
       attribution_required: true,
     },
-    "bergen": {
+    bergen: {
       name: "Bergen",
       has_image: false,
       verified: false,
     },
-    "trondheim": {
+    trondheim: {
       name: "Trondheim",
       has_image: true,
       verified: false,
     },
-    "stavanger": {
+    stavanger: {
       name: "Stavanger",
       has_image: true,
       verified: true,
       thumbnail: "https://example.com/stavanger_thumb.jpg",
-    }
-  }
+    },
+  },
 }));
 
 import { checkLocalCache } from "../wikipedia";
