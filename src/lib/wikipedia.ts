@@ -286,7 +286,13 @@ async function lookupPlaceImageUncached(
     const hits = await withNetworkSlot(() =>
       Promise.all(langs.map((lang) => fetchLang(lang, candidate))),
     );
-    const hit = hits.find((h) => h !== null) ?? null;
+    let hit: WikiImage | null = null;
+    for (let i = 0; i < hits.length; i++) {
+      if (hits[i] !== null) {
+        hit = hits[i];
+        break;
+      }
+    }
     if (hit) {
       cache[cacheKey] = { at: Date.now(), value: hit };
       writeCache(cache);
@@ -299,7 +305,13 @@ async function lookupPlaceImageUncached(
   const commonsHits = await Promise.all(
     candidates.map((candidate) => withNetworkSlot(() => fetchCommons(candidate))),
   );
-  const hit = commonsHits.find((h) => h !== null) ?? null;
+  let hit: WikiImage | null = null;
+  for (let i = 0; i < commonsHits.length; i++) {
+    if (commonsHits[i] !== null) {
+      hit = commonsHits[i];
+      break;
+    }
+  }
   if (hit) {
     cache[cacheKey] = { at: Date.now(), value: hit };
     writeCache(cache);
