@@ -35,11 +35,10 @@ const localCacheIndex = new Map<string, LocalImageCacheEntry>();
 function getLocalCacheEntry(cand: string): LocalImageCacheEntry | undefined {
   if (localCacheIndex.size === 0) {
     const raw = imageCacheData as Record<string, LocalImageCacheEntry>;
-    for (const key in raw) {
-      const val = raw[key];
+    Object.entries(raw).forEach(([key, val]) => {
       if (key) localCacheIndex.set(key.toLowerCase(), val);
       if (val.name) localCacheIndex.set(val.name.toLowerCase(), val);
-    }
+    });
   }
   return localCacheIndex.get(cand.toLowerCase());
 }
