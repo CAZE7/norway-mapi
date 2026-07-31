@@ -3773,8 +3773,15 @@
   },
   "p883": {
     "name": "Sponavikjo Strand",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Leirvik.JPG",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Leirvik.JPG/500px-Leirvik.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Leirvik.JPG",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p884": {
     "name": "Aslaksvikjo",
@@ -6705,15 +6712,8 @@
   },
   "c76": {
     "name": "Larvik Bobilhavn",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Larvik_Herregaarden.jpg",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Larvik_Herregaarden.jpg/500px-Larvik_Herregaarden.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Larvik_Herregaarden.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c77": {
     "name": "Bergenshallen Bobilparkering",
