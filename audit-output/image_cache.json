@@ -431,8 +431,15 @@
   },
   "p86": {
     "name": "Tromsdalstinden",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Summit_area_of_Tromsdalstinden_2022-09-07_22.jpg",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Summit_area_of_Tromsdalstinden_2022-09-07_22.jpg/500px-Summit_area_of_Tromsdalstinden_2022-09-07_22.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Summit_area_of_Tromsdalstinden_2022-09-07_22.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "p87": {
     "name": "Sherpatrappa Tromsø",
@@ -1206,15 +1213,8 @@
   },
   "p371": {
     "name": "Fredriksten festning",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Fredriksten_festning%2C_Hovedvakten_og_%C3%98vre_magasin.jpg",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Fredriksten_festning%2C_Hovedvakten_og_%C3%98vre_magasin.jpg/500px-Fredriksten_festning%2C_Hovedvakten_og_%C3%98vre_magasin.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Fredriksten_festning,_Hovedvakten_og_%C3%98vre_magasin.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p372": {
     "name": "Lillesand Flaksbandsbanen",
@@ -3753,8 +3753,15 @@
   },
   "p879": {
     "name": "Kollevåg badestrand",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Campingomr%C3%A5de.jpg",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Campingomr%C3%A5de.jpg/500px-Campingomr%C3%A5de.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Campingomr%C3%A5de.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p880": {
     "name": "Kollavågen",
@@ -3773,15 +3780,8 @@
   },
   "p883": {
     "name": "Sponavikjo Strand",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Leirvik.JPG",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Leirvik.JPG/500px-Leirvik.JPG",
-    "page": "https://commons.wikimedia.org/wiki/File:Leirvik.JPG",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p884": {
     "name": "Aslaksvikjo",
@@ -4420,15 +4420,8 @@
   },
   "p1011": {
     "name": "Andstabben 512 m osl",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/1/13/%C3%85gvatnet%2C_2010_09.jpg",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/%C3%85gvatnet%2C_2010_09.jpg/500px-%C3%85gvatnet%2C_2010_09.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:%C3%85gvatnet,_2010_09.jpg",
-    "license": "gfdl",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p1012": {
     "name": "kollfjelle",
@@ -6712,8 +6705,15 @@
   },
   "c76": {
     "name": "Larvik Bobilhavn",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Larvik_Herregaarden.jpg",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Larvik_Herregaarden.jpg/500px-Larvik_Herregaarden.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Larvik_Herregaarden.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c77": {
     "name": "Bergenshallen Bobilparkering",
@@ -8137,8 +8137,15 @@
   },
   "c368": {
     "name": "Morokulien Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/176_Fredsmonumentet%2C_Gr%C3%A6nsen_-_no-nb_digifoto_20150724_00054_bldsa_PK27882.jpg",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/176_Fredsmonumentet%2C_Gr%C3%A6nsen_-_no-nb_digifoto_20150724_00054_bldsa_PK27882.jpg/500px-176_Fredsmonumentet%2C_Gr%C3%A6nsen_-_no-nb_digifoto_20150724_00054_bldsa_PK27882.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:176_Fredsmonumentet,_Gr%C3%A6nsen_-_no-nb_digifoto_20150724_00054_bldsa_PK27882.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c369": {
     "name": "Ramton Camping",
@@ -9172,8 +9179,15 @@
   },
   "c577": {
     "name": "Valle Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Valle_kirke_Aust-Agder.jpg",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Valle_kirke_Aust-Agder.jpg/500px-Valle_kirke_Aust-Agder.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Valle_kirke_Aust-Agder.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c578": {
     "name": "Bufjord Camping",
@@ -9267,8 +9281,15 @@
   },
   "c596": {
     "name": "Skibotn Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Skibotn_church_and_supermarket.JPG",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Skibotn_church_and_supermarket.JPG/500px-Skibotn_church_and_supermarket.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Skibotn_church_and_supermarket.JPG",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c597": {
     "name": "Sandnes Camping",
