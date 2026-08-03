@@ -22,3 +22,18 @@ describe("renderErrorPage", () => {
     expect(html).toContain('<a class="secondary" href="/">Go home</a>');
   });
 });
+
+describe("createErrorResponse", () => {
+  it("returns a Response with status 500 and text/html content-type", async () => {
+    // Import dynamically to avoid top-level issues if something fails
+    const { createErrorResponse } = await import("./error-page");
+    const response = createErrorResponse();
+
+    expect(response).toBeInstanceOf(Response);
+    expect(response.status).toBe(500);
+    expect(response.headers.get("content-type")).toBe("text/html; charset=utf-8");
+
+    const body = await response.text();
+    expect(body).toContain("This page didn't load");
+  });
+});
