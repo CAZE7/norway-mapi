@@ -1,5 +1,28 @@
 import { expect, test, describe } from "vitest";
-import { formatDuration } from "./route-optimize";
+import { formatDuration, estimateTimes } from "./route-optimize";
+
+describe("estimateTimes", () => {
+  test("calculates times correctly for 0 km", () => {
+    const result = estimateTimes(0);
+    expect(result.roadKm).toBe(0);
+    expect(result.driveMinutes).toBe(0);
+    expect(result.walkMinutes).toBe(0);
+  });
+
+  test("calculates times correctly for 10 km", () => {
+    const result = estimateTimes(10);
+    expect(result.roadKm).toBeCloseTo(13);
+    expect(result.driveMinutes).toBeCloseTo(12);
+    expect(result.walkMinutes).toBeCloseTo(162.5);
+  });
+
+  test("calculates times correctly for 100 km", () => {
+    const result = estimateTimes(100);
+    expect(result.roadKm).toBeCloseTo(130);
+    expect(result.driveMinutes).toBeCloseTo(120);
+    expect(result.walkMinutes).toBeCloseTo(1625);
+  });
+});
 
 describe("formatDuration", () => {
   test("handles invalid or non-positive values", () => {
