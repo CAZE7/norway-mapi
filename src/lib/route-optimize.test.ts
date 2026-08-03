@@ -1,5 +1,22 @@
 import { expect, test, describe } from "vitest";
-import { formatDuration } from "./route-optimize";
+import { formatDuration, formatKm } from "./route-optimize";
+
+describe("formatKm", () => {
+  test("formats values less than 10 km with one decimal place", () => {
+    expect(formatKm(0)).toBe("0.0 km");
+    expect(formatKm(5)).toBe("5.0 km");
+    expect(formatKm(5.123)).toBe("5.1 km");
+    expect(formatKm(9.99)).toBe("10.0 km");
+  });
+
+  test("formats values 10 km or greater as integers with de-DE locale", () => {
+    expect(formatKm(10)).toBe("10 km");
+    expect(formatKm(10.4)).toBe("10 km");
+    expect(formatKm(10.5)).toBe("11 km");
+    expect(formatKm(1234.5)).toBe("1.235 km");
+    expect(formatKm(1000000)).toBe("1.000.000 km");
+  });
+});
 
 describe("formatDuration", () => {
   test("handles invalid or non-positive values", () => {
