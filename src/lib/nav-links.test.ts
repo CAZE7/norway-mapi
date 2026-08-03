@@ -1,5 +1,47 @@
 import { describe, it, expect } from "vitest";
-import { googleMapsRoute } from "./nav-links";
+import { googleMapsRoute, navLinksFor } from "./nav-links";
+
+describe("navLinksFor", () => {
+  it("returns exactly 6 navigation links", () => {
+    const links = navLinksFor(50, 10, "Test Location");
+    expect(links).toHaveLength(6);
+    const expectedLabels = [
+      "Google Maps",
+      "Apple Maps",
+      "Waze",
+      "Organic Maps",
+      "OpenStreetMap",
+      "geo:",
+    ];
+    expect(links.map((l) => l.label)).toEqual(expectedLabels);
+  });
+
+  it("interpolates positive and negative coordinates correctly", () => {
+    const links = navLinksFor(52.520008, -13.404954, "Berlin");
+
+    // Check Google Maps
+    const gmaps = links.find((l) => l.label === "Google Maps");
+    expect(gmaps?.href).toContain("destination=52.520008,-13.404954");
+
+    // Check OpenStreetMap (which uses different param names)
+    const osm = links.find((l) => l.label === "OpenStreetMap");
+    expect(osm?.href).toContain("mlat=52.520008&mlon=-13.404954");
+    expect(osm?.href).toContain("#map=13/52.520008/-13.404954");
+  });
+
+  it("correctly URI encodes the name parameter", () => {
+    const links = navLinksFor(10, 20, "Café & Bar (Test)");
+    const encodedName = encodeURIComponent("Café & Bar (Test)");
+
+    // Check Google Maps
+    const gmaps = links.find((l) => l.label === "Google Maps");
+    expect(gmaps?.href).toContain(`destination_place_id=${encodedName}`);
+
+    // Check Apple Maps
+    const amaps = links.find((l) => l.label === "Apple Maps");
+    expect(amaps?.href).toContain(`q=${encodedName}`);
+  });
+});
 
 describe("googleMapsRoute", () => {
   it("returns null if less than 2 stops are provided", () => {
