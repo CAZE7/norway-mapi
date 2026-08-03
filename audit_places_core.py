@@ -25,6 +25,7 @@ Verwendung:
 import json
 import csv
 import time
+import concurrent.futures
 import os
 import argparse
 import urllib.request
@@ -867,13 +868,13 @@ def run_audit(places, check_images=True, check_coords=True,
         except Exception:
             prev_cache = {}
 
-    for i, place in enumerate(places):
+    def process_place(args):
+        i, place = args
         if single_place and single_place.lower() not in place.get("name", "").lower():
-            continue
+            return None
 
         pid = place.get("id", "")
         name = place.get("name", "")
-        print(f"[{i+1}/{total}] {name} ({pid})")
 
         entry = {
             "id": pid, "name": name, "region": place.get("region", ""),
@@ -919,13 +920,22 @@ def run_audit(places, check_images=True, check_coords=True,
             ]})
             time.sleep(1.0)
 
-        results.append(entry)
-
-        status_icon = "OK" if entry.get("has_image") and entry.get("image_verified") else "SKIP"
+        # Build output string so it prints atomically
         coord_status = entry.get("status", "?" if verify_only else "skip")
-        print(f"  -> Image: {'VERIFIED' if entry.get('image_verified') else ('FOUND' if entry.get('has_image') else 'NONE')} "
-              f"(score {entry.get('image_verification_score', 0)}/{entry.get('image_verification_max', 5)}) | "
-              f"Coords: {coord_status}")
+        output = [
+            f"[{i+1}/{total}] {name} ({pid})",
+            f"  -> Image: {'VERIFIED' if entry.get('image_verified') else ('FOUND' if entry.get('has_image') else 'NONE')} "
+            f"(score {entry.get('image_verification_score', 0)}/{entry.get('image_verification_max', 5)}) | "
+            f"Coords: {coord_status}"
+        ]
+        return entry, "\n".join(output)
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        for result in executor.map(process_place, enumerate(places)):
+            if result is not None:
+                entry, output = result
+                print(output)
+                results.append(entry)
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
