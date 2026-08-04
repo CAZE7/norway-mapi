@@ -36,15 +36,8 @@
   },
   "p7": {
     "name": "Låtefossen",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Laatefossen24.jpg",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Laatefossen24.jpg/500px-Laatefossen24.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Laatefossen24.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p8": {
     "name": "Steinsdalsfossen",
@@ -473,15 +466,8 @@
   },
   "p93": {
     "name": "Kirkeporten",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Kirkeporten_Skarsv%C3%A5g_2022-09-09_03.jpg",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Kirkeporten_Skarsv%C3%A5g_2022-09-09_03.jpg/500px-Kirkeporten_Skarsv%C3%A5g_2022-09-09_03.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Kirkeporten_Skarsv%C3%A5g_2022-09-09_03.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p94": {
     "name": "Knivskjellodden",
@@ -1155,15 +1141,8 @@
   },
   "p333": {
     "name": "Rolfstangen badestrand",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/DNL_Ju-52_at_Fornebu_on_water.jpeg",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/DNL_Ju-52_at_Fornebu_on_water.jpeg/500px-DNL_Ju-52_at_Fornebu_on_water.jpeg",
-    "page": "https://commons.wikimedia.org/wiki/File:DNL_Ju-52_at_Fornebu_on_water.jpeg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p334": {
     "name": "Pelvikodden Badeplass",
@@ -2987,15 +2966,8 @@
   },
   "p723": {
     "name": "Odderøya Fyr",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Odder%C3%B8ya%2C_Kristiansand_-_S-1602U1_066.jpg",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Odder%C3%B8ya%2C_Kristiansand_-_S-1602U1_066.jpg/500px-Odder%C3%B8ya%2C_Kristiansand_-_S-1602U1_066.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Odder%C3%B8ya,_Kristiansand_-_S-1602U1_066.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p724": {
     "name": "Hattholmen fyr",
@@ -3064,15 +3036,8 @@
   },
   "p737": {
     "name": "Vetlefossen",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/E16-Gudvangen.JPG",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/E16-Gudvangen.JPG/500px-E16-Gudvangen.JPG",
-    "page": "https://commons.wikimedia.org/wiki/File:E16-Gudvangen.JPG",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p738": {
     "name": "Brurasløret",
@@ -3346,15 +3311,8 @@
   },
   "p792": {
     "name": "Tyskerhula",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Svelviksposten.jpg",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Svelviksposten.jpg/500px-Svelviksposten.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Svelviksposten.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p793": {
     "name": "Busopphola",
@@ -3808,15 +3766,8 @@
   },
   "p883": {
     "name": "Sponavikjo Strand",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Leirvik.JPG",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Leirvik.JPG/500px-Leirvik.JPG",
-    "page": "https://commons.wikimedia.org/wiki/File:Leirvik.JPG",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p884": {
     "name": "Aslaksvikjo",
@@ -4455,15 +4406,8 @@
   },
   "p1011": {
     "name": "Andstabben 512 m osl",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/1/13/%C3%85gvatnet%2C_2010_09.jpg",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/%C3%85gvatnet%2C_2010_09.jpg/500px-%C3%85gvatnet%2C_2010_09.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:%C3%85gvatnet,_2010_09.jpg",
-    "license": "gfdl",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p1012": {
     "name": "kollfjelle",
@@ -4977,15 +4921,8 @@
   },
   "p1114": {
     "name": "Pallvatnet",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Augusthimmel_Landegode.JPG",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Augusthimmel_Landegode.JPG/500px-Augusthimmel_Landegode.JPG",
-    "page": "https://commons.wikimedia.org/wiki/File:Augusthimmel_Landegode.JPG",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p1115": {
     "name": "Tjønna",
@@ -7344,8 +7281,15 @@
   },
   "c200": {
     "name": "Wohnmobilstellplatz · Allemannsveien",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Krager%C3%B8_stasjon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Krager%C3%B8_stasjon.jpg/500px-Krager%C3%B8_stasjon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Krager%C3%B8_stasjon.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c201": {
     "name": "Wohnmobilstellplatz · Idrottsvegen",
@@ -7669,8 +7613,15 @@
   },
   "c266": {
     "name": "Bie Apartment & Feriesenter, Top Camp",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Grimstad_bibliotek.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Grimstad_bibliotek.jpg/500px-Grimstad_bibliotek.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Grimstad_bibliotek.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c267": {
     "name": "Nedre Strand Hytteutleie og Familicamping",
@@ -7719,15 +7670,8 @@
   },
   "c276": {
     "name": "Kinsarvik Camping",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Manhole_cover_in_Kinsarvik.jpg",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Manhole_cover_in_Kinsarvik.jpg/500px-Manhole_cover_in_Kinsarvik.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Manhole_cover_in_Kinsarvik.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c277": {
     "name": "Ringøy Camping",
@@ -7841,15 +7785,8 @@
   },
   "c299": {
     "name": "Tana Hotel og Camping",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Tana_bru_Nye.jpg",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Tana_bru_Nye.jpg/500px-Tana_bru_Nye.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Tana_bru_Nye.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c300": {
     "name": "BaseCamp NorthCape",
@@ -8353,8 +8290,15 @@
   },
   "c400": {
     "name": "Trysilelva camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Storvegen%2C_Trysil.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Storvegen%2C_Trysil.jpg/500px-Storvegen%2C_Trysil.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Storvegen,_Trysil.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c401": {
     "name": "Steinvik Camping og Hyttegrend",
