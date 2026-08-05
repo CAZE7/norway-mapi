@@ -176,8 +176,15 @@
   },
   "p35": {
     "name": "Dalsnibba",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/View_of_Dalsnibba_from_the_access_road%2C_Stranda%2C_2006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/View_of_Dalsnibba_from_the_access_road%2C_Stranda%2C_2006.jpg/500px-View_of_Dalsnibba_from_the_access_road%2C_Stranda%2C_2006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:View_of_Dalsnibba_from_the_access_road,_Stranda,_2006.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "p36": {
     "name": "Sieben Schwestern",
@@ -2776,8 +2783,15 @@
   },
   "p685": {
     "name": "Grønningen fyr",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Gronningenfyr.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Gronningenfyr.JPG/500px-Gronningenfyr.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Gronningenfyr.JPG",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p686": {
     "name": "Eigerøy fyr",
@@ -2926,8 +2940,15 @@
   },
   "p715": {
     "name": "Leirvik Fyr",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Sunnhordland_tingrett.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Sunnhordland_tingrett.JPG/500px-Sunnhordland_tingrett.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Sunnhordland_tingrett.JPG",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p716": {
     "name": "Tyneset Fyr",
@@ -7281,15 +7302,8 @@
   },
   "c200": {
     "name": "Wohnmobilstellplatz · Allemannsveien",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Krager%C3%B8_stasjon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Krager%C3%B8_stasjon.jpg/500px-Krager%C3%B8_stasjon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Krager%C3%B8_stasjon.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c201": {
     "name": "Wohnmobilstellplatz · Idrottsvegen",
@@ -8290,15 +8304,8 @@
   },
   "c400": {
     "name": "Trysilelva camping",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Storvegen%2C_Trysil.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Storvegen%2C_Trysil.jpg/500px-Storvegen%2C_Trysil.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Storvegen,_Trysil.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c401": {
     "name": "Steinvik Camping og Hyttegrend",
@@ -8872,8 +8879,15 @@
   },
   "c517": {
     "name": "Knaben Camp",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Knaben_kapell.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Knaben_kapell.jpg/500px-Knaben_kapell.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Knaben_kapell.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "c518": {
     "name": "Kilefjorden Camping",
