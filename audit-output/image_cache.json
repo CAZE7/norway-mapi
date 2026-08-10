@@ -351,15 +351,8 @@
   },
   "p70": {
     "name": "Uttakleiv",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Rocky_shore_at_Uttakleiv_Beach_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Rocky_shore_at_Uttakleiv_Beach_%28Unsplash%29.jpg/500px-Rocky_shore_at_Uttakleiv_Beach_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Rocky_shore_at_Uttakleiv_Beach_(Unsplash).jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p71": {
     "name": "Offersøykammen",
@@ -2763,15 +2756,8 @@
   },
   "p681": {
     "name": "Færder fyr",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg/500px-Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p682": {
     "name": "Oksøy fyr",
@@ -2885,15 +2871,8 @@
   },
   "p704": {
     "name": "Gullholmen fyr",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Gullholmen%2C_Jel%C3%B8y%2C_Moss_-_S-1602U1_012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Gullholmen%2C_Jel%C3%B8y%2C_Moss_-_S-1602U1_012.jpg/500px-Gullholmen%2C_Jel%C3%B8y%2C_Moss_-_S-1602U1_012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Gullholmen,_Jel%C3%B8y,_Moss_-_S-1602U1_012.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p705": {
     "name": "Stavernsodden fyr",
@@ -2987,15 +2966,8 @@
   },
   "p723": {
     "name": "Odderøya Fyr",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Odder%C3%B8ya%2C_Kristiansand_-_S-1602U1_066.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Odder%C3%B8ya%2C_Kristiansand_-_S-1602U1_066.jpg/500px-Odder%C3%B8ya%2C_Kristiansand_-_S-1602U1_066.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Odder%C3%B8ya,_Kristiansand_-_S-1602U1_066.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p724": {
     "name": "Hattholmen fyr",
@@ -5769,15 +5741,8 @@
   },
   "p1278": {
     "name": "Landegode fyr",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Landegode_fyr.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Landegode_fyr.jpg/500px-Landegode_fyr.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Landegode_fyr.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p1279": {
     "name": "Vardø fyr",
@@ -6716,15 +6681,8 @@
   },
   "c74": {
     "name": "Vanse Bobilcamp",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Vanse_kirke%2C_Vest-Agder_-_Riksantikvaren-T211_01_0119.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Vanse_kirke%2C_Vest-Agder_-_Riksantikvaren-T211_01_0119.jpg/500px-Vanse_kirke%2C_Vest-Agder_-_Riksantikvaren-T211_01_0119.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Vanse_kirke,_Vest-Agder_-_Riksantikvaren-T211_01_0119.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c75": {
     "name": "Bobil Parkering",
@@ -7323,8 +7281,15 @@
   },
   "c200": {
     "name": "Wohnmobilstellplatz · Allemannsveien",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Krager%C3%B8_stasjon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Krager%C3%B8_stasjon.jpg/500px-Krager%C3%B8_stasjon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Krager%C3%B8_stasjon.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c201": {
     "name": "Wohnmobilstellplatz · Idrottsvegen",
@@ -9123,8 +9088,15 @@
   },
   "c563": {
     "name": "Ballangen Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Ballangen_Camping_2022-08-20_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Ballangen_Camping_2022-08-20_04.jpg/500px-Ballangen_Camping_2022-08-20_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Ballangen_Camping_2022-08-20_04.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "c564": {
     "name": "Polar Park",
