@@ -86,8 +86,15 @@
   },
   "p17": {
     "name": "Nigardsbreen",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Nigardsbreen_DN.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Nigardsbreen_DN.jpg/500px-Nigardsbreen_DN.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Nigardsbreen_DN.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "p18": {
     "name": "Feigefossen",
@@ -461,27 +468,13 @@
   },
   "p92": {
     "name": "Nordkap-Klippe",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Nordkapp_2022-09-11_14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Nordkapp_2022-09-11_14.jpg/500px-Nordkapp_2022-09-11_14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Nordkapp_2022-09-11_14.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p93": {
     "name": "Kirkeporten",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Kirkeporten_Skarsv%C3%A5g_2022-09-09_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Kirkeporten_Skarsv%C3%A5g_2022-09-09_03.jpg/500px-Kirkeporten_Skarsv%C3%A5g_2022-09-09_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Kirkeporten_Skarsv%C3%A5g_2022-09-09_03.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p94": {
     "name": "Knivskjellodden",
@@ -2770,8 +2763,15 @@
   },
   "p681": {
     "name": "Færder fyr",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg/500px-Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p682": {
     "name": "Oksøy fyr",
@@ -2790,15 +2790,8 @@
   },
   "p685": {
     "name": "Grønningen fyr",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Gronningenfyr.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Gronningenfyr.JPG/500px-Gronningenfyr.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Gronningenfyr.JPG",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p686": {
     "name": "Eigerøy fyr",
@@ -3767,15 +3760,8 @@
   },
   "p879": {
     "name": "Kollevåg badestrand",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Campingomr%C3%A5de.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Campingomr%C3%A5de.jpg/500px-Campingomr%C3%A5de.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Campingomr%C3%A5de.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p880": {
     "name": "Kollavågen",
@@ -6594,8 +6580,15 @@
   },
   "c50": {
     "name": "Vikedal Båthavn",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Vikedal.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Vikedal.JPG/500px-Vikedal.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Vikedal.JPG",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c51": {
     "name": "Langefonn Caravanpark",
@@ -6709,8 +6702,15 @@
   },
   "c74": {
     "name": "Vanse Bobilcamp",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Vanse_kirke%2C_Vest-Agder_-_Riksantikvaren-T211_01_0119.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Vanse_kirke%2C_Vest-Agder_-_Riksantikvaren-T211_01_0119.jpg/500px-Vanse_kirke%2C_Vest-Agder_-_Riksantikvaren-T211_01_0119.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Vanse_kirke,_Vest-Agder_-_Riksantikvaren-T211_01_0119.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c75": {
     "name": "Bobil Parkering",
@@ -7124,8 +7124,15 @@
   },
   "c161": {
     "name": "Hannoy",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Tind_Lofoten_22.06.2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Tind_Lofoten_22.06.2012.jpg/500px-Tind_Lofoten_22.06.2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Tind_Lofoten_22.06.2012.jpg",
+    "license": "gfdl",
+    "attribution_required": false
   },
   "c162": {
     "name": "Bjørnhågen camping",
@@ -7699,8 +7706,15 @@
   },
   "c279": {
     "name": "Ekeberg Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Ekebergmarkedet_spring_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Ekebergmarkedet_spring_2025.jpg/500px-Ekebergmarkedet_spring_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Ekebergmarkedet_spring_2025.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "c280": {
     "name": "Tomm Murstad Sjøleir",
@@ -8389,8 +8403,15 @@
   },
   "c418": {
     "name": "Tornes Fjordcamping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Tornes_nedre_og_boligfeltet_Kleiva.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Tornes_nedre_og_boligfeltet_Kleiva.jpg/500px-Tornes_nedre_og_boligfeltet_Kleiva.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Tornes_nedre_og_boligfeltet_Kleiva.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "c419": {
     "name": "Bjølstad Camping",
