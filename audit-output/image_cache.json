@@ -176,8 +176,15 @@
   },
   "p35": {
     "name": "Dalsnibba",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/View_of_Dalsnibba_from_the_access_road%2C_Stranda%2C_2006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/View_of_Dalsnibba_from_the_access_road%2C_Stranda%2C_2006.jpg/500px-View_of_Dalsnibba_from_the_access_road%2C_Stranda%2C_2006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:View_of_Dalsnibba_from_the_access_road,_Stranda,_2006.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "p36": {
     "name": "Sieben Schwestern",
@@ -431,15 +438,8 @@
   },
   "p86": {
     "name": "Tromsdalstinden",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Summit_area_of_Tromsdalstinden_2022-09-07_22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Summit_area_of_Tromsdalstinden_2022-09-07_22.jpg/500px-Summit_area_of_Tromsdalstinden_2022-09-07_22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Summit_area_of_Tromsdalstinden_2022-09-07_22.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p87": {
     "name": "Sherpatrappa Tromsø",
@@ -1108,15 +1108,8 @@
   },
   "p325": {
     "name": "Vollane",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Kalvatr%C3%A6et_skole.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Kalvatr%C3%A6et_skole.JPG/500px-Kalvatr%C3%A6et_skole.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Kalvatr%C3%A6et_skole.JPG",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p326": {
     "name": "Møhlenpris badeplass",
@@ -2770,8 +2763,15 @@
   },
   "p681": {
     "name": "Færder fyr",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg/500px-Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p682": {
     "name": "Oksøy fyr",
@@ -6635,15 +6635,8 @@
   },
   "c61": {
     "name": "Hakan Bobilhavn",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Holmestrand_kirke%2C_Vestfold_-_Riksantikvaren-T076_01_0057.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Holmestrand_kirke%2C_Vestfold_-_Riksantikvaren-T076_01_0057.jpg/500px-Holmestrand_kirke%2C_Vestfold_-_Riksantikvaren-T076_01_0057.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Holmestrand_kirke,_Vestfold_-_Riksantikvaren-T076_01_0057.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c62": {
     "name": "Vestresand",
@@ -7117,15 +7110,8 @@
   },
   "c161": {
     "name": "Hannoy",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Tind_Lofoten_22.06.2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Tind_Lofoten_22.06.2012.jpg/500px-Tind_Lofoten_22.06.2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Tind_Lofoten_22.06.2012.jpg",
-    "license": "gfdl",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c162": {
     "name": "Bjørnhågen camping",
@@ -7154,8 +7140,15 @@
   },
   "c167": {
     "name": "Elsa's caravan & galleri",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Bug%C3%B8ynes_Kapell.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Bug%C3%B8ynes_Kapell.jpg/500px-Bug%C3%B8ynes_Kapell.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Bug%C3%B8ynes_Kapell.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c168": {
     "name": "Vardø Bobilplass",
@@ -7309,15 +7302,8 @@
   },
   "c200": {
     "name": "Wohnmobilstellplatz · Allemannsveien",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Krager%C3%B8_stasjon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Krager%C3%B8_stasjon.jpg/500px-Krager%C3%B8_stasjon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Krager%C3%B8_stasjon.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c201": {
     "name": "Wohnmobilstellplatz · Idrottsvegen",
@@ -7691,15 +7677,8 @@
   },
   "c276": {
     "name": "Kinsarvik Camping",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Manhole_cover_in_Kinsarvik.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Manhole_cover_in_Kinsarvik.jpg/500px-Manhole_cover_in_Kinsarvik.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Manhole_cover_in_Kinsarvik.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c277": {
     "name": "Ringøy Camping",
@@ -8823,8 +8802,15 @@
   },
   "c502": {
     "name": "Skjervøy fiskecamp",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg/500px-Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "c504": {
     "name": "Kunes Camping",
