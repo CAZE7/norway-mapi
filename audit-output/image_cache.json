@@ -176,8 +176,15 @@
   },
   "p35": {
     "name": "Dalsnibba",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/View_of_Dalsnibba_from_the_access_road%2C_Stranda%2C_2006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/View_of_Dalsnibba_from_the_access_road%2C_Stranda%2C_2006.jpg/500px-View_of_Dalsnibba_from_the_access_road%2C_Stranda%2C_2006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:View_of_Dalsnibba_from_the_access_road,_Stranda,_2006.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "p36": {
     "name": "Sieben Schwestern",
@@ -1101,15 +1108,8 @@
   },
   "p325": {
     "name": "Vollane",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Kalvatr%C3%A6et_skole.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Kalvatr%C3%A6et_skole.JPG/500px-Kalvatr%C3%A6et_skole.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Kalvatr%C3%A6et_skole.JPG",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p326": {
     "name": "Møhlenpris badeplass",
@@ -2713,8 +2713,15 @@
   },
   "p671": {
     "name": "Årosfjellet",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/%C3%85ros_kirke%2C_Buskerud_-_Riksantikvaren-T051_01_0017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/%C3%85ros_kirke%2C_Buskerud_-_Riksantikvaren-T051_01_0017.jpg/500px-%C3%85ros_kirke%2C_Buskerud_-_Riksantikvaren-T051_01_0017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:%C3%85ros_kirke,_Buskerud_-_Riksantikvaren-T051_01_0017.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p672": {
     "name": "Tivoliåsen",
@@ -2783,15 +2790,8 @@
   },
   "p685": {
     "name": "Grønningen fyr",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Gronningenfyr.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Gronningenfyr.JPG/500px-Gronningenfyr.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Gronningenfyr.JPG",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p686": {
     "name": "Eigerøy fyr",
@@ -2860,15 +2860,8 @@
   },
   "p699": {
     "name": "Svenner fyr",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Svenner_Lighthouse_At_Sunset_%28186375213%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Svenner_Lighthouse_At_Sunset_%28186375213%29.jpeg/500px-Svenner_Lighthouse_At_Sunset_%28186375213%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Svenner_Lighthouse_At_Sunset_(186375213).jpeg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p700": {
     "name": "Fulehuk fyr",
@@ -4562,8 +4555,15 @@
   },
   "p1038": {
     "name": "Nordkapp",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Knivskjellodden_from_Nordkapp_2022-09-11_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Knivskjellodden_from_Nordkapp_2022-09-11_06.jpg/500px-Knivskjellodden_from_Nordkapp_2022-09-11_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Knivskjellodden_from_Nordkapp_2022-09-11_06.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "p1039": {
     "name": "Segla – Aussichtspunkt am Parkplatz",
@@ -6712,13 +6712,27 @@
   },
   "c76": {
     "name": "Larvik Bobilhavn",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Larvik_Herregaarden.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Larvik_Herregaarden.jpg/500px-Larvik_Herregaarden.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Larvik_Herregaarden.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c77": {
     "name": "Bergenshallen Bobilparkering",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Bergenshallen.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Bergenshallen.JPG/500px-Bergenshallen.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Bergenshallen.JPG",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c78": {
     "name": "Langevåg bobilparkering",
@@ -8297,15 +8311,8 @@
   },
   "c400": {
     "name": "Trysilelva camping",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Storvegen%2C_Trysil.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Storvegen%2C_Trysil.jpg/500px-Storvegen%2C_Trysil.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Storvegen,_Trysil.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c401": {
     "name": "Steinvik Camping og Hyttegrend",
@@ -9274,15 +9281,8 @@
   },
   "c596": {
     "name": "Skibotn Camping",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Skibotn_church_and_supermarket.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Skibotn_church_and_supermarket.JPG/500px-Skibotn_church_and_supermarket.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Skibotn_church_and_supermarket.JPG",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c597": {
     "name": "Sandnes Camping",
