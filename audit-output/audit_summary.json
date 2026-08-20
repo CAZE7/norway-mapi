@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-19T07:46:35.215383+00:00",
+  "timestamp": "2026-08-20T07:47:43.187825+00:00",
   "total_places": 1952,
   "images": {
-    "with_image": 5,
-    "with_verified_image": 5,
-    "without_image": 1947,
-    "verification_rate": "5/5",
-    "new_since_last": 5
+    "with_image": 8,
+    "with_verified_image": 8,
+    "without_image": 1944,
+    "verification_rate": "8/8",
+    "new_since_last": 8
   },
   "coordinates": {
     "ok": 0,
