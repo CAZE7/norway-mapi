@@ -176,15 +176,8 @@
   },
   "p35": {
     "name": "Dalsnibba",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/View_of_Dalsnibba_from_the_access_road%2C_Stranda%2C_2006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/View_of_Dalsnibba_from_the_access_road%2C_Stranda%2C_2006.jpg/500px-View_of_Dalsnibba_from_the_access_road%2C_Stranda%2C_2006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:View_of_Dalsnibba_from_the_access_road,_Stranda,_2006.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p36": {
     "name": "Sieben Schwestern",
@@ -1108,8 +1101,15 @@
   },
   "p325": {
     "name": "Vollane",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Kalvatr%C3%A6et_skole.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Kalvatr%C3%A6et_skole.JPG/500px-Kalvatr%C3%A6et_skole.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Kalvatr%C3%A6et_skole.JPG",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p326": {
     "name": "Møhlenpris badeplass",
@@ -2853,15 +2853,8 @@
   },
   "p699": {
     "name": "Svenner fyr",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Svenner_Lighthouse_At_Sunset_%28186375213%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Svenner_Lighthouse_At_Sunset_%28186375213%29.jpeg/500px-Svenner_Lighthouse_At_Sunset_%28186375213%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Svenner_Lighthouse_At_Sunset_(186375213).jpeg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p700": {
     "name": "Fulehuk fyr",
@@ -3765,8 +3758,15 @@
   },
   "p880": {
     "name": "Kollavågen",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Campingomr%C3%A5de.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Campingomr%C3%A5de.jpg/500px-Campingomr%C3%A5de.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Campingomr%C3%A5de.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p881": {
     "name": "Vesletjern badeplass",
@@ -6770,15 +6770,8 @@
   },
   "c89": {
     "name": "Levanger Camping & Fritidspark Moan AS",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Sykehuset_Levanger_stasjon_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Sykehuset_Levanger_stasjon_1.jpg/500px-Sykehuset_Levanger_stasjon_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Sykehuset_Levanger_stasjon_1.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c90": {
     "name": "Leka camping",
@@ -7117,15 +7110,8 @@
   },
   "c161": {
     "name": "Hannoy",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Tind_Lofoten_22.06.2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Tind_Lofoten_22.06.2012.jpg/500px-Tind_Lofoten_22.06.2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Tind_Lofoten_22.06.2012.jpg",
-    "license": "gfdl",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c162": {
     "name": "Bjørnhågen camping",
@@ -8059,15 +8045,8 @@
   },
   "c351": {
     "name": "Lunde Camping",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/To_lam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/To_lam.jpg/500px-To_lam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:To_lam.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c352": {
     "name": "Reception;Vang Camping",
@@ -8886,15 +8865,8 @@
   },
   "c517": {
     "name": "Knaben Camp",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Knaben_kapell.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Knaben_kapell.jpg/500px-Knaben_kapell.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Knaben_kapell.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c518": {
     "name": "Kilefjorden Camping",
@@ -9123,15 +9095,8 @@
   },
   "c563": {
     "name": "Ballangen Camping",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Ballangen_Camping_2022-08-20_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Ballangen_Camping_2022-08-20_04.jpg/500px-Ballangen_Camping_2022-08-20_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Ballangen_Camping_2022-08-20_04.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c564": {
     "name": "Polar Park",
@@ -9315,8 +9280,15 @@
   },
   "c600": {
     "name": "Spangereid Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Spangereid_kirke%2C_Vest-Agder_-_Riksantikvaren-T210_01_0062.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Spangereid_kirke%2C_Vest-Agder_-_Riksantikvaren-T210_01_0062.jpg/500px-Spangereid_kirke%2C_Vest-Agder_-_Riksantikvaren-T210_01_0062.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Spangereid_kirke,_Vest-Agder_-_Riksantikvaren-T210_01_0062.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c601": {
     "name": "Akkarvikodden Teltplass",
