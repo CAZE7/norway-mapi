@@ -211,15 +211,8 @@
   },
   "p42": {
     "name": "Mardalsfossen",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Mardalsfossen_Waterfall_Norway_2004.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Mardalsfossen_Waterfall_Norway_2004.jpg/500px-Mardalsfossen_Waterfall_Norway_2004.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Mardalsfossen_Waterfall_Norway_2004.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p43": {
     "name": "Atlanterhavsvegen: Eldhusøya",
@@ -1213,15 +1206,8 @@
   },
   "p371": {
     "name": "Fredriksten festning",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Fredriksten_festning%2C_Hovedvakten_og_%C3%98vre_magasin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Fredriksten_festning%2C_Hovedvakten_og_%C3%98vre_magasin.jpg/500px-Fredriksten_festning%2C_Hovedvakten_og_%C3%98vre_magasin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Fredriksten_festning,_Hovedvakten_og_%C3%98vre_magasin.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p372": {
     "name": "Lillesand Flaksbandsbanen",
@@ -1450,8 +1436,15 @@
   },
   "p417": {
     "name": "Steinbord",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Folgefonna_from_east.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Folgefonna_from_east.jpg/500px-Folgefonna_from_east.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Folgefonna_from_east.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p418": {
     "name": "Osterfloten",
@@ -2720,15 +2713,8 @@
   },
   "p671": {
     "name": "Årosfjellet",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/%C3%85ros_kirke%2C_Buskerud_-_Riksantikvaren-T051_01_0017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/%C3%85ros_kirke%2C_Buskerud_-_Riksantikvaren-T051_01_0017.jpg/500px-%C3%85ros_kirke%2C_Buskerud_-_Riksantikvaren-T051_01_0017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:%C3%85ros_kirke,_Buskerud_-_Riksantikvaren-T051_01_0017.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p672": {
     "name": "Tivoliåsen",
@@ -2777,8 +2763,15 @@
   },
   "p681": {
     "name": "Færder fyr",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg/500px-Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p682": {
     "name": "Oksøy fyr",
@@ -2867,15 +2860,8 @@
   },
   "p699": {
     "name": "Svenner fyr",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Svenner_Lighthouse_At_Sunset_%28186375213%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Svenner_Lighthouse_At_Sunset_%28186375213%29.jpeg/500px-Svenner_Lighthouse_At_Sunset_%28186375213%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Svenner_Lighthouse_At_Sunset_(186375213).jpeg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p700": {
     "name": "Fulehuk fyr",
@@ -2954,8 +2940,15 @@
   },
   "p715": {
     "name": "Leirvik Fyr",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Sunnhordland_tingrett.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Sunnhordland_tingrett.JPG/500px-Sunnhordland_tingrett.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Sunnhordland_tingrett.JPG",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p716": {
     "name": "Tyneset Fyr",
@@ -3779,15 +3772,8 @@
   },
   "p880": {
     "name": "Kollavågen",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Campingomr%C3%A5de.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Campingomr%C3%A5de.jpg/500px-Campingomr%C3%A5de.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Campingomr%C3%A5de.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p881": {
     "name": "Vesletjern badeplass",
@@ -5776,15 +5762,8 @@
   },
   "p1278": {
     "name": "Landegode fyr",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Landegode_fyr.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Landegode_fyr.jpg/500px-Landegode_fyr.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Landegode_fyr.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p1279": {
     "name": "Vardø fyr",
@@ -6358,8 +6337,15 @@
   },
   "c0": {
     "name": "Stavern Bo & Fritid Bobilpark",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Larvik_Fredtun_folkeh%C3%B8yskole.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Larvik_Fredtun_folkeh%C3%B8yskole.jpg/500px-Larvik_Fredtun_folkeh%C3%B8yskole.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Larvik_Fredtun_folkeh%C3%B8yskole.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c1": {
     "name": "Midttun Motell & Camping",
@@ -7168,15 +7154,8 @@
   },
   "c167": {
     "name": "Elsa's caravan & galleri",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Bug%C3%B8ynes_Kapell.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Bug%C3%B8ynes_Kapell.jpg/500px-Bug%C3%B8ynes_Kapell.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Bug%C3%B8ynes_Kapell.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c168": {
     "name": "Vardø Bobilplass",
@@ -7825,8 +7804,15 @@
   },
   "c300": {
     "name": "BaseCamp NorthCape",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/28/BaseCamp_NorthCape_Skarsv%C3%A5g_2022-09-12_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/BaseCamp_NorthCape_Skarsv%C3%A5g_2022-09-12_01.jpg/500px-BaseCamp_NorthCape_Skarsv%C3%A5g_2022-09-12_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:BaseCamp_NorthCape_Skarsv%C3%A5g_2022-09-12_01.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "c301": {
     "name": "Ifjord Camping & Cafe",
@@ -8080,15 +8066,8 @@
   },
   "c351": {
     "name": "Lunde Camping",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/To_lam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/To_lam.jpg/500px-To_lam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:To_lam.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c352": {
     "name": "Reception;Vang Camping",
@@ -8837,8 +8816,15 @@
   },
   "c502": {
     "name": "Skjervøy fiskecamp",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg/500px-Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "c504": {
     "name": "Kunes Camping",
@@ -9542,15 +9528,8 @@
   },
   "c645": {
     "name": "Harran Camping",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Harran_kirke.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Harran_kirke.JPG/500px-Harran_kirke.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Harran_kirke.JPG",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c646": {
     "name": "Aspneset Camping",
