@@ -36,8 +36,15 @@
   },
   "p7": {
     "name": "Låtefossen",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Laatefossen24.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Laatefossen24.jpg/500px-Laatefossen24.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Laatefossen24.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "p8": {
     "name": "Steinsdalsfossen",
@@ -2706,15 +2713,8 @@
   },
   "p671": {
     "name": "Årosfjellet",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/%C3%85ros_kirke%2C_Buskerud_-_Riksantikvaren-T051_01_0017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/%C3%85ros_kirke%2C_Buskerud_-_Riksantikvaren-T051_01_0017.jpg/500px-%C3%85ros_kirke%2C_Buskerud_-_Riksantikvaren-T051_01_0017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:%C3%85ros_kirke,_Buskerud_-_Riksantikvaren-T051_01_0017.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p672": {
     "name": "Tivoliåsen",
@@ -2980,8 +2980,15 @@
   },
   "p723": {
     "name": "Odderøya Fyr",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Odder%C3%B8ya%2C_Kristiansand_-_S-1602U1_066.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Odder%C3%B8ya%2C_Kristiansand_-_S-1602U1_066.jpg/500px-Odder%C3%B8ya%2C_Kristiansand_-_S-1602U1_066.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Odder%C3%B8ya,_Kristiansand_-_S-1602U1_066.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p724": {
     "name": "Hattholmen fyr",
@@ -3760,6 +3767,11 @@
   },
   "p879": {
     "name": "Kollevåg badestrand",
+    "has_image": false,
+    "verified": false
+  },
+  "p880": {
+    "name": "Kollavågen",
     "has_image": true,
     "verified": true,
     "verification_score": 4.0,
@@ -3769,11 +3781,6 @@
     "page": "https://commons.wikimedia.org/wiki/File:Campingomr%C3%A5de.jpg",
     "license": "public domain",
     "attribution_required": false
-  },
-  "p880": {
-    "name": "Kollavågen",
-    "has_image": false,
-    "verified": false
   },
   "p881": {
     "name": "Vesletjern badeplass",
@@ -4562,15 +4569,8 @@
   },
   "p1038": {
     "name": "Nordkapp",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Knivskjellodden_from_Nordkapp_2022-09-11_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Knivskjellodden_from_Nordkapp_2022-09-11_06.jpg/500px-Knivskjellodden_from_Nordkapp_2022-09-11_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Knivskjellodden_from_Nordkapp_2022-09-11_06.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p1039": {
     "name": "Segla – Aussichtspunkt am Parkplatz",
@@ -5769,15 +5769,8 @@
   },
   "p1278": {
     "name": "Landegode fyr",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Landegode_fyr.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Landegode_fyr.jpg/500px-Landegode_fyr.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Landegode_fyr.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p1279": {
     "name": "Vardø fyr",
@@ -6711,13 +6704,27 @@
   },
   "c73": {
     "name": "Farsund Bobil Camp",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Farsunds_Avis.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Farsunds_Avis.JPG/500px-Farsunds_Avis.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Farsunds_Avis.JPG",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c74": {
     "name": "Vanse Bobilcamp",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Vanse_kirke%2C_Vest-Agder_-_Riksantikvaren-T211_01_0119.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Vanse_kirke%2C_Vest-Agder_-_Riksantikvaren-T211_01_0119.jpg/500px-Vanse_kirke%2C_Vest-Agder_-_Riksantikvaren-T211_01_0119.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Vanse_kirke,_Vest-Agder_-_Riksantikvaren-T211_01_0119.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c75": {
     "name": "Bobil Parkering",
@@ -7351,8 +7358,15 @@
   },
   "c207": {
     "name": "Wohnmobilstellplatz · Nessjordet",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Muustrobrua.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Muustrobrua.jpg/500px-Muustrobrua.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Muustrobrua.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c208": {
     "name": "Wohnmobilstellplatz · Horsfjordveien",
