@@ -26,15 +26,8 @@
   },
   "p5": {
     "name": "Trolltunga",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Trolltunga%2C_Odda%2C_Norway_%28Unsplash_Xj8TdoAbmos%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Trolltunga%2C_Odda%2C_Norway_%28Unsplash_Xj8TdoAbmos%29.jpg/500px-Trolltunga%2C_Odda%2C_Norway_%28Unsplash_Xj8TdoAbmos%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Trolltunga,_Odda,_Norway_(Unsplash_Xj8TdoAbmos).jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p6": {
     "name": "Vøringsfossen",
@@ -218,15 +211,8 @@
   },
   "p42": {
     "name": "Mardalsfossen",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Mardalsfossen_Waterfall_Norway_2004.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Mardalsfossen_Waterfall_Norway_2004.jpg/500px-Mardalsfossen_Waterfall_Norway_2004.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Mardalsfossen_Waterfall_Norway_2004.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p43": {
     "name": "Atlanterhavsvegen: Eldhusøya",
@@ -1450,15 +1436,8 @@
   },
   "p417": {
     "name": "Steinbord",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Folgefonna_from_east.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Folgefonna_from_east.jpg/500px-Folgefonna_from_east.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Folgefonna_from_east.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p418": {
     "name": "Osterfloten",
@@ -2527,15 +2506,8 @@
   },
   "p631": {
     "name": "Furukongen",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Str%C3%B8msbo_g%C3%A5rd%2C_Str%C3%B8msbu_g%C3%A5rd%2C_Aust-Agder_-_Riksantikvaren-T188_01_0001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Str%C3%B8msbo_g%C3%A5rd%2C_Str%C3%B8msbu_g%C3%A5rd%2C_Aust-Agder_-_Riksantikvaren-T188_01_0001.jpg/500px-Str%C3%B8msbo_g%C3%A5rd%2C_Str%C3%B8msbu_g%C3%A5rd%2C_Aust-Agder_-_Riksantikvaren-T188_01_0001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Str%C3%B8msbo_g%C3%A5rd,_Str%C3%B8msbu_g%C3%A5rd,_Aust-Agder_-_Riksantikvaren-T188_01_0001.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p632": {
     "name": "Ulleråsen",
@@ -2734,8 +2706,15 @@
   },
   "p671": {
     "name": "Årosfjellet",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/%C3%85ros_kirke%2C_Buskerud_-_Riksantikvaren-T051_01_0017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/%C3%85ros_kirke%2C_Buskerud_-_Riksantikvaren-T051_01_0017.jpg/500px-%C3%85ros_kirke%2C_Buskerud_-_Riksantikvaren-T051_01_0017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:%C3%85ros_kirke,_Buskerud_-_Riksantikvaren-T051_01_0017.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p672": {
     "name": "Tivoliåsen",
@@ -2804,8 +2783,15 @@
   },
   "p685": {
     "name": "Grønningen fyr",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Gronningenfyr.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Gronningenfyr.JPG/500px-Gronningenfyr.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Gronningenfyr.JPG",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p686": {
     "name": "Eigerøy fyr",
@@ -2874,8 +2860,15 @@
   },
   "p699": {
     "name": "Svenner fyr",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Svenner_Lighthouse_At_Sunset_%28186375213%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Svenner_Lighthouse_At_Sunset_%28186375213%29.jpeg/500px-Svenner_Lighthouse_At_Sunset_%28186375213%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Svenner_Lighthouse_At_Sunset_(186375213).jpeg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "p700": {
     "name": "Fulehuk fyr",
@@ -2974,8 +2967,15 @@
   },
   "p719": {
     "name": "Slåtterøy fyr",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Sl%C3%A5tter%C3%B8y_fyr.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Sl%C3%A5tter%C3%B8y_fyr.jpg/500px-Sl%C3%A5tter%C3%B8y_fyr.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Sl%C3%A5tter%C3%B8y_fyr.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p720": {
     "name": "Feistein fyr",
@@ -3339,15 +3339,8 @@
   },
   "p792": {
     "name": "Tyskerhula",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Svelviksposten.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Svelviksposten.jpg/500px-Svelviksposten.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Svelviksposten.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p793": {
     "name": "Busopphola",
@@ -4576,15 +4569,8 @@
   },
   "p1038": {
     "name": "Nordkapp",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Knivskjellodden_from_Nordkapp_2022-09-11_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Knivskjellodden_from_Nordkapp_2022-09-11_06.jpg/500px-Knivskjellodden_from_Nordkapp_2022-09-11_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Knivskjellodden_from_Nordkapp_2022-09-11_06.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p1039": {
     "name": "Segla – Aussichtspunkt am Parkplatz",
@@ -4963,15 +4949,8 @@
   },
   "p1114": {
     "name": "Pallvatnet",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Augusthimmel_Landegode.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Augusthimmel_Landegode.JPG/500px-Augusthimmel_Landegode.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Augusthimmel_Landegode.JPG",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p1115": {
     "name": "Tjønna",
@@ -6670,15 +6649,8 @@
   },
   "c61": {
     "name": "Hakan Bobilhavn",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Holmestrand_kirke%2C_Vestfold_-_Riksantikvaren-T076_01_0057.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Holmestrand_kirke%2C_Vestfold_-_Riksantikvaren-T076_01_0057.jpg/500px-Holmestrand_kirke%2C_Vestfold_-_Riksantikvaren-T076_01_0057.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Holmestrand_kirke,_Vestfold_-_Riksantikvaren-T076_01_0057.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c62": {
     "name": "Vestresand",
@@ -7592,8 +7564,15 @@
   },
   "c252": {
     "name": "Hytte Camp Nordkapp - former Nordkapp Caravan og Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Nordkapp_from_Skarsv%C3%A5gveien_2022-09-12_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Nordkapp_from_Skarsv%C3%A5gveien_2022-09-12_01.jpg/500px-Nordkapp_from_Skarsv%C3%A5gveien_2022-09-12_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Nordkapp_from_Skarsv%C3%A5gveien_2022-09-12_01.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "c253": {
     "name": "Tana Familiecamping",
@@ -7707,8 +7686,15 @@
   },
   "c275": {
     "name": "Flåm Camping og Hostel",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Fl%C3%A5m_1942.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Fl%C3%A5m_1942.jpg/500px-Fl%C3%A5m_1942.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Fl%C3%A5m_1942.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c276": {
     "name": "Kinsarvik Camping",
@@ -7827,8 +7813,15 @@
   },
   "c299": {
     "name": "Tana Hotel og Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Tana_bru_Nye.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Tana_bru_Nye.jpg/500px-Tana_bru_Nye.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Tana_bru_Nye.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "c300": {
     "name": "BaseCamp NorthCape",
@@ -9507,8 +9500,15 @@
   },
   "c638": {
     "name": "Frosta Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Frosta-1900.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Frosta-1900.png/500px-Frosta-1900.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Frosta-1900.png",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c639": {
     "name": "Vaagen Camping",
