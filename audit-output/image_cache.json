@@ -26,15 +26,8 @@
   },
   "p5": {
     "name": "Trolltunga",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Trolltunga%2C_Odda%2C_Norway_%28Unsplash_Xj8TdoAbmos%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Trolltunga%2C_Odda%2C_Norway_%28Unsplash_Xj8TdoAbmos%29.jpg/500px-Trolltunga%2C_Odda%2C_Norway_%28Unsplash_Xj8TdoAbmos%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Trolltunga,_Odda,_Norway_(Unsplash_Xj8TdoAbmos).jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p6": {
     "name": "Vøringsfossen",
@@ -43,15 +36,8 @@
   },
   "p7": {
     "name": "Låtefossen",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Laatefossen24.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Laatefossen24.jpg/500px-Laatefossen24.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Laatefossen24.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p8": {
     "name": "Steinsdalsfossen",
@@ -190,8 +176,15 @@
   },
   "p35": {
     "name": "Dalsnibba",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/View_of_Dalsnibba_from_the_access_road%2C_Stranda%2C_2006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/View_of_Dalsnibba_from_the_access_road%2C_Stranda%2C_2006.jpg/500px-View_of_Dalsnibba_from_the_access_road%2C_Stranda%2C_2006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:View_of_Dalsnibba_from_the_access_road,_Stranda,_2006.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "p36": {
     "name": "Sieben Schwestern",
@@ -225,15 +218,8 @@
   },
   "p42": {
     "name": "Mardalsfossen",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Mardalsfossen_Waterfall_Norway_2004.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Mardalsfossen_Waterfall_Norway_2004.jpg/500px-Mardalsfossen_Waterfall_Norway_2004.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Mardalsfossen_Waterfall_Norway_2004.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p43": {
     "name": "Atlanterhavsvegen: Eldhusøya",
@@ -487,8 +473,15 @@
   },
   "p93": {
     "name": "Kirkeporten",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Kirkeporten_Skarsv%C3%A5g_2022-09-09_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Kirkeporten_Skarsv%C3%A5g_2022-09-09_03.jpg/500px-Kirkeporten_Skarsv%C3%A5g_2022-09-09_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Kirkeporten_Skarsv%C3%A5g_2022-09-09_03.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "p94": {
     "name": "Knivskjellodden",
@@ -1122,15 +1115,8 @@
   },
   "p325": {
     "name": "Vollane",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Kalvatr%C3%A6et_skole.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Kalvatr%C3%A6et_skole.JPG/500px-Kalvatr%C3%A6et_skole.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Kalvatr%C3%A6et_skole.JPG",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p326": {
     "name": "Møhlenpris badeplass",
@@ -1234,15 +1220,8 @@
   },
   "p371": {
     "name": "Fredriksten festning",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Fredriksten_festning%2C_Hovedvakten_og_%C3%98vre_magasin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Fredriksten_festning%2C_Hovedvakten_og_%C3%98vre_magasin.jpg/500px-Fredriksten_festning%2C_Hovedvakten_og_%C3%98vre_magasin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Fredriksten_festning,_Hovedvakten_og_%C3%98vre_magasin.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p372": {
     "name": "Lillesand Flaksbandsbanen",
@@ -2541,15 +2520,8 @@
   },
   "p631": {
     "name": "Furukongen",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Str%C3%B8msbo_g%C3%A5rd%2C_Str%C3%B8msbu_g%C3%A5rd%2C_Aust-Agder_-_Riksantikvaren-T188_01_0001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Str%C3%B8msbo_g%C3%A5rd%2C_Str%C3%B8msbu_g%C3%A5rd%2C_Aust-Agder_-_Riksantikvaren-T188_01_0001.jpg/500px-Str%C3%B8msbo_g%C3%A5rd%2C_Str%C3%B8msbu_g%C3%A5rd%2C_Aust-Agder_-_Riksantikvaren-T188_01_0001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Str%C3%B8msbo_g%C3%A5rd,_Str%C3%B8msbu_g%C3%A5rd,_Aust-Agder_-_Riksantikvaren-T188_01_0001.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p632": {
     "name": "Ulleråsen",
@@ -2818,15 +2790,8 @@
   },
   "p685": {
     "name": "Grønningen fyr",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Gronningenfyr.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Gronningenfyr.JPG/500px-Gronningenfyr.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Gronningenfyr.JPG",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p686": {
     "name": "Eigerøy fyr",
@@ -3795,15 +3760,8 @@
   },
   "p879": {
     "name": "Kollevåg badestrand",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Campingomr%C3%A5de.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Campingomr%C3%A5de.jpg/500px-Campingomr%C3%A5de.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Campingomr%C3%A5de.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p880": {
     "name": "Kollavågen",
@@ -5797,15 +5755,8 @@
   },
   "p1278": {
     "name": "Landegode fyr",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Landegode_fyr.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Landegode_fyr.jpg/500px-Landegode_fyr.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Landegode_fyr.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p1279": {
     "name": "Vardø fyr",
@@ -6379,8 +6330,15 @@
   },
   "c0": {
     "name": "Stavern Bo & Fritid Bobilpark",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Larvik_Fredtun_folkeh%C3%B8yskole.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Larvik_Fredtun_folkeh%C3%B8yskole.jpg/500px-Larvik_Fredtun_folkeh%C3%B8yskole.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Larvik_Fredtun_folkeh%C3%B8yskole.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c1": {
     "name": "Midttun Motell & Camping",
@@ -7669,8 +7627,15 @@
   },
   "c266": {
     "name": "Bie Apartment & Feriesenter, Top Camp",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Grimstad_bibliotek.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Grimstad_bibliotek.jpg/500px-Grimstad_bibliotek.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Grimstad_bibliotek.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c267": {
     "name": "Nedre Strand Hytteutleie og Familicamping",
@@ -8174,13 +8139,27 @@
   },
   "c367": {
     "name": "Montebello Camping og Turistsenter",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/176_Fredsmonumentet%2C_Gr%C3%A6nsen_-_no-nb_digifoto_20150724_00054_bldsa_PK27882.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/176_Fredsmonumentet%2C_Gr%C3%A6nsen_-_no-nb_digifoto_20150724_00054_bldsa_PK27882.jpg/500px-176_Fredsmonumentet%2C_Gr%C3%A6nsen_-_no-nb_digifoto_20150724_00054_bldsa_PK27882.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:176_Fredsmonumentet,_Gr%C3%A6nsen_-_no-nb_digifoto_20150724_00054_bldsa_PK27882.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c368": {
     "name": "Morokulien Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/176_Fredsmonumentet%2C_Gr%C3%A6nsen_-_no-nb_digifoto_20150724_00054_bldsa_PK27882.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/176_Fredsmonumentet%2C_Gr%C3%A6nsen_-_no-nb_digifoto_20150724_00054_bldsa_PK27882.jpg/500px-176_Fredsmonumentet%2C_Gr%C3%A6nsen_-_no-nb_digifoto_20150724_00054_bldsa_PK27882.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:176_Fredsmonumentet,_Gr%C3%A6nsen_-_no-nb_digifoto_20150724_00054_bldsa_PK27882.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c369": {
     "name": "Ramton Camping",
@@ -8844,15 +8823,8 @@
   },
   "c502": {
     "name": "Skjervøy fiskecamp",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg/500px-Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c504": {
     "name": "Kunes Camping",
