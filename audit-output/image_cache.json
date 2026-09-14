@@ -176,15 +176,8 @@
   },
   "p35": {
     "name": "Dalsnibba",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/View_of_Dalsnibba_from_the_access_road%2C_Stranda%2C_2006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/View_of_Dalsnibba_from_the_access_road%2C_Stranda%2C_2006.jpg/500px-View_of_Dalsnibba_from_the_access_road%2C_Stranda%2C_2006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:View_of_Dalsnibba_from_the_access_road,_Stranda,_2006.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p36": {
     "name": "Sieben Schwestern",
@@ -2388,8 +2381,15 @@
   },
   "p606": {
     "name": "Steinparken",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Bud_-_no-nb_digifoto_20160210_00141_NB_MIT_FNR_12048.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Bud_-_no-nb_digifoto_20160210_00141_NB_MIT_FNR_12048.jpg/500px-Bud_-_no-nb_digifoto_20160210_00141_NB_MIT_FNR_12048.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Bud_-_no-nb_digifoto_20160210_00141_NB_MIT_FNR_12048.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p607": {
     "name": "Magalaupet",
@@ -2940,8 +2940,15 @@
   },
   "p715": {
     "name": "Leirvik Fyr",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Sunnhordland_tingrett.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Sunnhordland_tingrett.JPG/500px-Sunnhordland_tingrett.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Sunnhordland_tingrett.JPG",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p716": {
     "name": "Tyneset Fyr",
@@ -7330,8 +7337,15 @@
   },
   "c207": {
     "name": "Wohnmobilstellplatz · Nessjordet",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Muustrobrua.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Muustrobrua.jpg/500px-Muustrobrua.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Muustrobrua.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c208": {
     "name": "Wohnmobilstellplatz · Horsfjordveien",
@@ -8045,8 +8059,15 @@
   },
   "c351": {
     "name": "Lunde Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/To_lam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/To_lam.jpg/500px-To_lam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:To_lam.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c352": {
     "name": "Reception;Vang Camping",
@@ -8375,15 +8396,8 @@
   },
   "c418": {
     "name": "Tornes Fjordcamping",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Tornes_nedre_og_boligfeltet_Kleiva.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Tornes_nedre_og_boligfeltet_Kleiva.jpg/500px-Tornes_nedre_og_boligfeltet_Kleiva.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Tornes_nedre_og_boligfeltet_Kleiva.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c419": {
     "name": "Bjølstad Camping",
@@ -9507,8 +9521,15 @@
   },
   "c645": {
     "name": "Harran Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Harran_kirke.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Harran_kirke.JPG/500px-Harran_kirke.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Harran_kirke.JPG",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c646": {
     "name": "Aspneset Camping",
