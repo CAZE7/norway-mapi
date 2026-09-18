@@ -2706,15 +2706,8 @@
   },
   "p671": {
     "name": "Årosfjellet",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/%C3%85ros_kirke%2C_Buskerud_-_Riksantikvaren-T051_01_0017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/%C3%85ros_kirke%2C_Buskerud_-_Riksantikvaren-T051_01_0017.jpg/500px-%C3%85ros_kirke%2C_Buskerud_-_Riksantikvaren-T051_01_0017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:%C3%85ros_kirke,_Buskerud_-_Riksantikvaren-T051_01_0017.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p672": {
     "name": "Tivoliåsen",
@@ -2853,8 +2846,15 @@
   },
   "p699": {
     "name": "Svenner fyr",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Svenner_Lighthouse_At_Sunset_%28186375213%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Svenner_Lighthouse_At_Sunset_%28186375213%29.jpeg/500px-Svenner_Lighthouse_At_Sunset_%28186375213%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Svenner_Lighthouse_At_Sunset_(186375213).jpeg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "p700": {
     "name": "Fulehuk fyr",
@@ -2973,8 +2973,15 @@
   },
   "p723": {
     "name": "Odderøya Fyr",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Odder%C3%B8ya%2C_Kristiansand_-_S-1602U1_066.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Odder%C3%B8ya%2C_Kristiansand_-_S-1602U1_066.jpg/500px-Odder%C3%B8ya%2C_Kristiansand_-_S-1602U1_066.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Odder%C3%B8ya,_Kristiansand_-_S-1602U1_066.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p724": {
     "name": "Hattholmen fyr",
@@ -3043,8 +3050,15 @@
   },
   "p737": {
     "name": "Vetlefossen",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/E16-Gudvangen.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/E16-Gudvangen.JPG/500px-E16-Gudvangen.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:E16-Gudvangen.JPG",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p738": {
     "name": "Brurasløret",
@@ -3753,6 +3767,11 @@
   },
   "p879": {
     "name": "Kollevåg badestrand",
+    "has_image": false,
+    "verified": false
+  },
+  "p880": {
+    "name": "Kollavågen",
     "has_image": true,
     "verified": true,
     "verification_score": 4.0,
@@ -3762,11 +3781,6 @@
     "page": "https://commons.wikimedia.org/wiki/File:Campingomr%C3%A5de.jpg",
     "license": "public domain",
     "attribution_required": false
-  },
-  "p880": {
-    "name": "Kollavågen",
-    "has_image": false,
-    "verified": false
   },
   "p881": {
     "name": "Vesletjern badeplass",
@@ -6770,15 +6784,8 @@
   },
   "c89": {
     "name": "Levanger Camping & Fritidspark Moan AS",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Sykehuset_Levanger_stasjon_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Sykehuset_Levanger_stasjon_1.jpg/500px-Sykehuset_Levanger_stasjon_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Sykehuset_Levanger_stasjon_1.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c90": {
     "name": "Leka camping",
@@ -7117,8 +7124,15 @@
   },
   "c161": {
     "name": "Hannoy",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Tind_Lofoten_22.06.2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tind_Lofoten_22.06.2012.jpg/500px-Tind_Lofoten_22.06.2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Tind_Lofoten_22.06.2012.jpg",
+    "license": "gfdl",
+    "attribution_required": false
   },
   "c162": {
     "name": "Bjørnhågen camping",
@@ -7172,15 +7186,8 @@
   },
   "c173": {
     "name": "Wohnmobilstellplatz · Eidsvollvegen",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/1301._Eidsvold._Hotellet_og_Dampskibsbryggen_%288386295516%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/1301._Eidsvold._Hotellet_og_Dampskibsbryggen_%288386295516%29.jpg/500px-1301._Eidsvold._Hotellet_og_Dampskibsbryggen_%288386295516%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:1301._Eidsvold._Hotellet_og_Dampskibsbryggen_(8386295516).jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c174": {
     "name": "Wohnmobilstellplatz · Batteriveien sør",
@@ -8059,15 +8066,8 @@
   },
   "c351": {
     "name": "Lunde Camping",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/To_lam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/To_lam.jpg/500px-To_lam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:To_lam.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c352": {
     "name": "Reception;Vang Camping",
