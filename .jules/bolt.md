@@ -42,6 +42,12 @@
 
 **Learning:** `for...in` loops on raw JSON objects incur prototype chain lookups. Refactoring to `Object.entries(raw).forEach` is a cleaner approach to avoid these lookups, although in simple caching benchmarks, `for...in` can sometimes be highly optimized by the JIT compiler making it appear faster or comparable in specific microbenchmarks. The refactor improves safety and avoids prototype iteration.
 **Action:** Use `Object.entries().forEach` or `Object.entries()` with `for...of` loops instead of `for...in` when iterating over object keys and values directly to ensure clean, prototype-safe iteration.
+
 ## 2024-05-18 - Avoid array methods requiring callbacks in tight loops
+
 **Learning:** Using array search methods like `.find()` inside consecutive loops over fallback candidates introduces unnecessary micro-overhead because it forces the JS engine to allocate and invoke a new callback function closure for every check. While this doesn't change the O(N) complexity compared to a loop, standard `for` loops are objectively faster as they eliminate this function overhead completely. Additionally, parallelizing a fallback sequence (using `Promise.all` across fallbacks) is dangerous as it prevents short-circuiting and spams APIs with redundant requests.
 **Action:** When micro-optimizing small arrays inside repetitive structures, prefer basic `for` loops with a manual `break` over functional array iterators like `.find()`. Never use `Promise.all` to execute a sequence of fallback requests that are supposed to short-circuit upon the first success.
+
+## 2024-05-18 - Performance Optimization Pattern: Distance Matrix Caching
+**Learning:** In routing or 2-opt optimization algorithms, redundantly executing mathematical operations like `haversine` distance inside N^2 loops generates major CPU bottlenecks. Caching intermediate values drastically speeds up computation. However, string allocation (e.g. tracking keys by `id1|id2` using a `Map`) introduces overhead that negates the math speedups.
+**Action:** Always pre-calculate symmetric distances, assign each unique node an integer ID index, and store the output in a 1D typed array (like `Float64Array`) accessed via row/col translation (`i * N + j`) to ensure highly-performant O(1) mathematical memory lookups instead of String mapping for tight mathematical loops.

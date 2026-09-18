@@ -23,7 +23,24 @@ export function totalDistance(order: Stop[]): number {
 
 // Nearest neighbor starting from index 0, then 2-opt refinement.
 export function optimizeOrder(stops: Stop[]): Stop[] {
-  if (stops.length <= 2) return stops.slice();
+  const n = stops.length;
+  if (n <= 2) return stops.slice();
+
+  // Precompute distances for O(1) lookups during nearest neighbor and 2-opt.
+  const stopIdx = new Map<Stop, number>();
+  for (let i = 0; i < n; i++) stopIdx.set(stops[i], i);
+
+  const dist = new Float64Array(n * n);
+  for (let i = 0; i < n; i++) {
+    for (let j = i + 1; j < n; j++) {
+      const d = haversine(stops[i], stops[j]);
+      dist[i * n + j] = d;
+      dist[j * n + i] = d;
+    }
+  }
+
+  const getDist = (a: Stop, b: Stop) => dist[stopIdx.get(a)! * n + stopIdx.get(b)!];
+
   // Nearest neighbor from first stop (kept as anchor).
   const remaining = stops.slice(1);
   const path: Stop[] = [stops[0]];
@@ -32,7 +49,7 @@ export function optimizeOrder(stops: Stop[]): Stop[] {
     let bestIdx = 0;
     let bestD = Infinity;
     for (let i = 0; i < remaining.length; i++) {
-      const d = haversine(last, remaining[i]);
+      const d = getDist(last, remaining[i]);
       if (d < bestD) {
         bestD = d;
         bestIdx = i;
@@ -40,10 +57,10 @@ export function optimizeOrder(stops: Stop[]): Stop[] {
     }
     path.push(remaining.splice(bestIdx, 1)[0]);
   }
-  return twoOpt(path);
+  return twoOpt(path, getDist);
 }
 
-function twoOpt(route: Stop[]): Stop[] {
+function twoOpt(route: Stop[], getDist: (a: Stop, b: Stop) => number): Stop[] {
   const n = route.length;
   if (n < 4) return route;
   const best = route.slice();
@@ -56,10 +73,10 @@ function twoOpt(route: Stop[]): Stop[] {
     for (let i = 1; i < n - 2; i++) {
       for (let k = i + 1; k < n - 1; k++) {
         const delta =
-          haversine(best[i - 1], best[k]) +
-          haversine(best[i], best[k + 1]) -
-          haversine(best[i - 1], best[i]) -
-          haversine(best[k], best[k + 1]);
+          getDist(best[i - 1], best[k]) +
+          getDist(best[i], best[k + 1]) -
+          getDist(best[i - 1], best[i]) -
+          getDist(best[k], best[k + 1]);
         if (delta < -1e-9) {
           const sub = best.slice(i, k + 1).reverse();
           best.splice(i, sub.length, ...sub);
