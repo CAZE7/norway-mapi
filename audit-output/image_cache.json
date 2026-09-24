@@ -86,15 +86,8 @@
   },
   "p17": {
     "name": "Nigardsbreen",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Nigardsbreen_DN.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Nigardsbreen_DN.jpg/500px-Nigardsbreen_DN.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Nigardsbreen_DN.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p18": {
     "name": "Feigefossen",
@@ -113,8 +106,15 @@
   },
   "p21": {
     "name": "Besseggen",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Besseggen_%28180170915%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Besseggen_%28180170915%29.jpeg/500px-Besseggen_%28180170915%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Besseggen_(180170915).jpeg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "p22": {
     "name": "Galdhøpiggen",
@@ -1148,15 +1148,8 @@
   },
   "p333": {
     "name": "Rolfstangen badestrand",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/DNL_Ju-52_at_Fornebu_on_water.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/DNL_Ju-52_at_Fornebu_on_water.jpeg/500px-DNL_Ju-52_at_Fornebu_on_water.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:DNL_Ju-52_at_Fornebu_on_water.jpeg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p334": {
     "name": "Pelvikodden Badeplass",
@@ -2770,15 +2763,8 @@
   },
   "p681": {
     "name": "Færder fyr",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg/500px-Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p682": {
     "name": "Oksøy fyr",
@@ -2947,15 +2933,8 @@
   },
   "p715": {
     "name": "Leirvik Fyr",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Sunnhordland_tingrett.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Sunnhordland_tingrett.JPG/500px-Sunnhordland_tingrett.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Sunnhordland_tingrett.JPG",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p716": {
     "name": "Tyneset Fyr",
@@ -3779,15 +3758,8 @@
   },
   "p880": {
     "name": "Kollavågen",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Campingomr%C3%A5de.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Campingomr%C3%A5de.jpg/500px-Campingomr%C3%A5de.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Campingomr%C3%A5de.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p881": {
     "name": "Vesletjern badeplass",
@@ -4666,8 +4638,15 @@
   },
   "p1056": {
     "name": "Vestersand",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Bug%C3%B8ynes_Kapell.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Bug%C3%B8ynes_Kapell.jpg/500px-Bug%C3%B8ynes_Kapell.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Bug%C3%B8ynes_Kapell.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p1057": {
     "name": "Hestbergfjurru",
@@ -7771,8 +7750,15 @@
   },
   "c292": {
     "name": "Moskenes Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Moskenes_kirke%2C_Nordland_-_Riksantikvaren-T424_01_0129.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Moskenes_kirke%2C_Nordland_-_Riksantikvaren-T424_01_0129.jpg/500px-Moskenes_kirke%2C_Nordland_-_Riksantikvaren-T424_01_0129.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Moskenes_kirke,_Nordland_-_Riksantikvaren-T424_01_0129.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c293": {
     "name": "Brustranda Fjordcamping",
@@ -8081,8 +8067,15 @@
   },
   "c354": {
     "name": "Hemre Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/E16-Gudvangen.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/E16-Gudvangen.JPG/500px-E16-Gudvangen.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:E16-Gudvangen.JPG",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c355": {
     "name": "Groven Camping og Hyttegrend",
@@ -8396,8 +8389,15 @@
   },
   "c418": {
     "name": "Tornes Fjordcamping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Tornes_nedre_og_boligfeltet_Kleiva.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Tornes_nedre_og_boligfeltet_Kleiva.jpg/500px-Tornes_nedre_og_boligfeltet_Kleiva.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Tornes_nedre_og_boligfeltet_Kleiva.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "c419": {
     "name": "Bjølstad Camping",
@@ -8816,15 +8816,8 @@
   },
   "c502": {
     "name": "Skjervøy fiskecamp",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg/500px-Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c504": {
     "name": "Kunes Camping",
@@ -9288,15 +9281,8 @@
   },
   "c596": {
     "name": "Skibotn Camping",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Skibotn_church_and_supermarket.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Skibotn_church_and_supermarket.JPG/500px-Skibotn_church_and_supermarket.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Skibotn_church_and_supermarket.JPG",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c597": {
     "name": "Sandnes Camping",
