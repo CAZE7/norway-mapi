@@ -211,8 +211,15 @@
   },
   "p42": {
     "name": "Mardalsfossen",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Mardalsfossen_Waterfall_Norway_2004.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Mardalsfossen_Waterfall_Norway_2004.jpg/500px-Mardalsfossen_Waterfall_Norway_2004.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Mardalsfossen_Waterfall_Norway_2004.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p43": {
     "name": "Atlanterhavsvegen: Eldhusøya",
@@ -1141,8 +1148,15 @@
   },
   "p333": {
     "name": "Rolfstangen badestrand",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/DNL_Ju-52_at_Fornebu_on_water.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/DNL_Ju-52_at_Fornebu_on_water.jpeg/500px-DNL_Ju-52_at_Fornebu_on_water.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:DNL_Ju-52_at_Fornebu_on_water.jpeg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p334": {
     "name": "Pelvikodden Badeplass",
@@ -1206,8 +1220,15 @@
   },
   "p371": {
     "name": "Fredriksten festning",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Fredriksten_festning%2C_Hovedvakten_og_%C3%98vre_magasin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Fredriksten_festning%2C_Hovedvakten_og_%C3%98vre_magasin.jpg/500px-Fredriksten_festning%2C_Hovedvakten_og_%C3%98vre_magasin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Fredriksten_festning,_Hovedvakten_og_%C3%98vre_magasin.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p372": {
     "name": "Lillesand Flaksbandsbanen",
@@ -2386,8 +2407,15 @@
   },
   "p607": {
     "name": "Magalaupet",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Magalaupet_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Magalaupet_1.jpg/500px-Magalaupet_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Magalaupet_1.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p608": {
     "name": "Jettegrytene ved Lona",
@@ -2966,8 +2994,15 @@
   },
   "p723": {
     "name": "Odderøya Fyr",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Odder%C3%B8ya%2C_Kristiansand_-_S-1602U1_066.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Odder%C3%B8ya%2C_Kristiansand_-_S-1602U1_066.jpg/500px-Odder%C3%B8ya%2C_Kristiansand_-_S-1602U1_066.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Odder%C3%B8ya,_Kristiansand_-_S-1602U1_066.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p724": {
     "name": "Hattholmen fyr",
@@ -6756,8 +6791,15 @@
   },
   "c89": {
     "name": "Levanger Camping & Fritidspark Moan AS",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Sykehuset_Levanger_stasjon_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Sykehuset_Levanger_stasjon_1.jpg/500px-Sykehuset_Levanger_stasjon_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Sykehuset_Levanger_stasjon_1.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c90": {
     "name": "Leka camping",
@@ -7151,15 +7193,8 @@
   },
   "c173": {
     "name": "Wohnmobilstellplatz · Eidsvollvegen",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/1301._Eidsvold._Hotellet_og_Dampskibsbryggen_%288386295516%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/1301._Eidsvold._Hotellet_og_Dampskibsbryggen_%288386295516%29.jpg/500px-1301._Eidsvold._Hotellet_og_Dampskibsbryggen_%288386295516%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:1301._Eidsvold._Hotellet_og_Dampskibsbryggen_(8386295516).jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c174": {
     "name": "Wohnmobilstellplatz · Batteriveien sør",
@@ -7288,15 +7323,8 @@
   },
   "c200": {
     "name": "Wohnmobilstellplatz · Allemannsveien",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Krager%C3%B8_stasjon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Krager%C3%B8_stasjon.jpg/500px-Krager%C3%B8_stasjon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Krager%C3%B8_stasjon.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c201": {
     "name": "Wohnmobilstellplatz · Idrottsvegen",
@@ -7330,8 +7358,15 @@
   },
   "c207": {
     "name": "Wohnmobilstellplatz · Nessjordet",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Muustrobrua.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Muustrobrua.jpg/500px-Muustrobrua.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Muustrobrua.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c208": {
     "name": "Wohnmobilstellplatz · Horsfjordveien",
@@ -7670,8 +7705,15 @@
   },
   "c276": {
     "name": "Kinsarvik Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Manhole_cover_in_Kinsarvik.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Manhole_cover_in_Kinsarvik.jpg/500px-Manhole_cover_in_Kinsarvik.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Manhole_cover_in_Kinsarvik.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "c277": {
     "name": "Ringøy Camping",
@@ -7785,8 +7827,15 @@
   },
   "c299": {
     "name": "Tana Hotel og Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Tana_bru_Nye.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Tana_bru_Nye.jpg/500px-Tana_bru_Nye.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Tana_bru_Nye.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "c300": {
     "name": "BaseCamp NorthCape",
@@ -8060,15 +8109,8 @@
   },
   "c354": {
     "name": "Hemre Camping",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/E16-Gudvangen.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/E16-Gudvangen.JPG/500px-E16-Gudvangen.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:E16-Gudvangen.JPG",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c355": {
     "name": "Groven Camping og Hyttegrend",
