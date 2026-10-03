@@ -86,15 +86,8 @@
   },
   "p17": {
     "name": "Nigardsbreen",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Nigardsbreen_DN.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Nigardsbreen_DN.jpg/500px-Nigardsbreen_DN.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Nigardsbreen_DN.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p18": {
     "name": "Feigefossen",
@@ -183,8 +176,15 @@
   },
   "p35": {
     "name": "Dalsnibba",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/View_of_Dalsnibba_from_the_access_road%2C_Stranda%2C_2006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/View_of_Dalsnibba_from_the_access_road%2C_Stranda%2C_2006.jpg/500px-View_of_Dalsnibba_from_the_access_road%2C_Stranda%2C_2006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:View_of_Dalsnibba_from_the_access_road,_Stranda,_2006.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "p36": {
     "name": "Sieben Schwestern",
@@ -2933,8 +2933,15 @@
   },
   "p715": {
     "name": "Leirvik Fyr",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Sunnhordland_tingrett.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Sunnhordland_tingrett.JPG/500px-Sunnhordland_tingrett.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Sunnhordland_tingrett.JPG",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p716": {
     "name": "Tyneset Fyr",
@@ -4413,8 +4420,15 @@
   },
   "p1011": {
     "name": "Andstabben 512 m osl",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/13/%C3%85gvatnet%2C_2010_09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/%C3%85gvatnet%2C_2010_09.jpg/500px-%C3%85gvatnet%2C_2010_09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:%C3%85gvatnet,_2010_09.jpg",
+    "license": "gfdl",
+    "attribution_required": false
   },
   "p1012": {
     "name": "kollfjelle",
@@ -4638,15 +4652,8 @@
   },
   "p1056": {
     "name": "Vestersand",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Bug%C3%B8ynes_Kapell.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Bug%C3%B8ynes_Kapell.jpg/500px-Bug%C3%B8ynes_Kapell.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Bug%C3%B8ynes_Kapell.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p1057": {
     "name": "Hestbergfjurru",
@@ -6705,8 +6712,15 @@
   },
   "c76": {
     "name": "Larvik Bobilhavn",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Larvik_Herregaarden.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Larvik_Herregaarden.jpg/500px-Larvik_Herregaarden.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Larvik_Herregaarden.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c77": {
     "name": "Bergenshallen Bobilparkering",
@@ -7620,15 +7634,8 @@
   },
   "c266": {
     "name": "Bie Apartment & Feriesenter, Top Camp",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Grimstad_bibliotek.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Grimstad_bibliotek.jpg/500px-Grimstad_bibliotek.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Grimstad_bibliotek.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c267": {
     "name": "Nedre Strand Hytteutleie og Familicamping",
@@ -8137,8 +8144,15 @@
   },
   "c368": {
     "name": "Morokulien Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/176_Fredsmonumentet%2C_Gr%C3%A6nsen_-_no-nb_digifoto_20150724_00054_bldsa_PK27882.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/176_Fredsmonumentet%2C_Gr%C3%A6nsen_-_no-nb_digifoto_20150724_00054_bldsa_PK27882.jpg/500px-176_Fredsmonumentet%2C_Gr%C3%A6nsen_-_no-nb_digifoto_20150724_00054_bldsa_PK27882.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:176_Fredsmonumentet,_Gr%C3%A6nsen_-_no-nb_digifoto_20150724_00054_bldsa_PK27882.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c369": {
     "name": "Ramton Camping",
@@ -8872,15 +8886,8 @@
   },
   "c517": {
     "name": "Knaben Camp",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Knaben_kapell.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Knaben_kapell.jpg/500px-Knaben_kapell.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Knaben_kapell.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c518": {
     "name": "Kilefjorden Camping",
@@ -9109,15 +9116,8 @@
   },
   "c563": {
     "name": "Ballangen Camping",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Ballangen_Camping_2022-08-20_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Ballangen_Camping_2022-08-20_04.jpg/500px-Ballangen_Camping_2022-08-20_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Ballangen_Camping_2022-08-20_04.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c564": {
     "name": "Polar Park",
