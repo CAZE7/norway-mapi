@@ -2756,15 +2756,8 @@
   },
   "p681": {
     "name": "Færder fyr",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg/500px-Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p682": {
     "name": "Oksøy fyr",
@@ -3303,8 +3296,15 @@
   },
   "p789": {
     "name": "Kjetil Rasks ur",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Flekkeroy_church.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Flekkeroy_church.png/500px-Flekkeroy_church.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Flekkeroy_church.png",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p790": {
     "name": "Ole Høylands hule",
@@ -3758,15 +3758,8 @@
   },
   "p880": {
     "name": "Kollavågen",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Campingomr%C3%A5de.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Campingomr%C3%A5de.jpg/500px-Campingomr%C3%A5de.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Campingomr%C3%A5de.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p881": {
     "name": "Vesletjern badeplass",
@@ -4450,8 +4443,15 @@
   },
   "p1017": {
     "name": "Ettertanken",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Ettertanken%2C_R%C3%B8st_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Ettertanken%2C_R%C3%B8st_2024.jpg/500px-Ettertanken%2C_R%C3%B8st_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Ettertanken,_R%C3%B8st_2024.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "p1018": {
     "name": "Varde",
@@ -7550,15 +7550,8 @@
   },
   "c252": {
     "name": "Hytte Camp Nordkapp - former Nordkapp Caravan og Camping",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Nordkapp_from_Skarsv%C3%A5gveien_2022-09-12_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Nordkapp_from_Skarsv%C3%A5gveien_2022-09-12_01.jpg/500px-Nordkapp_from_Skarsv%C3%A5gveien_2022-09-12_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Nordkapp_from_Skarsv%C3%A5gveien_2022-09-12_01.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c253": {
     "name": "Tana Familiecamping",
@@ -8297,8 +8290,15 @@
   },
   "c400": {
     "name": "Trysilelva camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Storvegen%2C_Trysil.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Storvegen%2C_Trysil.jpg/500px-Storvegen%2C_Trysil.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Storvegen,_Trysil.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c401": {
     "name": "Steinvik Camping og Hyttegrend",
@@ -8802,15 +8802,8 @@
   },
   "c502": {
     "name": "Skjervøy fiskecamp",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg/500px-Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c504": {
     "name": "Kunes Camping",
@@ -9294,8 +9287,15 @@
   },
   "c600": {
     "name": "Spangereid Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Spangereid_kirke%2C_Vest-Agder_-_Riksantikvaren-T210_01_0062.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Spangereid_kirke%2C_Vest-Agder_-_Riksantikvaren-T210_01_0062.jpg/500px-Spangereid_kirke%2C_Vest-Agder_-_Riksantikvaren-T210_01_0062.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Spangereid_kirke,_Vest-Agder_-_Riksantikvaren-T210_01_0062.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c601": {
     "name": "Akkarvikodden Teltplass",
@@ -9514,8 +9514,15 @@
   },
   "c645": {
     "name": "Harran Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Harran_kirke.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Harran_kirke.JPG/500px-Harran_kirke.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Harran_kirke.JPG",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c646": {
     "name": "Aspneset Camping",
