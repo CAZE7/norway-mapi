@@ -23,16 +23,26 @@ export function totalDistance(order: Stop[]): number {
 
 // Nearest neighbor starting from index 0, then 2-opt refinement.
 export function optimizeOrder(stops: Stop[]): Stop[] {
-  if (stops.length <= 2) return stops.slice();
+  const n = stops.length;
+  if (n <= 2) return stops.slice();
+
+  // Pre-calculate distance matrix
+  const dist = new Float64Array(n * n);
+  for (let i = 0; i < n; i++) {
+    for (let j = i + 1; j < n; j++) {
+      dist[i * n + j] = dist[j * n + i] = haversine(stops[i], stops[j]);
+    }
+  }
+
   // Nearest neighbor from first stop (kept as anchor).
-  const remaining = stops.slice(1);
-  const path: Stop[] = [stops[0]];
+  const remaining = Array.from({ length: n - 1 }, (_, i) => i + 1);
+  const path: number[] = [0];
   while (remaining.length) {
     const last = path[path.length - 1];
     let bestIdx = 0;
     let bestD = Infinity;
     for (let i = 0; i < remaining.length; i++) {
-      const d = haversine(last, remaining[i]);
+      const d = dist[last * n + remaining[i]];
       if (d < bestD) {
         bestD = d;
         bestIdx = i;
@@ -40,29 +50,35 @@ export function optimizeOrder(stops: Stop[]): Stop[] {
     }
     path.push(remaining.splice(bestIdx, 1)[0]);
   }
-  return twoOpt(path);
+  return twoOpt(path, dist, n).map((i) => stops[i]);
 }
 
-function twoOpt(route: Stop[]): Stop[] {
-  const n = route.length;
-  if (n < 4) return route;
-  const best = route.slice();
+function twoOpt(path: number[], dist: Float64Array, n: number): number[] {
+  if (path.length < 4) return path;
+  const best = path.slice();
 
   let improved = true;
   let guard = 0;
   while (improved && guard < 40) {
     improved = false;
     guard++;
-    for (let i = 1; i < n - 2; i++) {
-      for (let k = i + 1; k < n - 1; k++) {
+    for (let i = 1; i < best.length - 2; i++) {
+      for (let k = i + 1; k < best.length - 1; k++) {
         const delta =
-          haversine(best[i - 1], best[k]) +
-          haversine(best[i], best[k + 1]) -
-          haversine(best[i - 1], best[i]) -
-          haversine(best[k], best[k + 1]);
+          dist[best[i - 1] * n + best[k]] +
+          dist[best[i] * n + best[k + 1]] -
+          dist[best[i - 1] * n + best[i]] -
+          dist[best[k] * n + best[k + 1]];
         if (delta < -1e-9) {
-          const sub = best.slice(i, k + 1).reverse();
-          best.splice(i, sub.length, ...sub);
+          let l = i;
+          let r = k;
+          while (l < r) {
+            const temp = best[l];
+            best[l] = best[r];
+            best[r] = temp;
+            l++;
+            r--;
+          }
           improved = true;
           break;
         }
