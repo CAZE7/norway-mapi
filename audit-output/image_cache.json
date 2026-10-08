@@ -1141,15 +1141,8 @@
   },
   "p333": {
     "name": "Rolfstangen badestrand",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/DNL_Ju-52_at_Fornebu_on_water.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/DNL_Ju-52_at_Fornebu_on_water.jpeg/500px-DNL_Ju-52_at_Fornebu_on_water.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:DNL_Ju-52_at_Fornebu_on_water.jpeg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p334": {
     "name": "Pelvikodden Badeplass",
@@ -2763,15 +2756,8 @@
   },
   "p681": {
     "name": "Færder fyr",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg/500px-Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Fyrtornet_p%C3%A5_Lilla_F%C3%A6rder_vid_Christianiafjordens_mynding_-_Nordiska_taflor_-_no-nb_digibok_2014031426013-197.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p682": {
     "name": "Oksøy fyr",
@@ -3760,6 +3746,11 @@
   },
   "p879": {
     "name": "Kollevåg badestrand",
+    "has_image": false,
+    "verified": false
+  },
+  "p880": {
+    "name": "Kollavågen",
     "has_image": true,
     "verified": true,
     "verification_score": 4.0,
@@ -3769,11 +3760,6 @@
     "page": "https://commons.wikimedia.org/wiki/File:Campingomr%C3%A5de.jpg",
     "license": "public domain",
     "attribution_required": false
-  },
-  "p880": {
-    "name": "Kollavågen",
-    "has_image": false,
-    "verified": false
   },
   "p881": {
     "name": "Vesletjern badeplass",
@@ -4427,8 +4413,15 @@
   },
   "p1011": {
     "name": "Andstabben 512 m osl",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/13/%C3%85gvatnet%2C_2010_09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/%C3%85gvatnet%2C_2010_09.jpg/500px-%C3%85gvatnet%2C_2010_09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:%C3%85gvatnet,_2010_09.jpg",
+    "license": "gfdl",
+    "attribution_required": false
   },
   "p1012": {
     "name": "kollfjelle",
@@ -4562,8 +4555,15 @@
   },
   "p1038": {
     "name": "Nordkapp",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Knivskjellodden_from_Nordkapp_2022-09-11_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Knivskjellodden_from_Nordkapp_2022-09-11_06.jpg/500px-Knivskjellodden_from_Nordkapp_2022-09-11_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Knivskjellodden_from_Nordkapp_2022-09-11_06.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "p1039": {
     "name": "Segla – Aussichtspunkt am Parkplatz",
@@ -4942,15 +4942,8 @@
   },
   "p1114": {
     "name": "Pallvatnet",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Augusthimmel_Landegode.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Augusthimmel_Landegode.JPG/500px-Augusthimmel_Landegode.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Augusthimmel_Landegode.JPG",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p1115": {
     "name": "Tjønna",
@@ -6344,15 +6337,8 @@
   },
   "c0": {
     "name": "Stavern Bo & Fritid Bobilpark",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Larvik_Fredtun_folkeh%C3%B8yskole.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Larvik_Fredtun_folkeh%C3%B8yskole.jpg/500px-Larvik_Fredtun_folkeh%C3%B8yskole.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Larvik_Fredtun_folkeh%C3%B8yskole.jpg",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c1": {
     "name": "Midttun Motell & Camping",
@@ -6491,8 +6477,15 @@
   },
   "c28": {
     "name": "Solsiden",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Fredriksvern_verftsporten.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Fredriksvern_verftsporten.jpg/500px-Fredriksvern_verftsporten.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Fredriksvern_verftsporten.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c29": {
     "name": "Horten Gjesthavn",
@@ -7316,8 +7309,15 @@
   },
   "c200": {
     "name": "Wohnmobilstellplatz · Allemannsveien",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Krager%C3%B8_stasjon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Krager%C3%B8_stasjon.jpg/500px-Krager%C3%B8_stasjon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Krager%C3%B8_stasjon.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c201": {
     "name": "Wohnmobilstellplatz · Idrottsvegen",
