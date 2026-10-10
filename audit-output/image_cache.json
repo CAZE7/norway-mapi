@@ -36,8 +36,15 @@
   },
   "p7": {
     "name": "Låtefossen",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Laatefossen24.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Laatefossen24.jpg/500px-Laatefossen24.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Laatefossen24.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "p8": {
     "name": "Steinsdalsfossen",
@@ -431,15 +438,8 @@
   },
   "p86": {
     "name": "Tromsdalstinden",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Summit_area_of_Tromsdalstinden_2022-09-07_22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Summit_area_of_Tromsdalstinden_2022-09-07_22.jpg/500px-Summit_area_of_Tromsdalstinden_2022-09-07_22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Summit_area_of_Tromsdalstinden_2022-09-07_22.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "p87": {
     "name": "Sherpatrappa Tromsø",
@@ -2513,8 +2513,15 @@
   },
   "p631": {
     "name": "Furukongen",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Str%C3%B8msbo_g%C3%A5rd%2C_Str%C3%B8msbu_g%C3%A5rd%2C_Aust-Agder_-_Riksantikvaren-T188_01_0001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Str%C3%B8msbo_g%C3%A5rd%2C_Str%C3%B8msbu_g%C3%A5rd%2C_Aust-Agder_-_Riksantikvaren-T188_01_0001.jpg/500px-Str%C3%B8msbo_g%C3%A5rd%2C_Str%C3%B8msbu_g%C3%A5rd%2C_Aust-Agder_-_Riksantikvaren-T188_01_0001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Str%C3%B8msbo_g%C3%A5rd,_Str%C3%B8msbu_g%C3%A5rd,_Aust-Agder_-_Riksantikvaren-T188_01_0001.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p632": {
     "name": "Ulleråsen",
@@ -3303,8 +3310,15 @@
   },
   "p789": {
     "name": "Kjetil Rasks ur",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Flekkeroy_church.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Flekkeroy_church.png/500px-Flekkeroy_church.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Flekkeroy_church.png",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p790": {
     "name": "Ole Høylands hule",
@@ -5748,8 +5762,15 @@
   },
   "p1278": {
     "name": "Landegode fyr",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Landegode_fyr.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Landegode_fyr.jpg/500px-Landegode_fyr.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Landegode_fyr.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "p1279": {
     "name": "Vardø fyr",
@@ -6323,8 +6344,15 @@
   },
   "c0": {
     "name": "Stavern Bo & Fritid Bobilpark",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Larvik_Fredtun_folkeh%C3%B8yskole.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Larvik_Fredtun_folkeh%C3%B8yskole.jpg/500px-Larvik_Fredtun_folkeh%C3%B8yskole.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Larvik_Fredtun_folkeh%C3%B8yskole.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c1": {
     "name": "Midttun Motell & Camping",
@@ -7103,15 +7131,8 @@
   },
   "c161": {
     "name": "Hannoy",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Tind_Lofoten_22.06.2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tind_Lofoten_22.06.2012.jpg/500px-Tind_Lofoten_22.06.2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Tind_Lofoten_22.06.2012.jpg",
-    "license": "gfdl",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c162": {
     "name": "Bjørnhågen camping",
@@ -7685,15 +7706,8 @@
   },
   "c279": {
     "name": "Ekeberg Camping",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Ekebergmarkedet_spring_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Ekebergmarkedet_spring_2025.jpg/500px-Ekebergmarkedet_spring_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Ekebergmarkedet_spring_2025.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c280": {
     "name": "Tomm Murstad Sjøleir",
@@ -7757,8 +7771,15 @@
   },
   "c292": {
     "name": "Moskenes Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Moskenes_kirke%2C_Nordland_-_Riksantikvaren-T424_01_0129.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Moskenes_kirke%2C_Nordland_-_Riksantikvaren-T424_01_0129.jpg/500px-Moskenes_kirke%2C_Nordland_-_Riksantikvaren-T424_01_0129.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Moskenes_kirke,_Nordland_-_Riksantikvaren-T424_01_0129.jpg",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c293": {
     "name": "Brustranda Fjordcamping",
@@ -8592,15 +8613,8 @@
   },
   "c460": {
     "name": "Saltstraumen Camping",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Saltstraumen_bru_om_v%C3%A5ren.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Saltstraumen_bru_om_v%C3%A5ren.jpg/500px-Saltstraumen_bru_om_v%C3%A5ren.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Saltstraumen_bru_om_v%C3%A5ren.jpg",
-    "license": "cc0",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c461": {
     "name": "Mo i Rana Camping",
@@ -8809,8 +8823,15 @@
   },
   "c502": {
     "name": "Skjervøy fiskecamp",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg/500px-Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Skjerv%C3%B8y_harbour_at_night_from_Hurtigruten_ship_2022-09-08_02.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "c504": {
     "name": "Kunes Camping",
@@ -9109,8 +9130,15 @@
   },
   "c563": {
     "name": "Ballangen Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Ballangen_Camping_2022-08-20_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Ballangen_Camping_2022-08-20_04.jpg/500px-Ballangen_Camping_2022-08-20_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Ballangen_Camping_2022-08-20_04.jpg",
+    "license": "cc0",
+    "attribution_required": false
   },
   "c564": {
     "name": "Polar Park",
@@ -9274,15 +9302,8 @@
   },
   "c596": {
     "name": "Skibotn Camping",
-    "has_image": true,
-    "verified": true,
-    "verification_score": 4.0,
-    "source": "commons_geosearch",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Skibotn_church_and_supermarket.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Skibotn_church_and_supermarket.JPG/500px-Skibotn_church_and_supermarket.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page": "https://commons.wikimedia.org/wiki/File:Skibotn_church_and_supermarket.JPG",
-    "license": "public domain",
-    "attribution_required": false
+    "has_image": false,
+    "verified": false
   },
   "c597": {
     "name": "Sandnes Camping",
@@ -9521,8 +9542,15 @@
   },
   "c645": {
     "name": "Harran Camping",
-    "has_image": false,
-    "verified": false
+    "has_image": true,
+    "verified": true,
+    "verification_score": 4.0,
+    "source": "commons_geosearch",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Harran_kirke.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Harran_kirke.JPG/500px-Harran_kirke.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page": "https://commons.wikimedia.org/wiki/File:Harran_kirke.JPG",
+    "license": "public domain",
+    "attribution_required": false
   },
   "c646": {
     "name": "Aspneset Camping",
